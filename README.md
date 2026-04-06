@@ -1,2 +1,0 @@
-# portfolio-guylian
-Mon portfolio
