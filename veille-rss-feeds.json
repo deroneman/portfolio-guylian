@@ -1,0 +1,150 @@
+{
+  "feeds": [
+    {
+      "name": "Infrastructure",
+      "icon": "🏗️",
+      "tab_id": "infrastructure",
+      "sources": [
+        {
+          "title": "Kubernetes Blog",
+          "url": "https://kubernetes.io/feed.xml",
+          "category": "Infrastructure"
+        },
+        {
+          "title": "Docker Blog",
+          "url": "https://www.docker.com/feed",
+          "category": "Infrastructure"
+        },
+        {
+          "title": "Linux News",
+          "url": "https://www.linuxtoday.com/feed",
+          "category": "Infrastructure"
+        }
+      ]
+    },
+    {
+      "name": "Développement",
+      "icon": "💻",
+      "tab_id": "developpement",
+      "sources": [
+        {
+          "title": ".NET Blog",
+          "url": "https://devblogs.microsoft.com/dotnet/feed",
+          "category": "Développement"
+        },
+        {
+          "title": "JavaScript Weekly",
+          "url": "https://javascriptweekly.com/feed",
+          "category": "Développement"
+        },
+        {
+          "title": "GitHub Blog",
+          "url": "https://github.blog/feed",
+          "category": "Développement"
+        }
+      ]
+    },
+    {
+      "name": "Sécurité",
+      "icon": "🔐",
+      "tab_id": "securite",
+      "sources": [
+        {
+          "title": "Security News",
+          "url": "https://feeds.bleepingcomputer.com/feed",
+          "category": "Sécurité"
+        },
+        {
+          "title": "OWASP",
+          "url": "https://owasp.org/feed.xml",
+          "category": "Sécurité"
+        },
+        {
+          "title": "NVD - NIST",
+          "url": "https://nvd.nist.gov/feeds/json/cve/1.1/nvdcve-1.1-2024.json",
+          "category": "Sécurité"
+        }
+      ]
+    },
+    {
+      "name": "IA",
+      "icon": "🤖",
+      "tab_id": "ia",
+      "sources": [
+        {
+          "title": "OpenAI Blog",
+          "url": "https://openai.com/blog/feed",
+          "category": "IA"
+        },
+        {
+          "title": "Hugging Face",
+          "url": "https://huggingface.co/feed",
+          "category": "IA"
+        },
+        {
+          "title": "DeepMind",
+          "url": "https://www.deepmind.com/blog/feed",
+          "category": "IA"
+        }
+      ]
+    },
+    {
+      "name": "Cloud",
+      "icon": "☁️",
+      "tab_id": "cloud",
+      "sources": [
+        {
+          "title": "AWS Blog",
+          "url": "https://aws.amazon.com/blogs/aws/feed",
+          "category": "Cloud"
+        },
+        {
+          "title": "Microsoft Azure Blog",
+          "url": "https://azure.microsoft.com/en-us/blog/feed",
+          "category": "Cloud"
+        },
+        {
+          "title": "Terraform",
+          "url": "https://registry.terraform.io/feed.json",
+          "category": "Cloud"
+        }
+      ]
+    },
+    {
+      "name": "DevOps",
+      "icon": "🐳",
+      "tab_id": "devops",
+      "sources": [
+        {
+          "title": "Git Blog",
+          "url": "https://github.blog/feed",
+          "category": "DevOps"
+        },
+        {
+          "title": "CI/CD News",
+          "url": "https://www.jenkins.io/feed",
+          "category": "DevOps"
+        },
+        {
+          "title": "HashiCorp",
+          "url": "https://www.hashicorp.com/feed",
+          "category": "DevOps"
+        },
+        {
+          "title": "Prometheus Blog",
+          "url": "https://github.com/prometheus/prometheus/releases.atom",
+          "category": "DevOps"
+        },
+        {
+          "title": "Grafana Blog",
+          "url": "https://grafana.com/blog/feed",
+          "category": "DevOps"
+        }
+      ]
+    }
+  ],
+  "updateSchedule": "daily",
+  "lastUpdate": "2026-03-24T00:00:00Z",
+  "articlesPerFeed": 5,
+  "cacheTime": 86400
+}

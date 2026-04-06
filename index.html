@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio DUPUY Guylian</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sl-background">
+        <!-- Particules arrière-plan -->
+        <div class="particles"></div>
+        
+        <!-- Interface Principale -->
+        <div class="sl-interface">
+            <!-- HUB Central -->
+            <div class="sl-hub">
+                <div class="hub-title">
+                    <span class="glitch-text" data-text="SYSTEM">SYSTEM</span>
+                </div>
+                
+                <div class="hub-character">
+                    <div class="character-avatar">👤</div>
+                    <div class="character-info-hub">
+                        <div class="character-name-hub">GUYLIAN</div>
+                        <div class="character-level-hub">LEVEL 24</div>
+                    </div>
+                </div>
+                
+                <div class="hub-stats">
+                    <div class="hub-stat">
+                        <span>SANTÉ</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" id="health-fill" style="width: 100%"></div>
+                        </div>
+                        <span id="health-text">100/100</span>
+                    </div>
+                    <div class="hub-stat">
+                        <span>MANA</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" id="mana-fill" style="width: 100%"></div>
+                        </div>
+                        <span id="mana-text">100/100</span>
+                    </div>
+                </div>
+
+                <div class="hub-menu">
+                    <button class="menu-btn active" data-section="profil">
+                        <span class="btn-icon">📋</span>
+                        <span class="btn-text">PROFIL</span>
+                    </button>
+                    <button class="menu-btn" data-section="competences">
+                        <span class="btn-icon">⭐</span>
+                        <span class="btn-text">COMPÉTENCES</span>
+                    </button>
+                    <button class="menu-btn" data-section="experience">
+                        <span class="btn-icon">⚒️</span>
+                        <span class="btn-text">EXPÉRIENCES</span>
+                    </button>
+                    <button class="menu-btn" data-section="organisation">
+                        <span class="btn-icon">🏢</span>
+                        <span class="btn-text">ORGANISATION</span>
+                    </button>
+                    <button class="menu-btn" data-section="projets">
+                        <span class="btn-icon">🎯</span>
+                        <span class="btn-text">PROJETS</span>
+                    </button>
+                    <button class="menu-btn" data-section="veille">
+                        <span class="btn-icon">📰</span>
+                        <span class="btn-text">VEILLE</span>
+                    </button>
+                    <button class="menu-btn" data-section="contact">
+                        <span class="btn-icon">📡</span>
+                        <span class="btn-text">CONTACT</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Espace de Contenu Dynamique -->
+            <div class="sl-content-area">
+                <!-- PROFIL PANELS -->
+                <div class="sl-panel" id="profil-panel">
+                    <div class="panel-header">
+                        <div class="panel-title">💼 QUI SUIS-JE ?</div>
+                        <button class="panel-close">✕</button>
+                    </div>
+                    <div class="panel-content">
+                        <p>Actuellement en alternance au lycée Suzanne Valadon à Limoges pour l'obtention d'un <strong>BTS Services Informatique aux Organisations (SIO)</strong>.</p>
+                        <p>J'ai effectué ma formation dans le service informatique de la <strong>préfecture de la corrèze (SIDSIC)</strong> sur le site de la <strong>cité Administrative Jean Montalat à Tulle en corrèze(19)</strong>.</p>
+                        <p>J'ai intégré cette formation par passion des outils numériques et confirmer mon choix par la pratique durant mes expériences professionnelles de technicien informatique à compter de 2018.</p>
+                    </div>
+                </div>
+
+                <div class="sl-panel" id="spec-panel">
+                    <div class="panel-header">
+                        <div class="panel-title">🎮 SPÉCIALISATION</div>
+                        <button class="panel-close">✕</button>
+                    </div>
+                    <div class="panel-content">
+                        <p>Après avoir commencé en <strong>SLAM (Solution Logiciel et Applicatif Métier)</strong>, j'ai poursuivi en <strong>SISR (Solution d'Infrastructure, Système et réseau)</strong> pour mieux correspondre à mon expérience en entreprise.</p>
+                        <p><strong>SISR:</strong> Gestion de parc informatique, Active Directory, SQL, C#, Docker, Linux, PowerShell</p>
+                        <p><strong>SLAM:</strong> Langages de développement, Programmation Orientée Objet, JavaScript</p>
+                    </div>
+                </div>
+
+                <div class="sl-panel" id="formation-panel">
+                    <div class="panel-header">
+                        <div class="panel-title">📚 PARCOURS SCOLAIRE</div>
+                        <button class="panel-close">✕</button>
+                    </div>
+                    <div class="panel-content">
+                        <div class="formation-item">
+                            <div class="formation-header">Lycée Suzanne Valadon - Limoges</div>
+                            <div class="formation-detail">BTS Services Informatiques aux Organisations (2024-2026)</div>
+                        </div>
+                        <div class="formation-item">
+                            <div class="formation-header">Lycée Édouard Vaillant</div>
+                            <div class="formation-detail">BAC Professionnel Commerce (2021)</div>
+                            <div class="formation-detail">BEP Métiers de la Relation Client et Usager (2020)</div>
+                            <div class="formation-detail">DNB série Professionnelle (2019)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sl-panel" id="langues-panel">
+                    <div class="panel-header">
+                        <div class="panel-title">🌐 LANGUES</div>
+                        <button class="panel-close">✕</button>
+                    </div>
+                    <div class="panel-content">
+                        <div class="langue-item">
+                            <span class="langue-name">🇫🇷 FRANÇAIS</span>
+                            <span class="langue-level">Natif - Excellente maîtrise</span>
+                        </div>
+                        <div class="langue-item">
+                            <span class="langue-name">🇬🇧 ANGLAIS</span>
+                            <span class="langue-level">B1/B2 - Intermédiaire-Avancé</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sl-panel" id="objectifs-panel">
+                    <div class="panel-header">
+                        <div class="panel-title">🎯 OBJECTIFS PROFESSIONNELS</div>
+                        <button class="panel-close">✕</button>
+                    </div>
+                    <div class="panel-content">
+                        <p><strong>Poste recherché:</strong> Technicien Support/Infrastructure Informatique ou Administrateur Systèmes & Réseaux</p>
+                        <p><strong>Type de structure:</strong> PME, startup tech, collectivités/administrations</p>
+                        <p><strong>Localisation:</strong> Région : Nouvelle-Aquitaine / Occitanie / Auvergne-Rhône-Alpes / Télétravail hybride</p>
+                        <p><strong>Missions:</strong> Gestion d'infrastructure, admin réseau et sécurité, support utilisateurs, déploiement IT, DevOps/Cloud</p>
+                    </div>
+                </div>
+
+                <div class="sl-panel" id="motivations-panel">
+                    <div class="panel-header">
+                        <div class="panel-title">💫 MOTIVATIONS & LOISIRS</div>
+                        <button class="panel-close">✕</button>
+                    </div>
+                    <div class="panel-content">
+                        <p><strong>Motivations:</strong> Intéressé par le milieu de l'informatique et son fonctionnement, réseau ou développement. Passionné par les jeux vidéos et aimerais contribuer à leur développement. Souhaite acquérir de nouvelles compétences.</p>
+                        <p><strong>Loisirs:</strong> Informatique, jeux vidéos (solo, shooter, RPG, compétition) et mangas (Solo Leveling, My Hero Academia, Dragon Ball, GTO, etc.)</p>
+                    </div>
+                </div>
+
+                <!-- COMPÉTENCES -->
+                <div class="sl-panel" id="competences-panel">
+                    <div class="panel-header">
+                        <div class="panel-title">⭐ COMPÉTENCES</div>
+                        <button class="panel-close">✕</button>
+                    </div>
+                    <div class="panel-content skills-grid">
+                        <div class="skill-block">
+                            <div class="skill-category-title">INFRASTRUCTURE RÉSEAU</div>
+                            <div class="skill-list">
+                                <div class="skill-row">
+                                    <span>Gestion Parc Informatique</span>
+                                    <div class="mini-bar"><div class="mini-fill" style="width: 85%"></div></div>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-row">
+                                    <span>GLPI (Ticketing)</span>
+                                    <div class="mini-bar"><div class="mini-fill" style="width: 80%"></div></div>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-row">
+                                    <span>Active Directory</span>
+                                    <div class="mini-bar"><div class="mini-fill" style="width: 70%"></div></div>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-row">
+                                    <span>Brassage Réseau</span>
+                                    <div class="mini-bar"><div class="mini-fill" style="width: 90%"></div></div>
+                                    <span>90%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-block">
+                            <div class="skill-category-title">PROGRAMMATION</div>
+                            <div class="skill-list">
+                                <div class="skill-row">
+                                    <span>SQL</span>
+                                    <div class="mini-bar"><div class="mini-fill" style="width: 65%"></div></div>
+                                    <span>65%</span>
+                                </div>
+                                <div class="skill-row">
+                                    <span>PowerShell</span>
+                                    <div class="mini-bar"><div class="mini-fill" style="width: 70%"></div></div>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-row">
+                                    <span>JavaScript</span>
+                                    <div class="mini-bar"><div class="mini-fill" style="width: 55%"></div></div>
+                                    <span>55%</span>
+                                </div>
+                                <div class="skill-row">
+                                    <span>C#</span>
+                                    <div class="mini-bar"><div class="mini-fill" style="width: 65%"></div></div>
+                                    <span>65%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-block">
+                            <div class="skill-category-title">SYSTÈMES</div>
+                            <div class="skill-list">
+                                <div class="skill-row">
+                                    <span>Docker</span>
+                                    <div class="mini-bar"><div class="mini-fill" style="width: 60%"></div></div>
+                                    <span>60%</span>
+                                </div>
+                                <div class="skill-row">
+                                    <span>Linux Bash</span>
+                                    <div class="mini-bar"><div class="mini-fill" style="width: 80%"></div></div>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-row">
+                                    <span>PfSense VPN</span>
+                                    <div class="mini-bar"><div class="mini-fill" style="width: 60%"></div></div>
+                                    <span>60%</span>
+                                </div>
+                                <div class="skill-row">
+                                    <span>Résolution de Pannes</span>
+                                    <div class="mini-bar"><div class="mini-fill" style="width: 96%"></div></div>
+                                    <span>96%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EXPÉRIENCES -->
+                <div class="sl-panel" id="experience-panel">
+                    <div class="panel-header">
+                        <div class="panel-title">⚒️ EXPÉRIENCES</div>
+                        <button class="panel-close">✕</button>
+                    </div>
+                    <div class="panel-content">
+                        <div class="exp-tab">
+                            <div class="exp-date">Sept 2024 - Juin 2026</div>
+                            <div class="exp-title">Agent d'assistance informatique</div>
+                            <div class="exp-company">Cité Administrative Jean Montalat</div>
+                            <div class="exp-desc">Support utilisateur | Gestion incidents | Dépannage matériel/logiciel | Configuration poste</div>
+                            <div class="exp-reward">EXP +220</div>
+                        </div>
+                        <div class="exp-tab">
+                            <div class="exp-date">Sept - Nov 2023</div>
+                            <div class="exp-title">Agent NTIT - Soutien Informatique</div>
+                            <div class="exp-company">Tribunal Judiciaire de Limoges</div>
+                            <div class="exp-desc">Support utilisateur | Gestion incidents | Dépannage matériel/logiciel</div>
+                            <div class="exp-reward">EXP +30</div>
+                        </div>
+                        <div class="exp-tab">
+                            <div class="exp-date">Juin 2023</div>
+                            <div class="exp-title">Technicien Informatique (Intérim)</div>
+                            <div class="exp-company">Crédit Agricole Centre Ouest Agence Entreprises</div>
+                            <div class="exp-desc">Maintenance informatique | Gestion parc matériel | Support utilisateurs</div>
+                            <div class="exp-reward">EXP +10</div>
+                        </div>
+                        <div class="exp-tab">
+                            <div class="exp-date">Avril 2022 - Avril 2023</div>
+                            <div class="exp-title">Agent NTIT - Soutien Informatique</div>
+                            <div class="exp-company">Service Admin Régional Cour d'Appel de Limoges</div>
+                            <div class="exp-desc">Admin système et réseau | Maintenance parc | Gestion utilisateurs et accès | Support niv 1-2</div>
+                            <div class="exp-reward">EXP +120</div>
+                        </div>
+                        <div class="exp-tab">
+                            <div class="exp-date">Juin 2021 - Nov 2021</div>
+                            <div class="exp-title">Vendeur Conseil</div>
+                            <div class="exp-company">King Jouet</div>
+                            <div class="exp-desc">Service client | Conseil en jeux et jouets | Agencement des rayons</div>
+                            <div class="exp-reward">EXP +60</div>
+                        </div>
+                        <div class="exp-tab">
+                            <div class="exp-date">Mars 2018</div>
+                            <div class="exp-title">Technicien Maintenance Informatique</div>
+                            <div class="exp-company">MicroRezo</div>
+                            <div class="exp-desc">Stage de découverte | Maintenance informatique | Diagnostique des pannes</div>
+                            <div class="exp-reward">EXP +10</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ORGANISATION -->
+                <div class="sl-panel" id="organisation-panel">
+                    <div class="panel-header">
+                        <div class="panel-title">🏢 CITÉ ADMINISTRATIVE JEAN MONTALAT</div>
+                        <button class="panel-close">✕</button>
+                    </div>
+                    <div class="panel-content">
+                        <h3>🏛️ Structure Administrative</h3>
+                        <div class="org-info">
+                            <p><strong>Ministère de rattachement:</strong> Ministère de l'Intérieur</p>
+                            <p><strong>Localisation administrative:</strong> Préfecture de la Corrèze</p>
+                            <p><strong>Fonction:</strong> Immeuble de grande hauteur hébergeant depuis 1973 les services de l'état dans le département de la Corrèze</p>
+                            <p style="margin-top: 10px;">Fédération centralisée de multiples services administratifs interministériels dans une même tour.</p>
+                        </div>
+
+                        <h3 style="margin-top: 20px;">📊 Organigramme & Services</h3>
+                        <div class="org-info">
+                            <p><strong>Direction Départementale Interministérielle (DDI)</strong></p>
+                            <ul style="margin-top: 10px; margin-left: 20px;">
+                                <li><strong>DDT</strong> - Direction départementale des territoires</li>
+                                <li><strong>DDETSPP</strong> - Direction Départementale de l'Emploi, du Travail, des Solidarités et de la Protection des Populations</li>
+                            </ul>
+                            <p style="margin-top: 15px;"><strong>Services Complémentaires:</strong></p>
+                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                <li><strong>DSDEN</strong> - Direction des Services de l'Éducation Nationale</li>
+                                <li><strong>ONAC</strong> - Office National des Anciens Combattants</li>
+                            </ul>
+                            <p style="margin-top: 15px;"><strong>Autres services:</strong></p>
+                            <ul style="margin-top: 8px; margin-left: 20px;">
+                                <li><strong>DDFIP</strong> - Direction Départementale des Finances Publiques</li>
+                                <li><strong>OFB</strong> - Office Français de la Biodiversité</li>
+                                <li><strong>ONAC</strong> - Office National des Anciens Combattants</li>
+                                <li><strong>DSDEN</strong> - Direction des Services de l'Éducation Nationale</li>
+                                <li><strong>DMD</strong> - Délégation Militaire Départementale</li>
+                                <li><strong>PFMOE</strong> - Plateforme de la main d'oeuvre étrangère</li>
+                                <li><strong>ARS</strong> - Agence Régionale de Santé</li>
+                            </ul>
+                        </div>
+
+                        <h3 style="margin-top: 20px;">🏗️ Informations Architecturales</h3>
+                        <div class="org-info">
+                            <p><strong>Localisation:</strong> Tulle, Corrèze</p>
+                            <p><strong>Architecte:</strong> Jacques Sarrabezolles (1923-1991)</p>
+                            <p><strong>Construction:</strong> Panneaux en béton préfabriqués - Architecture XXe siècle moderne</p>
+                            <p><strong>Patrimoine:</strong> Labélisée "Patrimoine du XXe siècle" depuis 2010</p>
+                            <p><strong>Hauteur:</strong> 90 mètres (Monument architectural majeur de la région)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJETS -->
+                <div class="sl-panel" id="projets-panel">
+                    <div class="panel-header">
+                        <div class="panel-title">🎯 PROJETS</div>
+                        <button class="panel-close">✕</button>
+                    </div>
+                    <div class="panel-content">
+                        <div class="project-item">
+                            <div class="project-icon">🐳</div>
+                            <div class="project-info">
+                                <div class="project-name">Création Docker & Orchestration</div>
+                                <div class="project-desc">Dockerfiles multi-stage optimisés, docker-compose. Résultat: -60% temps déploiement</div>
+                                <div class="project-tags"><span>Docker</span><span>Orchestration</span><span>Sécurité</span><span>Documentation à venir</span></div>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <div class="project-icon">🎫</div>
+                            <div class="project-info">
+                                <div class="project-name">Système de Ticketing GLPI</div>
+                                <div class="project-desc">Déploiement GLPI, workflows, intégration AD. Résultat: -45% temps résolution</div>
+                                <div class="project-tags"><span>GLPI</span><span>Ticketing</span><span>Active Directory</span><span>Documentation à venir</span></div>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <div class="project-icon">🔌</div>
+                            <div class="project-info">
+                                <div class="project-name">Baie de Brassage & Cablage Réseau</div>
+                                <div class="project-desc">Design & installation baie 42U, câblage cat-6A, documentation Visio. Résultat: Zéro downtime</div>
+                                <div class="project-tags"><span>Réseau</span><span>Infrastructure</span><span>Documentation à venir</span></div>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <div class="project-icon">🔐</div>
+                            <div class="project-info">
+                                <div class="project-name">VPN Sécurisé PfSense</div>
+                                <div class="project-desc">Config PfSense, chiffrement OpenVPN, règles firewall, VLANs. Résultat: 150+ users concurrents</div>
+                                <div class="project-tags"><span>PfSense</span><span>VPN</span><span>Sécurité</span><span>Documentation à venir</span></div>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <div class="project-icon">🌐</div>
+                            <div class="project-info">
+                                <div class="project-name">Création d'un domaine</div>
+                                <div class="project-desc">Création d'un nom de domaine et configuration des serveurs</div>
+                                <div class="project-tags"><span>Infrastructure</span><span>DHCP</span><span>DNS</span><span>Documentation à venir</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VEILLE -->
+                <div class="sl-panel" id="veille-panel">
+                    <div class="panel-header">
+                        <div class="panel-title">📰 VEILLE TECHNOLOGIQUE</div>
+                        <button class="panel-close">✕</button>
+                    </div>
+                    <div class="panel-content">
+                        <!-- Onglets de la Veille -->
+                        <div class="veille-tabs">
+                            <button class="veille-tab-btn active" data-tab="recents">📌 Récents</button>
+                            <button class="veille-tab-btn" data-tab="infrastructure">🏗️ Infrastructure</button>
+                            <button class="veille-tab-btn" data-tab="developpement">💻 Développement</button>
+                            <button class="veille-tab-btn" data-tab="ia">🤖 IA & ML</button>
+                            <button class="veille-tab-btn" data-tab="cloud">☁️ Cloud</button>
+                            <button class="veille-tab-btn" data-tab="securite">🔐 Sécurité</button>
+                            <button class="veille-tab-btn" data-tab="devops">🐳 DevOps</button>
+                        </div>
+
+                        <!-- Contenu des onglets -->
+                        <div class="veille-tab-content active" id="recents-tab">
+                            <div class="veille-grid">
+                                <div class="veille-item">
+                                    <div class="veille-badge">Mars 2026</div>
+                                    <div class="veille-category">🏗️ Infrastructure</div>
+                                    <div class="veille-title">Kubernetes 1.30 - Nouvelles Fonctionnalités</div>
+                                    <div class="veille-description">Performance +15%, nouvelles APIs des nodes, webhooks avancés. Recommandé pour clusters critiques.</div>
+                                    <div class="veille-tags"><span>Kubernetes</span><span>DevOps</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Mars 2026</div>
+                                    <div class="veille-category">💻 Développement</div>
+                                    <div class="veille-title">.NET 9 - Nouvelles Capacités</div>
+                                    <div class="veille-description">Native AOT +25% perfs, C# 13, cross-platform amélioré, AI/ML intégré. Migration recommandée.</div>
+                                    <div class="veille-tags"><span>C#</span><span>.NET</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Mars 2026</div>
+                                    <div class="veille-category">🤖 IA & ML</div>
+                                    <div class="veille-title">ChatGPT & LLMs pour IT Admin</div>
+                                    <div class="veille-description">Automation tâches IT, docs auto-générées, troubleshooting assisté. Validation output requise.</div>
+                                    <div class="veille-tags"><span>AI/ML</span><span>Automation</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Mars 2026</div>
+                                    <div class="veille-category">☁️ Cloud</div>
+                                    <div class="veille-title">AWS Lambda - Durée Max 1h</div>
+                                    <div class="veille-description">Serverless enfin scalable, pricing optimisé, workflow plus flexibles.</div>
+                                    <div class="veille-tags"><span>AWS</span><span>Serverless</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Mars 2026</div>
+                                    <div class="veille-category">🔐 Sécurité</div>
+                                    <div class="veille-title">Zero Trust Architecture 2.0</div>
+                                    <div class="veille-description">Never Trust Always Verify. NIST Framework 2.0, segmentation micro, risque réduit.</div>
+                                    <div class="veille-tags"><span>Zero Trust</span><span>Compliance</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Mars 2026</div>
+                                    <div class="veille-category">🐳 DevOps</div>
+                                    <div class="veille-title">Docker v26 & Containerd Evolution</div>
+                                    <div class="veille-description">Sécurité conteneurs renforcée, gestion images IPFS, GPU natif. K8s compatible.</div>
+                                    <div class="veille-tags"><span>Docker</span><span>Containers</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Infrastructure Tab -->
+                        <div class="veille-tab-content" id="infrastructure-tab">
+                            <div class="veille-grid">
+                                <div class="veille-item">
+                                    <div class="veille-badge">Mars 2026</div>
+                                    <div class="veille-category">🏗️ Infrastructure</div>
+                                    <div class="veille-title">Kubernetes 1.30 - Nouvelles Fonctionnalités</div>
+                                    <div class="veille-description">Performance +15%, nouvelles APIs des nodes, webhooks avancés. Recommandé pour clusters critiques.</div>
+                                    <div class="veille-tags"><span>Kubernetes</span><span>DevOps</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Février 2026</div>
+                                    <div class="veille-category">🏗️ Infrastructure</div>
+                                    <div class="veille-title">Linux Kernel 6.x - Sécurité Renforcée</div>
+                                    <div class="veille-description">Patch critique CVE-2026, Seccomp renforcé, contrôles d'accès avancés. Mise à jour vitale pour production.</div>
+                                    <div class="veille-tags"><span>Linux</span><span>Sécurité</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Janvier 2026</div>
+                                    <div class="veille-category">☁️ Infrastructure</div>
+                                    <div class="veille-title">Terraform 1.7 - State Management</div>
+                                    <div class="veille-description">Gestion d'état distribuée, modules optimisés, meilleure performance. Grandes infrastructures bénéficiaires.</div>
+                                    <div class="veille-tags"><span>Terraform</span><span>IaC</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Développement Tab -->
+                        <div class="veille-tab-content" id="developpement-tab">
+                            <div class="veille-grid">
+                                <div class="veille-item">
+                                    <div class="veille-badge">Mars 2026</div>
+                                    <div class="veille-category">💻 Développement</div>
+                                    <div class="veille-title">.NET 9 - Nouvelles Capacités</div>
+                                    <div class="veille-description">Native AOT +25% perfs, C# 13, cross-platform amélioré, AI/ML intégré. Migration recommandée.</div>
+                                    <div class="veille-tags"><span>C#</span><span>.NET</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Février 2026</div>
+                                    <div class="veille-category">💻 Développement</div>
+                                    <div class="veille-title">Node.js 22 LTS - ECMAScript 2024</div>
+                                    <div class="veille-description">Support ES2024 complet, Worker threads optimisés, stream améliorés. Support jusqu'à 2028.</div>
+                                    <div class="veille-tags"><span>Node.js</span><span>JavaScript</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Janvier 2026</div>
+                                    <div class="veille-category">💻 Développement</div>
+                                    <div class="veille-title">Python 3.13 - Performance Tier 2</div>
+                                    <div class="veille-description">JIT compiler expérimental, +30% rapidité, typing amélioré. Data science accélérée.</div>
+                                    <div class="veille-tags"><span>Python</span><span>Performance</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- IA & ML Tab -->
+                        <div class="veille-tab-content" id="ia-tab">
+                            <div class="veille-grid">
+                                <div class="veille-item">
+                                    <div class="veille-badge">Mars 2026</div>
+                                    <div class="veille-category">🤖 IA & ML</div>
+                                    <div class="veille-title">ChatGPT & LLMs pour IT Admin</div>
+                                    <div class="veille-description">Automation tâches IT, docs auto-générées, troubleshooting assisté. Validation output requise.</div>
+                                    <div class="veille-tags"><span>AI/ML</span><span>Automation</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Février 2026</div>
+                                    <div class="veille-category">🤖 IA & ML</div>
+                                    <div class="veille-title">Claude 4 - Modèles Multimodaux</div>
+                                    <div class="veille-description">Support image/vidéo, contexte 200K tokens, reasoning avancé. Code generation +40%.</div>
+                                    <div class="veille-tags"><span>LLM</span><span>Multimodal</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Janvier 2026</div>
+                                    <div class="veille-category">🤖 IA & ML</div>
+                                    <div class="veille-title">TensorFlow 3.0 - Génération 3</div>
+                                    <div class="veille-description">API simplifiées, performance GPU/TPU optimale, training distribué native.</div>
+                                    <div class="veille-tags"><span>TensorFlow</span><span>ML</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cloud Tab -->
+                        <div class="veille-tab-content" id="cloud-tab">
+                            <div class="veille-grid">
+                                <div class="veille-item">
+                                    <div class="veille-badge">Mars 2026</div>
+                                    <div class="veille-category">☁️ Cloud</div>
+                                    <div class="veille-title">AWS Lambda - Durée Max 1h</div>
+                                    <div class="veille-description">Serverless enfin scalable, pricing optimisé, workflow plus flexibles.</div>
+                                    <div class="veille-tags"><span>AWS</span><span>Serverless</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Février 2026</div>
+                                    <div class="veille-category">☁️ Cloud</div>
+                                    <div class="veille-title">Azure Copilot - DevOps Automata</div>
+                                    <div class="veille-description">Automation déploiements, gestion coûts IA, infra recommendations intelligentes.</div>
+                                    <div class="veille-tags"><span>Azure</span><span>DevOps</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Janvier 2026</div>
+                                    <div class="veille-category">☁️ Cloud</div>
+                                    <div class="veille-title">GCP - Quantum Computing Preview</div>
+                                    <div class="veille-description">Accès quantum machines, chips maison Gen 3, simulation classique intégrée.</div>
+                                    <div class="veille-tags"><span>GCP</span><span>Quantum</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sécurité Tab -->
+                        <div class="veille-tab-content" id="securite-tab">
+                            <div class="veille-grid">
+                                <div class="veille-item">
+                                    <div class="veille-badge">Mars 2026</div>
+                                    <div class="veille-category">🔐 Sécurité</div>
+                                    <div class="veille-title">Zero Trust Architecture 2.0</div>
+                                    <div class="veille-description">Never Trust Always Verify. NIST Framework 2.0, segmentation micro, risque réduit.</div>
+                                    <div class="veille-tags"><span>Zero Trust</span><span>Compliance</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Février 2026</div>
+                                    <div class="veille-category">🔐 Sécurité</div>
+                                    <div class="veille-title">Post-Quantum Cryptography Standards</div>
+                                    <div class="veille-description">NIST approuve ML-KEM, ML-DSA. Migration urgent vers 2030.</div>
+                                    <div class="veille-tags"><span>Crypto</span><span>Quantum</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Janvier 2026</div>
+                                    <div class="veille-category">🔐 Sécurité</div>
+                                    <div class="veille-title">SIEM Intelligence + IA</div>
+                                    <div class="veille-description">Detection anomalies temps réel, alertes intelligentes, MTTR -60%.</div>
+                                    <div class="veille-tags"><span>SIEM</span><span>Détection</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DevOps Tab -->
+                        <div class="veille-tab-content" id="devops-tab">
+                            <div class="veille-grid">
+                                <div class="veille-item">
+                                    <div class="veille-badge">Mars 2026</div>
+                                    <div class="veille-category">🐳 DevOps</div>
+                                    <div class="veille-title">Docker v26 & Containerd Evolution</div>
+                                    <div class="veille-description">Sécurité conteneurs renforcée, gestion images IPFS, GPU natif. K8s compatible.</div>
+                                    <div class="veille-tags"><span>Docker</span><span>Containers</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Février 2026</div>
+                                    <div class="veille-category">🐳 DevOps</div>
+                                    <div class="veille-title">CI/CD Pipelines - GitHub Actions 2.0</div>
+                                    <div class="veille-description">Matrix builds 10x plus rapides, coûts réduits 40%, secrets sécurisés.</div>
+                                    <div class="veille-tags"><span>CI/CD</span><span>GitHub</span></div>
+                                </div>
+                                <div class="veille-item">
+                                    <div class="veille-badge">Janvier 2026</div>
+                                    <div class="veille-category">🐳 DevOps</div>
+                                    <div class="veille-title">ArgoCD v3 - GitOps Declarative</div>
+                                    <div class="veille-description">Synchro en temps réel, UI simplifiée, multi-cluster seamless.</div>
+                                    <div class="veille-tags"><span>GitOps</span><span>Kubernetes</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="sl-panel" id="contact-panel">
+                    <div class="panel-header">
+                        <div class="panel-title">📡 CONTACT</div>
+                        <button class="panel-close">✕</button>
+                    </div>
+                    <div class="panel-content">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-field">
+                                <label>NOM</label>
+                                <input type="text" id="name" name="name" placeholder="Votre nom..." required>
+                            </div>
+                            <div class="form-field">
+                                <label>EMAIL</label>
+                                <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                            </div>
+                            <div class="form-field">
+                                <label>SUJET</label>
+                                <input type="text" id="subject" name="subject" placeholder="Sujet..." required>
+                            </div>
+                            <div class="form-field">
+                                <label>MESSAGE</label>
+                                <textarea id="message" name="message" placeholder="Votre message..." rows="4" required></textarea>
+                            </div>
+                            <div class="captcha-verification">
+                                <div class="captcha-label">
+                                    <span class="scan-icon">🔍</span>
+                                    <span class="captcha-text" id="captchaQuestion"></span>
+                                </div>
+                                <input type="text" id="captchaInput" placeholder="Réponse..." class="captcha-input" required>
+                                <div class="captcha-validation" id="captchaValidation"></div>
+                            </div>
+                            <button type="submit" class="submit-btn">ENVOYER ⚡</button>
+                            <div id="formMessage" class="form-message"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
