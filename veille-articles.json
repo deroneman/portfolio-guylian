@@ -1,0 +1,43 @@
+{
+  "lastUpdate": "2026-04-06T00:00:00",
+  "articles": {
+    "recents": {
+      "icon": "📌",
+      "articles": [
+        {
+          "title": "Initialisation de la veille technologique",
+          "description": "Ce fichier sera mis à jour automatiquement chaque jour via GitHub Actions. Les articles de technologie s'afficheront ici une fois générés.",
+          "link": "https://github.com/deroneman/portfolio-guylian",
+          "source": "Portfolio Guylian",
+          "category": "Portfolio",
+          "published": "2026-04-06T00:00:00",
+          "author": "GitHub Action Bot"
+        }
+      ]
+    },
+    "infrastructure": {
+      "icon": "🏗️",
+      "articles": []
+    },
+    "developpement": {
+      "icon": "💻",
+      "articles": []
+    },
+    "securite": {
+      "icon": "🔐",
+      "articles": []
+    },
+    "ia": {
+      "icon": "🤖",
+      "articles": []
+    },
+    "cloud": {
+      "icon": "☁️",
+      "articles": []
+    },
+    "monitoring": {
+      "icon": "📊",
+      "articles": []
+    }
+  }
+}

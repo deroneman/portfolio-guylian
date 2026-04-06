@@ -37,7 +37,7 @@ Ce portfolio présente :
 - **Cité Administrative Jean Montalat** (90m de hauteur - 1967)
 - Ministère de l'Intérieur / Préfecture de la Corrèze
 - Structure béton préfabriqué, 150+ collaborateurs
-- **Services DDI principales**: Services de la Préfecture, Trésor Public, Services Informatiques Partagés
+- **Services DDI principaux**: Services de la Préfecture, Trésor Public, Services Informatiques Partagés
 - **Services Complémentaires**: DFIP (Finances), DSDEN, ONAC, DDT, DDETSPP
 - Enjeux IT: Gestion réseau complexe, sécurité données (RGPD), infrastructure administrative
 

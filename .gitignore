@@ -22,7 +22,7 @@ ENV/
 env/
 
 # Generated files
-veille-articles.json
+# veille-articles.json (décommentez pour ignorer, mais doit être généré par GitHub Actions)
 
 # IDE
 .vscode/
