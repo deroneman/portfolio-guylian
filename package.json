@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-guylian",
+  "version": "1.0.0",
+  "description": "Portfolio MMORPG avec formulaire de contact",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site'",
+    "dev": "vercel dev"
+  },
+  "keywords": ["portfolio", "mmorpg"],
+  "author": "Guylian Dupuy",
+  "license": "MIT",
+  "engines": {
+    "node": "20.x"
+  }
+}

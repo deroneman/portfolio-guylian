@@ -1,10 +1,5 @@
 {
-  "buildCommand": "",
-  "framework": "static",
-  "outputDirectory": ".",
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs20.x"
-    }
-  }
+  "buildCommand": "echo 'Static build'",
+  "outputDirectory": "./",
+  "framework": "static"
 }
