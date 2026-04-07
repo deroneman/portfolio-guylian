@@ -410,8 +410,8 @@ function setupPotionKeybinds() {
 
 // ===== CHEAT CODE SYSTEM =====
 let cheatBuffer = [];
-// Sequence: HAUT, HAUT, A, BAS, R, BAS, I, GAUCHE, S, DROITE, E, GAUCHE, DROITE
-const CHEAT_CODE = ['ArrowUp', 'ArrowUp', 'A', 'ArrowDown', 'R', 'ArrowDown', 'I', 'ArrowLeft', 'S', 'ArrowRight', 'E', 'ArrowLeft', 'ArrowRight']; 
+// Sequence: UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT (Classic Konami Code)
+const CHEAT_CODE = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight']; 
 const CHEAT_TIMEOUT = 5000; // 5 seconds to complete the code
 let cheatTimer = null;
 
@@ -428,23 +428,6 @@ function setupCheatCode() {
             cheatTimer = setTimeout(() => {
                 cheatBuffer = [];
             }, CHEAT_TIMEOUT);
-        }
-    });
-    
-    document.addEventListener('keypress', (e) => {
-        // Letter keys (skip if typing in input/textarea)
-        if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
-            const letter = e.key.toUpperCase();
-            if (['A', 'R', 'I', 'S', 'E'].includes(letter)) {
-                cheatBuffer.push(letter);
-                
-                checkCheatCode();
-                
-                clearTimeout(cheatTimer);
-                cheatTimer = setTimeout(() => {
-                    cheatBuffer = [];
-                }, CHEAT_TIMEOUT);
-            }
         }
     });
 }
@@ -482,8 +465,8 @@ function activateCheatCode() {
         <div style="color: #fbbf24; font-size: 36px; font-weight: 900; margin-bottom: 20px; letter-spacing: 3px; text-transform: uppercase;">⚡ SHADOW ABILITIES ACTIVATED ⚡</div>
         <div style="color: #e5e7eb; font-size: 14px; line-height: 1.8; margin-bottom: 15px;">
             <div style="margin-bottom: 10px;">🌑 <strong>Progression cachée activée</strong></div>
-            <div style="margin-bottom: 10px;"> Email: guylian.couhet@gmail.com</div>
-            <div style="margin-bottom: 10px;">💼 LinkedIn: linkedin.com/in/guylian-couhet</div>
+            <div style="margin-bottom: 10px;"> Email: guylian.dupuy@hotmail.fr</div>
+            <div style="margin-bottom: 10px;">💼 LinkedIn: https://www.linkedin.com/in/guylian-dupuy-012294269/</div>
             <div style="color: #9ca3af; font-size: 12px; margin-top: 15px;">« Vous avez découvert le secret... »</div>
         </div>
         <button id="closeSecret" style="
