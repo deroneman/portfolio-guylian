@@ -236,10 +236,12 @@ function showPotionMessage(message, type) {
 // ===== SOLO LEVELING INTERFACE LOGIC =====
 
 // Charger et afficher les articles de veille technologique depuis JSON
+let veilleData = null;
+
 async function loadVeilleArticles() {
     try {
         const response = await fetch('veille-articles.json');
-        const veilleData = await response.json();
+        veilleData = await response.json();
         
         // Fonction pour nettoyer le HTML
         const stripHTML = (html) => {
@@ -248,28 +250,87 @@ async function loadVeilleArticles() {
             return div.textContent || div.innerText || '';
         };
         
-        // Afficher les articles par catégorie/tab
-        for (const [tabId, categoryData] of Object.entries(veilleData.articles)) {
-            const tabContent = document.getElementById(`${tabId}-tab`);
+        // Extraire toutes les années disponibles
+        const yearsSet = new Set();
+        for (const categoryData of Object.values(veilleData.articles)) {
+            if (categoryData.articles) {
+                categoryData.articles.forEach(article => {
+                    const year = new Date(article.published).getFullYear();
+                    yearsSet.add(year);
+                });
+            }
+        }
+        
+        // Trier les années en ordre décroissant
+        const years = Array.from(yearsSet).sort((a, b) => b - a);
+        
+        // Remplir le select avec les années
+        const yearSelect = document.getElementById('veille-year-select');
+        if (yearSelect) {
+            years.forEach(year => {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                yearSelect.appendChild(option);
+            });
             
-            if (tabContent && categoryData.articles && categoryData.articles.length > 0) {
-                // Créer les éléments HTML pour les articles
-                const articlesHTML = categoryData.articles.map(article => `
+            // Gérer le changement de sélection d'année
+            yearSelect.addEventListener('change', () => {
+                displayVeilleArticles(stripHTML);
+            });
+        }
+        
+        // Afficher les articles initialement
+        displayVeilleArticles(stripHTML);
+        
+        console.log('✅ Articles de veille chargés avec succès');
+    } catch (error) {
+        console.warn('⚠️ Erreur lors du chargement des articles de veille:', error);
+    }
+}
+
+function displayVeilleArticles(stripHTML) {
+    if (!veilleData) return;
+    
+    const selectedYear = document.getElementById('veille-year-select')?.value;
+    
+    // Afficher les articles par catégorie/tab
+    for (const [tabId, categoryData] of Object.entries(veilleData.articles)) {
+        const tabContent = document.getElementById(`${tabId}-tab`);
+        const categoryIcon = categoryData.icon || '📌';
+        
+        if (tabContent && categoryData.articles && categoryData.articles.length > 0) {
+            let articlesToDisplay = categoryData.articles;
+            
+            // Pour "Récents", limiter à 6 articles (sans filtre d'année)
+            if (tabId === 'recents') {
+                articlesToDisplay = categoryData.articles.slice(0, 6);
+            } else if (selectedYear) {
+                // Pour les autres catégories, filtrer par année si sélectionnée
+                articlesToDisplay = categoryData.articles.filter(article => {
+                    const articleYear = new Date(article.published).getFullYear();
+                    return articleYear === parseInt(selectedYear);
+                });
+            }
+            
+            // Créer les éléments HTML pour les articles
+            const articlesHTML = articlesToDisplay.length > 0
+                ? articlesToDisplay.map(article => `
                     <div class="veille-item">
                         <div class="veille-badge">${new Date(article.published).toLocaleDateString('fr-FR')}</div>
-                        <div class="veille-category">${article.category}</div>
+                        <div class="veille-category">${categoryIcon} ${article.category}</div>
                         <div class="veille-title">${article.title}</div>
                         <div class="veille-description">${stripHTML(article.description)}</div>
                         <a href="${article.link}" target="_blank" class="veille-source">📌 ${article.source}</a>
                     </div>
-                `).join('');
-                
-                // Injecter dans la page avec une grille
-                tabContent.innerHTML = `<div class="veille-grid">${articlesHTML}</div>`;
-            }
+                `).join('')
+                : `<div style="padding: 20px; text-align: center; color: var(--muted-text);">Aucun article disponible${selectedYear ? ' pour ' + selectedYear : ''}</div>`;
+            
+            // Injecter dans la page avec une grille
+            tabContent.innerHTML = `<div class="veille-grid">${articlesHTML}</div>`;
         }
-        
-        console.log('✅ Articles de veille chargés avec succès');
+    }
+}
     } catch (error) {
         console.warn('⚠️ Erreur lors du chargement des articles de veille:', error);
         // Les articles statiques dans le HTML seront conservés en fallback
