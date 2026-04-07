@@ -1035,7 +1035,8 @@ body {
     .sl-hub {
         width: 100%;
         padding: 12px;
-        gap: 12px;
+        gap: 10px;
+        position: relative;
     }
 
     .hub-title {
@@ -1052,22 +1053,18 @@ body {
 
     .hub-menu {
         display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.95);
-        border: 1px solid rgba(139, 92, 246, 0.3);
-        border-radius: 0 0 6px 6px;
-        padding: 12px;
         gap: 6px;
         grid-template-columns: 1fr;
-        z-index: 1000;
-        border-top: 2px solid var(--primary-purple);
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
     }
 
     .hub-menu.active {
         display: grid;
+        max-height: 500px;
+        opacity: 1;
     }
 
     .menu-btn {
