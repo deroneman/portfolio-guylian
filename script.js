@@ -313,83 +313,62 @@ function displayVeilleArticles() {
                 // Initialiser l'état de pagination pour ce tab
                 if (!veillePaginationState[tabId]) {
                     veillePaginationState[tabId] = {
-                        selectedYear: 'all'
+                        currentPage: 1,
+                        itemsPerPage: 5,
+                        totalArticles: articlesToDisplay.length
                     };
                 }
                 
                 const state = veillePaginationState[tabId];
+                state.totalArticles = articlesToDisplay.length;
+                state.totalPages = Math.ceil(state.totalArticles / state.itemsPerPage);
                 
-                // Filtrer par année si sélectionnée
-                let filteredArticles = articlesToDisplay;
-                if (state.selectedYear !== 'all') {
-                    filteredArticles = articlesToDisplay.filter(article => {
-                        const year = new Date(article.published).getFullYear();
-                        return year.toString() === state.selectedYear;
-                    });
-                }
+                // Calculer l'index de début et fin pour une page
+                const startIdx = (state.currentPage - 1) * state.itemsPerPage;
+                const endIdx = startIdx + state.itemsPerPage;
+                const paginatedArticles = articlesToDisplay.slice(startIdx, endIdx);
                 
-                // Grouper les articles par année
-                const articlesByYear = {};
-                filteredArticles.forEach(article => {
-                    const year = new Date(article.published).getFullYear();
-                    if (!articlesByYear[year]) {
-                        articlesByYear[year] = [];
-                    }
-                    articlesByYear[year].push(article);
-                });
-                
-                // Obtenir les années triées (du plus récent au plus ancien)
-                const years = Object.keys(articlesByYear).map(Number).sort((a, b) => b - a);
-                
-                // Créer les sections groupées par année
-                const articlesHTML = years.map(year => {
-                    const yearArticles = articlesByYear[year].map(article => {
-                        let icon = categoryIcons[article.category] || '📌';
-                        
-                        return `
-                        <div class="veille-item">
-                            <div class="veille-badge">${new Date(article.published).toLocaleDateString('fr-FR')}</div>
-                            <div class="veille-category">${icon} ${article.category}</div>
-                            <div class="veille-title">${article.title}</div>
-                            <div class="veille-description">${stripHTML(article.description)}</div>
-                            <a href="${article.link}" target="_blank" class="veille-source">📌 ${article.source}</a>
-                        </div>
-                    `;
-                    }).join('');
+                // Créer les éléments HTML pour les articles
+                const articlesHTML = paginatedArticles.map(article => {
+                    let icon = categoryIcons[article.category] || '📌';
                     
                     return `
-                        <div class="veille-year-section">
-                            <h3 class="veille-year-header">${year} (${articlesByYear[year].length} articles)</h3>
-                            <div class="veille-grid">${yearArticles}</div>
-                        </div>
-                    `;
+                    <div class="veille-item">
+                        <div class="veille-badge">${new Date(article.published).toLocaleDateString('fr-FR')}</div>
+                        <div class="veille-category">${icon} ${article.category}</div>
+                        <div class="veille-title">${article.title}</div>
+                        <div class="veille-description">${stripHTML(article.description)}</div>
+                        <a href="${article.link}" target="_blank" class="veille-source">📌 ${article.source}</a>
+                    </div>
+                `;
                 }).join('');
                 
-                // Obtenir les années uniques disponibles (toutes les années, pas juste les filtrées)
-                const availableYears = [...new Set(articlesToDisplay.map(a => new Date(a.published).getFullYear()))].sort((a, b) => b - a);
-                
-                // Créer les contrôles de filtre
-                const filterHTML = `
-                    <div class="veille-filter">
-                        <label>Filtrer par année:</label>
-                        <select class="date-filter" onchange="changeVeilleYear('${tabId}', this.value)">
-                            <option value="all" ${state.selectedYear === 'all' ? 'selected' : ''}>Tous les articles</option>
-                            ${availableYears.map(year => `<option value="${year}" ${state.selectedYear === year.toString() ? 'selected' : ''}>${year}</option>`).join('')}
-                        </select>
+                // Créer les contrôles de pagination
+                const paginationHTML = `
+                    <div class="veille-pagination">
+                        <div class="pagination-controls">
+                            <button class="pagination-btn" onclick="changeVeillePage('${tabId}', -1)" ${state.currentPage === 1 ? 'disabled' : ''}>← Précédent</button>
+                            <span class="pagination-info">${state.currentPage} / ${state.totalPages}</span>
+                            <button class="pagination-btn" onclick="changeVeillePage('${tabId}', 1)" ${state.currentPage === state.totalPages ? 'disabled' : ''}>Suivant →</button>
+                        </div>
                     </div>
                 `;
                 
-                // Injecter dans la page
-                tabContent.innerHTML = `${filterHTML}${articlesHTML}`;
+                // Injecter dans la page avec une grille
+                tabContent.innerHTML = `<div class="veille-grid">${articlesHTML}</div>${paginationHTML}`;
             }
         }
     }
 }
 
-function changeVeilleYear(tabId, year) {
+
+function changeVeillePage(tabId, direction) {
     if (veillePaginationState[tabId]) {
-        veillePaginationState[tabId].selectedYear = year;
-        displayVeilleArticles();
+        const newPage = veillePaginationState[tabId].currentPage + direction;
+        if (newPage >= 1 && newPage <= veillePaginationState[tabId].totalPages) {
+            veillePaginationState[tabId].currentPage = newPage;
+            displayVeilleArticles();
+        }
     }
 }
 

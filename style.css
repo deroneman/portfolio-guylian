@@ -1052,46 +1052,55 @@ body {
     75% { transform: scale(1.05); border-color: #06b6d4; }
 }
 
-/* ===== VEILLE YEAR SECTIONS ===== */
-.veille-filter {
+/* ===== VEILLE PAGINATION ===== */
+.veille-pagination {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.pagination-controls {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    margin-bottom: 12px;
-    padding: 8px;
-    background: rgba(139, 92, 246, 0.05);
-    border-radius: 3px;
+    gap: 6px;
     flex-wrap: wrap;
 }
 
-.veille-filter label {
+.pagination-btn {
+    padding: 5px 8px;
+    background: rgba(139, 92, 246, 0.15);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 3px;
+    color: var(--light-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
     font-size: 9px;
-    color: var(--muted-text);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.3px;
 }
 
-.veille-year-section {
-    margin-bottom: 16px;
-}
-
-.veille-year-header {
-    font-size: 13px;
+.pagination-btn:hover:not(:disabled) {
+    background: rgba(139, 92, 246, 0.3);
+    border-color: var(--accent-gold);
     color: var(--accent-gold);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0 0 8px 0;
-    padding-bottom: 6px;
-    border-bottom: 2px solid rgba(139, 92, 246, 0.3);
 }
 
-.veille-year-section .veille-grid {
-    max-height: none;
-    overflow: visible;
-    margin-bottom: 8px;
+.pagination-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pagination-info {
+    font-size: 9px;
+    color: var(--muted-text);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
 }
 
 .display-btn {
@@ -1119,36 +1128,6 @@ body {
     border-color: var(--accent-gold);
     color: var(--accent-gold);
     box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
-}
-
-.date-filter {
-    padding: 5px 8px;
-    background: rgba(139, 92, 246, 0.15);
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    border-radius: 3px;
-    color: var(--light-text);
-    cursor: pointer;
-    font-size: 8px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
-    transition: all 0.3s ease;
-}
-
-.date-filter:hover {
-    background: rgba(139, 92, 246, 0.2);
-    border-color: var(--accent-gold);
-}
-
-.date-filter:focus {
-    outline: none;
-    border-color: var(--accent-gold);
-    box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
-}
-
-.date-filter option {
-    background: #1a0a2e;
-    color: var(--light-text);
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -1208,7 +1187,7 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .veille-filter {
+    .pagination-controls {
         flex-direction: column;
         gap: 8px;
     }
