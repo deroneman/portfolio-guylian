@@ -249,6 +249,37 @@ body {
     font-size: clamp(7px, 1.5vw, 11px);
 }
 
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    width: 24px;
+    height: 3px;
+    background: var(--accent-gold);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* ===== CONTENT AREA ===== */
 .sl-content-area {
     position: relative;
@@ -991,8 +1022,62 @@ body {
 
 /* ===== RESPONSIVE DESIGN ===== */
 
-/* BASE: Desktop 1024px-1440px */
-@media (max-width: 1440px) and (min-width: 1024px) {
+/* Mobile < 480px */
+@media (max-width: 479px) {
+    .sl-interface {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 8px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .sl-hub {
+        width: 100%;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .hub-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .hub-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        border-radius: 0 0 6px 6px;
+        padding: 12px;
+        gap: 6px;
+        grid-template-columns: 1fr;
+        z-index: 1000;
+        border-top: 2px solid var(--primary-purple);
+    }
+
+    .hub-menu.active {
+        display: grid;
+    }
+
+    .menu-btn {
+        font-size: 10px;
+        padding: 8px 8px;
+        gap: 4px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 639px) {
     .sl-interface {
         grid-template-columns: 320px 1fr;
         gap: 18px;

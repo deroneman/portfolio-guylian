@@ -290,6 +290,36 @@ function setupVeilleTabs() {
     });
 }
 
+function setupHamburgerMenu() {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const hubMenu = document.querySelector('.hub-menu');
+    const menuBtns = document.querySelectorAll('.menu-btn');
+    
+    if (!hamburgerBtn) return;
+    
+    // Toggle menu on hamburger click
+    hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active');
+        hubMenu.classList.toggle('active');
+    });
+    
+    // Close menu when clicking a menu item
+    menuBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            hamburgerBtn.classList.remove('active');
+            hubMenu.classList.remove('active');
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.sl-hub')) {
+            hamburgerBtn.classList.remove('active');
+            hubMenu.classList.remove('active');
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize stats display
     updateHealthDisplay();
@@ -303,6 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupPotionKeybinds();
     setupCheatCode();
     setupVeilleTabs();
+    setupHamburgerMenu();
     loadVeilleArticles();
 });
 
