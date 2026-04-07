@@ -1052,71 +1052,46 @@ body {
     75% { transform: scale(1.05); border-color: #06b6d4; }
 }
 
-/* ===== VEILLE PAGINATION ===== */
-.veille-pagination {
+/* ===== VEILLE YEAR SECTIONS ===== */
+.veille-filter {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 8px;
-    margin-top: 8px;
-    padding-top: 8px;
-    border-top: 1px solid rgba(139, 92, 246, 0.2);
-}
-
-.pagination-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    flex-wrap: wrap;
-}
-
-.pagination-btn {
-    padding: 5px 8px;
-    background: rgba(139, 92, 246, 0.15);
-    border: 1px solid rgba(139, 92, 246, 0.3);
+    margin-bottom: 12px;
+    padding: 8px;
+    background: rgba(139, 92, 246, 0.05);
     border-radius: 3px;
-    color: var(--light-text);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 9px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
-}
-
-.pagination-btn:hover:not(:disabled) {
-    background: rgba(139, 92, 246, 0.3);
-    border-color: var(--accent-gold);
-    color: var(--accent-gold);
-}
-
-.pagination-btn:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-}
-
-.pagination-info {
-    font-size: 9px;
-    color: var(--muted-text);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
-}
-
-.pagination-display {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
     flex-wrap: wrap;
 }
 
-.pagination-display label {
+.veille-filter label {
     font-size: 9px;
     color: var(--muted-text);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.3px;
+}
+
+.veille-year-section {
+    margin-bottom: 16px;
+}
+
+.veille-year-header {
+    font-size: 13px;
+    color: var(--accent-gold);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 8px 0;
+    padding-bottom: 6px;
+    border-bottom: 2px solid rgba(139, 92, 246, 0.3);
+}
+
+.veille-year-section .veille-grid {
+    max-height: none;
+    overflow: visible;
+    margin-bottom: 8px;
 }
 
 .display-btn {
@@ -1233,18 +1208,9 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .pagination-controls {
+    .veille-filter {
         flex-direction: column;
         gap: 8px;
-    }
-
-    .pagination-display {
-        gap: 6px;
-    }
-
-    .display-btn {
-        padding: 5px 8px;
-        font-size: 9px;
     }
 }
 
