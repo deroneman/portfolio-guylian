@@ -629,24 +629,24 @@ body {
 .veille-tabs {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
-    margin-bottom: 8px;
-    padding-bottom: 6px;
+    gap: 6px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
     border-bottom: 1px solid rgba(139, 92, 246, 0.2);
 }
 
 .veille-tab-btn {
-    padding: 5px 8px;
+    padding: 8px 12px;
     background: rgba(139, 92, 246, 0.1);
     border: 1px solid rgba(139, 92, 246, 0.3);
-    border-radius: 3px;
+    border-radius: 4px;
     color: var(--muted-text);
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
     white-space: nowrap;
 }
 
@@ -685,68 +685,61 @@ body {
 /* ===== VEILLE GRID ===== */
 .veille-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4px !important;
-    max-height: 50vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px !important;
+    max-height: 70vh;
     overflow-y: auto;
-    padding-right: 4px;
+    padding-right: 6px;
 }
 
 .veille-item {
     background: rgba(139, 92, 246, 0.1);
     border: 1px solid var(--primary-purple);
-    padding: 5px;
-    border-radius: 3px;
-    font-size: 9px;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 11px;
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 4px;
 }
 
 .veille-badge {
-    font-size: 7px;
+    font-size: 9px;
     color: var(--primary-purple);
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.5px;
 }
 
 .veille-category {
-    font-size: 8px;
+    font-size: 10px;
     color: var(--accent-gold);
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 .veille-title {
-    font-size: 9px;
+    font-size: 12px;
     color: var(--light-text);
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 .veille-description {
-    font-size: 8px;
+    font-size: 10px;
     color: var(--muted-text);
-    line-height: 1.2;
-    white-space: nowrap;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .veille-source {
-    font-size: 7px;
+    font-size: 9px;
     color: var(--primary-purple);
+    font-style: italic;
     text-decoration: none;
-    cursor: pointer;
-}
-
-.veille-description {
-    font-size: 8px;
-    color: var(--muted-text);
-    line-height: 1.2;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .veille-source {
@@ -1075,9 +1068,9 @@ body {
 .veille-pagination {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-top: 8px;
-    padding-top: 8px;
+    gap: 12px;
+    margin-top: 12px;
+    padding-top: 12px;
     border-top: 1px solid rgba(139, 92, 246, 0.2);
 }
 
@@ -1085,22 +1078,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
 .pagination-btn {
-    padding: 5px 8px;
+    padding: 8px 12px;
     background: rgba(139, 92, 246, 0.15);
     border: 1px solid rgba(139, 92, 246, 0.3);
-    border-radius: 3px;
+    border-radius: 4px;
     color: var(--light-text);
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
 }
 
 .pagination-btn:hover:not(:disabled) {
@@ -1115,41 +1108,41 @@ body {
 }
 
 .pagination-info {
-    font-size: 9px;
+    font-size: 11px;
     color: var(--muted-text);
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
 }
 
 .pagination-display {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 8px;
     flex-wrap: wrap;
 }
 
 .pagination-display label {
-    font-size: 9px;
+    font-size: 11px;
     color: var(--muted-text);
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
 }
 
 .display-btn {
-    padding: 4px 7px;
+    padding: 6px 10px;
     background: rgba(139, 92, 246, 0.1);
     border: 1px solid rgba(139, 92, 246, 0.3);
-    border-radius: 3px;
+    border-radius: 4px;
     color: var(--light-text);
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
 }
 
 .display-btn:hover {
