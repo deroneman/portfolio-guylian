@@ -1,43 +1,1030 @@
 {
-  "lastUpdate": "2026-04-06T00:00:00",
+  "lastUpdate": "2026-04-07T08:17:39.159486",
   "articles": {
+    "infrastructure": {
+      "icon": "🏗️",
+      "articles": [
+        {
+          "title": "Kubernetes v1.36 Sneak Peek",
+          "description": "<p>Kubernetes v1.36 is coming at the end of April 2026. This release will include removals and deprecations, and it is packed with an impressive number of\nenhancements. Here are some of the features w",
+          "link": "https://kubernetes.io/blog/2026/03/30/kubernetes-v1-36-sneak-peek/",
+          "source": "Kubernetes Blog",
+          "category": "Infrastructure",
+          "published": "Mon, 30 Mar 2026 00:00:00 +0000",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Announcing Ingress2Gateway 1.0: Your Path to Gateway API",
+          "description": "<p>With the Ingress-NGINX <a href=\"https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/\">retirement</a> scheduled for March 2026, the Kubernetes networking landscape is at a turning point.\n",
+          "link": "https://kubernetes.io/blog/2026/03/20/ingress2gateway-1-0-release/",
+          "source": "Kubernetes Blog",
+          "category": "Infrastructure",
+          "published": "Fri, 20 Mar 2026 11:00:00 -0800",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Running Agents on Kubernetes with Agent Sandbox",
+          "description": "<p>The landscape of artificial intelligence is undergoing a massive architectural shift. In the early days of generative AI, interacting with a model was often treated as a transient, stateless functi",
+          "link": "https://kubernetes.io/blog/2026/03/20/running-agents-on-kubernetes-with-agent-sandbox/",
+          "source": "Kubernetes Blog",
+          "category": "Infrastructure",
+          "published": "Fri, 20 Mar 2026 10:00:00 -0800",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Securing Production Debugging in Kubernetes",
+          "description": "<p>During production debugging, the fastest route is often broad access such as <code>cluster-admin</code> (a ClusterRole that grants administrator-level access), shared bastions/jump boxes, or long-l",
+          "link": "https://kubernetes.io/blog/2026/03/18/securing-production-debugging-in-kubernetes/",
+          "source": "Kubernetes Blog",
+          "category": "Infrastructure",
+          "published": "Wed, 18 Mar 2026 10:00:00 -0800",
+          "author": "Inconnu"
+        },
+        {
+          "title": "The Invisible Rewrite: Modernizing the Kubernetes Image Promoter",
+          "description": "<p>Every container image you pull from <code>registry.k8s.io</code> got there through\n<a href=\"https://github.com/kubernetes-sigs/promo-tools\"><code>kpromo</code></a>, the Kubernetes image\npromoter. I",
+          "link": "https://kubernetes.io/blog/2026/03/17/image-promoter-rewrite/",
+          "source": "Kubernetes Blog",
+          "category": "Infrastructure",
+          "published": "Tue, 17 Mar 2026 00:00:00 +0000",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Defending Your Software Supply Chain: What Every Engineering Team Should Do Now",
+          "description": "The software supply chain is under sustained attack. Not from a single threat actor or a single incident, but from an ecosystem-wide campaign that has been escalating for months and shows no signs of ",
+          "link": "https://www.docker.com/blog/defending-your-software-supply-chain-what-every-engineering-team-should-do-now/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Thu, 02 Apr 2026 18:14:40 +0000",
+          "author": "Dan Berezin Stelzer"
+        },
+        {
+          "title": "Gemma 4 is Here: Now Available on Docker Hub",
+          "description": "Docker Hub is quickly becoming the home for AI models, serving millions of developers and bringing together a curated lineup that spans lightweight edge models to high-performance LLMs, all packaged a",
+          "link": "https://www.docker.com/blog/gemma4-dockerhub/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Thu, 02 Apr 2026 16:16:56 +0000",
+          "author": "Jennifer Angeles"
+        },
+        {
+          "title": "Docker Offload now Generally Available: The Full Power of Docker, for Every Developer, Everywhere.",
+          "description": "Docker Desktop is one of the most widely used developer tools in the world, yet for millions of enterprise developers, running it simply hasn’t been an option. The environments they rely on, such as v",
+          "link": "https://www.docker.com/blog/docker-offload-now-generally-available-the-full-power-of-docker-for-every-developer-everywhere/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Thu, 02 Apr 2026 13:00:00 +0000",
+          "author": "Deanna Sparks"
+        },
+        {
+          "title": "Run and Iterate on LLMs Faster with Docker Model Runner on DGX Station",
+          "description": "Back in October, we showed how Docker Model Runner on the NVIDIA DGX Spark makes it remarkably easy to run large AI models locally with the same familiar Docker experience developers already trust. Th",
+          "link": "https://www.docker.com/blog/blog-docker-model-runner-new-nvidia-dgx-station/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Tue, 31 Mar 2026 17:57:17 +0000",
+          "author": "Yiwen Xu"
+        },
+        {
+          "title": "Docker Sandboxes: Run Agents in YOLO Mode, Safely",
+          "description": "Agents have crossed a threshold. Over a quarter of all production code is now AI-authored, and developers who use agents are merging roughly 60% more pull requests. But these gains only come when you ",
+          "link": "https://www.docker.com/blog/docker-sandboxes-run-agents-in-yolo-mode-safely/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Tue, 31 Mar 2026 16:39:16 +0000",
+          "author": "Srini Sekaran"
+        },
+        {
+          "title": "GParted Live 1.8.1 Released With Linux Kernel 6.19",
+          "description": "<p>GParted Live 1.8.1 is here with Linux Kernel 6.19! Explore enhanced partitioning tools and features for efficient disk management. Download now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/",
+          "link": "https://www.linuxtoday.com/blog/gparted-live-1-8-1-released-with-linux-kernel-6-19/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Mon, 06 Apr 2026 14:57:53 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Linux Distributions Begin Blocking Brazil Access Over New Digital Law",
+          "description": "<p>Explore the impact of Brazil's new digital law as Linux distributions begin restricting access. Learn what this means for the tech community and users.</p>\n<p>The post <a href=\"https://www.linuxtod",
+          "link": "https://www.linuxtoday.com/blog/linux-distributions-begin-blocking-brazil-access-over-new-digital-law/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Mon, 06 Apr 2026 14:56:16 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "GNOME 50 “Tokyo” Desktop Environment Officially Released, This Is What’s New",
+          "description": "<p>GNOME 50 \"Tokyo\" is here! Uncover the exciting new features and improvements in this latest desktop environment release. Upgrade your experience today.</p>\n<p>The post <a href=\"https://www.linuxtod",
+          "link": "https://www.linuxtoday.com/blog/gnome-50-tokyo-desktop-environment-officially-released-this-is-whats-new/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Mon, 06 Apr 2026 14:54:47 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Fedora Asahi Remix 43 Released for Apple Silicon Macs with KDE Plasma 6.6",
+          "description": "<p>Discover the latest Fedora Asahi Remix 43, now optimized for Apple Silicon Macs with KDE Plasma 6.6. Experience enhanced performance and features today!</p>\n<p>The post <a href=\"https://www.linuxto",
+          "link": "https://www.linuxtoday.com/blog/fedora-asahi-remix-43-released-for-apple-silicon-macs-with-kde-plasma-6-6/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Mon, 06 Apr 2026 14:52:05 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Java 26 Released With HTTP 3 Support and Performance Gains",
+          "description": "<p>Java 26 has arrived with enhanced HTTP 3 support and impressive performance gains. Explore the new features and optimize your applications now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/b",
+          "link": "https://www.linuxtoday.com/blog/java-26-released-with-http-3-support-and-performance-gains/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Mon, 06 Apr 2026 14:48:56 +0000",
+          "author": "Content Operations"
+        }
+      ]
+    },
+    "developpement": {
+      "icon": "💻",
+      "articles": [
+        {
+          "title": "Explore union types in C# 15",
+          "description": "<p>C# 15 introduces union types — declare a closed set of case types with implicit conversions and exhaustive pattern matching. Try unions in preview today and see the broader exhaustiveness roadmap.<",
+          "link": "https://devblogs.microsoft.com/dotnet/csharp-15-union-types/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Thu, 02 Apr 2026 17:05:00 +0000",
+          "author": "Bill Wagner"
+        },
+        {
+          "title": "Generative AI for Beginners .NET: Version 2 on .NET 10",
+          "description": "<p>Announcement of Version 2 of Generative AI for Beginners .NET, a free course rebuilt for .NET 10 with Microsoft.Extensions.AI, updated RAG patterns, and new agent framework content across five stru",
+          "link": "https://devblogs.microsoft.com/dotnet/generative-ai-for-beginners-dotnet-version-2-on-dotnet-10/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Mon, 23 Mar 2026 17:05:00 +0000",
+          "author": "Pablo Lopes, Bruno Capuano"
+        },
+        {
+          "title": "Ten Months with Copilot Coding Agent in dotnet/runtime",
+          "description": "<p>After ten months using GitHub Copilot Coding Agent (CCA) in dotnet/runtime, the .NET team shares data-driven lessons on cloud-AI-assisted development.</p>\n<p>The post <a href=\"https://devblogs.micr",
+          "link": "https://devblogs.microsoft.com/dotnet/ten-months-with-cca-in-dotnet-runtime/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Mon, 23 Mar 2026 14:55:00 +0000",
+          "author": "Stephen Toub - MSFT"
+        },
+        {
+          "title": "Accelerating .NET MAUI Development with AI Agents",
+          "description": "<p>Learn how custom-built AI agents are dramatically improving the .NET MAUI contribution workflow, reducing issue resolution time by 50-70% while increasing test coverage and code quality.</p>\n<p>The",
+          "link": "https://devblogs.microsoft.com/dotnet/accelerating-dotnet-maui-with-ai-agents/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Thu, 19 Mar 2026 21:12:42 +0000",
+          "author": "David Ortinau"
+        },
+        {
+          "title": "RT.Assistant: A Multi-Agent Voice Bot Using .NET and OpenAI",
+          "description": "<p>Guest blog post on building a real time assistant using OpenAI Realtime API using .NET, F#, Microsoft.Extensions.AI and .NET MAUI.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/rt-",
+          "link": "https://devblogs.microsoft.com/dotnet/rt-assistant-a-realtime-multiagent-voice-bot-using-dotnet-and-open-ai-api/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Tue, 17 Mar 2026 17:05:00 +0000",
+          "author": "Faisal Waris"
+        },
+        {
+          "title": "GitHub Copilot CLI combines model families for a second opinion",
+          "description": "<p>Discover how Rubber Duck provides a different perspective to GitHub Copilot CLI. </p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-fo",
+          "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Mon, 06 Apr 2026 21:53:49 +0000",
+          "author": "Nick McKenna"
+        },
+        {
+          "title": "The uphill climb of making diff lines performant",
+          "description": "<p>The path to better performance is often found in simplicity.</p>\n<p>The post <a href=\"https://github.blog/engineering/architecture-optimization/the-uphill-climb-of-making-diff-lines-performant/\">Th",
+          "link": "https://github.blog/engineering/architecture-optimization/the-uphill-climb-of-making-diff-lines-performant/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Fri, 03 Apr 2026 16:00:00 +0000",
+          "author": "Luke Ghenco"
+        },
+        {
+          "title": "Securing the open source supply chain across GitHub",
+          "description": "<p>Recent attacks on open source focus on exfiltrating secrets; here are the prevention steps you can take today, plus a look at the security capabilities GitHub is working on.</p>\n<p>The post <a href",
+          "link": "https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Wed, 01 Apr 2026 19:20:12 +0000",
+          "author": "Zachary Steindler"
+        },
+        {
+          "title": "Run multiple agents at once with /fleet in Copilot CLI",
+          "description": "<p>/fleet lets Copilot CLI dispatch multiple agents in parallel. Learn how to write prompts that split work across files, declare dependencies, and avoid common pitfalls.</p>\n<p>The post <a href=\"http",
+          "link": "https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Wed, 01 Apr 2026 15:00:00 +0000",
+          "author": "Matt Nigh"
+        },
+        {
+          "title": "Agent-driven development in Copilot Applied Science",
+          "description": "<p>I used coding agents to build agents that automated part of my job. Here's what I learned about working better with coding agents.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copi",
+          "link": "https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Tue, 31 Mar 2026 16:00:00 +0000",
+          "author": "Tyler McGoffin"
+        }
+      ]
+    },
+    "securite": {
+      "icon": "🔐",
+      "articles": [
+        {
+          "title": "Announcing the Retirement of OWASP Meetup Platform",
+          "description": "<p>There is no easy way to say this, so here goes. OWASP will be retiring Meetup, effective January 31, 2026. This impacts attendees and chapter leaders. Retiring Meetup in such a short time is not ho",
+          "link": "http://owasp.org/blog/2026/01/13/retiring-meetup.html",
+          "source": "OWASP",
+          "category": "Sécurité",
+          "published": "2026-01-13T07:00:00+00:00",
+          "author": "Andrew van der Stock"
+        },
+        {
+          "title": "The OWASP Foundation appoints Stacey Ebbs as Communications & Marketing Manager",
+          "description": "<p>The OWASP Foundation is pleased to announce the appointment of Stacey Ebbs as Communications and Marketing Manager. Stacey brings more than a decade of experience in marketing, events, and communit",
+          "link": "http://owasp.org/blog/2025/11/19/stacey-ebbs-marketing-hired.html",
+          "source": "OWASP",
+          "category": "Sécurité",
+          "published": "2025-11-19T07:00:00+00:00",
+          "author": "Andrew van der Stock"
+        },
+        {
+          "title": "OWASP Certified Secure Software Developer",
+          "description": "<p>To develop applications we need code. To write code we need developers. And to develop secure applications, developers need to write code that does not result in or have vulnerabilities.</p>\n\n<p>OW",
+          "link": "http://owasp.org/blog/2025/10/03/owasp-certified-secure-software-developer.html",
+          "source": "OWASP",
+          "category": "Sécurité",
+          "published": "2025-10-03T07:00:00+00:00",
+          "author": "Shruti Kulkarni"
+        },
+        {
+          "title": "GSoC 2025 Recap",
+          "description": "<h1 id=\"owasp-at-google-summer-of-code-2025\">OWASP at Google Summer of Code 2025</h1>\n\n<p><strong>Celebrating real impact, strong mentorship, and a growing community</strong></p>\n\n<p>The Google Summer",
+          "link": "http://owasp.org/blog/2025/10/01/GSoCRecap.html",
+          "source": "OWASP",
+          "category": "Sécurité",
+          "published": "2025-10-01T07:00:00+00:00",
+          "author": "Fabio Cerullo & Starr Brown"
+        },
+        {
+          "title": "OWASP Top 10 Community Survey",
+          "description": "<p><img alt=\"Top 10 Community Survey\" src=\"https://owasp.org/assets/images/content/Top10-Survey760x428px.png\" /></p>\n\n<h2 id=\"help-shape-the-future-of-web-application-security-owasp-top-10---2025-comm",
+          "link": "http://owasp.org/blog/2025/09/26/Top10Survey.html",
+          "source": "OWASP",
+          "category": "Sécurité",
+          "published": "2025-09-26T07:00:00+00:00",
+          "author": "Starr Brown"
+        }
+      ]
+    },
+    "ia": {
+      "icon": "🤖",
+      "articles": [
+        {
+          "title": "Gemma 4: Byte for byte, the most capable open models",
+          "description": "Gemma 4: Our most intelligent open models to date, purpose-built for advanced reasoning and agentic workflows.",
+          "link": "https://deepmind.google/blog/gemma-4-byte-for-byte-the-most-capable-open-models/",
+          "source": "DeepMind",
+          "category": "IA",
+          "published": "Thu, 02 Apr 2026 16:00:49 +0000",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Gemini 3.1 Flash Live: Making audio AI more natural and reliable",
+          "description": "Our latest voice model has improved precision and lower latency to make voice interactions more fluid, natural and precise.",
+          "link": "https://deepmind.google/blog/gemini-3-1-flash-live-making-audio-ai-more-natural-and-reliable/",
+          "source": "DeepMind",
+          "category": "IA",
+          "published": "Thu, 26 Mar 2026 15:23:35 +0000",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Protecting people from harmful manipulation",
+          "description": "Google DeepMind researches AI's harmful manipulation risks across areas like finance and health, leading to new safety measures.",
+          "link": "https://deepmind.google/blog/protecting-people-from-harmful-manipulation/",
+          "source": "DeepMind",
+          "category": "IA",
+          "published": "Wed, 25 Mar 2026 16:46:20 +0000",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Lyria 3 Pro: Create longer tracks in more",
+          "description": "Introducing Lyria 3 Pro, which unlocks longer tracks with structural awareness. We’re also bringing Lyria to more Google products and surfaces.",
+          "link": "https://deepmind.google/blog/lyria-3-pro-create-longer-tracks-in-more/",
+          "source": "DeepMind",
+          "category": "IA",
+          "published": "Wed, 25 Mar 2026 16:01:39 +0000",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Measuring progress toward AGI: A cognitive framework",
+          "description": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
+          "link": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework/",
+          "source": "DeepMind",
+          "category": "IA",
+          "published": "Tue, 17 Mar 2026 16:03:47 +0000",
+          "author": "Inconnu"
+        }
+      ]
+    },
+    "cloud": {
+      "icon": "☁️",
+      "articles": [
+        {
+          "title": "AWS Weekly Roundup: AWS DevOps Agent & Security Agent GA, Product Lifecycle updates, and more (April 6, 2026)",
+          "description": "Last week, I visited AWS Hong Kong User Group with my team. Hong Kong has a small but strong community, and their energy and passion are high. They recently started a new AI user group, and we hope mo",
+          "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-devops-agent-security-agent-ga-product-lifecycle-updates-and-more-april-6-2026/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Mon, 06 Apr 2026 16:51:00 +0000",
+          "author": "Channy Yun (윤석찬)"
+        },
+        {
+          "title": "Amazon Bedrock Guardrails supports cross-account safeguards with centralized control and management",
+          "description": "Organizational safeguards are now generally available in Amazon Bedrock Guardrails, enabling centralized enforcement and management of safety controls across multiple AWS accounts within an AWS Organi",
+          "link": "https://aws.amazon.com/blogs/aws/amazon-bedrock-guardrails-supports-cross-account-safeguards-with-centralized-control-and-management/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Fri, 03 Apr 2026 20:36:40 +0000",
+          "author": "Channy Yun (윤석찬)"
+        },
+        {
+          "title": "Announcing managed daemon support for Amazon ECS Managed Instances",
+          "description": "Amazon ECS Managed Daemons gives platform engineers independent control over monitoring, logging, and tracing agents without application team coordination, ensuring consistent daemon deployment and co",
+          "link": "https://aws.amazon.com/blogs/aws/announcing-managed-daemon-support-for-amazon-ecs-managed-instances/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Wed, 01 Apr 2026 23:31:24 +0000",
+          "author": "Micah Walter"
+        },
+        {
+          "title": "Announcing the AWS Sustainability console: Programmatic access, configurable CSV reports, and Scope 1–3 reporting in one place",
+          "description": "AWS announces the Sustainability console, a new standalone service that consolidates carbon emissions reporting and resources, giving sustainability teams independent access to Scope 1, 2, and 3 emiss",
+          "link": "https://aws.amazon.com/blogs/aws/announcing-the-aws-sustainability-console-programmatic-access-configurable-csv-reports-and-scope-1-3-reporting-in-one-place/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Tue, 31 Mar 2026 19:04:00 +0000",
+          "author": "Sébastien Stormacq"
+        },
+        {
+          "title": "AWS Weekly Roundup: AWS AI/ML Scholars program, Agent Plugin for AWS Serverless, and more (March 30, 2026)",
+          "description": "Last week, what excited me most was the launch of the 2026 AWS AI &amp; ML Scholars program by Swami Sivasubramanian, VP of AWS Agentic AI, to provide free AI education to up to 100,000 learners world",
+          "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-ai-ml-scholars-program-agent-plugin-for-aws-serverless-and-more-march-30-2026/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Mon, 30 Mar 2026 16:11:28 +0000",
+          "author": "Prasad Rao"
+        },
+        {
+          "title": "Azure IaaS: Keep critical applications running with built-in resiliency at scale",
+          "description": "<p>Azure IaaS provides foundational capabilities across compute, storage, and networking to help organizations stay resilient.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/azure-iaa",
+          "link": "https://azure.microsoft.com/en-us/blog/azure-iaas-keep-critical-applications-running-with-built-in-resiliency-at-scale/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Wed, 01 Apr 2026 16:00:00 +0000",
+          "author": "Igal Figlin"
+        },
+        {
+          "title": "Building sovereign AI at the edge: Microsoft and Armada collaborate to deliver Azure Local on Galleon modular datacenters",
+          "description": "<p>Explore how Microsoft and Armada bring sovereign AI to the edge with Azure Local, enabling secure, resilient workloads in disconnected and regulated environments.</p>\n<p>The post <a href=\"https://a",
+          "link": "https://azure.microsoft.com/en-us/blog/building-sovereign-ai-at-the-edge-microsoft-and-armada-collaborate-to-deliver-azure-local-on-galleon-modular-datacenters/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Tue, 31 Mar 2026 16:00:00 +0000",
+          "author": "Douglas Phillips"
+        },
+        {
+          "title": "Navigating digital sovereignty at the frontier of transformation",
+          "description": "<p>Digital sovereignty has become a practical leadership discipline grounded in risk management, continuity planning, and long-term accountability.</p>\n<p>The post <a href=\"https://www.microsoft.com/e",
+          "link": "https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/03/25/navigating-digital-sovereignty-at-the-frontier-of-transformation/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Mon, 30 Mar 2026 21:27:39 +0000",
+          "author": "Philippe Rogge"
+        },
+        {
+          "title": "Microsoft named a Leader in 2026 Gartner® Magic Quadrant™ for Integration Platform as a Service",
+          "description": "<p>Read why Microsoft was named a Leader for integration services in the 2026 Gartner® Magic Quadrant™ for Integration Platform as a Service.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us",
+          "link": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-2026-gartner-magic-quadrant-for-integration-platform-as-a-service/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Mon, 30 Mar 2026 16:00:00 +0000",
+          "author": "Naga Surendran"
+        },
+        {
+          "title": "AI for nuclear energy: Powering an intelligent, resilient future",
+          "description": "<p>To break the infrastructure bottleneck and shift the industry from ambition to delivery, Microsoft is announcing an AI for nuclear collaboration with NVIDIA, to provide end-to-end tools that stream",
+          "link": "https://www.microsoft.com/en-us/industry/blog/energy-and-resources/2026/03/24/ai-for-nuclear-energy-powering-an-intelligent-resilient-future/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Wed, 25 Mar 2026 15:00:00 +0000",
+          "author": "Darryl Willis"
+        }
+      ]
+    },
+    "devops": {
+      "icon": "🐳",
+      "articles": [
+        {
+          "title": "GitHub Copilot CLI combines model families for a second opinion",
+          "description": "<p>Discover how Rubber Duck provides a different perspective to GitHub Copilot CLI. </p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-fo",
+          "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Mon, 06 Apr 2026 21:53:49 +0000",
+          "author": "Nick McKenna"
+        },
+        {
+          "title": "The uphill climb of making diff lines performant",
+          "description": "<p>The path to better performance is often found in simplicity.</p>\n<p>The post <a href=\"https://github.blog/engineering/architecture-optimization/the-uphill-climb-of-making-diff-lines-performant/\">Th",
+          "link": "https://github.blog/engineering/architecture-optimization/the-uphill-climb-of-making-diff-lines-performant/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Fri, 03 Apr 2026 16:00:00 +0000",
+          "author": "Luke Ghenco"
+        },
+        {
+          "title": "Securing the open source supply chain across GitHub",
+          "description": "<p>Recent attacks on open source focus on exfiltrating secrets; here are the prevention steps you can take today, plus a look at the security capabilities GitHub is working on.</p>\n<p>The post <a href",
+          "link": "https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Wed, 01 Apr 2026 19:20:12 +0000",
+          "author": "Zachary Steindler"
+        },
+        {
+          "title": "Run multiple agents at once with /fleet in Copilot CLI",
+          "description": "<p>/fleet lets Copilot CLI dispatch multiple agents in parallel. Learn how to write prompts that split work across files, declare dependencies, and avoid common pitfalls.</p>\n<p>The post <a href=\"http",
+          "link": "https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Wed, 01 Apr 2026 15:00:00 +0000",
+          "author": "Matt Nigh"
+        },
+        {
+          "title": "Agent-driven development in Copilot Applied Science",
+          "description": "<p>I used coding agents to build agents that automated part of my job. Here's what I learned about working better with coding agents.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copi",
+          "link": "https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Tue, 31 Mar 2026 16:00:00 +0000",
+          "author": "Tyler McGoffin"
+        },
+        {
+          "title": "3.11.0 / 2026-04-02",
+          "description": "<ul>\n<li>[CHANGE] Hetzner SD: The <code>__meta_hetzner_datacenter</code> label is deprecated for the role <code>robot</code> but kept for backward compatibility, use the <code>__meta_hetzner_robot_dat",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-07T08:17:38.357996",
+          "author": "prombot"
+        },
+        {
+          "title": "3.11.0-rc.0 / 2026-03-30",
+          "description": "<ul>\n<li>[CHANGE] Hetzner SD: The <code>__meta_hetzner_datacenter</code> label is deprecated for the role <code>robot</code> but kept for backward compatibility, use the <code>__meta_hetzner_robot_dat",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-07T08:17:38.358009",
+          "author": "prombot"
+        },
+        {
+          "title": "3.10.0 / 2026-02-24",
+          "description": "<p>Prometheus now offers a distroless Docker image variant alongside the default<br />\nbusybox image. The distroless variant provides enhanced security with a minimal<br />\nbase image, uses UID/GID 65",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-07T08:17:38.358014",
+          "author": "prombot"
+        },
+        {
+          "title": "v0.310.0",
+          "description": "<p>v0.310.0</p>",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-07T08:17:38.358019",
+          "author": "codesome"
+        },
+        {
+          "title": "3.10.0-rc.1 / 2026-02-19",
+          "description": "<p>Prometheus now offers a distroless Docker image variant alongside the default<br />\nbusybox image. The distroless variant provides enhanced security with a minimal<br />\nbase image, uses UID/GID 65",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.1",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-07T08:17:38.358024",
+          "author": "prombot"
+        }
+      ]
+    },
     "recents": {
       "icon": "📌",
       "articles": [
         {
-          "title": "Initialisation de la veille technologique",
-          "description": "Ce fichier sera mis à jour automatiquement chaque jour via GitHub Actions. Les articles de technologie s'afficheront ici une fois générés.",
-          "link": "https://github.com/deroneman/portfolio-guylian",
-          "source": "Portfolio Guylian",
-          "category": "Portfolio",
-          "published": "2026-04-06T00:00:00",
-          "author": "GitHub Action Bot"
+          "title": "Protecting people from harmful manipulation",
+          "description": "Google DeepMind researches AI's harmful manipulation risks across areas like finance and health, leading to new safety measures.",
+          "link": "https://deepmind.google/blog/protecting-people-from-harmful-manipulation/",
+          "source": "DeepMind",
+          "category": "IA",
+          "published": "Wed, 25 Mar 2026 16:46:20 +0000",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Lyria 3 Pro: Create longer tracks in more",
+          "description": "Introducing Lyria 3 Pro, which unlocks longer tracks with structural awareness. We’re also bringing Lyria to more Google products and surfaces.",
+          "link": "https://deepmind.google/blog/lyria-3-pro-create-longer-tracks-in-more/",
+          "source": "DeepMind",
+          "category": "IA",
+          "published": "Wed, 25 Mar 2026 16:01:39 +0000",
+          "author": "Inconnu"
+        },
+        {
+          "title": "AI for nuclear energy: Powering an intelligent, resilient future",
+          "description": "<p>To break the infrastructure bottleneck and shift the industry from ambition to delivery, Microsoft is announcing an AI for nuclear collaboration with NVIDIA, to provide end-to-end tools that stream",
+          "link": "https://www.microsoft.com/en-us/industry/blog/energy-and-resources/2026/03/24/ai-for-nuclear-energy-powering-an-intelligent-resilient-future/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Wed, 25 Mar 2026 15:00:00 +0000",
+          "author": "Darryl Willis"
+        },
+        {
+          "title": "Securing Production Debugging in Kubernetes",
+          "description": "<p>During production debugging, the fastest route is often broad access such as <code>cluster-admin</code> (a ClusterRole that grants administrator-level access), shared bastions/jump boxes, or long-l",
+          "link": "https://kubernetes.io/blog/2026/03/18/securing-production-debugging-in-kubernetes/",
+          "source": "Kubernetes Blog",
+          "category": "Infrastructure",
+          "published": "Wed, 18 Mar 2026 10:00:00 -0800",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Announcing managed daemon support for Amazon ECS Managed Instances",
+          "description": "Amazon ECS Managed Daemons gives platform engineers independent control over monitoring, logging, and tracing agents without application team coordination, ensuring consistent daemon deployment and co",
+          "link": "https://aws.amazon.com/blogs/aws/announcing-managed-daemon-support-for-amazon-ecs-managed-instances/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Wed, 01 Apr 2026 23:31:24 +0000",
+          "author": "Micah Walter"
+        },
+        {
+          "title": "Securing the open source supply chain across GitHub",
+          "description": "<p>Recent attacks on open source focus on exfiltrating secrets; here are the prevention steps you can take today, plus a look at the security capabilities GitHub is working on.</p>\n<p>The post <a href",
+          "link": "https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Wed, 01 Apr 2026 19:20:12 +0000",
+          "author": "Zachary Steindler"
+        },
+        {
+          "title": "Securing the open source supply chain across GitHub",
+          "description": "<p>Recent attacks on open source focus on exfiltrating secrets; here are the prevention steps you can take today, plus a look at the security capabilities GitHub is working on.</p>\n<p>The post <a href",
+          "link": "https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Wed, 01 Apr 2026 19:20:12 +0000",
+          "author": "Zachary Steindler"
+        },
+        {
+          "title": "Azure IaaS: Keep critical applications running with built-in resiliency at scale",
+          "description": "<p>Azure IaaS provides foundational capabilities across compute, storage, and networking to help organizations stay resilient.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/azure-iaa",
+          "link": "https://azure.microsoft.com/en-us/blog/azure-iaas-keep-critical-applications-running-with-built-in-resiliency-at-scale/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Wed, 01 Apr 2026 16:00:00 +0000",
+          "author": "Igal Figlin"
+        },
+        {
+          "title": "Run multiple agents at once with /fleet in Copilot CLI",
+          "description": "<p>/fleet lets Copilot CLI dispatch multiple agents in parallel. Learn how to write prompts that split work across files, declare dependencies, and avoid common pitfalls.</p>\n<p>The post <a href=\"http",
+          "link": "https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Wed, 01 Apr 2026 15:00:00 +0000",
+          "author": "Matt Nigh"
+        },
+        {
+          "title": "Run multiple agents at once with /fleet in Copilot CLI",
+          "description": "<p>/fleet lets Copilot CLI dispatch multiple agents in parallel. Learn how to write prompts that split work across files, declare dependencies, and avoid common pitfalls.</p>\n<p>The post <a href=\"http",
+          "link": "https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Wed, 01 Apr 2026 15:00:00 +0000",
+          "author": "Matt Nigh"
+        },
+        {
+          "title": "Announcing the AWS Sustainability console: Programmatic access, configurable CSV reports, and Scope 1–3 reporting in one place",
+          "description": "AWS announces the Sustainability console, a new standalone service that consolidates carbon emissions reporting and resources, giving sustainability teams independent access to Scope 1, 2, and 3 emiss",
+          "link": "https://aws.amazon.com/blogs/aws/announcing-the-aws-sustainability-console-programmatic-access-configurable-csv-reports-and-scope-1-3-reporting-in-one-place/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Tue, 31 Mar 2026 19:04:00 +0000",
+          "author": "Sébastien Stormacq"
+        },
+        {
+          "title": "Run and Iterate on LLMs Faster with Docker Model Runner on DGX Station",
+          "description": "Back in October, we showed how Docker Model Runner on the NVIDIA DGX Spark makes it remarkably easy to run large AI models locally with the same familiar Docker experience developers already trust. Th",
+          "link": "https://www.docker.com/blog/blog-docker-model-runner-new-nvidia-dgx-station/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Tue, 31 Mar 2026 17:57:17 +0000",
+          "author": "Yiwen Xu"
+        },
+        {
+          "title": "Docker Sandboxes: Run Agents in YOLO Mode, Safely",
+          "description": "Agents have crossed a threshold. Over a quarter of all production code is now AI-authored, and developers who use agents are merging roughly 60% more pull requests. But these gains only come when you ",
+          "link": "https://www.docker.com/blog/docker-sandboxes-run-agents-in-yolo-mode-safely/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Tue, 31 Mar 2026 16:39:16 +0000",
+          "author": "Srini Sekaran"
+        },
+        {
+          "title": "Agent-driven development in Copilot Applied Science",
+          "description": "<p>I used coding agents to build agents that automated part of my job. Here's what I learned about working better with coding agents.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copi",
+          "link": "https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Tue, 31 Mar 2026 16:00:00 +0000",
+          "author": "Tyler McGoffin"
+        },
+        {
+          "title": "Building sovereign AI at the edge: Microsoft and Armada collaborate to deliver Azure Local on Galleon modular datacenters",
+          "description": "<p>Explore how Microsoft and Armada bring sovereign AI to the edge with Azure Local, enabling secure, resilient workloads in disconnected and regulated environments.</p>\n<p>The post <a href=\"https://a",
+          "link": "https://azure.microsoft.com/en-us/blog/building-sovereign-ai-at-the-edge-microsoft-and-armada-collaborate-to-deliver-azure-local-on-galleon-modular-datacenters/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Tue, 31 Mar 2026 16:00:00 +0000",
+          "author": "Douglas Phillips"
+        },
+        {
+          "title": "Agent-driven development in Copilot Applied Science",
+          "description": "<p>I used coding agents to build agents that automated part of my job. Here's what I learned about working better with coding agents.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copi",
+          "link": "https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Tue, 31 Mar 2026 16:00:00 +0000",
+          "author": "Tyler McGoffin"
+        },
+        {
+          "title": "RT.Assistant: A Multi-Agent Voice Bot Using .NET and OpenAI",
+          "description": "<p>Guest blog post on building a real time assistant using OpenAI Realtime API using .NET, F#, Microsoft.Extensions.AI and .NET MAUI.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/rt-",
+          "link": "https://devblogs.microsoft.com/dotnet/rt-assistant-a-realtime-multiagent-voice-bot-using-dotnet-and-open-ai-api/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Tue, 17 Mar 2026 17:05:00 +0000",
+          "author": "Faisal Waris"
+        },
+        {
+          "title": "Measuring progress toward AGI: A cognitive framework",
+          "description": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
+          "link": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework/",
+          "source": "DeepMind",
+          "category": "IA",
+          "published": "Tue, 17 Mar 2026 16:03:47 +0000",
+          "author": "Inconnu"
+        },
+        {
+          "title": "The Invisible Rewrite: Modernizing the Kubernetes Image Promoter",
+          "description": "<p>Every container image you pull from <code>registry.k8s.io</code> got there through\n<a href=\"https://github.com/kubernetes-sigs/promo-tools\"><code>kpromo</code></a>, the Kubernetes image\npromoter. I",
+          "link": "https://kubernetes.io/blog/2026/03/17/image-promoter-rewrite/",
+          "source": "Kubernetes Blog",
+          "category": "Infrastructure",
+          "published": "Tue, 17 Mar 2026 00:00:00 +0000",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Gemini 3.1 Flash Live: Making audio AI more natural and reliable",
+          "description": "Our latest voice model has improved precision and lower latency to make voice interactions more fluid, natural and precise.",
+          "link": "https://deepmind.google/blog/gemini-3-1-flash-live-making-audio-ai-more-natural-and-reliable/",
+          "source": "DeepMind",
+          "category": "IA",
+          "published": "Thu, 26 Mar 2026 15:23:35 +0000",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Accelerating .NET MAUI Development with AI Agents",
+          "description": "<p>Learn how custom-built AI agents are dramatically improving the .NET MAUI contribution workflow, reducing issue resolution time by 50-70% while increasing test coverage and code quality.</p>\n<p>The",
+          "link": "https://devblogs.microsoft.com/dotnet/accelerating-dotnet-maui-with-ai-agents/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Thu, 19 Mar 2026 21:12:42 +0000",
+          "author": "David Ortinau"
+        },
+        {
+          "title": "Defending Your Software Supply Chain: What Every Engineering Team Should Do Now",
+          "description": "The software supply chain is under sustained attack. Not from a single threat actor or a single incident, but from an ecosystem-wide campaign that has been escalating for months and shows no signs of ",
+          "link": "https://www.docker.com/blog/defending-your-software-supply-chain-what-every-engineering-team-should-do-now/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Thu, 02 Apr 2026 18:14:40 +0000",
+          "author": "Dan Berezin Stelzer"
+        },
+        {
+          "title": "Explore union types in C# 15",
+          "description": "<p>C# 15 introduces union types — declare a closed set of case types with implicit conversions and exhaustive pattern matching. Try unions in preview today and see the broader exhaustiveness roadmap.<",
+          "link": "https://devblogs.microsoft.com/dotnet/csharp-15-union-types/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Thu, 02 Apr 2026 17:05:00 +0000",
+          "author": "Bill Wagner"
+        },
+        {
+          "title": "Gemma 4 is Here: Now Available on Docker Hub",
+          "description": "Docker Hub is quickly becoming the home for AI models, serving millions of developers and bringing together a curated lineup that spans lightweight edge models to high-performance LLMs, all packaged a",
+          "link": "https://www.docker.com/blog/gemma4-dockerhub/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Thu, 02 Apr 2026 16:16:56 +0000",
+          "author": "Jennifer Angeles"
+        },
+        {
+          "title": "Gemma 4: Byte for byte, the most capable open models",
+          "description": "Gemma 4: Our most intelligent open models to date, purpose-built for advanced reasoning and agentic workflows.",
+          "link": "https://deepmind.google/blog/gemma-4-byte-for-byte-the-most-capable-open-models/",
+          "source": "DeepMind",
+          "category": "IA",
+          "published": "Thu, 02 Apr 2026 16:00:49 +0000",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Docker Offload now Generally Available: The Full Power of Docker, for Every Developer, Everywhere.",
+          "description": "Docker Desktop is one of the most widely used developer tools in the world, yet for millions of enterprise developers, running it simply hasn’t been an option. The environments they rely on, such as v",
+          "link": "https://www.docker.com/blog/docker-offload-now-generally-available-the-full-power-of-docker-for-every-developer-everywhere/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Thu, 02 Apr 2026 13:00:00 +0000",
+          "author": "Deanna Sparks"
+        },
+        {
+          "title": "Navigating digital sovereignty at the frontier of transformation",
+          "description": "<p>Digital sovereignty has become a practical leadership discipline grounded in risk management, continuity planning, and long-term accountability.</p>\n<p>The post <a href=\"https://www.microsoft.com/e",
+          "link": "https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/03/25/navigating-digital-sovereignty-at-the-frontier-of-transformation/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Mon, 30 Mar 2026 21:27:39 +0000",
+          "author": "Philippe Rogge"
+        },
+        {
+          "title": "AWS Weekly Roundup: AWS AI/ML Scholars program, Agent Plugin for AWS Serverless, and more (March 30, 2026)",
+          "description": "Last week, what excited me most was the launch of the 2026 AWS AI &amp; ML Scholars program by Swami Sivasubramanian, VP of AWS Agentic AI, to provide free AI education to up to 100,000 learners world",
+          "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-ai-ml-scholars-program-agent-plugin-for-aws-serverless-and-more-march-30-2026/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Mon, 30 Mar 2026 16:11:28 +0000",
+          "author": "Prasad Rao"
+        },
+        {
+          "title": "Microsoft named a Leader in 2026 Gartner® Magic Quadrant™ for Integration Platform as a Service",
+          "description": "<p>Read why Microsoft was named a Leader for integration services in the 2026 Gartner® Magic Quadrant™ for Integration Platform as a Service.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us",
+          "link": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-2026-gartner-magic-quadrant-for-integration-platform-as-a-service/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Mon, 30 Mar 2026 16:00:00 +0000",
+          "author": "Naga Surendran"
+        },
+        {
+          "title": "Kubernetes v1.36 Sneak Peek",
+          "description": "<p>Kubernetes v1.36 is coming at the end of April 2026. This release will include removals and deprecations, and it is packed with an impressive number of\nenhancements. Here are some of the features w",
+          "link": "https://kubernetes.io/blog/2026/03/30/kubernetes-v1-36-sneak-peek/",
+          "source": "Kubernetes Blog",
+          "category": "Infrastructure",
+          "published": "Mon, 30 Mar 2026 00:00:00 +0000",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Generative AI for Beginners .NET: Version 2 on .NET 10",
+          "description": "<p>Announcement of Version 2 of Generative AI for Beginners .NET, a free course rebuilt for .NET 10 with Microsoft.Extensions.AI, updated RAG patterns, and new agent framework content across five stru",
+          "link": "https://devblogs.microsoft.com/dotnet/generative-ai-for-beginners-dotnet-version-2-on-dotnet-10/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Mon, 23 Mar 2026 17:05:00 +0000",
+          "author": "Pablo Lopes, Bruno Capuano"
+        },
+        {
+          "title": "Ten Months with Copilot Coding Agent in dotnet/runtime",
+          "description": "<p>After ten months using GitHub Copilot Coding Agent (CCA) in dotnet/runtime, the .NET team shares data-driven lessons on cloud-AI-assisted development.</p>\n<p>The post <a href=\"https://devblogs.micr",
+          "link": "https://devblogs.microsoft.com/dotnet/ten-months-with-cca-in-dotnet-runtime/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Mon, 23 Mar 2026 14:55:00 +0000",
+          "author": "Stephen Toub - MSFT"
+        },
+        {
+          "title": "GitHub Copilot CLI combines model families for a second opinion",
+          "description": "<p>Discover how Rubber Duck provides a different perspective to GitHub Copilot CLI. </p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-fo",
+          "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Mon, 06 Apr 2026 21:53:49 +0000",
+          "author": "Nick McKenna"
+        },
+        {
+          "title": "GitHub Copilot CLI combines model families for a second opinion",
+          "description": "<p>Discover how Rubber Duck provides a different perspective to GitHub Copilot CLI. </p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-fo",
+          "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Mon, 06 Apr 2026 21:53:49 +0000",
+          "author": "Nick McKenna"
+        },
+        {
+          "title": "AWS Weekly Roundup: AWS DevOps Agent & Security Agent GA, Product Lifecycle updates, and more (April 6, 2026)",
+          "description": "Last week, I visited AWS Hong Kong User Group with my team. Hong Kong has a small but strong community, and their energy and passion are high. They recently started a new AI user group, and we hope mo",
+          "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-devops-agent-security-agent-ga-product-lifecycle-updates-and-more-april-6-2026/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Mon, 06 Apr 2026 16:51:00 +0000",
+          "author": "Channy Yun (윤석찬)"
+        },
+        {
+          "title": "GParted Live 1.8.1 Released With Linux Kernel 6.19",
+          "description": "<p>GParted Live 1.8.1 is here with Linux Kernel 6.19! Explore enhanced partitioning tools and features for efficient disk management. Download now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/",
+          "link": "https://www.linuxtoday.com/blog/gparted-live-1-8-1-released-with-linux-kernel-6-19/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Mon, 06 Apr 2026 14:57:53 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Linux Distributions Begin Blocking Brazil Access Over New Digital Law",
+          "description": "<p>Explore the impact of Brazil's new digital law as Linux distributions begin restricting access. Learn what this means for the tech community and users.</p>\n<p>The post <a href=\"https://www.linuxtod",
+          "link": "https://www.linuxtoday.com/blog/linux-distributions-begin-blocking-brazil-access-over-new-digital-law/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Mon, 06 Apr 2026 14:56:16 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "GNOME 50 “Tokyo” Desktop Environment Officially Released, This Is What’s New",
+          "description": "<p>GNOME 50 \"Tokyo\" is here! Uncover the exciting new features and improvements in this latest desktop environment release. Upgrade your experience today.</p>\n<p>The post <a href=\"https://www.linuxtod",
+          "link": "https://www.linuxtoday.com/blog/gnome-50-tokyo-desktop-environment-officially-released-this-is-whats-new/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Mon, 06 Apr 2026 14:54:47 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Fedora Asahi Remix 43 Released for Apple Silicon Macs with KDE Plasma 6.6",
+          "description": "<p>Discover the latest Fedora Asahi Remix 43, now optimized for Apple Silicon Macs with KDE Plasma 6.6. Experience enhanced performance and features today!</p>\n<p>The post <a href=\"https://www.linuxto",
+          "link": "https://www.linuxtoday.com/blog/fedora-asahi-remix-43-released-for-apple-silicon-macs-with-kde-plasma-6-6/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Mon, 06 Apr 2026 14:52:05 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Java 26 Released With HTTP 3 Support and Performance Gains",
+          "description": "<p>Java 26 has arrived with enhanced HTTP 3 support and impressive performance gains. Explore the new features and optimize your applications now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/b",
+          "link": "https://www.linuxtoday.com/blog/java-26-released-with-http-3-support-and-performance-gains/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Mon, 06 Apr 2026 14:48:56 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Announcing Ingress2Gateway 1.0: Your Path to Gateway API",
+          "description": "<p>With the Ingress-NGINX <a href=\"https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/\">retirement</a> scheduled for March 2026, the Kubernetes networking landscape is at a turning point.\n",
+          "link": "https://kubernetes.io/blog/2026/03/20/ingress2gateway-1-0-release/",
+          "source": "Kubernetes Blog",
+          "category": "Infrastructure",
+          "published": "Fri, 20 Mar 2026 11:00:00 -0800",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Running Agents on Kubernetes with Agent Sandbox",
+          "description": "<p>The landscape of artificial intelligence is undergoing a massive architectural shift. In the early days of generative AI, interacting with a model was often treated as a transient, stateless functi",
+          "link": "https://kubernetes.io/blog/2026/03/20/running-agents-on-kubernetes-with-agent-sandbox/",
+          "source": "Kubernetes Blog",
+          "category": "Infrastructure",
+          "published": "Fri, 20 Mar 2026 10:00:00 -0800",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Amazon Bedrock Guardrails supports cross-account safeguards with centralized control and management",
+          "description": "Organizational safeguards are now generally available in Amazon Bedrock Guardrails, enabling centralized enforcement and management of safety controls across multiple AWS accounts within an AWS Organi",
+          "link": "https://aws.amazon.com/blogs/aws/amazon-bedrock-guardrails-supports-cross-account-safeguards-with-centralized-control-and-management/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Fri, 03 Apr 2026 20:36:40 +0000",
+          "author": "Channy Yun (윤석찬)"
+        },
+        {
+          "title": "The uphill climb of making diff lines performant",
+          "description": "<p>The path to better performance is often found in simplicity.</p>\n<p>The post <a href=\"https://github.blog/engineering/architecture-optimization/the-uphill-climb-of-making-diff-lines-performant/\">Th",
+          "link": "https://github.blog/engineering/architecture-optimization/the-uphill-climb-of-making-diff-lines-performant/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Fri, 03 Apr 2026 16:00:00 +0000",
+          "author": "Luke Ghenco"
+        },
+        {
+          "title": "The uphill climb of making diff lines performant",
+          "description": "<p>The path to better performance is often found in simplicity.</p>\n<p>The post <a href=\"https://github.blog/engineering/architecture-optimization/the-uphill-climb-of-making-diff-lines-performant/\">Th",
+          "link": "https://github.blog/engineering/architecture-optimization/the-uphill-climb-of-making-diff-lines-performant/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Fri, 03 Apr 2026 16:00:00 +0000",
+          "author": "Luke Ghenco"
+        },
+        {
+          "title": "3.10.0-rc.1 / 2026-02-19",
+          "description": "<p>Prometheus now offers a distroless Docker image variant alongside the default<br />\nbusybox image. The distroless variant provides enhanced security with a minimal<br />\nbase image, uses UID/GID 65",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.1",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-07T08:17:38.358024",
+          "author": "prombot"
+        },
+        {
+          "title": "v0.310.0",
+          "description": "<p>v0.310.0</p>",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-07T08:17:38.358019",
+          "author": "codesome"
+        },
+        {
+          "title": "3.10.0 / 2026-02-24",
+          "description": "<p>Prometheus now offers a distroless Docker image variant alongside the default<br />\nbusybox image. The distroless variant provides enhanced security with a minimal<br />\nbase image, uses UID/GID 65",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-07T08:17:38.358014",
+          "author": "prombot"
+        },
+        {
+          "title": "3.11.0-rc.0 / 2026-03-30",
+          "description": "<ul>\n<li>[CHANGE] Hetzner SD: The <code>__meta_hetzner_datacenter</code> label is deprecated for the role <code>robot</code> but kept for backward compatibility, use the <code>__meta_hetzner_robot_dat",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-07T08:17:38.358009",
+          "author": "prombot"
+        },
+        {
+          "title": "3.11.0 / 2026-04-02",
+          "description": "<ul>\n<li>[CHANGE] Hetzner SD: The <code>__meta_hetzner_datacenter</code> label is deprecated for the role <code>robot</code> but kept for backward compatibility, use the <code>__meta_hetzner_robot_dat",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-07T08:17:38.357996",
+          "author": "prombot"
+        },
+        {
+          "title": "Announcing the Retirement of OWASP Meetup Platform",
+          "description": "<p>There is no easy way to say this, so here goes. OWASP will be retiring Meetup, effective January 31, 2026. This impacts attendees and chapter leaders. Retiring Meetup in such a short time is not ho",
+          "link": "http://owasp.org/blog/2026/01/13/retiring-meetup.html",
+          "source": "OWASP",
+          "category": "Sécurité",
+          "published": "2026-01-13T07:00:00+00:00",
+          "author": "Andrew van der Stock"
+        },
+        {
+          "title": "The OWASP Foundation appoints Stacey Ebbs as Communications & Marketing Manager",
+          "description": "<p>The OWASP Foundation is pleased to announce the appointment of Stacey Ebbs as Communications and Marketing Manager. Stacey brings more than a decade of experience in marketing, events, and communit",
+          "link": "http://owasp.org/blog/2025/11/19/stacey-ebbs-marketing-hired.html",
+          "source": "OWASP",
+          "category": "Sécurité",
+          "published": "2025-11-19T07:00:00+00:00",
+          "author": "Andrew van der Stock"
+        },
+        {
+          "title": "OWASP Certified Secure Software Developer",
+          "description": "<p>To develop applications we need code. To write code we need developers. And to develop secure applications, developers need to write code that does not result in or have vulnerabilities.</p>\n\n<p>OW",
+          "link": "http://owasp.org/blog/2025/10/03/owasp-certified-secure-software-developer.html",
+          "source": "OWASP",
+          "category": "Sécurité",
+          "published": "2025-10-03T07:00:00+00:00",
+          "author": "Shruti Kulkarni"
+        },
+        {
+          "title": "GSoC 2025 Recap",
+          "description": "<h1 id=\"owasp-at-google-summer-of-code-2025\">OWASP at Google Summer of Code 2025</h1>\n\n<p><strong>Celebrating real impact, strong mentorship, and a growing community</strong></p>\n\n<p>The Google Summer",
+          "link": "http://owasp.org/blog/2025/10/01/GSoCRecap.html",
+          "source": "OWASP",
+          "category": "Sécurité",
+          "published": "2025-10-01T07:00:00+00:00",
+          "author": "Fabio Cerullo & Starr Brown"
+        },
+        {
+          "title": "OWASP Top 10 Community Survey",
+          "description": "<p><img alt=\"Top 10 Community Survey\" src=\"https://owasp.org/assets/images/content/Top10-Survey760x428px.png\" /></p>\n\n<h2 id=\"help-shape-the-future-of-web-application-security-owasp-top-10---2025-comm",
+          "link": "http://owasp.org/blog/2025/09/26/Top10Survey.html",
+          "source": "OWASP",
+          "category": "Sécurité",
+          "published": "2025-09-26T07:00:00+00:00",
+          "author": "Starr Brown"
         }
       ]
-    },
-    "infrastructure": {
-      "icon": "🏗️",
-      "articles": []
-    },
-    "developpement": {
-      "icon": "💻",
-      "articles": []
-    },
-    "securite": {
-      "icon": "🔐",
-      "articles": []
-    },
-    "ia": {
-      "icon": "🤖",
-      "articles": []
-    },
-    "cloud": {
-      "icon": "☁️",
-      "articles": []
-    },
-    "monitoring": {
-      "icon": "📊",
-      "articles": []
     }
   }
 }
