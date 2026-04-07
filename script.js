@@ -804,7 +804,7 @@ function setupFormSubmission() {
             // Envoyer via l'API Vercel
             const apiUrl = window.location.hostname === 'localhost' 
                 ? 'http://localhost:3000/api/contact'
-                : 'https://deroneman.github.io/api/contact'; // À remplacer par votre domaine Vercel
+                : 'https://portfolio-guylian.vercel.app/api/contact';
             
             const response = await fetch(apiUrl, {
                 method: 'POST',
