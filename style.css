@@ -1597,7 +1597,8 @@ body {
     }
 
     .btn-text {
-        display: none;
+        display: inline;
+        font-size: 8px;
     }
 
     .btn-icon {
@@ -1608,6 +1609,8 @@ body {
         width: 100%;
         min-height: calc(100vh - 350px);
         padding: 8px;
+        overflow-y: auto;
+        overflow-x: hidden;
         order: 2;
     }
 
