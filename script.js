@@ -335,10 +335,10 @@ function displayVeilleArticles() {
                     return `
                     <div class="veille-item">
                         <div class="veille-badge">${new Date(article.published).toLocaleDateString('fr-FR')}</div>
-                        <div class="veille-category">${icon} ${article.category}</div>
-                        <div class="veille-title">${article.title}</div>
-                        <div class="veille-description">${stripHTML(article.description)}</div>
-                        <a href="${article.link}" target="_blank" class="veille-source">📌 ${article.source}</a>
+                        <a href="${article.link}" target="_blank" class="veille-link">
+                            <span class="veille-icon">${icon}</span>
+                            <span class="veille-title">${article.title}</span>
+                        </a>
                     </div>
                 `;
                 }).join('');
