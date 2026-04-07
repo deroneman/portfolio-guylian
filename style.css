@@ -791,6 +791,12 @@ body {
     gap: 6px;
 }
 
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
 .form-field label {
     font-size: 12px;
     font-weight: 700;
@@ -1190,6 +1196,10 @@ body {
     .pagination-controls {
         flex-direction: column;
         gap: 8px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1757,6 +1767,10 @@ body {
 
     #captchaQuestion {
         font-size: 14px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
     }
 }
 
