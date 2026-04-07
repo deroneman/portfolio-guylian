@@ -238,17 +238,17 @@ function showPotionMessage(message, type) {
 // Charger et afficher les articles de veille technologique depuis JSON
 let veilleData = null;
 
+// Fonction pour nettoyer le HTML
+function stripHTML(html) {
+    const div = document.createElement('div');
+    div.innerHTML = html;
+    return div.textContent || div.innerText || '';
+}
+
 async function loadVeilleArticles() {
     try {
         const response = await fetch('veille-articles.json');
         veilleData = await response.json();
-        
-        // Fonction pour nettoyer le HTML
-        const stripHTML = (html) => {
-            const div = document.createElement('div');
-            div.innerHTML = html;
-            return div.textContent || div.innerText || '';
-        };
         
         // Extraire toutes les années disponibles
         const yearsSet = new Set();
@@ -276,12 +276,12 @@ async function loadVeilleArticles() {
             
             // Gérer le changement de sélection d'année
             yearSelect.addEventListener('change', () => {
-                displayVeilleArticles(stripHTML);
+                displayVeilleArticles();
             });
         }
         
         // Afficher les articles initialement
-        displayVeilleArticles(stripHTML);
+        displayVeilleArticles();
         
         console.log('✅ Articles de veille chargés avec succès');
     } catch (error) {
@@ -289,7 +289,7 @@ async function loadVeilleArticles() {
     }
 }
 
-function displayVeilleArticles(stripHTML) {
+function displayVeilleArticles() {
     if (!veilleData) return;
     
     const selectedYear = document.getElementById('veille-year-select')?.value;
@@ -329,11 +329,6 @@ function displayVeilleArticles(stripHTML) {
             // Injecter dans la page avec une grille
             tabContent.innerHTML = `<div class="veille-grid">${articlesHTML}</div>`;
         }
-    }
-}
-    } catch (error) {
-        console.warn('⚠️ Erreur lors du chargement des articles de veille:', error);
-        // Les articles statiques dans le HTML seront conservés en fallback
     }
 }
 
