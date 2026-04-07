@@ -940,17 +940,11 @@ function setupFormSubmission() {
             // Use mana on successful form submission
             useMana(manaRequired);
             
-            showFormMessage('✅ Message envoyé avec succès !', 'success');
+            showContactNotification('✅ Message envoyé avec succès !', 'success');
             
             // Reset form
             form.reset();
             generateCaptcha();
-            
-            // Clear message after 3 seconds
-            setTimeout(() => {
-                document.getElementById('formMessage').textContent = '';
-                document.getElementById('formMessage').classList.remove('success', 'error', 'loading');
-            }, 3000);
         } catch (error) {
             showFormMessage('❌ ' + error.message, 'error');
         }
@@ -963,6 +957,66 @@ function showFormMessage(message, type) {
     messageEl.textContent = message;
     messageEl.classList.remove('success', 'error');
     messageEl.classList.add(type);
+}
+
+// Show contact notification popup (like potions)
+function showContactNotification(message, type) {
+    const notificationEl = document.createElement('div');
+    notificationEl.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 20px 30px;
+        background: ${type === 'success' ? 'rgba(16, 185, 129, 0.95)' : 'rgba(239, 68, 68, 0.95)'};
+        border: 2px solid ${type === 'success' ? '#10b981' : '#ef4444'};
+        color: #ffffff;
+        font-family: 'Rajdhani', monospace;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border-radius: 6px;
+        z-index: 5000;
+        box-shadow: 0 0 30px ${type === 'success' ? 'rgba(16, 185, 129, 0.6)' : 'rgba(239, 68, 68, 0.6)'};
+        animation: notificationSlideIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), notificationSlideOut 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 3.5s forwards;
+    `;
+    notificationEl.textContent = message;
+    document.body.appendChild(notificationEl);
+    
+    setTimeout(() => {
+        notificationEl.remove();
+    }, 4000);
+}
+
+// Add animation for notifications
+if (document.head) {
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes notificationSlideIn {
+            from {
+                opacity: 0;
+                transform: translateX(400px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes notificationSlideOut {
+            from {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateX(400px);
+            }
+        }
+    `;
+    if (!document.querySelector('style[data-notifications]')) {
+        style.setAttribute('data-notifications', 'true');
+        document.head.appendChild(style);
+    }
 }
 
 // Utility: Add parallax effect to background particles
