@@ -927,7 +927,18 @@ function setupFormSubmission() {
                 body: JSON.stringify(formData)
             });
 
-            const result = await response.json();
+            // Essayer de parser la réponse en JSON
+            let result;
+            const contentType = response.headers.get('content-type');
+            
+            if (contentType && contentType.includes('application/json')) {
+                result = await response.json();
+            } else {
+                // Si ce n'est pas du JSON, c'est une erreur serveur
+                const text = await response.text();
+                console.error('Réponse non-JSON reçue:', text.substring(0, 200));
+                throw new Error('Erreur serveur: réponse invalide');
+            }
 
             if (!response.ok) {
                 throw new Error(result.error || 'Erreur lors de l\'envoi');
