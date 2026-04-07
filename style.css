@@ -1146,6 +1146,36 @@ body {
     box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
 }
 
+.date-filter {
+    padding: 5px 8px;
+    background: rgba(139, 92, 246, 0.15);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 3px;
+    color: var(--light-text);
+    cursor: pointer;
+    font-size: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+.date-filter:hover {
+    background: rgba(139, 92, 246, 0.2);
+    border-color: var(--accent-gold);
+}
+
+.date-filter:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+}
+
+.date-filter option {
+    background: #1a0a2e;
+    color: var(--light-text);
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 
 /* Mobile < 480px */

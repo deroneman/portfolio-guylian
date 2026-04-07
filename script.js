@@ -312,23 +312,32 @@ function displayVeilleArticles() {
             if (articlesToDisplay.length > 0) {
                 // Initialiser l'état de pagination pour ce tab
                 if (!veillePaginationState[tabId]) {
-                    // Récents: 5 articles par défaut, catégories: 10 articles par défaut
-                    const defaultItemsPerPage = (tabId === 'recents') ? 5 : 10;
                     veillePaginationState[tabId] = {
                         currentPage: 1,
-                        itemsPerPage: defaultItemsPerPage,
-                        totalArticles: articlesToDisplay.length
+                        itemsPerPage: 9,
+                        totalArticles: articlesToDisplay.length,
+                        selectedYear: 'all'
                     };
                 }
                 
                 const state = veillePaginationState[tabId];
-                state.totalArticles = articlesToDisplay.length;
+                
+                // Filtrer par année si sélectionnée
+                let filteredArticles = articlesToDisplay;
+                if (state.selectedYear !== 'all') {
+                    filteredArticles = articlesToDisplay.filter(article => {
+                        const year = new Date(article.published).getFullYear();
+                        return year.toString() === state.selectedYear;
+                    });
+                }
+                
+                state.totalArticles = filteredArticles.length;
                 state.totalPages = Math.ceil(state.totalArticles / state.itemsPerPage);
                 
                 // Calculer l'index de début et fin
                 const startIdx = (state.currentPage - 1) * state.itemsPerPage;
                 const endIdx = startIdx + state.itemsPerPage;
-                const paginatedArticles = articlesToDisplay.slice(startIdx, endIdx);
+                const paginatedArticles = filteredArticles.slice(startIdx, endIdx);
                 
                 // Créer les éléments HTML pour les articles
                 const articlesHTML = paginatedArticles.map(article => {
@@ -345,6 +354,9 @@ function displayVeilleArticles() {
                 `;
                 }).join('');
                 
+                // Obtenir les années uniques disponibles
+                const availableYears = [...new Set(articlesToDisplay.map(a => new Date(a.published).getFullYear()))].sort((a, b) => b - a);
+                
                 // Créer les contrôles de pagination
                 const paginationHTML = `
                     <div class="veille-pagination">
@@ -354,14 +366,11 @@ function displayVeilleArticles() {
                             <button class="pagination-btn" onclick="changeVeillePage('${tabId}', 1)" ${state.currentPage === state.totalPages ? 'disabled' : ''}>Suivant →</button>
                         </div>
                         <div class="pagination-display">
-                            <label>Articles par page:</label>
-                            ${tabId === 'recents' ? `
-                                <button class="display-btn ${state.itemsPerPage === 5 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 5)">5</button>
-                                <button class="display-btn ${state.itemsPerPage === 10 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 10)">10</button>
-                            ` : `
-                                <button class="display-btn ${state.itemsPerPage === 10 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 10)">10</button>
-                                <button class="display-btn ${state.itemsPerPage === 50 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 50)">50</button>
-                            `}
+                            <label>Filtrer par année:</label>
+                            <select class="date-filter" onchange="changeVeilleYear('${tabId}', this.value)">
+                                <option value="all" ${state.selectedYear === 'all' ? 'selected' : ''}>Tous les articles</option>
+                                ${availableYears.map(year => `<option value="${year}" ${state.selectedYear === year.toString() ? 'selected' : ''}>${year}</option>`).join('')}
+                            </select>
                         </div>
                     </div>
                 `;
@@ -370,6 +379,14 @@ function displayVeilleArticles() {
                 tabContent.innerHTML = `<div class="veille-grid">${articlesHTML}</div>${paginationHTML}`;
             }
         }
+    }
+}
+
+function changeVeilleYear(tabId, year) {
+    if (veillePaginationState[tabId]) {
+        veillePaginationState[tabId].selectedYear = year;
+        veillePaginationState[tabId].currentPage = 1;
+        displayVeilleArticles();
     }
 }
 
