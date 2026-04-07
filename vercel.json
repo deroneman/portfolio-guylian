@@ -1,0 +1,12 @@
+{
+  "buildCommand": "",
+  "framework": "static",
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "env": [
+    "BREVO_API_KEY"
+  ]
+}

@@ -798,12 +798,34 @@ function setupFormSubmission() {
         }
 
         try {
+            // Show loading state
+            showFormMessage('📤 Envoi du message en cours...', 'loading');
+
+            // Envoyer via l'API Vercel
+            const apiUrl = window.location.hostname === 'localhost' 
+                ? 'http://localhost:3000/api/contact'
+                : 'https://deroneman.github.io/api/contact'; // À remplacer par votre domaine Vercel
+            
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || 'Erreur lors de l\'envoi');
+            }
+
             // Use mana on successful form submission
             useMana(manaRequired);
             
-            console.log('Form data:', formData);
+            console.log('✅ Message envoyé avec succès:', result.messageId);
             
-            showFormMessage('Message envoyé avec succès! ✓', 'success');
+            showFormMessage('✅ Message envoyé avec succès !', 'success');
             
             // Reset form
             form.reset();
@@ -812,10 +834,10 @@ function setupFormSubmission() {
             // Clear message after 3 seconds
             setTimeout(() => {
                 document.getElementById('formMessage').textContent = '';
-                document.getElementById('formMessage').classList.remove('success', 'error');
+                document.getElementById('formMessage').classList.remove('success', 'error', 'loading');
             }, 3000);
         } catch (error) {
-            showFormMessage('Erreur lors de l\'envoi du message', 'error');
+            showFormMessage('❌ ' + error.message, 'error');
             console.error('Form error:', error);
         }
     });
