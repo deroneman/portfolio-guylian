@@ -250,37 +250,7 @@ async function loadVeilleArticles() {
         const response = await fetch('veille-articles.json');
         veilleData = await response.json();
         
-        // Extraire toutes les années disponibles
-        const yearsSet = new Set();
-        for (const categoryData of Object.values(veilleData.articles)) {
-            if (categoryData.articles) {
-                categoryData.articles.forEach(article => {
-                    const year = new Date(article.published).getFullYear();
-                    yearsSet.add(year);
-                });
-            }
-        }
-        
-        // Trier les années en ordre décroissant
-        const years = Array.from(yearsSet).sort((a, b) => b - a);
-        
-        // Remplir le select avec les années
-        const yearSelect = document.getElementById('veille-year-select');
-        if (yearSelect) {
-            years.forEach(year => {
-                const option = document.createElement('option');
-                option.value = year;
-                option.textContent = year;
-                yearSelect.appendChild(option);
-            });
-            
-            // Gérer le changement de sélection d'année
-            yearSelect.addEventListener('change', () => {
-                displayVeilleArticles();
-            });
-        }
-        
-        // Afficher les articles initialement
+        // Afficher les articles
         displayVeilleArticles();
         
         console.log('✅ Articles de veille chargés avec succès');
@@ -292,39 +262,25 @@ async function loadVeilleArticles() {
 function displayVeilleArticles() {
     if (!veilleData) return;
     
-    const selectedYear = document.getElementById('veille-year-select')?.value;
-    
     // Afficher les articles par catégorie/tab
     for (const [tabId, categoryData] of Object.entries(veilleData.articles)) {
         const tabContent = document.getElementById(`${tabId}-tab`);
         const categoryIcon = categoryData.icon || '📌';
         
         if (tabContent && categoryData.articles && categoryData.articles.length > 0) {
-            let articlesToDisplay = categoryData.articles;
-            
-            // Pour "Récents", limiter à 6 articles (sans filtre d'année)
-            if (tabId === 'recents') {
-                articlesToDisplay = categoryData.articles.slice(0, 6);
-            } else if (selectedYear) {
-                // Pour les autres catégories, filtrer par année si sélectionnée
-                articlesToDisplay = categoryData.articles.filter(article => {
-                    const articleYear = new Date(article.published).getFullYear();
-                    return articleYear === parseInt(selectedYear);
-                });
-            }
+            // Les articles sont déjà triés par date du plus récent au plus ancien
+            const articlesToDisplay = categoryData.articles;
             
             // Créer les éléments HTML pour les articles
-            const articlesHTML = articlesToDisplay.length > 0
-                ? articlesToDisplay.map(article => `
-                    <div class="veille-item">
-                        <div class="veille-badge">${new Date(article.published).toLocaleDateString('fr-FR')}</div>
-                        <div class="veille-category">${categoryIcon} ${article.category}</div>
-                        <div class="veille-title">${article.title}</div>
-                        <div class="veille-description">${stripHTML(article.description)}</div>
-                        <a href="${article.link}" target="_blank" class="veille-source">📌 ${article.source}</a>
-                    </div>
-                `).join('')
-                : `<div style="padding: 20px; text-align: center; color: var(--muted-text);">Aucun article disponible${selectedYear ? ' pour ' + selectedYear : ''}</div>`;
+            const articlesHTML = articlesToDisplay.map(article => `
+                <div class="veille-item">
+                    <div class="veille-badge">${new Date(article.published).toLocaleDateString('fr-FR')}</div>
+                    <div class="veille-category">${categoryIcon} ${article.category}</div>
+                    <div class="veille-title">${article.title}</div>
+                    <div class="veille-description">${stripHTML(article.description)}</div>
+                    <a href="${article.link}" target="_blank" class="veille-source">📌 ${article.source}</a>
+                </div>
+            `).join('');
             
             // Injecter dans la page avec une grille
             tabContent.innerHTML = `<div class="veille-grid">${articlesHTML}</div>`;
