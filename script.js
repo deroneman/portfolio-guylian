@@ -267,23 +267,54 @@ function displayVeilleArticles() {
         const tabContent = document.getElementById(`${tabId}-tab`);
         const categoryIcon = categoryData.icon || '📌';
         
-        if (tabContent && categoryData.articles && categoryData.articles.length > 0) {
-            // Les articles sont déjà triés par date du plus récent au plus ancien
-            const articlesToDisplay = categoryData.articles;
+        if (tabContent) {
+            let articlesHTML = '';
             
-            // Créer les éléments HTML pour les articles
-            const articlesHTML = articlesToDisplay.map(article => `
-                <div class="veille-item">
-                    <div class="veille-badge">${new Date(article.published).toLocaleDateString('fr-FR')}</div>
-                    <div class="veille-category">${categoryIcon} ${article.category}</div>
-                    <div class="veille-title">${article.title}</div>
-                    <div class="veille-description">${stripHTML(article.description)}</div>
-                    <a href="${article.link}" target="_blank" class="veille-source">📌 ${article.source}</a>
-                </div>
-            `).join('');
+            if (tabId === 'recents') {
+                // Pour "Récents", combiner tous les articles de toutes les catégories (SAUF recents) avec leurs emojis
+                const allArticles = [];
+                
+                for (const [catKey, catData] of Object.entries(veilleData.articles)) {
+                    // Ignorer la catégorie "recents" elle-même
+                    if (catKey === 'recents') continue;
+                    
+                    if (catData.articles && Array.isArray(catData.articles)) {
+                        catData.articles.forEach(article => {
+                            allArticles.push({
+                                ...article,
+                                categoryIcon: catData.icon || '📌'
+                            });
+                        });
+                    }
+                }
+                
+                // Afficher tous les articles
+                articlesHTML = allArticles.map(article => `
+                    <div class="veille-item">
+                        <div class="veille-badge">${new Date(article.published).toLocaleDateString('fr-FR')}</div>
+                        <div class="veille-category">${article.categoryIcon} ${article.category}</div>
+                        <div class="veille-title">${article.title}</div>
+                        <div class="veille-description">${stripHTML(article.description)}</div>
+                        <a href="${article.link}" target="_blank" class="veille-source">📌 ${article.source}</a>
+                    </div>
+                `).join('');
+            } else {
+                // Pour les autres catégories, afficher uniquement leurs articles
+                if (categoryData.articles && categoryData.articles.length > 0) {
+                    articlesHTML = categoryData.articles.map(article => `
+                        <div class="veille-item">
+                            <div class="veille-badge">${new Date(article.published).toLocaleDateString('fr-FR')}</div>
+                            <div class="veille-category">${categoryIcon} ${article.category}</div>
+                            <div class="veille-title">${article.title}</div>
+                            <div class="veille-description">${stripHTML(article.description)}</div>
+                            <a href="${article.link}" target="_blank" class="veille-source">📌 ${article.source}</a>
+                        </div>
+                    `).join('');
+                }
+            }
             
             // Injecter dans la page avec une grille
-            tabContent.innerHTML = `<div class="veille-grid">${articlesHTML}</div>`;
+            tabContent.innerHTML = articlesHTML ? `<div class="veille-grid">${articlesHTML}</div>` : `<div style="padding: 20px; text-align: center; color: var(--muted-text);">Aucun article disponible</div>`;
         }
     }
 }
