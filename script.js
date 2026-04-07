@@ -312,9 +312,11 @@ function displayVeilleArticles() {
             if (articlesToDisplay.length > 0) {
                 // Initialiser l'état de pagination pour ce tab
                 if (!veillePaginationState[tabId]) {
+                    // Récents: 5 articles par défaut, catégories: 10 articles par défaut
+                    const defaultItemsPerPage = (tabId === 'recents') ? 5 : 10;
                     veillePaginationState[tabId] = {
                         currentPage: 1,
-                        itemsPerPage: 5,
+                        itemsPerPage: defaultItemsPerPage,
                         totalArticles: articlesToDisplay.length
                     };
                 }
@@ -353,8 +355,13 @@ function displayVeilleArticles() {
                         </div>
                         <div class="pagination-display">
                             <label>Articles par page:</label>
-                            <button class="display-btn ${state.itemsPerPage === 5 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 5)">5</button>
-                            <button class="display-btn ${state.itemsPerPage === 10 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 10)">10</button>
+                            ${tabId === 'recents' ? `
+                                <button class="display-btn ${state.itemsPerPage === 5 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 5)">5</button>
+                                <button class="display-btn ${state.itemsPerPage === 10 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 10)">10</button>
+                            ` : `
+                                <button class="display-btn ${state.itemsPerPage === 10 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 10)">10</button>
+                                <button class="display-btn ${state.itemsPerPage === 50 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 50)">50</button>
+                            `}
                         </div>
                     </div>
                 `;
