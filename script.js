@@ -262,6 +262,17 @@ async function loadVeilleArticles() {
 function displayVeilleArticles() {
     if (!veilleData) return;
     
+    // Fonction helper pour parser les dates RSS robustement
+    function parseRSSDate(dateStr) {
+        // Essayer de parser la date directement
+        let date = new Date(dateStr);
+        if (!isNaN(date)) {
+            return date.getTime();
+        }
+        // Fallback: retourner 0 si parsing échoue
+        return 0;
+    }
+    
     // Créer un map catégorie -> icône pour accès rapide
     const categoryIcons = {};
     for (const [catKey, catData] of Object.entries(veilleData.articles)) {
@@ -286,13 +297,19 @@ function displayVeilleArticles() {
                 }
                 // Trier par date (du plus récent au plus ancien)
                 articlesToDisplay.sort((a, b) => {
-                    const dateA = new Date(a.published).getTime();
-                    const dateB = new Date(b.published).getTime();
-                    return dateB - dateA; // du plus récent au plus ancien
+                    const timeA = parseRSSDate(a.published);
+                    const timeB = parseRSSDate(b.published);
+                    return timeB - timeA; // du plus récent au plus ancien
                 });
             } else if (categoryData.articles && categoryData.articles.length > 0) {
                 // Pour les autres catégories, utiliser les articles existants
                 articlesToDisplay = categoryData.articles;
+                // Trier par date (du plus récent au plus ancien)
+                articlesToDisplay.sort((a, b) => {
+                    const timeA = parseRSSDate(a.published);
+                    const timeB = parseRSSDate(b.published);
+                    return timeB - timeA; // du plus récent au plus ancien
+                });
             }
             
             if (articlesToDisplay.length > 0) {
