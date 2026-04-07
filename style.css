@@ -244,6 +244,11 @@ body {
     font-size: 16px;
 }
 
+.btn-text {
+    display: inline !important;
+    font-size: clamp(7px, 1.5vw, 11px);
+}
+
 /* ===== CONTENT AREA ===== */
 .sl-content-area {
     position: relative;
@@ -431,32 +436,42 @@ body {
 
 .skill-row {
     display: grid;
-    grid-template-columns: 1fr 45px;
+    grid-template-columns: 1fr 40px;
     align-items: center;
     gap: 8px;
-    font-size: 11px;
+    font-size: clamp(10px, 2vw, 14px);
+    width: 100%;
+    overflow: hidden;
 }
 
 .skill-row span:first-child {
     color: var(--light-text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .mini-bar {
-    height: 6px;
+    height: clamp(6px, 1.5vh, 10px);
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid var(--primary-purple);
     overflow: hidden;
+    width: 100%;
+    min-width: 40px;
 }
 
 .mini-fill {
     height: 100%;
     background: linear-gradient(90deg, var(--primary-purple), var(--accent-gold));
+    width: 100%;
+    max-width: 100%;
 }
 
 .skill-row span:last-child {
     color: var(--accent-gold);
     font-weight: 600;
     text-align: right;
+    min-width: 35px;
 }
 
 /* ===== EXPERIENCE TABS ===== */
