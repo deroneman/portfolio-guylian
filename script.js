@@ -264,13 +264,8 @@ function displayVeilleArticles() {
     
     // Fonction helper pour parser les dates RSS robustement
     function parseRSSDate(dateStr) {
-        // Essayer de parser la date directement
-        let date = new Date(dateStr);
-        if (!isNaN(date)) {
-            return date.getTime();
-        }
-        // Fallback: retourner 0 si parsing échoue
-        return 0;
+        const time = new Date(dateStr).getTime();
+        return isNaN(time) ? 0 : time;
     }
     
     // Créer un map catégorie -> icône pour accès rapide
