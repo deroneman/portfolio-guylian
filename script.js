@@ -241,6 +241,13 @@ async function loadVeilleArticles() {
         const response = await fetch('veille-articles.json');
         const veilleData = await response.json();
         
+        // Fonction pour nettoyer le HTML
+        const stripHTML = (html) => {
+            const div = document.createElement('div');
+            div.innerHTML = html;
+            return div.textContent || div.innerText || '';
+        };
+        
         // Afficher les articles par catégorie/tab
         for (const [tabId, categoryData] of Object.entries(veilleData.articles)) {
             const tabContent = document.getElementById(`${tabId}-tab`);
@@ -252,7 +259,7 @@ async function loadVeilleArticles() {
                         <div class="veille-badge">${new Date(article.published).toLocaleDateString('fr-FR')}</div>
                         <div class="veille-category">${article.category}</div>
                         <div class="veille-title">${article.title}</div>
-                        <div class="veille-description">${article.description}</div>
+                        <div class="veille-description">${stripHTML(article.description)}</div>
                         <a href="${article.link}" target="_blank" class="veille-source">📌 ${article.source}</a>
                     </div>
                 `).join('');

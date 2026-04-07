@@ -1088,6 +1088,11 @@ body {
 
 /* Laptop/Desktop 1440px+ */
 @media (min-width: 1440px) {
+    .veille-grid {
+        grid-template-columns: 1fr 1fr 1fr !important;
+        gap: 15px !important;
+    }
+
     .sl-interface {
         grid-template-columns: 380px 1fr;
         gap: 25px;
@@ -1278,6 +1283,11 @@ body {
 
 /* Tablet 768px-1024px */
 @media (min-width: 768px) and (max-width: 1023px) {
+    .veille-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
+    }
+
     .sl-interface {
         grid-template-columns: 280px 1fr;
         gap: 12px;
@@ -1354,6 +1364,11 @@ body {
 
 /* Small Tablet 640px-767px */
 @media (min-width: 640px) and (max-width: 767px) {
+    .veille-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+    }
+
     .sl-interface {
         grid-template-columns: 1fr;
         gap: 10px;
