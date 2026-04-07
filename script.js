@@ -181,7 +181,7 @@ function useHealthPotion() {
     startHealthPotionCooldown();
 }
 
-function useManaPotionPotion() {
+function useManaPotion() {
     if (manaPotionCooldown) {
         showPotionMessage('Potion de mana en cooldown...', 'cooldown');
         return;
@@ -252,10 +252,8 @@ async function loadVeilleArticles() {
         
         // Afficher les articles
         displayVeilleArticles();
-        
-        console.log('✅ Articles de veille chargés avec succès');
     } catch (error) {
-        console.warn('⚠️ Erreur lors du chargement des articles de veille:', error);
+        console.error('Failed to load veille articles');
     }
 }
 
@@ -518,7 +516,7 @@ function activateCheatCode() {
         <div style="color: #fbbf24; font-size: 36px; font-weight: 900; margin-bottom: 20px; letter-spacing: 3px; text-transform: uppercase;">⚡ SHADOW ABILITIES ACTIVATED ⚡</div>
         <div style="color: #e5e7eb; font-size: 14px; line-height: 1.8; margin-bottom: 15px;">
             <div style="margin-bottom: 10px;">🌑 <strong>Progression cachée activée</strong></div>
-            <div style="margin-bottom: 10px;"> Email: guylian.dupuy@hotmail.fr</div>
+            <div style="margin-bottom: 10px;">📧 Email: guylian.dupuy@hotmail.fr</div>
             <div style="margin-bottom: 10px;">💼 LinkedIn: https://www.linkedin.com/in/guylian-dupuy-012294269/</div>
             <div style="color: #9ca3af; font-size: 12px; margin-top: 15px;">« Vous avez découvert le secret... »</div>
         </div>
@@ -839,7 +837,13 @@ function generateCaptcha() {
     const operators = ['+', '-', '*'];
     const operator = operators[Math.floor(Math.random() * operators.length)];
     
-    captchaAnswer = eval(`${num1} ${operator} ${num2}`);
+    if (operator === '+') {
+        captchaAnswer = num1 + num2;
+    } else if (operator === '-') {
+        captchaAnswer = num1 - num2;
+    } else if (operator === '*') {
+        captchaAnswer = num1 * num2;
+    }
     
     const questionText = `${num1} ${operator} ${num2} = ?`;
     document.getElementById('captchaQuestion').textContent = questionText;
@@ -936,8 +940,6 @@ function setupFormSubmission() {
             // Use mana on successful form submission
             useMana(manaRequired);
             
-            console.log('✅ Message envoyé avec succès:', result.messageId);
-            
             showFormMessage('✅ Message envoyé avec succès !', 'success');
             
             // Reset form
@@ -951,7 +953,6 @@ function setupFormSubmission() {
             }, 3000);
         } catch (error) {
             showFormMessage('❌ ' + error.message, 'error');
-            console.error('Form error:', error);
         }
     });
 }
