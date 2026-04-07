@@ -436,12 +436,13 @@ body {
 
 .skill-row {
     display: grid;
-    grid-template-columns: 1fr 40px;
+    grid-template-columns: 1fr 35px;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
     font-size: clamp(10px, 2vw, 14px);
     width: 100%;
     overflow: hidden;
+    margin-bottom: 4px;
 }
 
 .skill-row span:first-child {
@@ -457,7 +458,7 @@ body {
     border: 1px solid var(--primary-purple);
     overflow: hidden;
     width: 100%;
-    min-width: 40px;
+    min-width: 30px;
 }
 
 .mini-fill {
@@ -471,7 +472,8 @@ body {
     color: var(--accent-gold);
     font-weight: 600;
     text-align: right;
-    min-width: 35px;
+    min-width: 30px;
+    font-size: clamp(9px, 1.8vw, 12px);
 }
 
 /* ===== EXPERIENCE TABS ===== */
