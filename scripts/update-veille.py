@@ -10,7 +10,7 @@ import os
 from datetime import datetime, timedelta
 from pathlib import Path
 
-def fetch_rss_articles(feeds_config, max_articles_per_feed=5):
+def fetch_rss_articles(feeds_config, max_articles_per_feed=50):
     """Récupère les articles des flux RSS"""
     
     articles_by_category = {}
@@ -35,7 +35,7 @@ def fetch_rss_articles(feeds_config, max_articles_per_feed=5):
                 for entry in feed.entries[:max_articles_per_feed]:
                     article = {
                         'title': entry.get('title', 'Sans titre'),
-                        'description': entry.get('summary', entry.get('description', 'Pas de description'))[:200],
+                        'description': entry.get('summary', entry.get('description', 'Pas de description')),
                         'link': entry.get('link', '#'),
                         'source': source['title'],
                         'category': source['category'],
