@@ -333,13 +333,14 @@ function displayVeilleArticles() {
                 // Créer les éléments HTML pour les articles
                 const articlesHTML = paginatedArticles.map(article => {
                     let icon = categoryIcons[article.category] || '📌';
+                    const shortDesc = stripHTML(article.description).substring(0, 120) + (stripHTML(article.description).length > 120 ? '...' : '');
                     
                     return `
                     <div class="veille-item">
                         <div class="veille-badge">${new Date(article.published).toLocaleDateString('fr-FR')}</div>
                         <div class="veille-category">${icon} ${article.category}</div>
                         <div class="veille-title">${article.title}</div>
-                        <div class="veille-description">${stripHTML(article.description)}</div>
+                        <div class="veille-description">${shortDesc}</div>
                         <a href="${article.link}" target="_blank" class="veille-source">📌 ${article.source}</a>
                     </div>
                 `;
