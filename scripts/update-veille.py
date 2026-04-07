@@ -10,6 +10,19 @@ import os
 from datetime import datetime, timedelta
 from pathlib import Path
 
+def parse_rss_date(date_str):
+    """Parse une date RSS et retourne un timestamp pour le tri"""
+    try:
+        # Essayer format RSS standard: "Mon, 30 Mar 2026 00:00:00 +0000"
+        if ',' in date_str:
+            date_obj = datetime.strptime(date_str[:16], '%a, %d %b %Y')
+        else:
+            # Essayer format ISO: "2026-04-07T08:17:39.159486"
+            date_obj = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+        return date_obj.timestamp()
+    except:
+        return 0
+
 def fetch_rss_articles(feeds_config, max_articles_per_feed=50):
     """Récupère les articles des flux RSS"""
     
@@ -51,8 +64,13 @@ def fetch_rss_articles(feeds_config, max_articles_per_feed=50):
                 print(f"⚠️ Erreur lors de la récupération de {source['title']}: {e}")
                 continue
     
-    # Ajouter la section "recents" avec tous les articles triés par date
-    sorted_articles = sorted(all_articles, key=lambda x: x['published'], reverse=True)
+    # Trier les articles de chaque catégorie par date (plus récent d'abord)
+    for tab_id, category_data in articles_by_category.items():
+        if tab_id != 'recents' and 'articles' in category_data:
+            category_data['articles'].sort(key=lambda x: parse_rss_date(x['published']), reverse=True)
+    
+    # Ajouter la section "recents" avec tous les articles triés par date (plus récent d'abord)
+    sorted_articles = sorted(all_articles, key=lambda x: parse_rss_date(x['published']), reverse=True)
     articles_by_category['recents'] = {
         'icon': '📌',
         'articles': sorted_articles
