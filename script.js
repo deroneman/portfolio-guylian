@@ -262,6 +262,14 @@ async function loadVeilleArticles() {
 function displayVeilleArticles() {
     if (!veilleData) return;
     
+    // Créer un map catégorie -> icône pour accès rapide
+    const categoryIcons = {};
+    for (const [catKey, catData] of Object.entries(veilleData.articles)) {
+        if (catKey !== 'recents') {
+            categoryIcons[catData.articles?.[0]?.category] = catData.icon || '📌';
+        }
+    }
+    
     // Afficher les articles par catégorie/tab
     for (const [tabId, categoryData] of Object.entries(veilleData.articles)) {
         const tabContent = document.getElementById(`${tabId}-tab`);
@@ -277,7 +285,11 @@ function displayVeilleArticles() {
                     }
                 }
                 // Trier par date (du plus récent au plus ancien)
-                articlesToDisplay.sort((a, b) => new Date(b.published) - new Date(a.published));
+                articlesToDisplay.sort((a, b) => {
+                    const dateA = new Date(a.published).getTime();
+                    const dateB = new Date(b.published).getTime();
+                    return dateB - dateA; // du plus récent au plus ancien
+                });
             } else if (categoryData.articles && categoryData.articles.length > 0) {
                 // Pour les autres catégories, utiliser les articles existants
                 articlesToDisplay = categoryData.articles;
@@ -286,16 +298,8 @@ function displayVeilleArticles() {
             if (articlesToDisplay.length > 0) {
                 // Créer les éléments HTML pour les articles
                 const articlesHTML = articlesToDisplay.map(article => {
-                    // Pour "recents", utiliser l'emoji de la catégorie originale de l'article
-                    let icon = categoryData.icon || '📌';
-                    if (tabId === 'recents') {
-                        for (const [catKey, catData] of Object.entries(veilleData.articles)) {
-                            if (catKey !== 'recents' && article.category === catData.articles?.[0]?.category) {
-                                icon = catData.icon || '📌';
-                                break;
-                            }
-                        }
-                    }
+                    // Déterminer l'icône à utiliser
+                    let icon = categoryIcons[article.category] || '📌';
                     
                     return `
                     <div class="veille-item">
