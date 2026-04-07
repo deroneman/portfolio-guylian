@@ -801,12 +801,8 @@ function setupFormSubmission() {
             // Show loading state
             showFormMessage('📤 Envoi du message en cours...', 'loading');
 
-            // Envoyer via l'API Vercel
-            const apiUrl = window.location.hostname === 'localhost' 
-                ? 'http://localhost:3000/api/contact'
-                : 'https://portfolio-guylian.vercel.app/api/contact';
-            
-            const response = await fetch(apiUrl, {
+            // Envoyer via l'API Vercel (URL relative - fonctionne sur tous les domaines)
+            const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
