@@ -685,19 +685,22 @@ body {
 /* ===== VEILLE GRID ===== */
 .veille-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 4px !important;
+    max-height: 50vh;
+    overflow-y: auto;
+    padding-right: 4px;
 }
 
 .veille-item {
     background: rgba(139, 92, 246, 0.1);
     border: 1px solid var(--primary-purple);
-    padding: 5px;
-    border-radius: 4px;
-    font-size: 10px;
+    padding: 4px;
+    border-radius: 3px;
+    font-size: 9px;
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 1px;
 }
 
 .veille-badge {
@@ -752,6 +755,25 @@ body {
     border-radius: 2px;
     font-size: 7px;
     font-weight: 600;
+}
+
+/* Scrollbar pour veille grid */
+.veille-grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.veille-grid::-webkit-scrollbar-track {
+    background: rgba(139, 92, 246, 0.1);
+    border-radius: 3px;
+}
+
+.veille-grid::-webkit-scrollbar-thumb {
+    background: rgba(139, 92, 246, 0.3);
+    border-radius: 3px;
+}
+
+.veille-grid::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 92, 246, 0.5);
 }
 
 /* ===== CONTACT FORM ===== */
