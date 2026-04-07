@@ -259,14 +259,16 @@ async function loadVeilleArticles() {
     }
 }
 
+// État de pagination pour la veille
+let veillePaginationState = {};
+
+function parseRSSDate(dateStr) {
+    const time = new Date(dateStr).getTime();
+    return isNaN(time) ? 0 : time;
+}
+
 function displayVeilleArticles() {
     if (!veilleData) return;
-    
-    // Fonction helper pour parser les dates RSS robustement
-    function parseRSSDate(dateStr) {
-        const time = new Date(dateStr).getTime();
-        return isNaN(time) ? 0 : time;
-    }
     
     // Créer un map catégorie -> icône pour accès rapide
     const categoryIcons = {};
@@ -294,7 +296,7 @@ function displayVeilleArticles() {
                 articlesToDisplay.sort((a, b) => {
                     const timeA = parseRSSDate(a.published);
                     const timeB = parseRSSDate(b.published);
-                    return timeB - timeA; // du plus récent au plus ancien
+                    return timeB - timeA;
                 });
             } else if (categoryData.articles && categoryData.articles.length > 0) {
                 // Pour les autres catégories, utiliser les articles existants
@@ -303,14 +305,31 @@ function displayVeilleArticles() {
                 articlesToDisplay.sort((a, b) => {
                     const timeA = parseRSSDate(a.published);
                     const timeB = parseRSSDate(b.published);
-                    return timeB - timeA; // du plus récent au plus ancien
+                    return timeB - timeA;
                 });
             }
             
             if (articlesToDisplay.length > 0) {
+                // Initialiser l'état de pagination pour ce tab
+                if (!veillePaginationState[tabId]) {
+                    veillePaginationState[tabId] = {
+                        currentPage: 1,
+                        itemsPerPage: 5,
+                        totalArticles: articlesToDisplay.length
+                    };
+                }
+                
+                const state = veillePaginationState[tabId];
+                state.totalArticles = articlesToDisplay.length;
+                state.totalPages = Math.ceil(state.totalArticles / state.itemsPerPage);
+                
+                // Calculer l'index de début et fin
+                const startIdx = (state.currentPage - 1) * state.itemsPerPage;
+                const endIdx = startIdx + state.itemsPerPage;
+                const paginatedArticles = articlesToDisplay.slice(startIdx, endIdx);
+                
                 // Créer les éléments HTML pour les articles
-                const articlesHTML = articlesToDisplay.map(article => {
-                    // Déterminer l'icône à utiliser
+                const articlesHTML = paginatedArticles.map(article => {
                     let icon = categoryIcons[article.category] || '📌';
                     
                     return `
@@ -324,10 +343,46 @@ function displayVeilleArticles() {
                 `;
                 }).join('');
                 
+                // Créer les contrôles de pagination
+                const paginationHTML = `
+                    <div class="veille-pagination">
+                        <div class="pagination-controls">
+                            <button class="pagination-btn" onclick="changeVeillePage('${tabId}', -1)" ${state.currentPage === 1 ? 'disabled' : ''}>← Précédent</button>
+                            <span class="pagination-info">${state.currentPage} / ${state.totalPages} (${state.totalArticles} articles)</span>
+                            <button class="pagination-btn" onclick="changeVeillePage('${tabId}', 1)" ${state.currentPage === state.totalPages ? 'disabled' : ''}>Suivant →</button>
+                        </div>
+                        <div class="pagination-display">
+                            <label>Articles par page:</label>
+                            <button class="display-btn ${state.itemsPerPage === 5 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 5)">5</button>
+                            <button class="display-btn ${state.itemsPerPage === 50 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 50)">50</button>
+                            <button class="display-btn ${state.itemsPerPage === 100 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 100)">100</button>
+                            <button class="display-btn ${state.itemsPerPage === articlesToDisplay.length ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', ${articlesToDisplay.length})">Tous</button>
+                        </div>
+                    </div>
+                `;
+                
                 // Injecter dans la page avec une grille
-                tabContent.innerHTML = `<div class="veille-grid">${articlesHTML}</div>`;
+                tabContent.innerHTML = `<div class="veille-grid">${articlesHTML}</div>${paginationHTML}`;
             }
         }
+    }
+}
+
+function changeVeillePage(tabId, direction) {
+    if (veillePaginationState[tabId]) {
+        const newPage = veillePaginationState[tabId].currentPage + direction;
+        if (newPage >= 1 && newPage <= veillePaginationState[tabId].totalPages) {
+            veillePaginationState[tabId].currentPage = newPage;
+            displayVeilleArticles();
+        }
+    }
+}
+
+function changeVeilleDisplay(tabId, itemsPerPage) {
+    if (veillePaginationState[tabId]) {
+        veillePaginationState[tabId].itemsPerPage = itemsPerPage;
+        veillePaginationState[tabId].currentPage = 1;
+        displayVeilleArticles();
     }
 }
 

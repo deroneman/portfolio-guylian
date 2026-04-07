@@ -1024,6 +1024,100 @@ body {
     75% { transform: scale(1.05); border-color: #06b6d4; }
 }
 
+/* ===== VEILLE PAGINATION ===== */
+.veille-pagination {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.pagination-btn {
+    padding: 8px 12px;
+    background: rgba(139, 92, 246, 0.15);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 4px;
+    color: var(--light-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: rgba(139, 92, 246, 0.3);
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.pagination-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pagination-info {
+    font-size: 11px;
+    color: var(--muted-text);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pagination-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.pagination-display label {
+    font-size: 11px;
+    color: var(--muted-text);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.display-btn {
+    padding: 6px 10px;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 4px;
+    color: var(--light-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.display-btn:hover {
+    background: rgba(139, 92, 246, 0.2);
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.display-btn.active {
+    background: rgba(139, 92, 246, 0.3);
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 
 /* Mobile < 480px */
@@ -1075,6 +1169,24 @@ body {
         font-size: 10px;
         padding: 8px 8px;
         gap: 4px;
+    }
+
+    .veille-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pagination-controls {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .pagination-display {
+        gap: 6px;
+    }
+
+    .display-btn {
+        padding: 5px 8px;
+        font-size: 9px;
     }
 }
 
