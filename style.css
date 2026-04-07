@@ -393,7 +393,7 @@ body {
 
 .panel-content {
     padding: 0 20px 20px 20px;
-    max-height: 75vh;
+    max-height: 82vh;
     overflow-y: auto;
     color: var(--light-text);
     font-size: 14px;
@@ -413,7 +413,11 @@ body {
 #projets-panel .panel-content,
 #organisation-panel .panel-content,
 #contact-panel .panel-content {
-    max-height: 78vh;
+    max-height: 85vh;
+}
+
+#veille-panel .panel-content {
+    max-height: 88vh;
 }
 
 /* Scrollbar customization */
@@ -1322,7 +1326,7 @@ body {
     }
 
     .panel-content {
-        max-height: 72vh;
+        max-height: 78vh;
         padding: 18px 15px;
     }
 
@@ -1334,7 +1338,11 @@ body {
     #projets-panel .panel-content,
     #organisation-panel .panel-content,
     #contact-panel .panel-content {
-        max-height: 76vh;
+        max-height: 80vh;
+    }
+
+    #veille-panel .panel-content {
+        max-height: 82vh;
     }
 
     .projet-item {
@@ -1404,8 +1412,12 @@ body {
     }
 
     .panel-content {
-        max-height: 70vh;
+        max-height: 75vh;
         font-size: 14px;
+    }
+
+    #veille-panel .panel-content {
+        max-height: 80vh;
     }
 
     .panel-title {
@@ -1514,7 +1526,7 @@ body {
     }
 
     .panel-content {
-        max-height: 65vh;
+        max-height: 80vh;
         padding: 12px 15px;
         font-size: 13px;
     }
@@ -1523,7 +1535,11 @@ body {
     #projets-panel .panel-content,
     #organisation-panel .panel-content,
     #contact-panel .panel-content {
-        max-height: 68vh;
+        max-height: 80vh;
+    }
+
+    #veille-panel .panel-content {
+        max-height: 85vh;
     }
 
     .skills-grid {
