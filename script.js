@@ -265,25 +265,52 @@ function displayVeilleArticles() {
     // Afficher les articles par catégorie/tab
     for (const [tabId, categoryData] of Object.entries(veilleData.articles)) {
         const tabContent = document.getElementById(`${tabId}-tab`);
-        const categoryIcon = categoryData.icon || '📌';
         
-        if (tabContent && categoryData.articles && categoryData.articles.length > 0) {
-            // Les articles sont déjà triés par date du plus récent au plus ancien
-            const articlesToDisplay = categoryData.articles;
+        if (tabContent) {
+            let articlesToDisplay = [];
             
-            // Créer les éléments HTML pour les articles
-            const articlesHTML = articlesToDisplay.map(article => `
-                <div class="veille-item">
-                    <div class="veille-badge">${new Date(article.published).toLocaleDateString('fr-FR')}</div>
-                    <div class="veille-category">${categoryIcon} ${article.category}</div>
-                    <div class="veille-title">${article.title}</div>
-                    <div class="veille-description">${stripHTML(article.description)}</div>
-                    <a href="${article.link}" target="_blank" class="veille-source">📌 ${article.source}</a>
-                </div>
-            `).join('');
+            // Pour "recents", combiner et trier tous les articles de toutes les catégories
+            if (tabId === 'recents') {
+                for (const [catKey, catData] of Object.entries(veilleData.articles)) {
+                    if (catKey !== 'recents' && catData.articles && Array.isArray(catData.articles)) {
+                        articlesToDisplay = articlesToDisplay.concat(catData.articles);
+                    }
+                }
+                // Trier par date (du plus récent au plus ancien)
+                articlesToDisplay.sort((a, b) => new Date(b.published) - new Date(a.published));
+            } else if (categoryData.articles && categoryData.articles.length > 0) {
+                // Pour les autres catégories, utiliser les articles existants
+                articlesToDisplay = categoryData.articles;
+            }
             
-            // Injecter dans la page avec une grille
-            tabContent.innerHTML = `<div class="veille-grid">${articlesHTML}</div>`;
+            if (articlesToDisplay.length > 0) {
+                // Créer les éléments HTML pour les articles
+                const articlesHTML = articlesToDisplay.map(article => {
+                    // Pour "recents", utiliser l'emoji de la catégorie originale de l'article
+                    let icon = categoryData.icon || '📌';
+                    if (tabId === 'recents') {
+                        for (const [catKey, catData] of Object.entries(veilleData.articles)) {
+                            if (catKey !== 'recents' && article.category === catData.articles?.[0]?.category) {
+                                icon = catData.icon || '📌';
+                                break;
+                            }
+                        }
+                    }
+                    
+                    return `
+                    <div class="veille-item">
+                        <div class="veille-badge">${new Date(article.published).toLocaleDateString('fr-FR')}</div>
+                        <div class="veille-category">${icon} ${article.category}</div>
+                        <div class="veille-title">${article.title}</div>
+                        <div class="veille-description">${stripHTML(article.description)}</div>
+                        <a href="${article.link}" target="_blank" class="veille-source">📌 ${article.source}</a>
+                    </div>
+                `;
+                }).join('');
+                
+                // Injecter dans la page avec une grille
+                tabContent.innerHTML = `<div class="veille-grid">${articlesHTML}</div>`;
+            }
         }
     }
 }
