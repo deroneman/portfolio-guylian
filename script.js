@@ -353,7 +353,7 @@ function displayVeilleArticles() {
                         </div>
                         <div class="pagination-display">
                             <label>Articles par page:</label>
-                            <button class="display-btn ${state.itemsPerPage === 5 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 5)">5</button>
+                            <button class="display-btn ${state.itemsPerPage === 10 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 10)">10</button>
                             <button class="display-btn ${state.itemsPerPage === 50 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 50)">50</button>
                             <button class="display-btn ${state.itemsPerPage === 100 ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', 100)">100</button>
                             <button class="display-btn ${state.itemsPerPage === articlesToDisplay.length ? 'active' : ''}" onclick="changeVeilleDisplay('${tabId}', ${articlesToDisplay.length})">Tous</button>
