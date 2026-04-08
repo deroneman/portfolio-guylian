@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-07T22:58:15.280851",
+  "lastUpdate": "2026-04-08T08:16:12.786070",
   "articles": {
     "infrastructure": {
       "icon": "🏗️",
@@ -1745,7 +1745,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739800",
+          "published": "2026-04-08T08:16:11.991791",
           "author": "codesome"
         },
         {
@@ -1754,7 +1754,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0-rc.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739782",
+          "published": "2026-04-08T08:16:11.991786",
           "author": "codesome"
         },
         {
@@ -1763,7 +1763,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739766",
+          "published": "2026-04-08T08:16:11.991782",
           "author": "prombot"
         },
         {
@@ -1772,7 +1772,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739751",
+          "published": "2026-04-08T08:16:11.991778",
           "author": "codesome"
         },
         {
@@ -1781,7 +1781,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739736",
+          "published": "2026-04-08T08:16:11.991773",
           "author": "prombot"
         },
         {
@@ -1790,7 +1790,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739721",
+          "published": "2026-04-08T08:16:11.991769",
           "author": "prombot"
         },
         {
@@ -1799,7 +1799,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739700",
+          "published": "2026-04-08T08:16:11.991765",
           "author": "prombot"
         },
         {
@@ -1808,7 +1808,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739678",
+          "published": "2026-04-08T08:16:11.991760",
           "author": "roidelapluie"
         },
         {
@@ -1817,7 +1817,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739664",
+          "published": "2026-04-08T08:16:11.991756",
           "author": "roidelapluie"
         },
         {
@@ -1826,7 +1826,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739644",
+          "published": "2026-04-08T08:16:11.991741",
           "author": "prombot"
         },
         {
@@ -1930,7 +1930,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739800",
+          "published": "2026-04-08T08:16:11.991791",
           "author": "codesome"
         },
         {
@@ -1939,7 +1939,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0-rc.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739782",
+          "published": "2026-04-08T08:16:11.991786",
           "author": "codesome"
         },
         {
@@ -1948,7 +1948,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739766",
+          "published": "2026-04-08T08:16:11.991782",
           "author": "prombot"
         },
         {
@@ -1957,7 +1957,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739751",
+          "published": "2026-04-08T08:16:11.991778",
           "author": "codesome"
         },
         {
@@ -1966,7 +1966,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739736",
+          "published": "2026-04-08T08:16:11.991773",
           "author": "prombot"
         },
         {
@@ -1975,7 +1975,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739721",
+          "published": "2026-04-08T08:16:11.991769",
           "author": "prombot"
         },
         {
@@ -1984,7 +1984,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739700",
+          "published": "2026-04-08T08:16:11.991765",
           "author": "prombot"
         },
         {
@@ -1993,7 +1993,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739678",
+          "published": "2026-04-08T08:16:11.991760",
           "author": "roidelapluie"
         },
         {
@@ -2002,7 +2002,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739664",
+          "published": "2026-04-08T08:16:11.991756",
           "author": "roidelapluie"
         },
         {
@@ -2011,7 +2011,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-07T22:58:14.739644",
+          "published": "2026-04-08T08:16:11.991741",
           "author": "prombot"
         },
         {
