@@ -625,6 +625,101 @@ body {
     letter-spacing: 0.3px;
 }
 
+/* ===== PROJETS TABS ===== */
+.projets-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.projets-tab-btn {
+    padding: 5px 8px;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 3px;
+    color: var(--muted-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.projets-tab-btn:hover {
+    background: rgba(139, 92, 246, 0.2);
+    border-color: var(--primary-purple);
+    color: var(--primary-purple);
+}
+
+.projets-tab-btn.active {
+    background: rgba(139, 92, 246, 0.3);
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.projets-tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.projets-tab-content.active {
+    display: block;
+}
+
+/* ===== PDF VIEWER ===== */
+.pdf-viewer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pdf-controls {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.pdf-btn {
+    padding: 5px 10px;
+    background: rgba(139, 92, 246, 0.15);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 3px;
+    color: var(--light-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.pdf-btn:hover {
+    background: rgba(139, 92, 246, 0.3);
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.pdf-content {
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#pdf-iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 4px;
+}
+
 /* ===== VEILLE TABS ===== */
 .veille-tabs {
     display: flex;

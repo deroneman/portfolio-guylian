@@ -391,6 +391,46 @@ function setupVeilleTabs() {
     });
 }
 
+function setupProjetsTabs() {
+    const projetsTabs = document.querySelectorAll('.projets-tab-btn');
+    
+    projetsTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const tabName = tab.getAttribute('data-tab');
+            
+            // Remove active class from all tabs and contents
+            document.querySelectorAll('.projets-tab-btn').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.projets-tab-content').forEach(c => c.classList.remove('active'));
+            
+            // Add active class to clicked tab and corresponding content
+            tab.classList.add('active');
+            const content = document.getElementById(`${tabName}-tab`);
+            if (content) {
+                content.classList.add('active');
+            }
+        });
+    });
+}
+
+function setupPDFControls() {
+    const fullscreen = document.getElementById('pdf-fullscreen');
+    const container = document.getElementById('pdf-content');
+    
+    if (!fullscreen || !container) return;
+    
+    fullscreen.addEventListener('click', () => {
+        if (container.requestFullscreen) {
+            container.requestFullscreen();
+        } else if (container.webkitRequestFullscreen) {
+            container.webkitRequestFullscreen();
+        } else if (container.mozRequestFullScreen) {
+            container.mozRequestFullScreen();
+        } else if (container.msRequestFullscreen) {
+            container.msRequestFullscreen();
+        }
+    });
+}
+
 function setupHamburgerMenu() {
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const hubMenu = document.querySelector('.hub-menu');
@@ -434,6 +474,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setupPotionKeybinds();
     setupCheatCode();
     setupVeilleTabs();
+    setupProjetsTabs();
+    setupPDFControls();
     setupHamburgerMenu();
     loadVeilleArticles();
 });

@@ -363,7 +363,15 @@
                         <button class="panel-close">✕</button>
                     </div>
                     <div class="panel-content">
-                        <div class="project-item">
+                        <!-- Onglets Projets -->
+                        <div class="projets-tabs">
+                            <button class="projets-tab-btn active" data-tab="mes-projets">💻 Mes Projets</button>
+                            <button class="projets-tab-btn" data-tab="tableau-synthese">📋 Tableau de Synthèse</button>
+                        </div>
+
+                        <!-- Contenu Projets -->
+                        <div class="projets-tab-content active" id="mes-projets-tab">
+                            <div class="projects-list">
                             <div class="project-icon">🐳</div>
                             <div class="project-info">
                                 <div class="project-name">Création Docker & Orchestration</div>
@@ -401,6 +409,22 @@
                                 <div class="project-name">Création d'un domaine</div>
                                 <div class="project-desc">Création d'un nom de domaine et configuration des serveurs</div>
                                 <div class="project-tags"><span>Infrastructure</span><span>DHCP</span><span>DNS</span><span>Documentation à venir</span></div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+
+                        <!-- Contenu Tableau de Synthèse -->
+                        <div class="projets-tab-content" id="tableau-synthese-tab">
+                            <div class="pdf-viewer-container">
+                                <div class="pdf-controls">
+                                    <button id="pdf-fullscreen" class="pdf-btn">⛶ Plein écran</button>
+                                    <a href="tableau-synthese.html" target="_blank" class="pdf-btn">🔗 Ouvrir en nouvelle fenêtre</a>
+                                    <a href="tableau-synthese.html" download class="pdf-btn">⬇ Télécharger</a>
+                                </div>
+                                <div class="pdf-content" id="pdf-content">
+                                    <iframe id="pdf-iframe" src="tableau-synthese.html" style="width: 100%; height: 600px; border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 4px;"></iframe>
+                                </div>
                             </div>
                         </div>
                     </div>
