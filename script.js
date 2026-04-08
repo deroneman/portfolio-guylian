@@ -245,120 +245,6 @@ function stripHTML(html) {
     return div.textContent || div.innerText || '';
 }
 
-// ===== PDF VIEWER SETUP =====
-let pdfDoc = null;
-let currentPage = 1;
-let zoomLevel = 1.8;
-
-function setupPDFViewer() {
-    const pdfProjectItems = document.querySelectorAll('.pdf-project-item');
-    const modal = document.getElementById('pdfModal');
-    const closeBtn = document.getElementById('closePdfModal');
-    
-    // Open modal when clicking on PDF project
-    pdfProjectItems.forEach(item => {
-        item.addEventListener('click', () => {
-            modal.classList.add('active');
-            if (!pdfDoc) {
-                initPDFViewer();
-            }
-        });
-    });
-    
-    // Close modal
-    closeBtn.addEventListener('click', () => {
-        modal.classList.remove('active');
-    });
-    
-    // Close modal when clicking outside
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.remove('active');
-        }
-    });
-    
-    // Setup PDF buttons
-    setupPDFButtons();
-}
-
-function initPDFViewer() {
-    const canvas = document.getElementById('pdf-canvas');
-    const pdfUrl = 'tableau-synthese-bts.pdf';
-    
-    // Set PDF.js worker
-    if (typeof pdfjsLib !== 'undefined') {
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-        
-        pdfjsLib.getDocument(pdfUrl).promise.then(doc => {
-            pdfDoc = doc;
-            document.getElementById('pdf-page-info').textContent = `Page 1/${doc.numPages}`;
-            renderPDFPage(1, true);
-        }).catch(err => {
-            console.log('PDF error:', err);
-        });
-    }
-}
-
-function setupPDFButtons() {
-    document.getElementById('pdf-prev').addEventListener('click', () => {
-        if (currentPage > 1) {
-            currentPage--;
-            renderPDFPage(currentPage, false);
-        }
-    });
-    
-    document.getElementById('pdf-next').addEventListener('click', () => {
-        if (pdfDoc && currentPage < pdfDoc.numPages) {
-            currentPage++;
-            renderPDFPage(currentPage, false);
-        }
-    });
-    
-    document.getElementById('pdf-zoom-in').addEventListener('click', () => {
-        zoomLevel += 0.1;
-        renderPDFPage(currentPage, false);
-    });
-    
-    document.getElementById('pdf-zoom-out').addEventListener('click', () => {
-        if (zoomLevel > 0.3) {
-            zoomLevel -= 0.1;
-            renderPDFPage(currentPage, false);
-        }
-    });
-}
-
-function renderPDFPage(pageNum, fitToWidth = false) {
-    const canvas = document.getElementById('pdf-canvas');
-    const container = canvas.parentElement;
-    const ctx = canvas.getContext('2d');
-    
-    if (!pdfDoc) return;
-    
-    pdfDoc.getPage(pageNum).then(page => {
-        let scale = zoomLevel;
-        
-        // Fit to width on first load
-        if (fitToWidth) {
-            const viewport = page.getViewport({ scale: 1 });
-            const availableWidth = container.clientWidth - 30;
-            scale = Math.min(availableWidth / viewport.width, 2.5);
-            zoomLevel = scale;
-        }
-        
-        const viewport = page.getViewport({ scale: scale });
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
-        
-        const renderContext = {
-            canvasContext: ctx,
-            viewport: viewport
-        };
-        
-        page.render(renderContext);
-        document.getElementById('pdf-page-info').textContent = `Page ${pageNum}/${pdfDoc.numPages}`;
-    });
-}
-
 async function loadVeilleArticles() {
     try {
         const response = await fetch('veille-articles.json');
@@ -550,7 +436,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setupVeilleTabs();
     setupHamburgerMenu();
     loadVeilleArticles();
-    setupPDFViewer();
 });
 
 function setupPotionKeybinds() {
