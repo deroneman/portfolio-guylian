@@ -676,7 +676,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    height: calc(65vh - 100px);
+    height: calc(100vh - 260px);
+    padding: 0 10px 10px 0;
 }
 
 .pdf-toolbar {
@@ -726,9 +727,10 @@ body {
     border-radius: 4px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     overflow: auto;
     background: rgba(0, 0, 0, 0.4);
+    padding: 10px;
 }
 
 #pdf-canvas {

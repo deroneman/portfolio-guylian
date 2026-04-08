@@ -445,7 +445,7 @@ function setupProjetsTabs() {
 // ===== PDF VIEWER SETUP =====
 let pdfDoc = null;
 let currentPage = 1;
-let zoomLevel = 1.5;
+let zoomLevel = 1;
 
 function setupPDFViewer() {
     const canvas = document.getElementById('pdf-canvas');
@@ -457,7 +457,9 @@ function setupPDFViewer() {
     pdfjsLib.getDocument(pdfUrl).promise.then(doc => {
         pdfDoc = doc;
         document.getElementById('pdf-page-info').textContent = `Page 1/${doc.numPages}`;
-        renderPDFPage(1);
+        setTimeout(() => {
+            renderPDFPage(1, true);
+        }, 100);
     }).catch(err => {
         console.log('PDF error:', err);
         canvas.parentElement.innerHTML = '<p style="color: #888; padding: 20px;">PDF not found. Make sure tableau-synthese-bts.pdf is in the root directory.</p>';
@@ -467,36 +469,46 @@ function setupPDFViewer() {
     document.getElementById('pdf-prev').addEventListener('click', () => {
         if (currentPage > 1) {
             currentPage--;
-            renderPDFPage(currentPage);
+            renderPDFPage(currentPage, false);
         }
     });
     
     document.getElementById('pdf-next').addEventListener('click', () => {
         if (pdfDoc && currentPage < pdfDoc.numPages) {
             currentPage++;
-            renderPDFPage(currentPage);
+            renderPDFPage(currentPage, false);
         }
     });
     
     document.getElementById('pdf-zoom-in').addEventListener('click', () => {
-        zoomLevel += 0.2;
-        renderPDFPage(currentPage);
+        zoomLevel += 0.1;
+        renderPDFPage(currentPage, false);
     });
     
     document.getElementById('pdf-zoom-out').addEventListener('click', () => {
-        if (zoomLevel > 0.5) {
-            zoomLevel -= 0.2;
-            renderPDFPage(currentPage);
+        if (zoomLevel > 0.3) {
+            zoomLevel -= 0.1;
+            renderPDFPage(currentPage, false);
         }
     });
 }
 
-function renderPDFPage(pageNum) {
+function renderPDFPage(pageNum, fitToWidth = false) {
     const canvas = document.getElementById('pdf-canvas');
+    const container = canvas.parentElement;
     const ctx = canvas.getContext('2d');
     
     pdfDoc.getPage(pageNum).then(page => {
-        const viewport = page.getViewport({ scale: zoomLevel });
+        let scale = zoomLevel;
+        
+        // Fit to width on first load
+        if (fitToWidth) {
+            const viewport = page.getViewport({ scale: 1 });
+            scale = (container.clientWidth - 20) / viewport.width;
+            zoomLevel = scale;
+        }
+        
+        const viewport = page.getViewport({ scale: scale });
         canvas.width = viewport.width;
         canvas.height = viewport.height;
         
