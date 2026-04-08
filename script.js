@@ -445,7 +445,7 @@ function setupProjetsTabs() {
 // ===== PDF VIEWER SETUP =====
 let pdfDoc = null;
 let currentPage = 1;
-let zoomLevel = 1;
+let zoomLevel = 1.8;
 
 function setupPDFViewer() {
     const canvas = document.getElementById('pdf-canvas');
@@ -504,7 +504,8 @@ function renderPDFPage(pageNum, fitToWidth = false) {
         // Fit to width on first load
         if (fitToWidth) {
             const viewport = page.getViewport({ scale: 1 });
-            scale = (container.clientWidth - 20) / viewport.width;
+            const availableWidth = container.clientWidth - 30;
+            scale = Math.min(availableWidth / viewport.width, 2.5);
             zoomLevel = scale;
         }
         

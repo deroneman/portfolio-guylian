@@ -676,7 +676,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    height: calc(100vh - 260px);
+    height: calc(100vh - 180px);
     padding: 0 10px 10px 0;
 }
 
@@ -727,10 +727,11 @@ body {
     border-radius: 4px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     overflow: auto;
     background: rgba(0, 0, 0, 0.4);
-    padding: 10px;
+    padding: 15px;
+    min-height: 0;
 }
 
 #pdf-canvas {
