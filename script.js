@@ -391,46 +391,6 @@ function setupVeilleTabs() {
     });
 }
 
-function setupProjetsTabs() {
-    const projetsTabs = document.querySelectorAll('.projets-tab-btn');
-    
-    projetsTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const tabName = tab.getAttribute('data-tab');
-            
-            // Remove active class from all tabs and contents
-            document.querySelectorAll('.projets-tab-btn').forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.projets-tab-content').forEach(c => c.classList.remove('active'));
-            
-            // Add active class to clicked tab and corresponding content
-            tab.classList.add('active');
-            const content = document.getElementById(`${tabName}-tab`);
-            if (content) {
-                content.classList.add('active');
-            }
-        });
-    });
-}
-
-function setupPDFControls() {
-    const fullscreen = document.getElementById('pdf-fullscreen');
-    const container = document.getElementById('pdf-content');
-    
-    if (!fullscreen || !container) return;
-    
-    fullscreen.addEventListener('click', () => {
-        if (container.requestFullscreen) {
-            container.requestFullscreen();
-        } else if (container.webkitRequestFullscreen) {
-            container.webkitRequestFullscreen();
-        } else if (container.mozRequestFullScreen) {
-            container.mozRequestFullScreen();
-        } else if (container.msRequestFullscreen) {
-            container.msRequestFullscreen();
-        }
-    });
-}
-
 function setupHamburgerMenu() {
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const hubMenu = document.querySelector('.hub-menu');
@@ -461,6 +421,95 @@ function setupHamburgerMenu() {
     });
 }
 
+// ===== PROJETS TABS MANAGEMENT =====
+function setupProjetsTabs() {
+    const projetsTabs = document.querySelectorAll('.projets-tab-btn');
+    projetsTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const tabName = tab.getAttribute('data-tab');
+            
+            // Remove active class from all tabs and contents
+            document.querySelectorAll('.projets-tab-btn').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.projets-tab-content').forEach(c => c.classList.remove('active'));
+            
+            // Add active class to clicked tab and corresponding content
+            tab.classList.add('active');
+            const content = document.getElementById(tabName + '-tab');
+            if (content) {
+                content.classList.add('active');
+            }
+        });
+    });
+}
+
+// ===== PDF VIEWER SETUP =====
+let pdfDoc = null;
+let currentPage = 1;
+let zoomLevel = 1.5;
+
+function setupPDFViewer() {
+    const canvas = document.getElementById('pdf-canvas');
+    if (!canvas) return;
+    
+    const pdfUrl = 'tableau-synthese-bts.pdf';
+    
+    // Load PDF document
+    pdfjsLib.getDocument(pdfUrl).promise.then(doc => {
+        pdfDoc = doc;
+        document.getElementById('pdf-page-info').textContent = `Page 1/${doc.numPages}`;
+        renderPDFPage(1);
+    }).catch(err => {
+        console.log('PDF error:', err);
+        canvas.parentElement.innerHTML = '<p style="color: #888; padding: 20px;">PDF not found. Make sure tableau-synthese-bts.pdf is in the root directory.</p>';
+    });
+    
+    // Setup button listeners
+    document.getElementById('pdf-prev').addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderPDFPage(currentPage);
+        }
+    });
+    
+    document.getElementById('pdf-next').addEventListener('click', () => {
+        if (pdfDoc && currentPage < pdfDoc.numPages) {
+            currentPage++;
+            renderPDFPage(currentPage);
+        }
+    });
+    
+    document.getElementById('pdf-zoom-in').addEventListener('click', () => {
+        zoomLevel += 0.2;
+        renderPDFPage(currentPage);
+    });
+    
+    document.getElementById('pdf-zoom-out').addEventListener('click', () => {
+        if (zoomLevel > 0.5) {
+            zoomLevel -= 0.2;
+            renderPDFPage(currentPage);
+        }
+    });
+}
+
+function renderPDFPage(pageNum) {
+    const canvas = document.getElementById('pdf-canvas');
+    const ctx = canvas.getContext('2d');
+    
+    pdfDoc.getPage(pageNum).then(page => {
+        const viewport = page.getViewport({ scale: zoomLevel });
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+        
+        const renderContext = {
+            canvasContext: ctx,
+            viewport: viewport
+        };
+        
+        page.render(renderContext);
+        document.getElementById('pdf-page-info').textContent = `Page ${pageNum}/${pdfDoc.numPages}`;
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize stats display
     updateHealthDisplay();
@@ -475,7 +524,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupCheatCode();
     setupVeilleTabs();
     setupProjetsTabs();
-    setupPDFControls();
+    setupPDFViewer();
     setupHamburgerMenu();
     loadVeilleArticles();
 });

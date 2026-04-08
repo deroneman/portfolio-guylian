@@ -366,12 +366,12 @@
                         <!-- Onglets Projets -->
                         <div class="projets-tabs">
                             <button class="projets-tab-btn active" data-tab="mes-projets">💻 Mes Projets</button>
-                            <button class="projets-tab-btn" data-tab="tableau-synthese">📋 Tableau de Synthèse</button>
+                            <button class="projets-tab-btn" data-tab="tableau-synthese">📋 Document BTS</button>
                         </div>
 
-                        <!-- Contenu Projets -->
+                        <!-- Mes Projets -->
                         <div class="projets-tab-content active" id="mes-projets-tab">
-                            <div class="projects-list">
+                        <div class="project-item">
                             <div class="project-icon">🐳</div>
                             <div class="project-info">
                                 <div class="project-name">Création Docker & Orchestration</div>
@@ -411,24 +411,27 @@
                                 <div class="project-tags"><span>Infrastructure</span><span>DHCP</span><span>DNS</span><span>Documentation à venir</span></div>
                             </div>
                         </div>
-                            </div>
                         </div>
 
-                        <!-- Contenu Tableau de Synthèse -->
+                        <!-- Tableau de Synthèse PDF -->
                         <div class="projets-tab-content" id="tableau-synthese-tab">
-                            <div class="pdf-viewer-container">
-                                <div class="pdf-controls">
-                                    <button id="pdf-fullscreen" class="pdf-btn">⛶ Plein écran</button>
-                                    <a href="tableau-synthese.html" target="_blank" class="pdf-btn">🔗 Ouvrir en nouvelle fenêtre</a>
-                                    <a href="tableau-synthese.html" download class="pdf-btn">⬇ Télécharger</a>
+                            <div class="pdf-viewer">
+                                <div class="pdf-toolbar">
+                                    <button id="pdf-prev" class="pdf-tool-btn">⬅ Précédent</button>
+                                    <span id="pdf-page-info" class="pdf-page-info">Page 1/2</span>
+                                    <button id="pdf-next" class="pdf-tool-btn">Suivant ➡</button>
+                                    <button id="pdf-zoom-in" class="pdf-tool-btn">🔍+ Zoom</button>
+                                    <button id="pdf-zoom-out" class="pdf-tool-btn">🔍-</button>
+                                    <a id="pdf-download" href="tableau-synthese-bts.pdf" download class="pdf-tool-btn">⬇ PDF</a>
                                 </div>
-                                <div class="pdf-content" id="pdf-content">
-                                    <iframe id="pdf-iframe" src="tableau-synthese.html" style="width: 100%; height: 600px; border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 4px;"></iframe>
+                                <div class="pdf-canvas-container">
+                                    <canvas id="pdf-canvas"></canvas>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
                 <!-- VEILLE -->
                 <div class="sl-panel" id="veille-panel">
