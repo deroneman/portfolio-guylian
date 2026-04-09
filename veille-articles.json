@@ -1,97 +1,106 @@
 {
-  "lastUpdate": "2026-04-08T08:16:12.786070",
+  "lastUpdate": "2026-04-09T08:23:33.525394",
   "articles": {
     "infrastructure": {
       "icon": "🏗️",
       "articles": [
         {
-          "title": "Mastering These Basic APT Commands Will Elevate Your CLI Skills",
-          "description": "<p>Elevate your command line skills by mastering essential APT commands. Discover tips and tricks to enhance your efficiency and productivity today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/mastering-these-basic-apt-commands-will-elevate-your-cli-skills/\">Mastering These Basic APT Commands Will Elevate Your CLI Skills</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/mastering-these-basic-apt-commands-will-elevate-your-cli-skills/",
+          "title": "Reclaim Developer Hours through Smarter Vulnerability Prioritization with Docker and Mend.io",
+          "description": "We recently announced the integration between Mend.io and Docker Hardened Images (DHI) provides a seamless framework for managing container security. By automatically distinguishing between base image vulnerabilities and application-layer risks, it uses VEX statements to differentiate between exploitable vulnerabilities and non-exploitable vulnerabilities, allowing your team to prioritize what really matters. TL;DR: The Developer Value Proposition...",
+          "link": "https://www.docker.com/blog/reclaim-developer-hours-through-smarter-vulnerability-prioritization-with-docker-and-mend-io/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Wed, 08 Apr 2026 18:23:51 +0000",
+          "author": "Dan Berezin Stelzer"
+        },
+        {
+          "title": "AlmaLinux Kitten Gets Its Claws Into RISC-V",
+          "description": "<p>Learn about AlmaLinux's innovative integration with RISC-V, showcasing its potential to revolutionize the open-source landscape. Dive into the details now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/almalinux-kitten-gets-its-claws-into-risc-v/\">AlmaLinux Kitten Gets Its Claws Into RISC-V</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/almalinux-kitten-gets-its-claws-into-risc-v/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:56:00 +0000",
+          "published": "Wed, 08 Apr 2026 11:20:23 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Opera GX Gaming Browser Launches on Linux With Full Feature Set",
-          "description": "<p>Germany mandates Open Document Format (ODF) for public administration, enhancing digital sovereignty and interoperability in the Sovereign Digital Stack.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/opera-gx-gaming-browser-launches-on-linux-with-full-feature-set/\">Opera GX Gaming Browser Launches on Linux With Full Feature Set</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/opera-gx-gaming-browser-launches-on-linux-with-full-feature-set/",
+          "title": "KiCad 10.0 PCB Design and Electronics CAD Software Released as a Major Update",
+          "description": "<p>Explore KiCad 10.0, a significant update in PCB design and electronics CAD software. Unleash your creativity with enhanced tools and features!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/kicad-10-0-pcb-design-and-electronics-cad-software-released-as-a-major-update/\">KiCad 10.0 PCB Design and Electronics CAD Software Released as a Major Update</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/kicad-10-0-pcb-design-and-electronics-cad-software-released-as-a-major-update/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:53:32 +0000",
+          "published": "Wed, 08 Apr 2026 11:17:37 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Germany Mandates ODF for Public Administration in Sovereign Digital Stack",
-          "description": "<p>Discover how Germany's ODF mandate for public administration strengthens digital sovereignty and promotes efficient data exchange in the Sovereign Digital Stack.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/germany-mandates-odf-for-public-administration-in-sovereign-digital-stack/\">Germany Mandates ODF for Public Administration in Sovereign Digital Stack</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/germany-mandates-odf-for-public-administration-in-sovereign-digital-stack/",
+          "title": "openSUSE’s Agama Installer 19 Released with Major Architectural Overhaul",
+          "description": "<p>Learn about the major architectural changes in openSUSE's Agama Installer 19, designed to streamline installations and enhance overall system performance.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/opensuses-agama-installer-19-released-with-major-architectural-overhaul/\">openSUSE’s Agama Installer 19 Released with Major Architectural Overhaul</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/opensuses-agama-installer-19-released-with-major-architectural-overhaul/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:50:37 +0000",
+          "published": "Wed, 08 Apr 2026 11:14:27 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "PrismLinux: A No‑Drama, Sane Approach to Arch-Based Linux",
-          "description": "<p>Discover PrismLinux, the Arch-based distribution that prioritizes simplicity and stability. Experience a no-drama approach to Linux for all users.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/prismlinux-a-no%e2%80%91drama-sane-approach-to-arch-based-linux/\">PrismLinux: A No‑Drama, Sane Approach to Arch-Based Linux</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/prismlinux-a-no%e2%80%91drama-sane-approach-to-arch-based-linux/",
+          "title": "Mageia 10 Enters Public Beta Testing with Linux Kernel 6.18 LTS and Mesa 26.0",
+          "description": "<p>Mageia 10 has entered public beta testing! Experience the power of Linux Kernel 6.18 LTS and Mesa 26.0. Get involved and test the future of Linux now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/mageia-10-enters-public-beta-testing-with-linux-kernel-6-18-lts-and-mesa-26-0/\">Mageia 10 Enters Public Beta Testing with Linux Kernel 6.18 LTS and Mesa 26.0</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/mageia-10-enters-public-beta-testing-with-linux-kernel-6-18-lts-and-mesa-26-0/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:43:02 +0000",
+          "published": "Wed, 08 Apr 2026 11:11:11 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "The PCLinuxOS Recipe Corner Special Edition, Volume 3",
-          "description": "<p>Explore The PCLinuxOS Recipe Corner Special Edition, Volume 3, featuring a collection of innovative recipes to inspire your next cooking adventure.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/the-pclinuxos-recipe-corner-special-edition-volume-3/\">The PCLinuxOS Recipe Corner Special Edition, Volume 3</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/the-pclinuxos-recipe-corner-special-edition-volume-3/",
+          "title": "Sweet Home 3D: The Ultimate Home Design Tool for Linux Users",
+          "description": "<p>Discover Sweet Home 3D, the ultimate home design tool for Linux users. Create stunning interiors with ease and transform your living space today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/sweet-home-3d-the-ultimate-home-design-tool-for-linux-users/\">Sweet Home 3D: The Ultimate Home Design Tool for Linux Users</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/sweet-home-3d-the-ultimate-home-design-tool-for-linux-users/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:32:05 +0000",
+          "published": "Wed, 08 Apr 2026 11:07:45 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "WPS Office on Linux: Complete Installation & Setup Guide",
-          "description": "<p>Master WPS Office on Linux with our detailed installation and setup guide. Unlock powerful features and streamline your workflow effortlessly today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/wps-office-on-linux-complete-installation-setup-guide/\">WPS Office on Linux: Complete Installation &amp; Setup Guide</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/wps-office-on-linux-complete-installation-setup-guide/",
+          "title": "System76 Redesigns Thelio Mira as a Liquid‑Cooled Linux Desktop",
+          "description": "<p>Discover the newly redesigned Thelio Mira by System76, featuring advanced liquid cooling for optimal performance in a sleek Linux desktop.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/system76-redesigns-thelio-mira-as-a-liquid%e2%80%91cooled-linux-desktop/\">System76 Redesigns Thelio Mira as a Liquid‑Cooled Linux Desktop</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/system76-redesigns-thelio-mira-as-a-liquid%e2%80%91cooled-linux-desktop/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:24:57 +0000",
+          "published": "Wed, 08 Apr 2026 11:04:21 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Warp – Modern Terminal With an Ide-Like Interface and AI Assistance",
-          "description": "<p>Experience Warp, a cutting-edge terminal with an intuitive IDE-like interface and AI support, streamlining your workflow and elevating your programming tasks.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/warp-modern-terminal-with-an-ide-like-interface-and-ai-assistance/\">Warp &#8211; Modern Terminal With an Ide-Like Interface and AI Assistance</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/warp-modern-terminal-with-an-ide-like-interface-and-ai-assistance/",
+          "title": "Feedr – Polished Linux Terminal-Based RSS/Atom Feed Reader",
+          "description": "<p>Experience Feedr, a refined terminal-based RSS/Atom feed reader for Linux, designed to enhance your reading experience with efficiency and elegance.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/feedr-polished-linux-terminal-based-rss-atom-feed-reader/\">Feedr – Polished Linux Terminal-Based RSS/Atom Feed Reader</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/feedr-polished-linux-terminal-based-rss-atom-feed-reader/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:23:23 +0000",
+          "published": "Wed, 08 Apr 2026 11:00:00 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Vivaldi Browser 7.9 Introduces UI Auto-Hide for Full-Screen Browsing",
-          "description": "<p>Vivaldi Browser 7.9 introduces UI Auto-Hide, allowing for seamless full-screen browsing. Experience a cleaner interface and improved focus now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/vivaldi-browser-7-9-introduces-ui-auto-hide-for-full-screen-browsing/\">Vivaldi Browser 7.9 Introduces UI Auto-Hide for Full-Screen Browsing</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/vivaldi-browser-7-9-introduces-ui-auto-hide-for-full-screen-browsing/",
+          "title": "How to Fix “No Sound” Issue on MacBook Pro with Linux Kernel 6.17 and Later",
+          "description": "<p>Struggling with sound issues on your MacBook Pro with Linux Kernel 6.17? Explore our comprehensive guide to restore audio functionality effortlessly.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-fix-no-sound-issue-on-macbook-pro-with-linux-kernel-6-17-and-later/\">How to Fix “No Sound” Issue on MacBook Pro with Linux Kernel 6.17 and Later</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/how-to-fix-no-sound-issue-on-macbook-pro-with-linux-kernel-6-17-and-later/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:20:51 +0000",
+          "published": "Wed, 08 Apr 2026 10:47:02 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "PipeWire 1.4.11 Released as Bug Fix Update for Older Stable Series",
-          "description": "<p>PipeWire 1.4.11 has been released, offering essential bug fixes for the older stable series. Discover the improvements and updates in this latest version.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/pipewire-1-4-11-released-as-bug-fix-update-for-older-stable-series/\">PipeWire 1.4.11 Released as Bug Fix Update for Older Stable Series</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/pipewire-1-4-11-released-as-bug-fix-update-for-older-stable-series/",
+          "title": "Systemd Introduces Birth Date Support for Upcoming Linux Desktop Age Controls",
+          "description": "<p>Discover how Systemd's new birth date support enhances age controls for Linux desktops, ensuring a safer and more tailored user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/systemd-introduces-birth-date-support-for-upcoming-linux-desktop-age-controls/\">Systemd Introduces Birth Date Support for Upcoming Linux Desktop Age Controls</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/systemd-introduces-birth-date-support-for-upcoming-linux-desktop-age-controls/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:17:32 +0000",
+          "published": "Wed, 08 Apr 2026 10:40:40 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Ubuntu systemd Vulnerability (CVE-2026-3888) Allows Root Escalation – Update Now to Fix",
-          "description": "<p>Discover the critical Ubuntu systemd vulnerability (CVE-2026-3888) that allows root escalation. Update your system now to ensure your security.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/ubuntu-systemd-vulnerability-cve-2026-3888-allows-root-escalation-update-now-to-fix/\">Ubuntu systemd Vulnerability (CVE-2026-3888) Allows Root Escalation – Update Now to Fix</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/ubuntu-systemd-vulnerability-cve-2026-3888-allows-root-escalation-update-now-to-fix/",
+          "title": "TeXstudio on Linux: A Complete Guide to the Powerful LaTeX Editor for Ubuntu",
+          "description": "<p>Discover how to master TeXstudio on Linux with our complete guide. Learn tips and tricks for using this powerful LaTeX editor on Ubuntu effectively.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/texstudio-on-linux-a-complete-guide-to-the-powerful-latex-editor-for-ubuntu/\">TeXstudio on Linux: A Complete Guide to the Powerful LaTeX Editor for Ubuntu</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/texstudio-on-linux-a-complete-guide-to-the-powerful-latex-editor-for-ubuntu/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:13:56 +0000",
+          "published": "Wed, 08 Apr 2026 10:34:23 +0000",
           "author": "Content Operations"
         },
         {
@@ -219,15 +228,6 @@
           "category": "Infrastructure",
           "published": "Fri, 13 Mar 2026 13:00:00 +0000",
           "author": "Jin Kim"
-        },
-        {
-          "title": "How to Run Claude Code with Docker: Local Models, MCP Servers, and Secure Sandboxes",
-          "description": "Claude Code is quickly becoming a go-to AI coding assistant for developers and increasingly for non-developers who want to build with code. But to truly unlock its potential, it needs the right local infrastructure, tool access, and security boundaries. In this blog, we’ll show you how to run Claude Code with Docker to gain full...",
-          "link": "https://www.docker.com/blog/run-claude-code-with-docker/",
-          "source": "Docker Blog",
-          "category": "Infrastructure",
-          "published": "Fri, 13 Mar 2026 12:17:54 +0000",
-          "author": "Yiwen Xu"
         },
         {
           "title": "Announcing the AI Gateway Working Group",
@@ -640,6 +640,24 @@
       "icon": "💻",
       "articles": [
         {
+          "title": "GitHub availability report: March 2026",
+          "description": "<p>In March, we experienced four incidents that resulted in degraded performance across GitHub services.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-availability-report-march-2026/\">GitHub availability report: March 2026</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/github-availability-report-march-2026/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Thu, 09 Apr 2026 02:21:17 +0000",
+          "author": "Jakub Oleksy"
+        },
+        {
+          "title": "GitHub Universe is back: We want you to take the stage",
+          "description": "<p>Get inspired by five of the most memorable, magical, and quirky Universe sessions to date.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/\">GitHub Universe is back: We want you to take the stage</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Wed, 08 Apr 2026 16:35:46 +0000",
+          "author": "Rachel Cohen"
+        },
+        {
           "title": "Your Migration’s Source of Truth: The Modernization Assessment",
           "description": "<p>Introducing GitHub Copilot Modernization and diving into the assessment report as part of cloud modernization process</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/your-migrations-source-of-truth-the-modernization-assessment/\">Your Migration&#8217;s Source of Truth: The Modernization Assessment</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
           "link": "https://devblogs.microsoft.com/dotnet/your-migrations-source-of-truth-the-modernization-assessment/",
@@ -737,24 +755,6 @@
           "category": "Développement",
           "published": "Thu, 26 Mar 2026 16:00:00 +0000",
           "author": "Jonathan Evans"
-        },
-        {
-          "title": "Updates to GitHub Copilot interaction data usage policy",
-          "description": "<p>From April 24 onward, interaction data—specifically inputs, outputs, code snippets, and associated context—from Copilot Free, Pro, and Pro+ users will be used to train and improve our AI models unless they opt out.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/\">Updates to GitHub Copilot interaction data usage policy</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Wed, 25 Mar 2026 19:02:29 +0000",
-          "author": "Mario Rodriguez"
-        },
-        {
-          "title": "Building AI-powered GitHub issue triage with the Copilot SDK",
-          "description": "<p>Learn how to integrate the Copilot SDK into a React Native app to generate AI-powered issue summaries, with production patterns for graceful degradation and caching.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/building-ai-powered-github-issue-triage-with-the-copilot-sdk/\">Building AI-powered GitHub issue triage with the Copilot SDK</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/building-ai-powered-github-issue-triage-with-the-copilot-sdk/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Tue, 24 Mar 2026 16:00:00 +0000",
-          "author": "Andrea Griffiths"
         },
         {
           "title": "Generative AI for Beginners .NET: Version 2 on .NET 10",
@@ -1465,6 +1465,15 @@
       "icon": "☁️",
       "articles": [
         {
+          "title": "Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value",
+          "description": "<p>Get practical strategies and best practices to help you plan, design, and manage AI investments for sustainable value and efficiency.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/\">Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Wed, 08 Apr 2026 16:00:00 +0000",
+          "author": "Fernando Vasconcellos"
+        },
+        {
           "title": "Launching S3 Files, making S3 buckets accessible as file systems",
           "description": "Amazon S3 Files makes S3 buckets accessible as high-performance file systems on AWS compute resources, eliminating the tradeoff between object storage benefits and interactive file capabilities while enabling seamless data sharing with ~1ms latencies.",
           "link": "https://aws.amazon.com/blogs/aws/launching-s3-files-making-s3-buckets-accessible-as-file-systems/",
@@ -1654,15 +1663,6 @@
           "author": "Yina Arenas"
         },
         {
-          "title": "From legacy to leadership: How PostgreSQL on Azure powers enterprise agility and innovation",
-          "description": "<p>Our mission is to make PostgreSQL the most performant, scalable, and enterprise-ready open database platform available. With Azure Database for PostgreSQL and the newly introduced Azure HorizonDB, we’re delivering on that vision.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/from-legacy-to-leadership-how-postgresql-on-azure-powers-enterprise-agility-and-innovation/\">From legacy to leadership: How PostgreSQL on Azure powers enterprise agility and innovation</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://azure.microsoft.com/en-us/blog/from-legacy-to-leadership-how-postgresql-on-azure-powers-enterprise-agility-and-innovation/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Mon, 16 Mar 2026 17:00:00 +0000",
-          "author": "Affan Dar"
-        },
-        {
           "title": "Twenty years of Amazon S3 and building what’s next",
           "description": "Some reflections on 20 years of innovations in Amazon S3 including S3 Tables, S3 Vectors and S3 Metadata.",
           "link": "https://aws.amazon.com/blogs/aws/twenty-years-of-amazon-s3-and-building-whats-next/",
@@ -1745,7 +1745,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991791",
+          "published": "2026-04-09T08:23:32.907516",
           "author": "codesome"
         },
         {
@@ -1754,7 +1754,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0-rc.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991786",
+          "published": "2026-04-09T08:23:32.907512",
           "author": "codesome"
         },
         {
@@ -1763,7 +1763,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991782",
+          "published": "2026-04-09T08:23:32.907508",
           "author": "prombot"
         },
         {
@@ -1772,7 +1772,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991778",
+          "published": "2026-04-09T08:23:32.907504",
           "author": "codesome"
         },
         {
@@ -1781,7 +1781,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991773",
+          "published": "2026-04-09T08:23:32.907500",
           "author": "prombot"
         },
         {
@@ -1790,7 +1790,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991769",
+          "published": "2026-04-09T08:23:32.907495",
           "author": "prombot"
         },
         {
@@ -1799,7 +1799,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991765",
+          "published": "2026-04-09T08:23:32.907491",
           "author": "prombot"
         },
         {
@@ -1808,7 +1808,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991760",
+          "published": "2026-04-09T08:23:32.907487",
           "author": "roidelapluie"
         },
         {
@@ -1817,7 +1817,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991756",
+          "published": "2026-04-09T08:23:32.907482",
           "author": "roidelapluie"
         },
         {
@@ -1826,8 +1826,26 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991741",
+          "published": "2026-04-09T08:23:32.907470",
           "author": "prombot"
+        },
+        {
+          "title": "GitHub availability report: March 2026",
+          "description": "<p>In March, we experienced four incidents that resulted in degraded performance across GitHub services.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-availability-report-march-2026/\">GitHub availability report: March 2026</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/github-availability-report-march-2026/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Thu, 09 Apr 2026 02:21:17 +0000",
+          "author": "Jakub Oleksy"
+        },
+        {
+          "title": "GitHub Universe is back: We want you to take the stage",
+          "description": "<p>Get inspired by five of the most memorable, magical, and quirky Universe sessions to date.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/\">GitHub Universe is back: We want you to take the stage</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Wed, 08 Apr 2026 16:35:46 +0000",
+          "author": "Rachel Cohen"
         },
         {
           "title": "GitHub Copilot CLI combines model families for a second opinion",
@@ -1900,24 +1918,6 @@
           "category": "DevOps",
           "published": "Thu, 26 Mar 2026 16:00:00 +0000",
           "author": "Jonathan Evans"
-        },
-        {
-          "title": "Updates to GitHub Copilot interaction data usage policy",
-          "description": "<p>From April 24 onward, interaction data—specifically inputs, outputs, code snippets, and associated context—from Copilot Free, Pro, and Pro+ users will be used to train and improve our AI models unless they opt out.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/\">Updates to GitHub Copilot interaction data usage policy</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Wed, 25 Mar 2026 19:02:29 +0000",
-          "author": "Mario Rodriguez"
-        },
-        {
-          "title": "Building AI-powered GitHub issue triage with the Copilot SDK",
-          "description": "<p>Learn how to integrate the Copilot SDK into a React Native app to generate AI-powered issue summaries, with production patterns for graceful degradation and caching.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/building-ai-powered-github-issue-triage-with-the-copilot-sdk/\">Building AI-powered GitHub issue triage with the Copilot SDK</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/building-ai-powered-github-issue-triage-with-the-copilot-sdk/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Tue, 24 Mar 2026 16:00:00 +0000",
-          "author": "Andrea Griffiths"
         }
       ]
     },
@@ -1930,7 +1930,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991791",
+          "published": "2026-04-09T08:23:32.907516",
           "author": "codesome"
         },
         {
@@ -1939,7 +1939,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0-rc.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991786",
+          "published": "2026-04-09T08:23:32.907512",
           "author": "codesome"
         },
         {
@@ -1948,7 +1948,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991782",
+          "published": "2026-04-09T08:23:32.907508",
           "author": "prombot"
         },
         {
@@ -1957,7 +1957,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991778",
+          "published": "2026-04-09T08:23:32.907504",
           "author": "codesome"
         },
         {
@@ -1966,7 +1966,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991773",
+          "published": "2026-04-09T08:23:32.907500",
           "author": "prombot"
         },
         {
@@ -1975,7 +1975,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991769",
+          "published": "2026-04-09T08:23:32.907495",
           "author": "prombot"
         },
         {
@@ -1984,7 +1984,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991765",
+          "published": "2026-04-09T08:23:32.907491",
           "author": "prombot"
         },
         {
@@ -1993,7 +1993,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991760",
+          "published": "2026-04-09T08:23:32.907487",
           "author": "roidelapluie"
         },
         {
@@ -2002,7 +2002,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991756",
+          "published": "2026-04-09T08:23:32.907482",
           "author": "roidelapluie"
         },
         {
@@ -2011,98 +2011,152 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-08T08:16:11.991741",
+          "published": "2026-04-09T08:23:32.907470",
           "author": "prombot"
         },
         {
-          "title": "Mastering These Basic APT Commands Will Elevate Your CLI Skills",
-          "description": "<p>Elevate your command line skills by mastering essential APT commands. Discover tips and tricks to enhance your efficiency and productivity today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/mastering-these-basic-apt-commands-will-elevate-your-cli-skills/\">Mastering These Basic APT Commands Will Elevate Your CLI Skills</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/mastering-these-basic-apt-commands-will-elevate-your-cli-skills/",
+          "title": "GitHub availability report: March 2026",
+          "description": "<p>In March, we experienced four incidents that resulted in degraded performance across GitHub services.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-availability-report-march-2026/\">GitHub availability report: March 2026</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/github-availability-report-march-2026/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Thu, 09 Apr 2026 02:21:17 +0000",
+          "author": "Jakub Oleksy"
+        },
+        {
+          "title": "GitHub availability report: March 2026",
+          "description": "<p>In March, we experienced four incidents that resulted in degraded performance across GitHub services.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-availability-report-march-2026/\">GitHub availability report: March 2026</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/github-availability-report-march-2026/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Thu, 09 Apr 2026 02:21:17 +0000",
+          "author": "Jakub Oleksy"
+        },
+        {
+          "title": "Reclaim Developer Hours through Smarter Vulnerability Prioritization with Docker and Mend.io",
+          "description": "We recently announced the integration between Mend.io and Docker Hardened Images (DHI) provides a seamless framework for managing container security. By automatically distinguishing between base image vulnerabilities and application-layer risks, it uses VEX statements to differentiate between exploitable vulnerabilities and non-exploitable vulnerabilities, allowing your team to prioritize what really matters. TL;DR: The Developer Value Proposition...",
+          "link": "https://www.docker.com/blog/reclaim-developer-hours-through-smarter-vulnerability-prioritization-with-docker-and-mend-io/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Wed, 08 Apr 2026 18:23:51 +0000",
+          "author": "Dan Berezin Stelzer"
+        },
+        {
+          "title": "AlmaLinux Kitten Gets Its Claws Into RISC-V",
+          "description": "<p>Learn about AlmaLinux's innovative integration with RISC-V, showcasing its potential to revolutionize the open-source landscape. Dive into the details now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/almalinux-kitten-gets-its-claws-into-risc-v/\">AlmaLinux Kitten Gets Its Claws Into RISC-V</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/almalinux-kitten-gets-its-claws-into-risc-v/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:56:00 +0000",
+          "published": "Wed, 08 Apr 2026 11:20:23 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Opera GX Gaming Browser Launches on Linux With Full Feature Set",
-          "description": "<p>Germany mandates Open Document Format (ODF) for public administration, enhancing digital sovereignty and interoperability in the Sovereign Digital Stack.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/opera-gx-gaming-browser-launches-on-linux-with-full-feature-set/\">Opera GX Gaming Browser Launches on Linux With Full Feature Set</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/opera-gx-gaming-browser-launches-on-linux-with-full-feature-set/",
+          "title": "KiCad 10.0 PCB Design and Electronics CAD Software Released as a Major Update",
+          "description": "<p>Explore KiCad 10.0, a significant update in PCB design and electronics CAD software. Unleash your creativity with enhanced tools and features!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/kicad-10-0-pcb-design-and-electronics-cad-software-released-as-a-major-update/\">KiCad 10.0 PCB Design and Electronics CAD Software Released as a Major Update</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/kicad-10-0-pcb-design-and-electronics-cad-software-released-as-a-major-update/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:53:32 +0000",
+          "published": "Wed, 08 Apr 2026 11:17:37 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Germany Mandates ODF for Public Administration in Sovereign Digital Stack",
-          "description": "<p>Discover how Germany's ODF mandate for public administration strengthens digital sovereignty and promotes efficient data exchange in the Sovereign Digital Stack.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/germany-mandates-odf-for-public-administration-in-sovereign-digital-stack/\">Germany Mandates ODF for Public Administration in Sovereign Digital Stack</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/germany-mandates-odf-for-public-administration-in-sovereign-digital-stack/",
+          "title": "openSUSE’s Agama Installer 19 Released with Major Architectural Overhaul",
+          "description": "<p>Learn about the major architectural changes in openSUSE's Agama Installer 19, designed to streamline installations and enhance overall system performance.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/opensuses-agama-installer-19-released-with-major-architectural-overhaul/\">openSUSE’s Agama Installer 19 Released with Major Architectural Overhaul</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/opensuses-agama-installer-19-released-with-major-architectural-overhaul/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:50:37 +0000",
+          "published": "Wed, 08 Apr 2026 11:14:27 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "PrismLinux: A No‑Drama, Sane Approach to Arch-Based Linux",
-          "description": "<p>Discover PrismLinux, the Arch-based distribution that prioritizes simplicity and stability. Experience a no-drama approach to Linux for all users.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/prismlinux-a-no%e2%80%91drama-sane-approach-to-arch-based-linux/\">PrismLinux: A No‑Drama, Sane Approach to Arch-Based Linux</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/prismlinux-a-no%e2%80%91drama-sane-approach-to-arch-based-linux/",
+          "title": "Mageia 10 Enters Public Beta Testing with Linux Kernel 6.18 LTS and Mesa 26.0",
+          "description": "<p>Mageia 10 has entered public beta testing! Experience the power of Linux Kernel 6.18 LTS and Mesa 26.0. Get involved and test the future of Linux now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/mageia-10-enters-public-beta-testing-with-linux-kernel-6-18-lts-and-mesa-26-0/\">Mageia 10 Enters Public Beta Testing with Linux Kernel 6.18 LTS and Mesa 26.0</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/mageia-10-enters-public-beta-testing-with-linux-kernel-6-18-lts-and-mesa-26-0/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:43:02 +0000",
+          "published": "Wed, 08 Apr 2026 11:11:11 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "The PCLinuxOS Recipe Corner Special Edition, Volume 3",
-          "description": "<p>Explore The PCLinuxOS Recipe Corner Special Edition, Volume 3, featuring a collection of innovative recipes to inspire your next cooking adventure.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/the-pclinuxos-recipe-corner-special-edition-volume-3/\">The PCLinuxOS Recipe Corner Special Edition, Volume 3</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/the-pclinuxos-recipe-corner-special-edition-volume-3/",
+          "title": "Sweet Home 3D: The Ultimate Home Design Tool for Linux Users",
+          "description": "<p>Discover Sweet Home 3D, the ultimate home design tool for Linux users. Create stunning interiors with ease and transform your living space today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/sweet-home-3d-the-ultimate-home-design-tool-for-linux-users/\">Sweet Home 3D: The Ultimate Home Design Tool for Linux Users</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/sweet-home-3d-the-ultimate-home-design-tool-for-linux-users/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:32:05 +0000",
+          "published": "Wed, 08 Apr 2026 11:07:45 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "WPS Office on Linux: Complete Installation & Setup Guide",
-          "description": "<p>Master WPS Office on Linux with our detailed installation and setup guide. Unlock powerful features and streamline your workflow effortlessly today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/wps-office-on-linux-complete-installation-setup-guide/\">WPS Office on Linux: Complete Installation &amp; Setup Guide</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/wps-office-on-linux-complete-installation-setup-guide/",
+          "title": "System76 Redesigns Thelio Mira as a Liquid‑Cooled Linux Desktop",
+          "description": "<p>Discover the newly redesigned Thelio Mira by System76, featuring advanced liquid cooling for optimal performance in a sleek Linux desktop.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/system76-redesigns-thelio-mira-as-a-liquid%e2%80%91cooled-linux-desktop/\">System76 Redesigns Thelio Mira as a Liquid‑Cooled Linux Desktop</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/system76-redesigns-thelio-mira-as-a-liquid%e2%80%91cooled-linux-desktop/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:24:57 +0000",
+          "published": "Wed, 08 Apr 2026 11:04:21 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Warp – Modern Terminal With an Ide-Like Interface and AI Assistance",
-          "description": "<p>Experience Warp, a cutting-edge terminal with an intuitive IDE-like interface and AI support, streamlining your workflow and elevating your programming tasks.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/warp-modern-terminal-with-an-ide-like-interface-and-ai-assistance/\">Warp &#8211; Modern Terminal With an Ide-Like Interface and AI Assistance</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/warp-modern-terminal-with-an-ide-like-interface-and-ai-assistance/",
+          "title": "Feedr – Polished Linux Terminal-Based RSS/Atom Feed Reader",
+          "description": "<p>Experience Feedr, a refined terminal-based RSS/Atom feed reader for Linux, designed to enhance your reading experience with efficiency and elegance.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/feedr-polished-linux-terminal-based-rss-atom-feed-reader/\">Feedr – Polished Linux Terminal-Based RSS/Atom Feed Reader</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/feedr-polished-linux-terminal-based-rss-atom-feed-reader/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:23:23 +0000",
+          "published": "Wed, 08 Apr 2026 11:00:00 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Vivaldi Browser 7.9 Introduces UI Auto-Hide for Full-Screen Browsing",
-          "description": "<p>Vivaldi Browser 7.9 introduces UI Auto-Hide, allowing for seamless full-screen browsing. Experience a cleaner interface and improved focus now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/vivaldi-browser-7-9-introduces-ui-auto-hide-for-full-screen-browsing/\">Vivaldi Browser 7.9 Introduces UI Auto-Hide for Full-Screen Browsing</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/vivaldi-browser-7-9-introduces-ui-auto-hide-for-full-screen-browsing/",
+          "title": "How to Fix “No Sound” Issue on MacBook Pro with Linux Kernel 6.17 and Later",
+          "description": "<p>Struggling with sound issues on your MacBook Pro with Linux Kernel 6.17? Explore our comprehensive guide to restore audio functionality effortlessly.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-fix-no-sound-issue-on-macbook-pro-with-linux-kernel-6-17-and-later/\">How to Fix “No Sound” Issue on MacBook Pro with Linux Kernel 6.17 and Later</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/how-to-fix-no-sound-issue-on-macbook-pro-with-linux-kernel-6-17-and-later/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:20:51 +0000",
+          "published": "Wed, 08 Apr 2026 10:47:02 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "PipeWire 1.4.11 Released as Bug Fix Update for Older Stable Series",
-          "description": "<p>PipeWire 1.4.11 has been released, offering essential bug fixes for the older stable series. Discover the improvements and updates in this latest version.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/pipewire-1-4-11-released-as-bug-fix-update-for-older-stable-series/\">PipeWire 1.4.11 Released as Bug Fix Update for Older Stable Series</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/pipewire-1-4-11-released-as-bug-fix-update-for-older-stable-series/",
+          "title": "Systemd Introduces Birth Date Support for Upcoming Linux Desktop Age Controls",
+          "description": "<p>Discover how Systemd's new birth date support enhances age controls for Linux desktops, ensuring a safer and more tailored user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/systemd-introduces-birth-date-support-for-upcoming-linux-desktop-age-controls/\">Systemd Introduces Birth Date Support for Upcoming Linux Desktop Age Controls</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/systemd-introduces-birth-date-support-for-upcoming-linux-desktop-age-controls/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:17:32 +0000",
+          "published": "Wed, 08 Apr 2026 10:40:40 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Ubuntu systemd Vulnerability (CVE-2026-3888) Allows Root Escalation – Update Now to Fix",
-          "description": "<p>Discover the critical Ubuntu systemd vulnerability (CVE-2026-3888) that allows root escalation. Update your system now to ensure your security.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/ubuntu-systemd-vulnerability-cve-2026-3888-allows-root-escalation-update-now-to-fix/\">Ubuntu systemd Vulnerability (CVE-2026-3888) Allows Root Escalation – Update Now to Fix</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/ubuntu-systemd-vulnerability-cve-2026-3888-allows-root-escalation-update-now-to-fix/",
+          "title": "TeXstudio on Linux: A Complete Guide to the Powerful LaTeX Editor for Ubuntu",
+          "description": "<p>Discover how to master TeXstudio on Linux with our complete guide. Learn tips and tricks for using this powerful LaTeX editor on Ubuntu effectively.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/texstudio-on-linux-a-complete-guide-to-the-powerful-latex-editor-for-ubuntu/\">TeXstudio on Linux: A Complete Guide to the Powerful LaTeX Editor for Ubuntu</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/texstudio-on-linux-a-complete-guide-to-the-powerful-latex-editor-for-ubuntu/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Tue, 07 Apr 2026 08:13:56 +0000",
+          "published": "Wed, 08 Apr 2026 10:34:23 +0000",
           "author": "Content Operations"
+        },
+        {
+          "title": "GitHub Universe is back: We want you to take the stage",
+          "description": "<p>Get inspired by five of the most memorable, magical, and quirky Universe sessions to date.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/\">GitHub Universe is back: We want you to take the stage</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Wed, 08 Apr 2026 16:35:46 +0000",
+          "author": "Rachel Cohen"
+        },
+        {
+          "title": "Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value",
+          "description": "<p>Get practical strategies and best practices to help you plan, design, and manage AI investments for sustainable value and efficiency.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/\">Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Wed, 08 Apr 2026 16:00:00 +0000",
+          "author": "Fernando Vasconcellos"
+        },
+        {
+          "title": "GitHub Universe is back: We want you to take the stage",
+          "description": "<p>Get inspired by five of the most memorable, magical, and quirky Universe sessions to date.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/\">GitHub Universe is back: We want you to take the stage</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Wed, 08 Apr 2026 16:35:46 +0000",
+          "author": "Rachel Cohen"
         },
         {
           "title": "Your Migration’s Source of Truth: The Modernization Assessment",
@@ -2456,15 +2510,6 @@
           "author": "Jonathan Evans"
         },
         {
-          "title": "Updates to GitHub Copilot interaction data usage policy",
-          "description": "<p>From April 24 onward, interaction data—specifically inputs, outputs, code snippets, and associated context—from Copilot Free, Pro, and Pro+ users will be used to train and improve our AI models unless they opt out.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/\">Updates to GitHub Copilot interaction data usage policy</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Wed, 25 Mar 2026 19:02:29 +0000",
-          "author": "Mario Rodriguez"
-        },
-        {
           "title": "Protecting people from harmful manipulation",
           "description": "Google DeepMind researches AI's harmful manipulation risks across areas like finance and health, leading to new safety measures.",
           "link": "https://deepmind.google/blog/protecting-people-from-harmful-manipulation/",
@@ -2501,24 +2546,6 @@
           "author": "Darryl Willis"
         },
         {
-          "title": "Updates to GitHub Copilot interaction data usage policy",
-          "description": "<p>From April 24 onward, interaction data—specifically inputs, outputs, code snippets, and associated context—from Copilot Free, Pro, and Pro+ users will be used to train and improve our AI models unless they opt out.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/\">Updates to GitHub Copilot interaction data usage policy</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Wed, 25 Mar 2026 19:02:29 +0000",
-          "author": "Mario Rodriguez"
-        },
-        {
-          "title": "Building AI-powered GitHub issue triage with the Copilot SDK",
-          "description": "<p>Learn how to integrate the Copilot SDK into a React Native app to generate AI-powered issue summaries, with production patterns for graceful degradation and caching.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/building-ai-powered-github-issue-triage-with-the-copilot-sdk/\">Building AI-powered GitHub issue triage with the Copilot SDK</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/building-ai-powered-github-issue-triage-with-the-copilot-sdk/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Tue, 24 Mar 2026 16:00:00 +0000",
-          "author": "Andrea Griffiths"
-        },
-        {
           "title": "What’s new with Microsoft in open-source and Kubernetes at KubeCon + CloudNativeCon Europe 2026",
           "description": "<p>At KubeCon + CloudNativeCon Europe 2026 in Amsterdam, we're making announcements that reflect the goal of bringing the operational maturity of Kubernetes to today's workloads and demands.</p>\n<p>The post <a href=\"https://opensource.microsoft.com/blog/2026/03/24/whats-new-with-microsoft-in-open-source-and-kubernetes-at-kubecon-cloudnativecon-europe-2026/\">What’s new with Microsoft in open-source and Kubernetes at KubeCon + CloudNativeCon Europe 2026</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
           "link": "https://opensource.microsoft.com/blog/2026/03/24/whats-new-with-microsoft-in-open-source-and-kubernetes-at-kubecon-cloudnativecon-europe-2026/",
@@ -2526,15 +2553,6 @@
           "category": "Cloud",
           "published": "Tue, 24 Mar 2026 07:05:00 +0000",
           "author": "Brendan Burns"
-        },
-        {
-          "title": "Building AI-powered GitHub issue triage with the Copilot SDK",
-          "description": "<p>Learn how to integrate the Copilot SDK into a React Native app to generate AI-powered issue summaries, with production patterns for graceful degradation and caching.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/building-ai-powered-github-issue-triage-with-the-copilot-sdk/\">Building AI-powered GitHub issue triage with the Copilot SDK</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/building-ai-powered-github-issue-triage-with-the-copilot-sdk/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Tue, 24 Mar 2026 16:00:00 +0000",
-          "author": "Andrea Griffiths"
         },
         {
           "title": "Trivy supply chain compromise: What Docker Hub users should know",
@@ -2699,15 +2717,6 @@
           "author": "Yina Arenas"
         },
         {
-          "title": "From legacy to leadership: How PostgreSQL on Azure powers enterprise agility and innovation",
-          "description": "<p>Our mission is to make PostgreSQL the most performant, scalable, and enterprise-ready open database platform available. With Azure Database for PostgreSQL and the newly introduced Azure HorizonDB, we’re delivering on that vision.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/from-legacy-to-leadership-how-postgresql-on-azure-powers-enterprise-agility-and-innovation/\">From legacy to leadership: How PostgreSQL on Azure powers enterprise agility and innovation</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://azure.microsoft.com/en-us/blog/from-legacy-to-leadership-how-postgresql-on-azure-powers-enterprise-agility-and-innovation/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Mon, 16 Mar 2026 17:00:00 +0000",
-          "author": "Affan Dar"
-        },
-        {
           "title": "Achieving Test Reliability for Native E2E Testing: Beyond Fixing Broken Tests",
           "description": "End-to-end (E2E) tests are particularly important for native applications that run on various platforms (Android/iOS), screen sizes, and OS versions. E2E testing picks up differences in behavior across this fragmented ecosystem. But keeping E2E tests reliable is often more challenging than writing them in the first place.  The fragmented device ecosystem, gaps in test frameworks,...",
           "link": "https://www.docker.com/blog/native-e2e-test-reliability/",
@@ -2715,15 +2724,6 @@
           "category": "Infrastructure",
           "published": "Fri, 13 Mar 2026 13:00:00 +0000",
           "author": "Jin Kim"
-        },
-        {
-          "title": "How to Run Claude Code with Docker: Local Models, MCP Servers, and Secure Sandboxes",
-          "description": "Claude Code is quickly becoming a go-to AI coding assistant for developers and increasingly for non-developers who want to build with code. But to truly unlock its potential, it needs the right local infrastructure, tool access, and security boundaries. In this blog, we’ll show you how to run Claude Code with Docker to gain full...",
-          "link": "https://www.docker.com/blog/run-claude-code-with-docker/",
-          "source": "Docker Blog",
-          "category": "Infrastructure",
-          "published": "Fri, 13 Mar 2026 12:17:54 +0000",
-          "author": "Yiwen Xu"
         },
         {
           "title": "Twenty years of Amazon S3 and building what’s next",
