@@ -1,43 +1,97 @@
 {
-  "lastUpdate": "2026-04-10T08:25:20.007275",
+  "lastUpdate": "2026-04-11T07:55:34.971774",
   "articles": {
     "infrastructure": {
       "icon": "🏗️",
       "articles": [
         {
-          "title": "How a Typosquatted Domain and a Fake Version Tag Turned Trivy Into a Credential Stealer",
-          "description": "<p> Uncover the alarming case of how a typosquatted domain and a fake version tag turned Trivy into a credential-stealing threat. Stay informed and secure.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-a-typosquatted-domain-and-a-fake-version-tag-turned-trivy-into-a-credential-stealer/\">How a Typosquatted Domain and a Fake Version Tag Turned Trivy Into a Credential Stealer</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/how-a-typosquatted-domain-and-a-fake-version-tag-turned-trivy-into-a-credential-stealer/",
+          "title": "Plumber: Open-source Scanner of GitLab CI/CD Pipelines for Compliance Gaps",
+          "description": "<p>Ensure your GitLab CI/CD pipelines are compliant with Plumber, the open-source scanner that detects gaps and strengthens your development process.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/plumber-open-source-scanner-of-gitlab-ci-cd-pipelines-for-compliance-gaps/\">Plumber: Open-source Scanner of GitLab CI/CD Pipelines for Compliance Gaps</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/plumber-open-source-scanner-of-gitlab-ci-cd-pipelines-for-compliance-gaps/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Thu, 09 Apr 2026 11:44:06 +0000",
+          "published": "Fri, 10 Apr 2026 15:03:58 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Wine 11.5 Improves Linux Compatibility with New Build System Changes",
-          "description": "<p>Discover how Wine 11.5 enhances Linux compatibility with its new build system changes, making it easier to run Windows applications seamlessly.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/wine-11-5-improves-linux-compatibility-with-new-build-system-changes/\">Wine 11.5 Improves Linux Compatibility with New Build System Changes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/wine-11-5-improves-linux-compatibility-with-new-build-system-changes/",
+          "title": "9to5Linux Weekly Roundup: March 22nd, 2026",
+          "description": "<p>Explore the 9to5Linux Weekly Roundup from March 22nd, 2026, featuring essential updates, software releases, and insights from the Linux community.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-march-22nd-2026/\">9to5Linux Weekly Roundup: March 22nd, 2026</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-march-22nd-2026/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Thu, 09 Apr 2026 11:36:55 +0000",
+          "published": "Fri, 10 Apr 2026 14:59:48 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "OpenShot 3.5 Open-Source Video Editor Released with New Default Timeline",
-          "description": "<p>Discover the latest features of OpenShot 3.5, the open-source video editor, now with a new default timeline for enhanced editing efficiency and creativity.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/openshot-3-5-open-source-video-editor-released-with-new-default-timeline/\">OpenShot 3.5 Open-Source Video Editor Released with New Default Timeline</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/openshot-3-5-open-source-video-editor-released-with-new-default-timeline/",
+          "title": "Linuxiac Weekly Wrap-Up: Week 12, 2026 (Mar 16 – 22)",
+          "description": "<p>Discover the latest in Linux news with our Weekly Wrap-Up for March 16-22, 2026. Stay informed on trends, updates, and community highlights.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-12-2026-mar-16-22/\">Linuxiac Weekly Wrap-Up: Week 12, 2026 (Mar 16 – 22)</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-12-2026-mar-16-22/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Thu, 09 Apr 2026 11:33:14 +0000",
+          "published": "Fri, 10 Apr 2026 14:55:53 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Emmabuntüs Debian Edition 6 1.01 Is Out with More Accessibility Improvements",
-          "description": "<p>Emmabuntüs Debian Edition 6.1.01 is here! Explore new accessibility features designed to make computing easier for everyone.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/emmabuntus-debian-edition-6-1-01-is-out-with-more-accessibility-improvements/\">Emmabuntüs Debian Edition 6 1.01 Is Out with More Accessibility Improvements</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/emmabuntus-debian-edition-6-1-01-is-out-with-more-accessibility-improvements/",
+          "title": "Bottles 63.0 Introduces Proxy Support and Resolves Installation Issues",
+          "description": "<p>Bottles 63.0 is here! Explore the latest features, including proxy support and solutions for installation issues, to optimize your software usage.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/bottles-63-0-introduces-proxy-support-and-resolves-installation-issues/\">Bottles 63.0 Introduces Proxy Support and Resolves Installation Issues</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/bottles-63-0-introduces-proxy-support-and-resolves-installation-issues/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Thu, 09 Apr 2026 11:30:03 +0000",
+          "published": "Fri, 10 Apr 2026 14:54:33 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "GStreamer 1.30 to Support HDR10+ Metadata Parsing from H.265 & AV1 Bitstreams",
+          "description": "<p>Learn about GStreamer 1.30's support for HDR10+ metadata parsing from H.265 and AV1 bitstreams, ensuring enhanced video quality and performance.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/gstreamer-1-30-to-support-hdr10-metadata-parsing-from-h-265-av1-bitstreams/\">GStreamer 1.30 to Support HDR10+ Metadata Parsing from H.265 &amp; AV1 Bitstreams</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/gstreamer-1-30-to-support-hdr10-metadata-parsing-from-h-265-av1-bitstreams/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 10 Apr 2026 14:47:57 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "HandBrake 1.11.1 Video Transcoder Improves Stability With Audio and UI Fixes",
+          "description": "<p>Discover the latest HandBrake 1.11.1 update, featuring enhanced stability, audio improvements, and UI fixes for a seamless video transcoding experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/handbrake-1-11-1-video-transcoder-improves-stability-with-audio-and-ui-fixes/\">HandBrake 1.11.1 Video Transcoder Improves Stability With Audio and UI Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/handbrake-1-11-1-video-transcoder-improves-stability-with-audio-and-ui-fixes/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 10 Apr 2026 14:43:06 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Canonical Announces MicroCloud 3.1 with Cluster Manager Integration",
+          "description": "<p>Canonical unveils MicroCloud 3.1 with integrated Cluster Manager. Explore new features designed to optimize your cloud infrastructure and streamline operations.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/canonical-announces-microcloud-3-1-with-cluster-manager-integration/\">Canonical Announces MicroCloud 3.1 with Cluster Manager Integration</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/canonical-announces-microcloud-3-1-with-cluster-manager-integration/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 10 Apr 2026 14:41:53 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Turris Omnia NG Wired Launches as a Linux-Powered 10Gb Router",
+          "description": "<p>Discover the Turris Omnia NG, a powerful Linux-powered 10Gb router designed for high-speed connectivity and advanced network management.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/turris-omnia-ng-wired-launches-as-a-linux-powered-10gb-router/\">Turris Omnia NG Wired Launches as a Linux-Powered 10Gb Router</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/turris-omnia-ng-wired-launches-as-a-linux-powered-10gb-router/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 10 Apr 2026 14:37:10 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "SysVinit 3.16 Init System Released with Minor Fixes",
+          "description": "<p>Explore the release of SysVinit 3.16, which includes essential minor fixes. Learn how these updates can improve your init system's efficiency and reliability.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/sysvinit-3-16-init-system-released-with-minor-fixes/\">SysVinit 3.16 Init System Released with Minor Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/sysvinit-3-16-init-system-released-with-minor-fixes/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 10 Apr 2026 14:30:48 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Developer of the Week: Matthew Forrester Wolffe",
+          "description": "<p>Meet Matthew Forrester Wolffe, this week's featured developer. Dive into his contributions and learn how he's making waves in the tech community.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/developer-of-the-week-matthew-forrester-wolffe/\">Developer of the Week: Matthew Forrester Wolffe</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/developer-of-the-week-matthew-forrester-wolffe/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 10 Apr 2026 14:18:56 +0000",
           "author": "Content Operations"
         },
         {
@@ -48,60 +102,6 @@
           "category": "Infrastructure",
           "published": "Wed, 08 Apr 2026 18:23:51 +0000",
           "author": "Dan Berezin Stelzer"
-        },
-        {
-          "title": "AlmaLinux Kitten Gets Its Claws Into RISC-V",
-          "description": "<p>Learn about AlmaLinux's innovative integration with RISC-V, showcasing its potential to revolutionize the open-source landscape. Dive into the details now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/almalinux-kitten-gets-its-claws-into-risc-v/\">AlmaLinux Kitten Gets Its Claws Into RISC-V</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/almalinux-kitten-gets-its-claws-into-risc-v/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 08 Apr 2026 11:20:23 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "KiCad 10.0 PCB Design and Electronics CAD Software Released as a Major Update",
-          "description": "<p>Explore KiCad 10.0, a significant update in PCB design and electronics CAD software. Unleash your creativity with enhanced tools and features!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/kicad-10-0-pcb-design-and-electronics-cad-software-released-as-a-major-update/\">KiCad 10.0 PCB Design and Electronics CAD Software Released as a Major Update</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/kicad-10-0-pcb-design-and-electronics-cad-software-released-as-a-major-update/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 08 Apr 2026 11:17:37 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "openSUSE’s Agama Installer 19 Released with Major Architectural Overhaul",
-          "description": "<p>Learn about the major architectural changes in openSUSE's Agama Installer 19, designed to streamline installations and enhance overall system performance.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/opensuses-agama-installer-19-released-with-major-architectural-overhaul/\">openSUSE’s Agama Installer 19 Released with Major Architectural Overhaul</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/opensuses-agama-installer-19-released-with-major-architectural-overhaul/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 08 Apr 2026 11:14:27 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Mageia 10 Enters Public Beta Testing with Linux Kernel 6.18 LTS and Mesa 26.0",
-          "description": "<p>Mageia 10 has entered public beta testing! Experience the power of Linux Kernel 6.18 LTS and Mesa 26.0. Get involved and test the future of Linux now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/mageia-10-enters-public-beta-testing-with-linux-kernel-6-18-lts-and-mesa-26-0/\">Mageia 10 Enters Public Beta Testing with Linux Kernel 6.18 LTS and Mesa 26.0</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/mageia-10-enters-public-beta-testing-with-linux-kernel-6-18-lts-and-mesa-26-0/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 08 Apr 2026 11:11:11 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Sweet Home 3D: The Ultimate Home Design Tool for Linux Users",
-          "description": "<p>Discover Sweet Home 3D, the ultimate home design tool for Linux users. Create stunning interiors with ease and transform your living space today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/sweet-home-3d-the-ultimate-home-design-tool-for-linux-users/\">Sweet Home 3D: The Ultimate Home Design Tool for Linux Users</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/sweet-home-3d-the-ultimate-home-design-tool-for-linux-users/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 08 Apr 2026 11:07:45 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "System76 Redesigns Thelio Mira as a Liquid‑Cooled Linux Desktop",
-          "description": "<p>Discover the newly redesigned Thelio Mira by System76, featuring advanced liquid cooling for optimal performance in a sleek Linux desktop.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/system76-redesigns-thelio-mira-as-a-liquid%e2%80%91cooled-linux-desktop/\">System76 Redesigns Thelio Mira as a Liquid‑Cooled Linux Desktop</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/system76-redesigns-thelio-mira-as-a-liquid%e2%80%91cooled-linux-desktop/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 08 Apr 2026 11:04:21 +0000",
-          "author": "Content Operations"
         },
         {
           "title": "Defending Your Software Supply Chain: What Every Engineering Team Should Do Now",
@@ -640,6 +640,15 @@
       "icon": "💻",
       "articles": [
         {
+          "title": "GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI",
+          "description": "<p>GitHub for Beginners: Getting started with the GitHub Copilot CLI, a step-by-step tutorial.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/\">GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Fri, 10 Apr 2026 16:00:00 +0000",
+          "author": "Christopher Harrison"
+        },
+        {
           "title": "GitHub availability report: March 2026",
           "description": "<p>In March, we experienced four incidents that resulted in degraded performance across GitHub services.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-availability-report-march-2026/\">GitHub availability report: March 2026</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
           "link": "https://github.blog/news-insights/company-news/github-availability-report-march-2026/",
@@ -668,7 +677,7 @@
         },
         {
           "title": "ASP.NET Core 2.3 end of support announcement",
-          "description": "<p>ASP.NET Core 2.3 will reach end of support on April 7, 2027. Learn what this means for your applications and how to upgrade to a modern supported version of .NET.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/aspnet-core-2-3-end-of-support/\">ASP.NET Core 2.3 end of support announcement</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "description": "<p>ASP.NET Core 2.3 will reach end of support on April 13, 2027. Learn what this means for your applications and how to upgrade to a modern supported version of .NET.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/aspnet-core-2-3-end-of-support/\">ASP.NET Core 2.3 end of support announcement</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
           "link": "https://devblogs.microsoft.com/dotnet/aspnet-core-2-3-end-of-support/",
           "source": ".NET Blog",
           "category": "Développement",
@@ -746,15 +755,6 @@
           "category": "Développement",
           "published": "Thu, 26 Mar 2026 16:49:14 +0000",
           "author": "Greg Ose"
-        },
-        {
-          "title": "A year of open source vulnerability trends: CVEs, advisories, and malware",
-          "description": "<p>Reviewed advisories hit a four-year low, malware advisories surged, and CNA publishing grew—here’s what changed and what it means for your triage and response. </p>\n<p>The post <a href=\"https://github.blog/security/supply-chain-security/a-year-of-open-source-vulnerability-trends-cves-advisories-and-malware/\">A year of open source vulnerability trends: CVEs, advisories, and malware</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/security/supply-chain-security/a-year-of-open-source-vulnerability-trends-cves-advisories-and-malware/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Thu, 26 Mar 2026 16:00:00 +0000",
-          "author": "Jonathan Evans"
         },
         {
           "title": "Generative AI for Beginners .NET: Version 2 on .NET 10",
@@ -1465,6 +1465,33 @@
       "icon": "☁️",
       "articles": [
         {
+          "title": "Microsoft named a Leader in The Forrester Wave™ for Sovereign Cloud Platforms",
+          "description": "<p>Microsoft is named a Leader in The Forrester Wave™ for Sovereign Cloud Platforms, recognizing Microsoft Sovereign Cloud leadership in evolving sovereignty needs.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-forrester-wave-for-sovereign-cloud-platforms/\">Microsoft named a Leader in The Forrester Wave™ for Sovereign Cloud Platforms</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-forrester-wave-for-sovereign-cloud-platforms/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Thu, 09 Apr 2026 19:00:00 +0000",
+          "author": "Alistair Speirs"
+        },
+        {
+          "title": "How Drasi used GitHub Copilot to find documentation bugs",
+          "description": "<p>How Microsoft uses AI agents and Drasi to keep open‑source documentation accurate and working.</p>\n<p>The post <a href=\"https://opensource.microsoft.com/blog/2026/04/09/how-drasi-used-github-copilot-to-find-documentation-bugs/\">How Drasi used GitHub Copilot to find documentation bugs</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://opensource.microsoft.com/blog/2026/04/09/how-drasi-used-github-copilot-to-find-documentation-bugs/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Thu, 09 Apr 2026 15:05:00 +0000",
+          "author": "Aman Singh"
+        },
+        {
+          "title": "Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value",
+          "description": "<p>Get practical strategies and best practices to help you plan, design, and manage AI investments for sustainable value and efficiency.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/\">Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Wed, 08 Apr 2026 16:00:00 +0000",
+          "author": "Fernando Vasconcellos"
+        },
+        {
           "title": "Launching S3 Files, making S3 buckets accessible as file systems",
           "description": "Amazon S3 Files makes S3 buckets accessible as high-performance file systems on AWS compute resources, eliminating the tradeoff between object storage benefits and interactive file capabilities while enabling seamless data sharing with ~1ms latencies.",
           "link": "https://aws.amazon.com/blogs/aws/launching-s3-files-making-s3-buckets-accessible-as-file-systems/",
@@ -1627,15 +1654,6 @@
           "author": "Shireesh Thota"
         },
         {
-          "title": "FabCon and SQLCon 2026: Unifying databases and Fabric on a single data platform",
-          "description": "<p>We're bring attendees together to share real experiences and solve challenges side-by-side. Only together can we move into meaningful results.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-unifying-databases-and-fabric-on-a-single-data-platform/\">FabCon and SQLCon 2026: Unifying databases and Fabric on a single data platform</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-unifying-databases-and-fabric-on-a-single-data-platform/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Wed, 18 Mar 2026 12:45:00 +0000",
-          "author": "Arun Ulag"
-        },
-        {
           "title": "AWS Weekly Roundup: Amazon S3 turns 20, Amazon Route 53 Global Resolver general availability, and more (March 16, 2026)",
           "description": "Twenty years ago this past week, Amazon S3 launched publicly on March 14, 2006. While Amazon Simple Storage Service is often considered the foundational storage service that defined cloud infrastructure, what began as a simple object storage service has grown into something far larger in scope and scale. As of March 2026, S3 stores more […]",
           "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-turns-20-amazon-route-53-global-resolver-general-availability-and-more-march-16-2026/",
@@ -1643,24 +1661,6 @@
           "category": "Cloud",
           "published": "Mon, 16 Mar 2026 16:02:17 +0000",
           "author": "Esra Kayabali"
-        },
-        {
-          "title": "Microsoft at NVIDIA GTC: New solutions for Microsoft Foundry, Azure AI infrastructure and Physical AI",
-          "description": "<p>Microsoft combines accelerated computing with cloud scale engineering to bring advanced AI capabilities to our customers. For years, we’ve worked with NVIDIA to integrate hardware, software and infrastructure to power many of today’s most important AI breakthroughs.</p>\n<p>The post <a href=\"https://blogs.microsoft.com/blog/2026/03/16/microsoft-at-nvidia-gtc-new-solutions-for-microsoft-foundry-azure-ai-infrastructure-and-physical-ai/\">Microsoft at NVIDIA GTC: New solutions for Microsoft Foundry, Azure AI infrastructure and Physical AI</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://blogs.microsoft.com/blog/2026/03/16/microsoft-at-nvidia-gtc-new-solutions-for-microsoft-foundry-azure-ai-infrastructure-and-physical-ai/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Mon, 16 Mar 2026 21:21:14 +0000",
-          "author": "Yina Arenas"
-        },
-        {
-          "title": "From legacy to leadership: How PostgreSQL on Azure powers enterprise agility and innovation",
-          "description": "<p>Our mission is to make PostgreSQL the most performant, scalable, and enterprise-ready open database platform available. With Azure Database for PostgreSQL and the newly introduced Azure HorizonDB, we’re delivering on that vision.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/from-legacy-to-leadership-how-postgresql-on-azure-powers-enterprise-agility-and-innovation/\">From legacy to leadership: How PostgreSQL on Azure powers enterprise agility and innovation</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://azure.microsoft.com/en-us/blog/from-legacy-to-leadership-how-postgresql-on-azure-powers-enterprise-agility-and-innovation/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Mon, 16 Mar 2026 17:00:00 +0000",
-          "author": "Affan Dar"
         },
         {
           "title": "Twenty years of Amazon S3 and building what’s next",
@@ -1745,7 +1745,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085216",
+          "published": "2026-04-11T07:55:34.444371",
           "author": "codesome"
         },
         {
@@ -1754,7 +1754,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0-rc.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085212",
+          "published": "2026-04-11T07:55:34.444367",
           "author": "codesome"
         },
         {
@@ -1763,7 +1763,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085208",
+          "published": "2026-04-11T07:55:34.444363",
           "author": "prombot"
         },
         {
@@ -1772,7 +1772,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085203",
+          "published": "2026-04-11T07:55:34.444358",
           "author": "codesome"
         },
         {
@@ -1781,7 +1781,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085199",
+          "published": "2026-04-11T07:55:34.444354",
           "author": "prombot"
         },
         {
@@ -1790,7 +1790,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085195",
+          "published": "2026-04-11T07:55:34.444349",
           "author": "prombot"
         },
         {
@@ -1799,7 +1799,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085191",
+          "published": "2026-04-11T07:55:34.444345",
           "author": "prombot"
         },
         {
@@ -1808,7 +1808,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085186",
+          "published": "2026-04-11T07:55:34.444340",
           "author": "roidelapluie"
         },
         {
@@ -1817,7 +1817,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085181",
+          "published": "2026-04-11T07:55:34.444336",
           "author": "roidelapluie"
         },
         {
@@ -1826,8 +1826,17 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085166",
+          "published": "2026-04-11T07:55:34.444323",
           "author": "prombot"
+        },
+        {
+          "title": "GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI",
+          "description": "<p>GitHub for Beginners: Getting started with the GitHub Copilot CLI, a step-by-step tutorial.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/\">GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Fri, 10 Apr 2026 16:00:00 +0000",
+          "author": "Christopher Harrison"
         },
         {
           "title": "GitHub availability report: March 2026",
@@ -1909,15 +1918,6 @@
           "category": "DevOps",
           "published": "Thu, 26 Mar 2026 16:49:14 +0000",
           "author": "Greg Ose"
-        },
-        {
-          "title": "A year of open source vulnerability trends: CVEs, advisories, and malware",
-          "description": "<p>Reviewed advisories hit a four-year low, malware advisories surged, and CNA publishing grew—here’s what changed and what it means for your triage and response. </p>\n<p>The post <a href=\"https://github.blog/security/supply-chain-security/a-year-of-open-source-vulnerability-trends-cves-advisories-and-malware/\">A year of open source vulnerability trends: CVEs, advisories, and malware</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/security/supply-chain-security/a-year-of-open-source-vulnerability-trends-cves-advisories-and-malware/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Thu, 26 Mar 2026 16:00:00 +0000",
-          "author": "Jonathan Evans"
         }
       ]
     },
@@ -1930,7 +1930,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085216",
+          "published": "2026-04-11T07:55:34.444371",
           "author": "codesome"
         },
         {
@@ -1939,7 +1939,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0-rc.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085212",
+          "published": "2026-04-11T07:55:34.444367",
           "author": "codesome"
         },
         {
@@ -1948,7 +1948,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085208",
+          "published": "2026-04-11T07:55:34.444363",
           "author": "prombot"
         },
         {
@@ -1957,7 +1957,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085203",
+          "published": "2026-04-11T07:55:34.444358",
           "author": "codesome"
         },
         {
@@ -1966,7 +1966,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085199",
+          "published": "2026-04-11T07:55:34.444354",
           "author": "prombot"
         },
         {
@@ -1975,7 +1975,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085195",
+          "published": "2026-04-11T07:55:34.444349",
           "author": "prombot"
         },
         {
@@ -1984,7 +1984,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085191",
+          "published": "2026-04-11T07:55:34.444345",
           "author": "prombot"
         },
         {
@@ -1993,7 +1993,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085186",
+          "published": "2026-04-11T07:55:34.444340",
           "author": "roidelapluie"
         },
         {
@@ -2002,7 +2002,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085181",
+          "published": "2026-04-11T07:55:34.444336",
           "author": "roidelapluie"
         },
         {
@@ -2011,44 +2011,116 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-10T08:25:19.085166",
+          "published": "2026-04-11T07:55:34.444323",
           "author": "prombot"
         },
         {
-          "title": "How a Typosquatted Domain and a Fake Version Tag Turned Trivy Into a Credential Stealer",
-          "description": "<p> Uncover the alarming case of how a typosquatted domain and a fake version tag turned Trivy into a credential-stealing threat. Stay informed and secure.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-a-typosquatted-domain-and-a-fake-version-tag-turned-trivy-into-a-credential-stealer/\">How a Typosquatted Domain and a Fake Version Tag Turned Trivy Into a Credential Stealer</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/how-a-typosquatted-domain-and-a-fake-version-tag-turned-trivy-into-a-credential-stealer/",
+          "title": "Plumber: Open-source Scanner of GitLab CI/CD Pipelines for Compliance Gaps",
+          "description": "<p>Ensure your GitLab CI/CD pipelines are compliant with Plumber, the open-source scanner that detects gaps and strengthens your development process.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/plumber-open-source-scanner-of-gitlab-ci-cd-pipelines-for-compliance-gaps/\">Plumber: Open-source Scanner of GitLab CI/CD Pipelines for Compliance Gaps</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/plumber-open-source-scanner-of-gitlab-ci-cd-pipelines-for-compliance-gaps/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Thu, 09 Apr 2026 11:44:06 +0000",
+          "published": "Fri, 10 Apr 2026 15:03:58 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Wine 11.5 Improves Linux Compatibility with New Build System Changes",
-          "description": "<p>Discover how Wine 11.5 enhances Linux compatibility with its new build system changes, making it easier to run Windows applications seamlessly.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/wine-11-5-improves-linux-compatibility-with-new-build-system-changes/\">Wine 11.5 Improves Linux Compatibility with New Build System Changes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/wine-11-5-improves-linux-compatibility-with-new-build-system-changes/",
+          "title": "9to5Linux Weekly Roundup: March 22nd, 2026",
+          "description": "<p>Explore the 9to5Linux Weekly Roundup from March 22nd, 2026, featuring essential updates, software releases, and insights from the Linux community.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-march-22nd-2026/\">9to5Linux Weekly Roundup: March 22nd, 2026</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-march-22nd-2026/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Thu, 09 Apr 2026 11:36:55 +0000",
+          "published": "Fri, 10 Apr 2026 14:59:48 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "OpenShot 3.5 Open-Source Video Editor Released with New Default Timeline",
-          "description": "<p>Discover the latest features of OpenShot 3.5, the open-source video editor, now with a new default timeline for enhanced editing efficiency and creativity.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/openshot-3-5-open-source-video-editor-released-with-new-default-timeline/\">OpenShot 3.5 Open-Source Video Editor Released with New Default Timeline</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/openshot-3-5-open-source-video-editor-released-with-new-default-timeline/",
+          "title": "Linuxiac Weekly Wrap-Up: Week 12, 2026 (Mar 16 – 22)",
+          "description": "<p>Discover the latest in Linux news with our Weekly Wrap-Up for March 16-22, 2026. Stay informed on trends, updates, and community highlights.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-12-2026-mar-16-22/\">Linuxiac Weekly Wrap-Up: Week 12, 2026 (Mar 16 – 22)</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-12-2026-mar-16-22/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Thu, 09 Apr 2026 11:33:14 +0000",
+          "published": "Fri, 10 Apr 2026 14:55:53 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Emmabuntüs Debian Edition 6 1.01 Is Out with More Accessibility Improvements",
-          "description": "<p>Emmabuntüs Debian Edition 6.1.01 is here! Explore new accessibility features designed to make computing easier for everyone.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/emmabuntus-debian-edition-6-1-01-is-out-with-more-accessibility-improvements/\">Emmabuntüs Debian Edition 6 1.01 Is Out with More Accessibility Improvements</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/emmabuntus-debian-edition-6-1-01-is-out-with-more-accessibility-improvements/",
+          "title": "Bottles 63.0 Introduces Proxy Support and Resolves Installation Issues",
+          "description": "<p>Bottles 63.0 is here! Explore the latest features, including proxy support and solutions for installation issues, to optimize your software usage.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/bottles-63-0-introduces-proxy-support-and-resolves-installation-issues/\">Bottles 63.0 Introduces Proxy Support and Resolves Installation Issues</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/bottles-63-0-introduces-proxy-support-and-resolves-installation-issues/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Thu, 09 Apr 2026 11:30:03 +0000",
+          "published": "Fri, 10 Apr 2026 14:54:33 +0000",
           "author": "Content Operations"
+        },
+        {
+          "title": "GStreamer 1.30 to Support HDR10+ Metadata Parsing from H.265 & AV1 Bitstreams",
+          "description": "<p>Learn about GStreamer 1.30's support for HDR10+ metadata parsing from H.265 and AV1 bitstreams, ensuring enhanced video quality and performance.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/gstreamer-1-30-to-support-hdr10-metadata-parsing-from-h-265-av1-bitstreams/\">GStreamer 1.30 to Support HDR10+ Metadata Parsing from H.265 &amp; AV1 Bitstreams</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/gstreamer-1-30-to-support-hdr10-metadata-parsing-from-h-265-av1-bitstreams/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 10 Apr 2026 14:47:57 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "HandBrake 1.11.1 Video Transcoder Improves Stability With Audio and UI Fixes",
+          "description": "<p>Discover the latest HandBrake 1.11.1 update, featuring enhanced stability, audio improvements, and UI fixes for a seamless video transcoding experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/handbrake-1-11-1-video-transcoder-improves-stability-with-audio-and-ui-fixes/\">HandBrake 1.11.1 Video Transcoder Improves Stability With Audio and UI Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/handbrake-1-11-1-video-transcoder-improves-stability-with-audio-and-ui-fixes/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 10 Apr 2026 14:43:06 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Canonical Announces MicroCloud 3.1 with Cluster Manager Integration",
+          "description": "<p>Canonical unveils MicroCloud 3.1 with integrated Cluster Manager. Explore new features designed to optimize your cloud infrastructure and streamline operations.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/canonical-announces-microcloud-3-1-with-cluster-manager-integration/\">Canonical Announces MicroCloud 3.1 with Cluster Manager Integration</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/canonical-announces-microcloud-3-1-with-cluster-manager-integration/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 10 Apr 2026 14:41:53 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Turris Omnia NG Wired Launches as a Linux-Powered 10Gb Router",
+          "description": "<p>Discover the Turris Omnia NG, a powerful Linux-powered 10Gb router designed for high-speed connectivity and advanced network management.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/turris-omnia-ng-wired-launches-as-a-linux-powered-10gb-router/\">Turris Omnia NG Wired Launches as a Linux-Powered 10Gb Router</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/turris-omnia-ng-wired-launches-as-a-linux-powered-10gb-router/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 10 Apr 2026 14:37:10 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "SysVinit 3.16 Init System Released with Minor Fixes",
+          "description": "<p>Explore the release of SysVinit 3.16, which includes essential minor fixes. Learn how these updates can improve your init system's efficiency and reliability.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/sysvinit-3-16-init-system-released-with-minor-fixes/\">SysVinit 3.16 Init System Released with Minor Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/sysvinit-3-16-init-system-released-with-minor-fixes/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 10 Apr 2026 14:30:48 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Developer of the Week: Matthew Forrester Wolffe",
+          "description": "<p>Meet Matthew Forrester Wolffe, this week's featured developer. Dive into his contributions and learn how he's making waves in the tech community.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/developer-of-the-week-matthew-forrester-wolffe/\">Developer of the Week: Matthew Forrester Wolffe</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/developer-of-the-week-matthew-forrester-wolffe/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 10 Apr 2026 14:18:56 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI",
+          "description": "<p>GitHub for Beginners: Getting started with the GitHub Copilot CLI, a step-by-step tutorial.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/\">GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Fri, 10 Apr 2026 16:00:00 +0000",
+          "author": "Christopher Harrison"
+        },
+        {
+          "title": "GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI",
+          "description": "<p>GitHub for Beginners: Getting started with the GitHub Copilot CLI, a step-by-step tutorial.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/\">GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Fri, 10 Apr 2026 16:00:00 +0000",
+          "author": "Christopher Harrison"
         },
         {
           "title": "GitHub availability report: March 2026",
@@ -2058,6 +2130,24 @@
           "category": "Développement",
           "published": "Thu, 09 Apr 2026 02:21:17 +0000",
           "author": "Jakub Oleksy"
+        },
+        {
+          "title": "Microsoft named a Leader in The Forrester Wave™ for Sovereign Cloud Platforms",
+          "description": "<p>Microsoft is named a Leader in The Forrester Wave™ for Sovereign Cloud Platforms, recognizing Microsoft Sovereign Cloud leadership in evolving sovereignty needs.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-forrester-wave-for-sovereign-cloud-platforms/\">Microsoft named a Leader in The Forrester Wave™ for Sovereign Cloud Platforms</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-forrester-wave-for-sovereign-cloud-platforms/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Thu, 09 Apr 2026 19:00:00 +0000",
+          "author": "Alistair Speirs"
+        },
+        {
+          "title": "How Drasi used GitHub Copilot to find documentation bugs",
+          "description": "<p>How Microsoft uses AI agents and Drasi to keep open‑source documentation accurate and working.</p>\n<p>The post <a href=\"https://opensource.microsoft.com/blog/2026/04/09/how-drasi-used-github-copilot-to-find-documentation-bugs/\">How Drasi used GitHub Copilot to find documentation bugs</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://opensource.microsoft.com/blog/2026/04/09/how-drasi-used-github-copilot-to-find-documentation-bugs/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Thu, 09 Apr 2026 15:05:00 +0000",
+          "author": "Aman Singh"
         },
         {
           "title": "GitHub availability report: March 2026",
@@ -2078,60 +2168,6 @@
           "author": "Dan Berezin Stelzer"
         },
         {
-          "title": "AlmaLinux Kitten Gets Its Claws Into RISC-V",
-          "description": "<p>Learn about AlmaLinux's innovative integration with RISC-V, showcasing its potential to revolutionize the open-source landscape. Dive into the details now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/almalinux-kitten-gets-its-claws-into-risc-v/\">AlmaLinux Kitten Gets Its Claws Into RISC-V</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/almalinux-kitten-gets-its-claws-into-risc-v/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 08 Apr 2026 11:20:23 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "KiCad 10.0 PCB Design and Electronics CAD Software Released as a Major Update",
-          "description": "<p>Explore KiCad 10.0, a significant update in PCB design and electronics CAD software. Unleash your creativity with enhanced tools and features!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/kicad-10-0-pcb-design-and-electronics-cad-software-released-as-a-major-update/\">KiCad 10.0 PCB Design and Electronics CAD Software Released as a Major Update</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/kicad-10-0-pcb-design-and-electronics-cad-software-released-as-a-major-update/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 08 Apr 2026 11:17:37 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "openSUSE’s Agama Installer 19 Released with Major Architectural Overhaul",
-          "description": "<p>Learn about the major architectural changes in openSUSE's Agama Installer 19, designed to streamline installations and enhance overall system performance.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/opensuses-agama-installer-19-released-with-major-architectural-overhaul/\">openSUSE’s Agama Installer 19 Released with Major Architectural Overhaul</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/opensuses-agama-installer-19-released-with-major-architectural-overhaul/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 08 Apr 2026 11:14:27 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Mageia 10 Enters Public Beta Testing with Linux Kernel 6.18 LTS and Mesa 26.0",
-          "description": "<p>Mageia 10 has entered public beta testing! Experience the power of Linux Kernel 6.18 LTS and Mesa 26.0. Get involved and test the future of Linux now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/mageia-10-enters-public-beta-testing-with-linux-kernel-6-18-lts-and-mesa-26-0/\">Mageia 10 Enters Public Beta Testing with Linux Kernel 6.18 LTS and Mesa 26.0</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/mageia-10-enters-public-beta-testing-with-linux-kernel-6-18-lts-and-mesa-26-0/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 08 Apr 2026 11:11:11 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Sweet Home 3D: The Ultimate Home Design Tool for Linux Users",
-          "description": "<p>Discover Sweet Home 3D, the ultimate home design tool for Linux users. Create stunning interiors with ease and transform your living space today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/sweet-home-3d-the-ultimate-home-design-tool-for-linux-users/\">Sweet Home 3D: The Ultimate Home Design Tool for Linux Users</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/sweet-home-3d-the-ultimate-home-design-tool-for-linux-users/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 08 Apr 2026 11:07:45 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "System76 Redesigns Thelio Mira as a Liquid‑Cooled Linux Desktop",
-          "description": "<p>Discover the newly redesigned Thelio Mira by System76, featuring advanced liquid cooling for optimal performance in a sleek Linux desktop.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/system76-redesigns-thelio-mira-as-a-liquid%e2%80%91cooled-linux-desktop/\">System76 Redesigns Thelio Mira as a Liquid‑Cooled Linux Desktop</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/system76-redesigns-thelio-mira-as-a-liquid%e2%80%91cooled-linux-desktop/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 08 Apr 2026 11:04:21 +0000",
-          "author": "Content Operations"
-        },
-        {
           "title": "GitHub Universe is back: We want you to take the stage",
           "description": "<p>Get inspired by five of the most memorable, magical, and quirky Universe sessions to date.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/\">GitHub Universe is back: We want you to take the stage</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
           "link": "https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/",
@@ -2139,6 +2175,15 @@
           "category": "Développement",
           "published": "Wed, 08 Apr 2026 16:35:46 +0000",
           "author": "Rachel Cohen"
+        },
+        {
+          "title": "Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value",
+          "description": "<p>Get practical strategies and best practices to help you plan, design, and manage AI investments for sustainable value and efficiency.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/\">Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Wed, 08 Apr 2026 16:00:00 +0000",
+          "author": "Fernando Vasconcellos"
         },
         {
           "title": "GitHub Universe is back: We want you to take the stage",
@@ -2160,7 +2205,7 @@
         },
         {
           "title": "ASP.NET Core 2.3 end of support announcement",
-          "description": "<p>ASP.NET Core 2.3 will reach end of support on April 7, 2027. Learn what this means for your applications and how to upgrade to a modern supported version of .NET.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/aspnet-core-2-3-end-of-support/\">ASP.NET Core 2.3 end of support announcement</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "description": "<p>ASP.NET Core 2.3 will reach end of support on April 13, 2027. Learn what this means for your applications and how to upgrade to a modern supported version of .NET.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/aspnet-core-2-3-end-of-support/\">ASP.NET Core 2.3 end of support announcement</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
           "link": "https://devblogs.microsoft.com/dotnet/aspnet-core-2-3-end-of-support/",
           "source": ".NET Blog",
           "category": "Développement",
@@ -2456,15 +2501,6 @@
           "author": "Greg Ose"
         },
         {
-          "title": "A year of open source vulnerability trends: CVEs, advisories, and malware",
-          "description": "<p>Reviewed advisories hit a four-year low, malware advisories surged, and CNA publishing grew—here’s what changed and what it means for your triage and response. </p>\n<p>The post <a href=\"https://github.blog/security/supply-chain-security/a-year-of-open-source-vulnerability-trends-cves-advisories-and-malware/\">A year of open source vulnerability trends: CVEs, advisories, and malware</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/security/supply-chain-security/a-year-of-open-source-vulnerability-trends-cves-advisories-and-malware/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Thu, 26 Mar 2026 16:00:00 +0000",
-          "author": "Jonathan Evans"
-        },
-        {
           "title": "Gemini 3.1 Flash Live: Making audio AI more natural and reliable",
           "description": "Our latest voice model has improved precision and lower latency to make voice interactions more fluid, natural and precise.",
           "link": "https://deepmind.google/blog/gemini-3-1-flash-live-making-audio-ai-more-natural-and-reliable/",
@@ -2490,15 +2526,6 @@
           "category": "DevOps",
           "published": "Thu, 26 Mar 2026 16:49:14 +0000",
           "author": "Greg Ose"
-        },
-        {
-          "title": "A year of open source vulnerability trends: CVEs, advisories, and malware",
-          "description": "<p>Reviewed advisories hit a four-year low, malware advisories surged, and CNA publishing grew—here’s what changed and what it means for your triage and response. </p>\n<p>The post <a href=\"https://github.blog/security/supply-chain-security/a-year-of-open-source-vulnerability-trends-cves-advisories-and-malware/\">A year of open source vulnerability trends: CVEs, advisories, and malware</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/security/supply-chain-security/a-year-of-open-source-vulnerability-trends-cves-advisories-and-malware/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Thu, 26 Mar 2026 16:00:00 +0000",
-          "author": "Jonathan Evans"
         },
         {
           "title": "Protecting people from harmful manipulation",
@@ -2654,15 +2681,6 @@
           "author": "Shireesh Thota"
         },
         {
-          "title": "FabCon and SQLCon 2026: Unifying databases and Fabric on a single data platform",
-          "description": "<p>We're bring attendees together to share real experiences and solve challenges side-by-side. Only together can we move into meaningful results.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-unifying-databases-and-fabric-on-a-single-data-platform/\">FabCon and SQLCon 2026: Unifying databases and Fabric on a single data platform</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-unifying-databases-and-fabric-on-a-single-data-platform/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Wed, 18 Mar 2026 12:45:00 +0000",
-          "author": "Arun Ulag"
-        },
-        {
           "title": "The Invisible Rewrite: Modernizing the Kubernetes Image Promoter",
           "description": "<p>Every container image you pull from <code>registry.k8s.io</code> got there through\n<a href=\"https://github.com/kubernetes-sigs/promo-tools\"><code>kpromo</code></a>, the Kubernetes image\npromoter. It copies images from staging registries to\nproduction, signs them with <a href=\"https://sigstore.dev\">cosign</a>, replicates\nsignatures across more than 20 regional mirrors, and generates\n<a href=\"https://slsa.dev\">SLSA</a> provenance attestations. If this tool breaks, no\nKubernetes release ships. Over the past few weeks, we rewrote its core from\nscratch, deleted 20% of the codebase, made it dramatically faster, and\nnobody noticed. That was the whole point.</p>\n<h2 id=\"a-bit-of-history\">A bit of history</h2>\n<p>The image promoter started in late 2018 as an internal Google project by\n<a href=\"https://github.com/listx\">Linus Arver</a>. The goal was simple: replace the\nmanual, Googler-gated process of copying container images into <code>k8s.gcr.io</code> with\na community-owned, GitOps-based workflow. Push to a staging registry, open a PR\nwith a YAML manifest, get it reviewed and merged, and automation handles the\nrest. <a href=\"https://github.com/kubernetes/enhancements/blob/master/keps/sig-release/1734-k8s-image-promoter/README.md\">KEP-1734</a>\nformalized this proposal.</p>\n<p>In early 2019, the code moved to <code>kubernetes-sigs/k8s-container-image-promoter</code>\nand grew quickly. Over the next few years,\n<a href=\"https://github.com/justaugustus\">Stephen Augustus</a> consolidated multiple tools\n(<code>cip</code>, <code>gh2gcs</code>, <code>krel promote-images</code>, <code>promobot-files</code>) into a single CLI\ncalled <code>kpromo</code>. The repository was renamed to\n<a href=\"https://github.com/kubernetes-sigs/promo-tools\"><code>promo-tools</code></a>.\n<a href=\"https://github.com/puerco\">Adolfo Garcia Veytia (Puerco)</a> added cosign signing\nand SBOM support. <a href=\"https://github.com/tylerferrara\">Tyler Ferrara</a> built\nvulnerability scanning. <a href=\"https://github.com/cpanato\">Carlos Panato</a> kept the project in a healthy and\nreleasable state. 42 contributors made about 3,500 commits across more than 60 releases.</p>\n<p>It worked. But by 2025 the codebase carried the weight of seven years of\nincremental additions from multiple SIGs and subprojects. The README\n<a href=\"https://github.com/kubernetes-sigs/promo-tools/blob/7b6d515b78aadd617c8060a223786f8e57aa061f/README.md#disclaimer\">said it plainly</a>:\nyou will see duplicated code, multiple techniques for accomplishing the same\nthing, and several TODOs.</p>\n<h2 id=\"the-problems-we-needed-to-solve\">The problems we needed to solve</h2>\n<p>Production promotion jobs for Kubernetes core images regularly took over 30\nminutes and frequently failed with rate limit errors. The core promotion logic\nhad grown into a monolith that was\n<a href=\"https://github.com/kubernetes-sigs/promo-tools/issues/1177\">hard to extend</a>\nand difficult to test, making new features like provenance or vulnerability\nscanning painful to add.</p>\n<p>On the <a href=\"https://github.com/kubernetes/sig-release/blob/master/roadmap.md\">SIG Release roadmap</a>,\ntwo work items had been sitting for a while: &quot;Rewrite artifact promoter&quot; and\n&quot;Make artifact validation more robust&quot;. We had discussed these at SIG Release\nmeetings and KubeCons, and the open research spikes on\n<a href=\"https://github.com/orgs/kubernetes/projects/171\">project board #171</a> captured\neight questions that needed answers before we could move forward.</p>\n<h2 id=\"one-issue-to-answer-them-all\">One issue to answer them all</h2>\n<p>In February 2026, we opened <a href=\"https://github.com/kubernetes-sigs/promo-tools/issues/1701\">issue #1701</a>\n(&quot;Rewrite artifact promoter pipeline&quot;) and answered all eight spikes in a single\ntracking issue. The rewrite was deliberately phased so that each step could be\nreviewed, merged, and validated independently. Here is what we did:</p>\n<p><strong>Phase 1: Rate Limiting</strong> (<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1702\">#1702</a>).\nRewrote rate limiting to properly throttle all registry operations with adaptive\nbackoff.</p>\n<p><strong>Phase 2: Interfaces</strong> (<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1704\">#1704</a>).\nPut registry and auth operations behind clean interfaces so they can be swapped\nout and tested independently.</p>\n<p><strong>Phase 3: Pipeline Engine</strong> (<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1705\">#1705</a>).\nBuilt a pipeline engine that runs promotion as a sequence of distinct phases\ninstead of one large function.</p>\n<p><strong>Phase 4: Provenance</strong> (<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1706\">#1706</a>).\nAdded SLSA provenance verification for staging images.</p>\n<p><strong>Phase 5: Scanner and SBOMs</strong> (<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1709\">#1709</a>).\nAdded vulnerability scanning and SBOM support. Flipped the default to the new\npipeline engine. At this point we cut\n<a href=\"https://github.com/kubernetes-sigs/promo-tools/releases/tag/v4.2.0\">v4.2.0</a> and let it\nsoak in production before continuing.</p>\n<p><strong>Phase 6: Split Signing from Replication</strong> (<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1713\">#1713</a>).\nSeparated image signing from signature replication into their own pipeline\nphases, eliminating the rate limit contention that caused most production\nfailures.</p>\n<p><strong>Phase 7: Remove Legacy Pipeline</strong> (<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1712\">#1712</a>).\nDeleted the old code path entirely.</p>\n<p><strong>Phase 8: Remove Legacy Dependencies</strong> (<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1716\">#1716</a>).\nDeleted the audit subsystem, deprecated tools, and e2e test infrastructure.</p>\n<p><strong>Phase 9: Delete the Monolith</strong> (<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1718\">#1718</a>).\nRemoved the old monolithic core and its supporting packages. Thousands of lines\ndeleted across phases 7 through 9.</p>\n<p>Each phase shipped independently.\n<a href=\"https://github.com/kubernetes-sigs/promo-tools/releases/tag/v4.3.0\">v4.3.0</a> followed\nthe next day with the legacy code fully removed.</p>\n<p>With the new architecture in place, a series of follow-up improvements landed:\nparallelized registry reads\n(<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1736\">#1736</a>),\nretry logic for all network operations\n(<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1742\">#1742</a>),\nper-request timeouts to prevent pipeline hangs\n(<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1763\">#1763</a>),\nHTTP connection reuse\n(<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1759\">#1759</a>),\nlocal registry integration tests\n(<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1746\">#1746</a>),\nthe removal of deprecated credential file support\n(<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1758\">#1758</a>),\na rework of attestation handling to use cosign's OCI APIs and the removal of\ndeprecated SBOM support\n(<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1764\">#1764</a>),\nand a dedicated promotion record predicate type registered with the\n<a href=\"https://github.com/in-toto/attestation\">in-toto attestation framework</a>\n(<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1767\">#1767</a>).\nThese would have been much harder to land without the clean separation the\nrewrite provided.\n<a href=\"https://github.com/kubernetes-sigs/promo-tools/releases/tag/v4.4.0\">v4.4.0</a>\nshipped all of these improvements and enabled provenance generation and\nverification by default.</p>\n<h2 id=\"the-new-pipeline\">The new pipeline</h2>\n<p>The promotion pipeline now has seven clearly separated phases:</p>\n<div class=\"mermaid\">graph LR\nSetup --> Plan --> Provenance --> Validate --> Promote --> Sign --> Attest\n</div>\n<table>\n<thead>\n<tr>\n<th>Phase</th>\n<th>What it does</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Setup</strong></td>\n<td>Validate options, prewarm TUF cache.</td>\n</tr>\n<tr>\n<td><strong>Plan</strong></td>\n<td>Parse manifests, read registries, compute which images need promotion.</td>\n</tr>\n<tr>\n<td><strong>Provenance</strong></td>\n<td>Verify SLSA attestations on staging images.</td>\n</tr>\n<tr>\n<td><strong>Validate</strong></td>\n<td>Check cosign signatures, exit here for dry runs.</td>\n</tr>\n<tr>\n<td><strong>Promote</strong></td>\n<td>Copy images server-side, preserving digests.</td>\n</tr>\n<tr>\n<td><strong>Sign</strong></td>\n<td>Sign promoted images with keyless cosign.</td>\n</tr>\n<tr>\n<td><strong>Attest</strong></td>\n<td>Generate promotion provenance attestations using a dedicated <a href=\"https://in-toto.io\">in-toto</a> predicate type.</td>\n</tr>\n</tbody>\n</table>\n<p>Phases run sequentially, so each one gets exclusive access to the full rate\nlimit budget. No more contention. Signature replication to mirror registries is\nno longer part of this pipeline and runs as a\n<a href=\"https://prow.k8s.io/?job=ci-k8sio-image-signature-replication\">dedicated periodic Prow job</a>\ninstead.</p>\n<h2 id=\"making-it-fast\">Making it fast</h2>\n<p>With the architecture in place, we turned to performance.</p>\n<p><strong>Parallel registry reads</strong> (<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1736\">#1736</a>):\nThe plan phase reads 1,350 registries. We parallelized this and the plan phase\ndropped from about 20 minutes to about 2 minutes.</p>\n<p><strong>Two-phase tag listing</strong> (<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1761\">#1761</a>):\nInstead of checking all 46,000 image groups across more than 20 mirrors, we first check\nonly the source repositories. About 57% of images have no signatures at all\nbecause they were promoted before signing was enabled. We skip those entirely,\ncutting API calls roughly in half.</p>\n<p><strong>Source check before replication</strong> (<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1727\">#1727</a>):\nBefore iterating all mirrors for a given image, we check if the signature\nexists on the primary registry first. In steady state where most signatures are\nalready replicated, this reduced the work from about 17 hours to about 15\nminutes.</p>\n<p><strong>Per-request timeouts</strong> (<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1763\">#1763</a>):\nWe observed intermittent hangs where a stalled connection blocked the pipeline\nfor over 9 hours. Every network operation now has its own timeout and transient\nfailures are retried automatically.</p>\n<p><strong>Connection reuse</strong> (<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1759\">#1759</a>):\nWe started reusing HTTP connections and auth state across operations, eliminating\nredundant token negotiations. This closed a\n<a href=\"https://github.com/kubernetes-sigs/promo-tools/issues/842\">long-standing request</a>\nfrom 2023.</p>\n<h2 id=\"by-the-numbers\">By the numbers</h2>\n<p>Here is what the rewrite looks like in aggregate.</p>\n<ul>\n<li>Over 40 PRs merged, 3 releases shipped (<a href=\"https://github.com/kubernetes-sigs/promo-tools/releases/tag/v4.2.0\">v4.2.0</a>, <a href=\"https://github.com/kubernetes-sigs/promo-tools/releases/tag/v4.3.0\">v4.3.0</a>, <a href=\"https://github.com/kubernetes-sigs/promo-tools/releases/tag/v4.4.0\">v4.4.0</a>)</li>\n<li>Over 10,000 lines added and over 16,000 lines deleted, a net reduction\nof about 5,000 lines (20% smaller codebase)</li>\n<li>Performance drastically improved across the board</li>\n<li>Robustness improved with retry logic, per-request timeouts, and adaptive rate limiting</li>\n<li>19 long-standing issues closed</li>\n</ul>\n<p>The codebase shrank by a fifth while gaining provenance attestations, a pipeline\nengine, vulnerability scanning integration, parallelized operations, retry\nlogic, integration tests against local registries, and a standalone signature\nreplication mode.</p>\n<h2 id=\"no-user-facing-changes\">No user-facing changes</h2>\n<p>This was a hard requirement. The <code>kpromo cip</code> command accepts the same flags and\nreads the same YAML manifests. The\n<a href=\"https://prow.k8s.io/?job=post-k8sio-image-promo\"><code>post-k8sio-image-promo</code></a>\nProw job continued working throughout. The promotion manifests in\n<a href=\"https://github.com/kubernetes/k8s.io\">kubernetes/k8s.io</a> did not change. Nobody\nhad to update their workflows or configuration.</p>\n<p>We caught two regressions early in production. One (<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1731\">#1731</a>)\ncaused a registry key mismatch that made every image appear as &quot;lost&quot; so that\nnothing was promoted. Another (<a href=\"https://github.com/kubernetes-sigs/promo-tools/pull/1733\">#1733</a>)\nset the default thread count to zero, blocking all goroutines. Both were fixed\nwithin hours. The phased release strategy (<a href=\"https://github.com/kubernetes-sigs/promo-tools/releases/tag/v4.2.0\">v4.2.0</a> with the new engine, <a href=\"https://github.com/kubernetes-sigs/promo-tools/releases/tag/v4.3.0\">v4.3.0</a>\nwith legacy code removed) gave us a clear rollback path that we fortunately\nnever needed.</p>\n<h2 id=\"what-comes-next\">What comes next</h2>\n<p>Signature replication across all mirror registries remains the most expensive\npart of the promotion cycle. <a href=\"https://github.com/kubernetes-sigs/promo-tools/issues/1762\">Issue #1762</a>\nproposes eliminating it entirely by having\n<a href=\"https://github.com/kubernetes/registry.k8s.io\">archeio</a> (the <code>registry.k8s.io</code>\nredirect service) route signature tag requests to a single canonical upstream\ninstead of per-region backends. Another option would be to move signing closer\nto the registry infrastructure itself. Both approaches need further discussion\nwith the SIG Release and infrastructure teams, but either one would remove\nthousands of API calls per promotion cycle and simplify the codebase even\nfurther.</p>\n<h2 id=\"thank-you\">Thank you</h2>\n<p>This project has been a community effort spanning seven years. Thank you to\n<a href=\"https://github.com/listx\">Linus</a>,\n<a href=\"https://github.com/justaugustus\">Stephen</a>,\n<a href=\"https://github.com/puerco\">Adolfo</a>,\n<a href=\"https://github.com/cpanato\">Carlos</a>,\n<a href=\"https://github.com/BenTheElder\">Ben</a>,\n<a href=\"https://github.com/xmudrii\">Marko</a>,\n<a href=\"https://github.com/lasomethingsomething\">Lauri</a>,\n<a href=\"https://github.com/tylerferrara\">Tyler</a>,\n<a href=\"https://github.com/ameukam\">Arnaud</a>, and many others who contributed\ncode, reviews, and planning over the years. The SIG Release and Release\nEngineering communities provided the context, the discussions, and the patience\nfor a rewrite of infrastructure that every Kubernetes release depends on.</p>\n<p>If you want to get involved, join us in\n<a href=\"https://kubernetes.slack.com/archives/C2C40FMNF\"><code>#release-management</code></a> on the\nKubernetes Slack or check out the\n<a href=\"https://github.com/kubernetes-sigs/promo-tools\">repository</a>.</p>",
           "link": "https://kubernetes.io/blog/2026/03/17/image-promoter-rewrite/",
@@ -2697,24 +2715,6 @@
           "category": "Cloud",
           "published": "Mon, 16 Mar 2026 16:02:17 +0000",
           "author": "Esra Kayabali"
-        },
-        {
-          "title": "Microsoft at NVIDIA GTC: New solutions for Microsoft Foundry, Azure AI infrastructure and Physical AI",
-          "description": "<p>Microsoft combines accelerated computing with cloud scale engineering to bring advanced AI capabilities to our customers. For years, we’ve worked with NVIDIA to integrate hardware, software and infrastructure to power many of today’s most important AI breakthroughs.</p>\n<p>The post <a href=\"https://blogs.microsoft.com/blog/2026/03/16/microsoft-at-nvidia-gtc-new-solutions-for-microsoft-foundry-azure-ai-infrastructure-and-physical-ai/\">Microsoft at NVIDIA GTC: New solutions for Microsoft Foundry, Azure AI infrastructure and Physical AI</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://blogs.microsoft.com/blog/2026/03/16/microsoft-at-nvidia-gtc-new-solutions-for-microsoft-foundry-azure-ai-infrastructure-and-physical-ai/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Mon, 16 Mar 2026 21:21:14 +0000",
-          "author": "Yina Arenas"
-        },
-        {
-          "title": "From legacy to leadership: How PostgreSQL on Azure powers enterprise agility and innovation",
-          "description": "<p>Our mission is to make PostgreSQL the most performant, scalable, and enterprise-ready open database platform available. With Azure Database for PostgreSQL and the newly introduced Azure HorizonDB, we’re delivering on that vision.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/from-legacy-to-leadership-how-postgresql-on-azure-powers-enterprise-agility-and-innovation/\">From legacy to leadership: How PostgreSQL on Azure powers enterprise agility and innovation</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://azure.microsoft.com/en-us/blog/from-legacy-to-leadership-how-postgresql-on-azure-powers-enterprise-agility-and-innovation/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Mon, 16 Mar 2026 17:00:00 +0000",
-          "author": "Affan Dar"
         },
         {
           "title": "Achieving Test Reliability for Native E2E Testing: Beyond Fixing Broken Tests",
