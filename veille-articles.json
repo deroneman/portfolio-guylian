@@ -1,97 +1,106 @@
 {
-  "lastUpdate": "2026-04-13T09:06:33.324606",
+  "lastUpdate": "2026-04-14T08:48:48.752848",
   "articles": {
     "infrastructure": {
       "icon": "🏗️",
       "articles": [
         {
-          "title": "Plumber: Open-source Scanner of GitLab CI/CD Pipelines for Compliance Gaps",
-          "description": "<p>Ensure your GitLab CI/CD pipelines are compliant with Plumber, the open-source scanner that detects gaps and strengthens your development process.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/plumber-open-source-scanner-of-gitlab-ci-cd-pipelines-for-compliance-gaps/\">Plumber: Open-source Scanner of GitLab CI/CD Pipelines for Compliance Gaps</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/plumber-open-source-scanner-of-gitlab-ci-cd-pipelines-for-compliance-gaps/",
+          "title": "How to Analyze Hugging Face for Arm64 Readiness",
+          "description": "This post is a collaboration between Docker and Arm, demonstrating how Docker MCP Toolkit and the Arm MCP Server work together to scan Hugging Face Spaces for Arm64 Readiness. In our previous post, we walked through migrating a legacy C++ application with AVX2 intrinsics to Arm64 using Docker MCP Toolkit and the Arm MCP Server...",
+          "link": "https://www.docker.com/blog/how-to-analyze-hugging-face-for-arm64-readiness/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Mon, 13 Apr 2026 15:59:37 +0000",
+          "author": "Jennifer Kohl"
+        },
+        {
+          "title": "Calligra Suite: A Modern KDE-Native Office Experience for Linux Power Users",
+          "description": "<p>Experience the Calligra Suite, a cutting-edge office suite tailored for Linux power users. Enjoy a rich set of features and a user-friendly interface for all your needs.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/calligra-suite-a-modern-kde-native-office-experience-for-linux-power-users/\">Calligra Suite: A Modern KDE-Native Office Experience for Linux Power Users</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/calligra-suite-a-modern-kde-native-office-experience-for-linux-power-users/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 15:03:58 +0000",
+          "published": "Mon, 13 Apr 2026 10:59:25 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "9to5Linux Weekly Roundup: March 22nd, 2026",
-          "description": "<p>Explore the 9to5Linux Weekly Roundup from March 22nd, 2026, featuring essential updates, software releases, and insights from the Linux community.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-march-22nd-2026/\">9to5Linux Weekly Roundup: March 22nd, 2026</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-march-22nd-2026/",
+          "title": "How to Install SSH on Ubuntu 26.04",
+          "description": "<p>Learn how to install SSH on Ubuntu 26.04 with our step-by-step guide. Secure your server and enable remote access effortlessly today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-install-ssh-on-ubuntu-26-04/\">How to Install SSH on Ubuntu 26.04</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/how-to-install-ssh-on-ubuntu-26-04/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:59:48 +0000",
+          "published": "Mon, 13 Apr 2026 10:51:58 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Linuxiac Weekly Wrap-Up: Week 12, 2026 (Mar 16 – 22)",
-          "description": "<p>Discover the latest in Linux news with our Weekly Wrap-Up for March 16-22, 2026. Stay informed on trends, updates, and community highlights.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-12-2026-mar-16-22/\">Linuxiac Weekly Wrap-Up: Week 12, 2026 (Mar 16 – 22)</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-12-2026-mar-16-22/",
+          "title": "GNOME 48.10 Released as Final Bugfix Update for GNOME 48",
+          "description": "<p>Discover the final bugfix update for GNOME 48 with version 48.10. Explore enhancements and improvements that enhance your user experience today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/gnome-48-10-released-as-final-bugfix-update-for-gnome-48/\">GNOME 48.10 Released as Final Bugfix Update for GNOME 48</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/gnome-48-10-released-as-final-bugfix-update-for-gnome-48/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:55:53 +0000",
+          "published": "Mon, 13 Apr 2026 10:42:33 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Bottles 63.0 Introduces Proxy Support and Resolves Installation Issues",
-          "description": "<p>Bottles 63.0 is here! Explore the latest features, including proxy support and solutions for installation issues, to optimize your software usage.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/bottles-63-0-introduces-proxy-support-and-resolves-installation-issues/\">Bottles 63.0 Introduces Proxy Support and Resolves Installation Issues</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/bottles-63-0-introduces-proxy-support-and-resolves-installation-issues/",
+          "title": "NVIDIA 595 Linux Graphics Driver Released as Latest Production Branch Version",
+          "description": "<p>Discover the latest NVIDIA 595 Linux Graphics Driver, now available as the newest production branch version. Enhance your graphics performance today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/nvidia-595-linux-graphics-driver-released-as-latest-production-branch-version/\">NVIDIA 595 Linux Graphics Driver Released as Latest Production Branch Version</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/nvidia-595-linux-graphics-driver-released-as-latest-production-branch-version/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:54:33 +0000",
+          "published": "Mon, 13 Apr 2026 10:36:56 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "GStreamer 1.30 to Support HDR10+ Metadata Parsing from H.265 & AV1 Bitstreams",
-          "description": "<p>Learn about GStreamer 1.30's support for HDR10+ metadata parsing from H.265 and AV1 bitstreams, ensuring enhanced video quality and performance.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/gstreamer-1-30-to-support-hdr10-metadata-parsing-from-h-265-av1-bitstreams/\">GStreamer 1.30 to Support HDR10+ Metadata Parsing from H.265 &amp; AV1 Bitstreams</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/gstreamer-1-30-to-support-hdr10-metadata-parsing-from-h-265-av1-bitstreams/",
+          "title": "Krita 5.3 and Krita 6.0 Released With New Text Engine and Wayland HDR Support",
+          "description": "<p>Discover the latest features in Krita 5.3 and 6.0, including a new text engine and Wayland HDR support. Elevate your digital art experience today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/krita-5-3-and-krita-6-0-released-with-new-text-engine-and-wayland-hdr-support/\">Krita 5.3 and Krita 6.0 Released With New Text Engine and Wayland HDR Support</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/krita-5-3-and-krita-6-0-released-with-new-text-engine-and-wayland-hdr-support/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:47:57 +0000",
+          "published": "Mon, 13 Apr 2026 10:30:28 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "HandBrake 1.11.1 Video Transcoder Improves Stability With Audio and UI Fixes",
-          "description": "<p>Discover the latest HandBrake 1.11.1 update, featuring enhanced stability, audio improvements, and UI fixes for a seamless video transcoding experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/handbrake-1-11-1-video-transcoder-improves-stability-with-audio-and-ui-fixes/\">HandBrake 1.11.1 Video Transcoder Improves Stability With Audio and UI Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/handbrake-1-11-1-video-transcoder-improves-stability-with-audio-and-ui-fixes/",
+          "title": "BOSGAME M4 Plus Mini PC running Linux: BIOS",
+          "description": "<p>Experience the BOSGAME M4 Plus Mini PC with Linux. Ideal for home or office use, this mini PC combines power and portability. Find out more here!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/bosgame-m4-plus-mini-pc-running-linux-bios/\">BOSGAME M4 Plus Mini PC running Linux: BIOS</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/bosgame-m4-plus-mini-pc-running-linux-bios/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:43:06 +0000",
+          "published": "Mon, 13 Apr 2026 10:28:16 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Canonical Announces MicroCloud 3.1 with Cluster Manager Integration",
-          "description": "<p>Canonical unveils MicroCloud 3.1 with integrated Cluster Manager. Explore new features designed to optimize your cloud infrastructure and streamline operations.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/canonical-announces-microcloud-3-1-with-cluster-manager-integration/\">Canonical Announces MicroCloud 3.1 with Cluster Manager Integration</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/canonical-announces-microcloud-3-1-with-cluster-manager-integration/",
+          "title": "Transmission Reimagined: A Fast, Lightweight, and Modern BitTorrent Client",
+          "description": "<p>Transform your downloading experience with Transmission Reimagined, a sleek and efficient BitTorrent client that prioritizes speed and user-friendly functionality.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/transmission-reimagined-a-fast-lightweight-and-modern-bittorrent-client/\">Transmission Reimagined: A Fast, Lightweight, and Modern BitTorrent Client</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/transmission-reimagined-a-fast-lightweight-and-modern-bittorrent-client/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:41:53 +0000",
+          "published": "Mon, 13 Apr 2026 10:23:55 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Turris Omnia NG Wired Launches as a Linux-Powered 10Gb Router",
-          "description": "<p>Discover the Turris Omnia NG, a powerful Linux-powered 10Gb router designed for high-speed connectivity and advanced network management.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/turris-omnia-ng-wired-launches-as-a-linux-powered-10gb-router/\">Turris Omnia NG Wired Launches as a Linux-Powered 10Gb Router</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/turris-omnia-ng-wired-launches-as-a-linux-powered-10gb-router/",
+          "title": "Microsoft Edge Stable on Linux: A Surprisingly Solid Chromium Alternative",
+          "description": "<p>Explore Microsoft Edge Stable on Linux, a surprisingly solid Chromium alternative that offers seamless performance and enhanced security for all users.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/microsoft-edge-stable-on-linux-a-surprisingly-solid-chromium-alternative/\">Microsoft Edge Stable on Linux: A Surprisingly Solid Chromium Alternative</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/microsoft-edge-stable-on-linux-a-surprisingly-solid-chromium-alternative/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:37:10 +0000",
+          "published": "Mon, 13 Apr 2026 10:15:09 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "SysVinit 3.16 Init System Released with Minor Fixes",
-          "description": "<p>Explore the release of SysVinit 3.16, which includes essential minor fixes. Learn how these updates can improve your init system's efficiency and reliability.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/sysvinit-3-16-init-system-released-with-minor-fixes/\">SysVinit 3.16 Init System Released with Minor Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/sysvinit-3-16-init-system-released-with-minor-fixes/",
+          "title": "Re-thinking Framebuffers in PanVK",
+          "description": "<p>Delve into the re-thinking of framebuffers in PanVK, where cutting-edge techniques meet improved graphics performance. Transform your rendering strategies today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/re-thinking-framebuffers-in-panvk/\">Re-thinking Framebuffers in PanVK</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/re-thinking-framebuffers-in-panvk/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:30:48 +0000",
+          "published": "Mon, 13 Apr 2026 10:13:15 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Developer of the Week: Matthew Forrester Wolffe",
-          "description": "<p>Meet Matthew Forrester Wolffe, this week's featured developer. Dive into his contributions and learn how he's making waves in the tech community.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/developer-of-the-week-matthew-forrester-wolffe/\">Developer of the Week: Matthew Forrester Wolffe</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/developer-of-the-week-matthew-forrester-wolffe/",
+          "title": "OpenSSF Welcomes New Members as SLSA, Gemara, and AI Security Efforts Mature",
+          "description": "<p>Discover how OpenSSF is expanding its community with new members as SLSA, Gemara, and AI security efforts evolve. Be part of the future of open-source security.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/openssf-welcomes-new-members-as-slsa-gemara-and-ai-security-efforts-mature/\">OpenSSF Welcomes New Members as SLSA, Gemara, and AI Security Efforts Mature</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/openssf-welcomes-new-members-as-slsa-gemara-and-ai-security-efforts-mature/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:18:56 +0000",
+          "published": "Mon, 13 Apr 2026 10:03:29 +0000",
           "author": "Content Operations"
         },
         {
@@ -219,15 +228,6 @@
           "category": "Infrastructure",
           "published": "Tue, 17 Mar 2026 00:00:00 +0000",
           "author": "Inconnu"
-        },
-        {
-          "title": "Achieving Test Reliability for Native E2E Testing: Beyond Fixing Broken Tests",
-          "description": "End-to-end (E2E) tests are particularly important for native applications that run on various platforms (Android/iOS), screen sizes, and OS versions. E2E testing picks up differences in behavior across this fragmented ecosystem. But keeping E2E tests reliable is often more challenging than writing them in the first place.  The fragmented device ecosystem, gaps in test frameworks,...",
-          "link": "https://www.docker.com/blog/native-e2e-test-reliability/",
-          "source": "Docker Blog",
-          "category": "Infrastructure",
-          "published": "Fri, 13 Mar 2026 13:00:00 +0000",
-          "author": "Jin Kim"
         },
         {
           "title": "Announcing the AI Gateway Working Group",
@@ -640,6 +640,15 @@
       "icon": "💻",
       "articles": [
         {
+          "title": "GitHub for Beginners: Getting started with GitHub Pages",
+          "description": "<p>Learn how to create a free website for any repository on GitHub Pages.</p>\n<p>The post <a href=\"https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-pages/\">GitHub for Beginners: Getting started with GitHub Pages</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-pages/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Mon, 13 Apr 2026 15:00:00 +0000",
+          "author": "Kedasha Kerr"
+        },
+        {
           "title": "GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI",
           "description": "<p>GitHub for Beginners: Getting started with the GitHub Copilot CLI, a step-by-step tutorial.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/\">GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
           "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/",
@@ -746,15 +755,6 @@
           "category": "Développement",
           "published": "Mon, 30 Mar 2026 16:00:00 +0000",
           "author": "Kedasha Kerr"
-        },
-        {
-          "title": "What’s coming to our GitHub Actions 2026 security roadmap",
-          "description": "<p>A look at GitHub Actions’ 2026 roadmap, outlining how secure defaults, policy controls, and CI/CD observability harden the software supply chain end to end.</p>\n<p>The post <a href=\"https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/\">What&#8217;s coming to our GitHub Actions 2026 security roadmap</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Thu, 26 Mar 2026 16:49:14 +0000",
-          "author": "Greg Ose"
         },
         {
           "title": "Generative AI for Beginners .NET: Version 2 on .NET 10",
@@ -1465,6 +1465,15 @@
       "icon": "☁️",
       "articles": [
         {
+          "title": "AWS Weekly Roundup: Claude Mythos Preview in Amazon Bedrock, AWS Agent Registry, and more (April 13, 2026)",
+          "description": "In my last Week in Review post, I mentioned how much time I’ve been spending on AI-Driven Development Lifecycle (AI-DLC) workshops with customers this year. A common theme in those sessions is the need for better cost visibility. Teams are moving fast with AI, but as they go from experimenting to full production, finance and […]",
+          "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-mythos-preview-in-amazon-bedrock-aws-agent-registry-and-more-april-13-2026/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Mon, 13 Apr 2026 16:16:20 +0000",
+          "author": "Micah Walter"
+        },
+        {
           "title": "Microsoft named a Leader in The Forrester Wave™ for Sovereign Cloud Platforms",
           "description": "<p>Microsoft is named a Leader in The Forrester Wave™ for Sovereign Cloud Platforms, recognizing Microsoft Sovereign Cloud leadership in evolving sovereignty needs.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-forrester-wave-for-sovereign-cloud-platforms/\">Microsoft named a Leader in The Forrester Wave™ for Sovereign Cloud Platforms</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
           "link": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-forrester-wave-for-sovereign-cloud-platforms/",
@@ -1724,15 +1733,6 @@
           "category": "Cloud",
           "published": "Tue, 24 Feb 2026 18:55:11 +0000",
           "author": "Micah Walter"
-        },
-        {
-          "title": "AWS Weekly Roundup: Claude Sonnet 4.6 in Amazon Bedrock, Kiro in GovCloud Regions, new Agent Plugins, and more (February 23, 2026)",
-          "description": "Last week, my team met many developers at Developer Week in San Jose. My colleague, Vinicius Senger delivered a great keynote about renascent software—a new way of building and evolving applications where humans and AI collaborate as co-developers using Kiro. Other colleagues, Du’An Lightfoot, Elizabeth Fuentes, Laura Salinas, and Sandhya Subramani spoke about building and […]",
-          "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-4-6-in-amazon-bedrock-kiro-in-govcloud-regions-new-agent-plugins-and-more-february-23-2026/",
-          "source": "AWS Blog",
-          "category": "Cloud",
-          "published": "Mon, 23 Feb 2026 16:56:24 +0000",
-          "author": "Channy Yun (윤석찬)"
         }
       ]
     },
@@ -1740,48 +1740,12 @@
       "icon": "🐳",
       "articles": [
         {
-          "title": "v3.10.0-rc.0",
-          "description": "<p>v3.10.0-rc.0</p>",
-          "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.0",
-          "source": "Prometheus Blog",
-          "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454283",
-          "author": "codesome"
-        },
-        {
-          "title": "v0.310.0-rc.1",
-          "description": "<p>v0.310.0-rc.1</p>",
-          "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0-rc.1",
-          "source": "Prometheus Blog",
-          "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454279",
-          "author": "codesome"
-        },
-        {
-          "title": "3.10.0-rc.1 / 2026-02-19",
-          "description": "<p>Prometheus now offers a distroless Docker image variant alongside the default<br />\nbusybox image. The distroless variant provides enhanced security with a minimal<br />\nbase image, uses UID/GID 65532 (nonroot) instead of nobody, and removes the<br />\nVOLUME declaration. Both variants are available with <code>-busybox</code> and <code>-distroless</code><br />\ntag suffixes (e.g., <code>prom/prometheus:latest-busybox</code>, <code>prom/prometheus:latest-distroless</code>).<br />\nThe busybox image remains the default with no suffix for backwards compatibility<br />\n(e.g., <code>prom/prometheus:latest</code> points to the busybox variant).</p>\n<p>For users migrating existing <strong>named</strong> volumes from the busybox image to the distroless variant, the ownership can be adjusted with:</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\"><pre class=\"notranslate\"><code>docker run --rm -v prometheus-data:/prometheus alpine chown -R 65532:65532 /prometheus\n</code></pre></div>\n<p>Then, the container can be started with the old volume with:</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\"><pre class=\"notranslate\"><code>docker run -v prometheus-data:/prometheus prom/prometheus:latest-distroless\n</code></pre></div>\n<p>User migrating from bind mounts might need to ajust permissions too, depending on their setup.</p>\n<ul>\n<li>[CHANGE] Alerting: Add <code>alertmanager</code> dimension to following metrics: <code>prometheus_notifications_dropped_total</code>, <code>prometheus_notifications_queue_capacity</code>, <code>prometheus_notifications_queue_length</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/16355\">#16355</a></li>\n<li>[CHANGE] UI: Hide expanded alert annotations by default, enabling more information density on the <code>/alerts</code> page. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17611\">#17611</a></li>\n<li>[FEATURE] AWS SD: Add MSK Role. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17600\">#17600</a></li>\n<li>[FEATURE] PromQL: Add <code>fill()</code> / <code>fill_left()</code> / <code>fill_right()</code> binop modifiers for specifying default values for missing series. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17644\">#17644</a></li>\n<li>[FEATURE] Web: Add OpenAPI 3.2 specification for the HTTP API at <code>/api/v1/openapi.yaml</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17825\">#17825</a></li>\n<li>[FEATURE] Dockerfile: Add distroless image variant using UID/GID 65532 and no VOLUME declaration. Busybox image remains default. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17876\">#17876</a></li>\n<li>[FEATURE] Web: Add on-demand wall time profiling under <code>&lt;URL&gt;/debug/pprof/fgprof</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18027\">#18027</a></li>\n<li>[ENHANCEMENT] PromQL: Add more detail to histogram quantile monotonicity info annotations. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/15578\">#15578</a></li>\n<li>[ENHANCEMENT] Alerting: Independent alertmanager sendloops. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/16355\">#16355</a></li>\n<li>[ENHANCEMENT] TSDB: Experimental support for early compaction of stale series in the memory with configurable threshold <code>stale_series_compaction_threshold</code> in the config file. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/16929\">#16929</a></li>\n<li>[ENHANCEMENT] Service Discovery: Service discoveries are now removable from the Prometheus binary through the Go build tag <code>remove_all_sd</code> and individual service discoveries can be re-added with the build tags <code>enable_&lt;sd name&gt;_sd</code>. Users can build a custom Prometheus with only the necessary SDs for a smaller binary size. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17736\">#17736</a></li>\n<li>[ENHANCEMENT] Promtool: Support promql syntax features <code>promql-duration-expr</code> and <code>promql-extended-range-selectors</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17926\">#17926</a></li>\n<li>[PERF] PromQL: Avoid unnecessary label extraction in PromQL functions. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17676\">#17676</a></li>\n<li>[PERF] PromQL: Improve performance of regex matchers like <code>.*-.*-.*</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17707\">#17707</a></li>\n<li>[PERF] OTLP: Add label caching for OTLP-to-Prometheus conversion to reduce allocations and improve latency. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17860\">#17860</a></li>\n<li>[PERF] API: Compute <code>/api/v1/targets/relabel_steps</code> in a single pass instead of re-running relabeling for each prefix. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17969\">#17969</a></li>\n<li>[PERF] tsdb: Optimize LabelValues intersection performance for matchers. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18069\">#18069</a></li>\n<li>[BUGFIX] PromQL: Prevent query strings containing only UTF-8 continuation bytes from crashing Prometheus. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17735\">#17735</a></li>\n<li>[BUGFIX] Web: Fix missing <code>X-Prometheus-Stopping</code> header for <code>/-/ready</code> endpoint in <code>NotReady</code> state. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17795\">#17795</a></li>\n<li>[BUGFIX] PromQL: Fix PromQL <code>info()</code> function returning empty results when filtering by a label that exists on both the input metric and <code>target_info</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17817\">#17817</a></li>\n<li>[BUGFIX] TSDB: Fix a bug during exemplar buffer grow/shrink that could cause exemplars to be incorrectly discarded. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17863\">#17863</a></li>\n<li>[BUGFIX] UI: Fix broken graph display after page reload, due to broken Y axis min encoding/decoding. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17869\">#17869</a></li>\n<li>[BUGFIX] TSDB: Fix memory leaks in buffer pools by clearing reference fields (Labels, Histogram pointers, metadata strings) before returning buffers to pools. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17879\">#17879</a></li>\n<li>[BUGFIX] PromQL: info function: fix series without identifying labels not being returned. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17898\">#17898</a></li>\n<li>[BUGFIX] OTLP: Filter <code>__name__</code> from OTLP attributes to prevent duplicate labels. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17917\">#17917</a></li>\n<li>[BUGFIX] TSDB: Fix division by zero when computing stale series ratio with empty head. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17952\">#17952</a></li>\n<li>[BUGFIX] OTLP: Fix potential silent data loss for sum metrics. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17954\">#17954</a></li>\n<li>[BUGFIX] PromQL: Fix smoothed interpolation across counter resets. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17988\">#17988</a></li>\n<li>[BUGFIX] PromQL: Fix panic with <code>@</code> modifier on empty ranges. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18020\">#18020</a></li>\n<li>[BUGFIX] PromQL: Fix <code>avg_over_time</code> for a single native histogram. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18058\">#18058</a></li>\n</ul>",
-          "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.1",
-          "source": "Prometheus Blog",
-          "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454275",
-          "author": "prombot"
-        },
-        {
-          "title": "v0.310.0",
-          "description": "<p>v0.310.0</p>",
-          "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0",
-          "source": "Prometheus Blog",
-          "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454271",
-          "author": "codesome"
-        },
-        {
           "title": "3.10.0 / 2026-02-24",
           "description": "<p>Prometheus now offers a distroless Docker image variant alongside the default<br />\nbusybox image. The distroless variant provides enhanced security with a minimal<br />\nbase image, uses UID/GID 65532 (nonroot) instead of nobody, and removes the<br />\nVOLUME declaration. Both variants are available with <code>-busybox</code> and <code>-distroless</code><br />\ntag suffixes (e.g., <code>prom/prometheus:latest-busybox</code>, <code>prom/prometheus:latest-distroless</code>).<br />\nThe busybox image remains the default with no suffix for backwards compatibility<br />\n(e.g., <code>prom/prometheus:latest</code> points to the busybox variant).</p>\n<p>For users migrating existing <strong>named</strong> volumes from the busybox image to the distroless variant, the ownership can be adjusted with:</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\"><pre class=\"notranslate\"><code>docker run --rm -v prometheus-data:/prometheus alpine chown -R 65532:65532 /prometheus\n</code></pre></div>\n<p>Then, the container can be started with the old volume with:</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\"><pre class=\"notranslate\"><code>docker run -v prometheus-data:/prometheus prom/prometheus:latest-distroless\n</code></pre></div>\n<p>User migrating from bind mounts might need to ajust permissions too, depending on their setup.</p>\n<ul>\n<li>[CHANGE] Alerting: Add <code>alertmanager</code> dimension to following metrics: <code>prometheus_notifications_dropped_total</code>, <code>prometheus_notifications_queue_capacity</code>, <code>prometheus_notifications_queue_length</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/16355\">#16355</a></li>\n<li>[CHANGE] UI: Hide expanded alert annotations by default, enabling more information density on the <code>/alerts</code> page. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17611\">#17611</a></li>\n<li>[FEATURE] AWS SD: Add MSK Role. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17600\">#17600</a></li>\n<li>[FEATURE] PromQL: Add <code>fill()</code> / <code>fill_left()</code> / <code>fill_right()</code> binop modifiers for specifying default values for missing series. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17644\">#17644</a></li>\n<li>[FEATURE] Web: Add OpenAPI 3.2 specification for the HTTP API at <code>/api/v1/openapi.yaml</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17825\">#17825</a></li>\n<li>[FEATURE] Dockerfile: Add distroless image variant using UID/GID 65532 and no VOLUME declaration. Busybox image remains default. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17876\">#17876</a></li>\n<li>[FEATURE] Web: Add on-demand wall time profiling under <code>&lt;URL&gt;/debug/pprof/fgprof</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18027\">#18027</a></li>\n<li>[ENHANCEMENT] PromQL: Add more detail to histogram quantile monotonicity info annotations. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/15578\">#15578</a></li>\n<li>[ENHANCEMENT] Alerting: Independent alertmanager sendloops. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/16355\">#16355</a></li>\n<li>[ENHANCEMENT] TSDB: Experimental support for early compaction of stale series in the memory with configurable threshold <code>stale_series_compaction_threshold</code> in the config file. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/16929\">#16929</a></li>\n<li>[ENHANCEMENT] Service Discovery: Service discoveries are now removable from the Prometheus binary through the Go build tag <code>remove_all_sd</code> and individual service discoveries can be re-added with the build tags <code>enable_&lt;sd name&gt;_sd</code>. Users can build a custom Prometheus with only the necessary SDs for a smaller binary size. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17736\">#17736</a></li>\n<li>[ENHANCEMENT] Promtool: Support promql syntax features <code>promql-duration-expr</code> and <code>promql-extended-range-selectors</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17926\">#17926</a></li>\n<li>[PERF] PromQL: Avoid unnecessary label extraction in PromQL functions. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17676\">#17676</a></li>\n<li>[PERF] PromQL: Improve performance of regex matchers like <code>.*-.*-.*</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17707\">#17707</a></li>\n<li>[PERF] OTLP: Add label caching for OTLP-to-Prometheus conversion to reduce allocations and improve latency. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17860\">#17860</a></li>\n<li>[PERF] API: Compute <code>/api/v1/targets/relabel_steps</code> in a single pass instead of re-running relabeling for each prefix. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17969\">#17969</a></li>\n<li>[PERF] tsdb: Optimize LabelValues intersection performance for matchers. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18069\">#18069</a></li>\n<li>[BUGFIX] PromQL: Prevent query strings containing only UTF-8 continuation bytes from crashing Prometheus. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17735\">#17735</a></li>\n<li>[BUGFIX] Web: Fix missing <code>X-Prometheus-Stopping</code> header for <code>/-/ready</code> endpoint in <code>NotReady</code> state. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17795\">#17795</a></li>\n<li>[BUGFIX] PromQL: Fix PromQL <code>info()</code> function returning empty results when filtering by a label that exists on both the input metric and <code>target_info</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17817\">#17817</a></li>\n<li>[BUGFIX] TSDB: Fix a bug during exemplar buffer grow/shrink that could cause exemplars to be incorrectly discarded. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17863\">#17863</a></li>\n<li>[BUGFIX] UI: Fix broken graph display after page reload, due to broken Y axis min encoding/decoding. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17869\">#17869</a></li>\n<li>[BUGFIX] TSDB: Fix memory leaks in buffer pools by clearing reference fields (Labels, Histogram pointers, metadata strings) before returning buffers to pools. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17879\">#17879</a></li>\n<li>[BUGFIX] PromQL: info function: fix series without identifying labels not being returned. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17898\">#17898</a></li>\n<li>[BUGFIX] OTLP: Filter <code>__name__</code> from OTLP attributes to prevent duplicate labels. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17917\">#17917</a></li>\n<li>[BUGFIX] TSDB: Fix division by zero when computing stale series ratio with empty head. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17952\">#17952</a></li>\n<li>[BUGFIX] OTLP: Fix potential silent data loss for sum metrics. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17954\">#17954</a></li>\n<li>[BUGFIX] PromQL: Fix smoothed interpolation across counter resets. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17988\">#17988</a></li>\n<li>[BUGFIX] PromQL: Fix panic with <code>@</code> modifier on empty ranges. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18020\">#18020</a></li>\n<li>[BUGFIX] PromQL: Fix <code>avg_over_time</code> for a single native histogram. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18058\">#18058</a></li>\n</ul>",
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454267",
+          "published": "2026-04-14T08:48:47.940532",
           "author": "prombot"
         },
         {
@@ -1790,7 +1754,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454263",
+          "published": "2026-04-14T08:48:47.940514",
           "author": "prombot"
         },
         {
@@ -1799,7 +1763,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454258",
+          "published": "2026-04-14T08:48:47.940506",
           "author": "prombot"
         },
         {
@@ -1808,7 +1772,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454254",
+          "published": "2026-04-14T08:48:47.940501",
           "author": "roidelapluie"
         },
         {
@@ -1817,7 +1781,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454249",
+          "published": "2026-04-14T08:48:47.940497",
           "author": "roidelapluie"
         },
         {
@@ -1826,8 +1790,53 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454234",
+          "published": "2026-04-14T08:48:47.940493",
           "author": "prombot"
+        },
+        {
+          "title": "v0.305.2",
+          "description": "<p>v0.305.2</p>",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-14T08:48:47.940488",
+          "author": "roidelapluie"
+        },
+        {
+          "title": "v0.311.2",
+          "description": "<p>v0.311.2</p>",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-14T08:48:47.940484",
+          "author": "roidelapluie"
+        },
+        {
+          "title": "3.5.2 / 2026-04-13",
+          "description": "<p>This release has a fix for a Stored XSS vulnerability that can be triggered via crafted metric names and label values in Prometheus web UI tooltips and metrics explorer. Thanks to Duc Anh Nguyen from TinyxLab for reporting it.</p>\n<ul>\n<li>[SECURITY] UI: Fix stored XSS via unescaped metric names and labels. <a href=\"https://github.com/advisories/GHSA-vffh-x6r8-xx99\" title=\"CVE-2026-40179\">CVE-2026-40179</a>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18507\">#18507</a></li>\n<li>[PERF] Regex: Stop calling Simplify. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17908\">#17908</a></li>\n</ul>",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-14T08:48:47.940479",
+          "author": "prombot"
+        },
+        {
+          "title": "3.11.2 / 2026-04-13",
+          "description": "<p>This release has a fix for a Stored XSS vulnerability that can be triggered via crafted metric names and label values in Prometheus web UI tooltips and metrics explorer. Thanks to Duc Anh Nguyen from TinyxLab for reporting it.</p>\n<ul>\n<li>[SECURITY] UI: Fix stored XSS via unescaped metric names and labels. <a href=\"https://github.com/advisories/GHSA-vffh-x6r8-xx99\" title=\"CVE-2026-40179\">CVE-2026-40179</a>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18506\">#18506</a></li>\n<li>[ENHANCEMENT] Consul SD: Introduce <code>health_filter</code> field for Health API filtering. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18499\">#18499</a></li>\n<li>[BUGFIX] Consul SD: Fix filter parameter being incorrectly applied to the Health API. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18499\">#18499</a></li>\n</ul>",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-14T08:48:47.940465",
+          "author": "prombot"
+        },
+        {
+          "title": "GitHub for Beginners: Getting started with GitHub Pages",
+          "description": "<p>Learn how to create a free website for any repository on GitHub Pages.</p>\n<p>The post <a href=\"https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-pages/\">GitHub for Beginners: Getting started with GitHub Pages</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-pages/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Mon, 13 Apr 2026 15:00:00 +0000",
+          "author": "Kedasha Kerr"
         },
         {
           "title": "GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI",
@@ -1909,15 +1918,6 @@
           "category": "DevOps",
           "published": "Mon, 30 Mar 2026 16:00:00 +0000",
           "author": "Kedasha Kerr"
-        },
-        {
-          "title": "What’s coming to our GitHub Actions 2026 security roadmap",
-          "description": "<p>A look at GitHub Actions’ 2026 roadmap, outlining how secure defaults, policy controls, and CI/CD observability harden the software supply chain end to end.</p>\n<p>The post <a href=\"https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/\">What&#8217;s coming to our GitHub Actions 2026 security roadmap</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Thu, 26 Mar 2026 16:49:14 +0000",
-          "author": "Greg Ose"
         }
       ]
     },
@@ -1925,48 +1925,12 @@
       "icon": "📌",
       "articles": [
         {
-          "title": "v3.10.0-rc.0",
-          "description": "<p>v3.10.0-rc.0</p>",
-          "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.0",
-          "source": "Prometheus Blog",
-          "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454283",
-          "author": "codesome"
-        },
-        {
-          "title": "v0.310.0-rc.1",
-          "description": "<p>v0.310.0-rc.1</p>",
-          "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0-rc.1",
-          "source": "Prometheus Blog",
-          "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454279",
-          "author": "codesome"
-        },
-        {
-          "title": "3.10.0-rc.1 / 2026-02-19",
-          "description": "<p>Prometheus now offers a distroless Docker image variant alongside the default<br />\nbusybox image. The distroless variant provides enhanced security with a minimal<br />\nbase image, uses UID/GID 65532 (nonroot) instead of nobody, and removes the<br />\nVOLUME declaration. Both variants are available with <code>-busybox</code> and <code>-distroless</code><br />\ntag suffixes (e.g., <code>prom/prometheus:latest-busybox</code>, <code>prom/prometheus:latest-distroless</code>).<br />\nThe busybox image remains the default with no suffix for backwards compatibility<br />\n(e.g., <code>prom/prometheus:latest</code> points to the busybox variant).</p>\n<p>For users migrating existing <strong>named</strong> volumes from the busybox image to the distroless variant, the ownership can be adjusted with:</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\"><pre class=\"notranslate\"><code>docker run --rm -v prometheus-data:/prometheus alpine chown -R 65532:65532 /prometheus\n</code></pre></div>\n<p>Then, the container can be started with the old volume with:</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\"><pre class=\"notranslate\"><code>docker run -v prometheus-data:/prometheus prom/prometheus:latest-distroless\n</code></pre></div>\n<p>User migrating from bind mounts might need to ajust permissions too, depending on their setup.</p>\n<ul>\n<li>[CHANGE] Alerting: Add <code>alertmanager</code> dimension to following metrics: <code>prometheus_notifications_dropped_total</code>, <code>prometheus_notifications_queue_capacity</code>, <code>prometheus_notifications_queue_length</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/16355\">#16355</a></li>\n<li>[CHANGE] UI: Hide expanded alert annotations by default, enabling more information density on the <code>/alerts</code> page. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17611\">#17611</a></li>\n<li>[FEATURE] AWS SD: Add MSK Role. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17600\">#17600</a></li>\n<li>[FEATURE] PromQL: Add <code>fill()</code> / <code>fill_left()</code> / <code>fill_right()</code> binop modifiers for specifying default values for missing series. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17644\">#17644</a></li>\n<li>[FEATURE] Web: Add OpenAPI 3.2 specification for the HTTP API at <code>/api/v1/openapi.yaml</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17825\">#17825</a></li>\n<li>[FEATURE] Dockerfile: Add distroless image variant using UID/GID 65532 and no VOLUME declaration. Busybox image remains default. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17876\">#17876</a></li>\n<li>[FEATURE] Web: Add on-demand wall time profiling under <code>&lt;URL&gt;/debug/pprof/fgprof</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18027\">#18027</a></li>\n<li>[ENHANCEMENT] PromQL: Add more detail to histogram quantile monotonicity info annotations. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/15578\">#15578</a></li>\n<li>[ENHANCEMENT] Alerting: Independent alertmanager sendloops. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/16355\">#16355</a></li>\n<li>[ENHANCEMENT] TSDB: Experimental support for early compaction of stale series in the memory with configurable threshold <code>stale_series_compaction_threshold</code> in the config file. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/16929\">#16929</a></li>\n<li>[ENHANCEMENT] Service Discovery: Service discoveries are now removable from the Prometheus binary through the Go build tag <code>remove_all_sd</code> and individual service discoveries can be re-added with the build tags <code>enable_&lt;sd name&gt;_sd</code>. Users can build a custom Prometheus with only the necessary SDs for a smaller binary size. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17736\">#17736</a></li>\n<li>[ENHANCEMENT] Promtool: Support promql syntax features <code>promql-duration-expr</code> and <code>promql-extended-range-selectors</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17926\">#17926</a></li>\n<li>[PERF] PromQL: Avoid unnecessary label extraction in PromQL functions. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17676\">#17676</a></li>\n<li>[PERF] PromQL: Improve performance of regex matchers like <code>.*-.*-.*</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17707\">#17707</a></li>\n<li>[PERF] OTLP: Add label caching for OTLP-to-Prometheus conversion to reduce allocations and improve latency. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17860\">#17860</a></li>\n<li>[PERF] API: Compute <code>/api/v1/targets/relabel_steps</code> in a single pass instead of re-running relabeling for each prefix. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17969\">#17969</a></li>\n<li>[PERF] tsdb: Optimize LabelValues intersection performance for matchers. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18069\">#18069</a></li>\n<li>[BUGFIX] PromQL: Prevent query strings containing only UTF-8 continuation bytes from crashing Prometheus. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17735\">#17735</a></li>\n<li>[BUGFIX] Web: Fix missing <code>X-Prometheus-Stopping</code> header for <code>/-/ready</code> endpoint in <code>NotReady</code> state. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17795\">#17795</a></li>\n<li>[BUGFIX] PromQL: Fix PromQL <code>info()</code> function returning empty results when filtering by a label that exists on both the input metric and <code>target_info</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17817\">#17817</a></li>\n<li>[BUGFIX] TSDB: Fix a bug during exemplar buffer grow/shrink that could cause exemplars to be incorrectly discarded. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17863\">#17863</a></li>\n<li>[BUGFIX] UI: Fix broken graph display after page reload, due to broken Y axis min encoding/decoding. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17869\">#17869</a></li>\n<li>[BUGFIX] TSDB: Fix memory leaks in buffer pools by clearing reference fields (Labels, Histogram pointers, metadata strings) before returning buffers to pools. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17879\">#17879</a></li>\n<li>[BUGFIX] PromQL: info function: fix series without identifying labels not being returned. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17898\">#17898</a></li>\n<li>[BUGFIX] OTLP: Filter <code>__name__</code> from OTLP attributes to prevent duplicate labels. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17917\">#17917</a></li>\n<li>[BUGFIX] TSDB: Fix division by zero when computing stale series ratio with empty head. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17952\">#17952</a></li>\n<li>[BUGFIX] OTLP: Fix potential silent data loss for sum metrics. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17954\">#17954</a></li>\n<li>[BUGFIX] PromQL: Fix smoothed interpolation across counter resets. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17988\">#17988</a></li>\n<li>[BUGFIX] PromQL: Fix panic with <code>@</code> modifier on empty ranges. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18020\">#18020</a></li>\n<li>[BUGFIX] PromQL: Fix <code>avg_over_time</code> for a single native histogram. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18058\">#18058</a></li>\n</ul>",
-          "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0-rc.1",
-          "source": "Prometheus Blog",
-          "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454275",
-          "author": "prombot"
-        },
-        {
-          "title": "v0.310.0",
-          "description": "<p>v0.310.0</p>",
-          "link": "https://github.com/prometheus/prometheus/releases/tag/v0.310.0",
-          "source": "Prometheus Blog",
-          "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454271",
-          "author": "codesome"
-        },
-        {
           "title": "3.10.0 / 2026-02-24",
           "description": "<p>Prometheus now offers a distroless Docker image variant alongside the default<br />\nbusybox image. The distroless variant provides enhanced security with a minimal<br />\nbase image, uses UID/GID 65532 (nonroot) instead of nobody, and removes the<br />\nVOLUME declaration. Both variants are available with <code>-busybox</code> and <code>-distroless</code><br />\ntag suffixes (e.g., <code>prom/prometheus:latest-busybox</code>, <code>prom/prometheus:latest-distroless</code>).<br />\nThe busybox image remains the default with no suffix for backwards compatibility<br />\n(e.g., <code>prom/prometheus:latest</code> points to the busybox variant).</p>\n<p>For users migrating existing <strong>named</strong> volumes from the busybox image to the distroless variant, the ownership can be adjusted with:</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\"><pre class=\"notranslate\"><code>docker run --rm -v prometheus-data:/prometheus alpine chown -R 65532:65532 /prometheus\n</code></pre></div>\n<p>Then, the container can be started with the old volume with:</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\"><pre class=\"notranslate\"><code>docker run -v prometheus-data:/prometheus prom/prometheus:latest-distroless\n</code></pre></div>\n<p>User migrating from bind mounts might need to ajust permissions too, depending on their setup.</p>\n<ul>\n<li>[CHANGE] Alerting: Add <code>alertmanager</code> dimension to following metrics: <code>prometheus_notifications_dropped_total</code>, <code>prometheus_notifications_queue_capacity</code>, <code>prometheus_notifications_queue_length</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/16355\">#16355</a></li>\n<li>[CHANGE] UI: Hide expanded alert annotations by default, enabling more information density on the <code>/alerts</code> page. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17611\">#17611</a></li>\n<li>[FEATURE] AWS SD: Add MSK Role. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17600\">#17600</a></li>\n<li>[FEATURE] PromQL: Add <code>fill()</code> / <code>fill_left()</code> / <code>fill_right()</code> binop modifiers for specifying default values for missing series. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17644\">#17644</a></li>\n<li>[FEATURE] Web: Add OpenAPI 3.2 specification for the HTTP API at <code>/api/v1/openapi.yaml</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17825\">#17825</a></li>\n<li>[FEATURE] Dockerfile: Add distroless image variant using UID/GID 65532 and no VOLUME declaration. Busybox image remains default. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17876\">#17876</a></li>\n<li>[FEATURE] Web: Add on-demand wall time profiling under <code>&lt;URL&gt;/debug/pprof/fgprof</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18027\">#18027</a></li>\n<li>[ENHANCEMENT] PromQL: Add more detail to histogram quantile monotonicity info annotations. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/15578\">#15578</a></li>\n<li>[ENHANCEMENT] Alerting: Independent alertmanager sendloops. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/16355\">#16355</a></li>\n<li>[ENHANCEMENT] TSDB: Experimental support for early compaction of stale series in the memory with configurable threshold <code>stale_series_compaction_threshold</code> in the config file. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/16929\">#16929</a></li>\n<li>[ENHANCEMENT] Service Discovery: Service discoveries are now removable from the Prometheus binary through the Go build tag <code>remove_all_sd</code> and individual service discoveries can be re-added with the build tags <code>enable_&lt;sd name&gt;_sd</code>. Users can build a custom Prometheus with only the necessary SDs for a smaller binary size. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17736\">#17736</a></li>\n<li>[ENHANCEMENT] Promtool: Support promql syntax features <code>promql-duration-expr</code> and <code>promql-extended-range-selectors</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17926\">#17926</a></li>\n<li>[PERF] PromQL: Avoid unnecessary label extraction in PromQL functions. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17676\">#17676</a></li>\n<li>[PERF] PromQL: Improve performance of regex matchers like <code>.*-.*-.*</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17707\">#17707</a></li>\n<li>[PERF] OTLP: Add label caching for OTLP-to-Prometheus conversion to reduce allocations and improve latency. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17860\">#17860</a></li>\n<li>[PERF] API: Compute <code>/api/v1/targets/relabel_steps</code> in a single pass instead of re-running relabeling for each prefix. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17969\">#17969</a></li>\n<li>[PERF] tsdb: Optimize LabelValues intersection performance for matchers. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18069\">#18069</a></li>\n<li>[BUGFIX] PromQL: Prevent query strings containing only UTF-8 continuation bytes from crashing Prometheus. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17735\">#17735</a></li>\n<li>[BUGFIX] Web: Fix missing <code>X-Prometheus-Stopping</code> header for <code>/-/ready</code> endpoint in <code>NotReady</code> state. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17795\">#17795</a></li>\n<li>[BUGFIX] PromQL: Fix PromQL <code>info()</code> function returning empty results when filtering by a label that exists on both the input metric and <code>target_info</code>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17817\">#17817</a></li>\n<li>[BUGFIX] TSDB: Fix a bug during exemplar buffer grow/shrink that could cause exemplars to be incorrectly discarded. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17863\">#17863</a></li>\n<li>[BUGFIX] UI: Fix broken graph display after page reload, due to broken Y axis min encoding/decoding. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17869\">#17869</a></li>\n<li>[BUGFIX] TSDB: Fix memory leaks in buffer pools by clearing reference fields (Labels, Histogram pointers, metadata strings) before returning buffers to pools. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17879\">#17879</a></li>\n<li>[BUGFIX] PromQL: info function: fix series without identifying labels not being returned. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17898\">#17898</a></li>\n<li>[BUGFIX] OTLP: Filter <code>__name__</code> from OTLP attributes to prevent duplicate labels. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17917\">#17917</a></li>\n<li>[BUGFIX] TSDB: Fix division by zero when computing stale series ratio with empty head. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17952\">#17952</a></li>\n<li>[BUGFIX] OTLP: Fix potential silent data loss for sum metrics. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17954\">#17954</a></li>\n<li>[BUGFIX] PromQL: Fix smoothed interpolation across counter resets. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17988\">#17988</a></li>\n<li>[BUGFIX] PromQL: Fix panic with <code>@</code> modifier on empty ranges. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18020\">#18020</a></li>\n<li>[BUGFIX] PromQL: Fix <code>avg_over_time</code> for a single native histogram. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18058\">#18058</a></li>\n</ul>",
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454267",
+          "published": "2026-04-14T08:48:47.940532",
           "author": "prombot"
         },
         {
@@ -1975,7 +1939,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454263",
+          "published": "2026-04-14T08:48:47.940514",
           "author": "prombot"
         },
         {
@@ -1984,7 +1948,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454258",
+          "published": "2026-04-14T08:48:47.940506",
           "author": "prombot"
         },
         {
@@ -1993,7 +1957,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454254",
+          "published": "2026-04-14T08:48:47.940501",
           "author": "roidelapluie"
         },
         {
@@ -2002,7 +1966,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454249",
+          "published": "2026-04-14T08:48:47.940497",
           "author": "roidelapluie"
         },
         {
@@ -2011,98 +1975,170 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-13T09:06:32.454234",
+          "published": "2026-04-14T08:48:47.940493",
           "author": "prombot"
         },
         {
-          "title": "Plumber: Open-source Scanner of GitLab CI/CD Pipelines for Compliance Gaps",
-          "description": "<p>Ensure your GitLab CI/CD pipelines are compliant with Plumber, the open-source scanner that detects gaps and strengthens your development process.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/plumber-open-source-scanner-of-gitlab-ci-cd-pipelines-for-compliance-gaps/\">Plumber: Open-source Scanner of GitLab CI/CD Pipelines for Compliance Gaps</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/plumber-open-source-scanner-of-gitlab-ci-cd-pipelines-for-compliance-gaps/",
+          "title": "v0.305.2",
+          "description": "<p>v0.305.2</p>",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-14T08:48:47.940488",
+          "author": "roidelapluie"
+        },
+        {
+          "title": "v0.311.2",
+          "description": "<p>v0.311.2</p>",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-14T08:48:47.940484",
+          "author": "roidelapluie"
+        },
+        {
+          "title": "3.5.2 / 2026-04-13",
+          "description": "<p>This release has a fix for a Stored XSS vulnerability that can be triggered via crafted metric names and label values in Prometheus web UI tooltips and metrics explorer. Thanks to Duc Anh Nguyen from TinyxLab for reporting it.</p>\n<ul>\n<li>[SECURITY] UI: Fix stored XSS via unescaped metric names and labels. <a href=\"https://github.com/advisories/GHSA-vffh-x6r8-xx99\" title=\"CVE-2026-40179\">CVE-2026-40179</a>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18507\">#18507</a></li>\n<li>[PERF] Regex: Stop calling Simplify. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/17908\">#17908</a></li>\n</ul>",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-14T08:48:47.940479",
+          "author": "prombot"
+        },
+        {
+          "title": "3.11.2 / 2026-04-13",
+          "description": "<p>This release has a fix for a Stored XSS vulnerability that can be triggered via crafted metric names and label values in Prometheus web UI tooltips and metrics explorer. Thanks to Duc Anh Nguyen from TinyxLab for reporting it.</p>\n<ul>\n<li>[SECURITY] UI: Fix stored XSS via unescaped metric names and labels. <a href=\"https://github.com/advisories/GHSA-vffh-x6r8-xx99\" title=\"CVE-2026-40179\">CVE-2026-40179</a>. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18506\">#18506</a></li>\n<li>[ENHANCEMENT] Consul SD: Introduce <code>health_filter</code> field for Health API filtering. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18499\">#18499</a></li>\n<li>[BUGFIX] Consul SD: Fix filter parameter being incorrectly applied to the Health API. <a class=\"issue-link js-issue-link\" href=\"https://github.com/prometheus/prometheus/pull/18499\">#18499</a></li>\n</ul>",
+          "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
+          "source": "Prometheus Blog",
+          "category": "DevOps",
+          "published": "2026-04-14T08:48:47.940465",
+          "author": "prombot"
+        },
+        {
+          "title": "How to Analyze Hugging Face for Arm64 Readiness",
+          "description": "This post is a collaboration between Docker and Arm, demonstrating how Docker MCP Toolkit and the Arm MCP Server work together to scan Hugging Face Spaces for Arm64 Readiness. In our previous post, we walked through migrating a legacy C++ application with AVX2 intrinsics to Arm64 using Docker MCP Toolkit and the Arm MCP Server...",
+          "link": "https://www.docker.com/blog/how-to-analyze-hugging-face-for-arm64-readiness/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Mon, 13 Apr 2026 15:59:37 +0000",
+          "author": "Jennifer Kohl"
+        },
+        {
+          "title": "Calligra Suite: A Modern KDE-Native Office Experience for Linux Power Users",
+          "description": "<p>Experience the Calligra Suite, a cutting-edge office suite tailored for Linux power users. Enjoy a rich set of features and a user-friendly interface for all your needs.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/calligra-suite-a-modern-kde-native-office-experience-for-linux-power-users/\">Calligra Suite: A Modern KDE-Native Office Experience for Linux Power Users</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/calligra-suite-a-modern-kde-native-office-experience-for-linux-power-users/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 15:03:58 +0000",
+          "published": "Mon, 13 Apr 2026 10:59:25 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "9to5Linux Weekly Roundup: March 22nd, 2026",
-          "description": "<p>Explore the 9to5Linux Weekly Roundup from March 22nd, 2026, featuring essential updates, software releases, and insights from the Linux community.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-march-22nd-2026/\">9to5Linux Weekly Roundup: March 22nd, 2026</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-march-22nd-2026/",
+          "title": "How to Install SSH on Ubuntu 26.04",
+          "description": "<p>Learn how to install SSH on Ubuntu 26.04 with our step-by-step guide. Secure your server and enable remote access effortlessly today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-install-ssh-on-ubuntu-26-04/\">How to Install SSH on Ubuntu 26.04</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/how-to-install-ssh-on-ubuntu-26-04/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:59:48 +0000",
+          "published": "Mon, 13 Apr 2026 10:51:58 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Linuxiac Weekly Wrap-Up: Week 12, 2026 (Mar 16 – 22)",
-          "description": "<p>Discover the latest in Linux news with our Weekly Wrap-Up for March 16-22, 2026. Stay informed on trends, updates, and community highlights.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-12-2026-mar-16-22/\">Linuxiac Weekly Wrap-Up: Week 12, 2026 (Mar 16 – 22)</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-12-2026-mar-16-22/",
+          "title": "GNOME 48.10 Released as Final Bugfix Update for GNOME 48",
+          "description": "<p>Discover the final bugfix update for GNOME 48 with version 48.10. Explore enhancements and improvements that enhance your user experience today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/gnome-48-10-released-as-final-bugfix-update-for-gnome-48/\">GNOME 48.10 Released as Final Bugfix Update for GNOME 48</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/gnome-48-10-released-as-final-bugfix-update-for-gnome-48/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:55:53 +0000",
+          "published": "Mon, 13 Apr 2026 10:42:33 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Bottles 63.0 Introduces Proxy Support and Resolves Installation Issues",
-          "description": "<p>Bottles 63.0 is here! Explore the latest features, including proxy support and solutions for installation issues, to optimize your software usage.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/bottles-63-0-introduces-proxy-support-and-resolves-installation-issues/\">Bottles 63.0 Introduces Proxy Support and Resolves Installation Issues</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/bottles-63-0-introduces-proxy-support-and-resolves-installation-issues/",
+          "title": "NVIDIA 595 Linux Graphics Driver Released as Latest Production Branch Version",
+          "description": "<p>Discover the latest NVIDIA 595 Linux Graphics Driver, now available as the newest production branch version. Enhance your graphics performance today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/nvidia-595-linux-graphics-driver-released-as-latest-production-branch-version/\">NVIDIA 595 Linux Graphics Driver Released as Latest Production Branch Version</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/nvidia-595-linux-graphics-driver-released-as-latest-production-branch-version/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:54:33 +0000",
+          "published": "Mon, 13 Apr 2026 10:36:56 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "GStreamer 1.30 to Support HDR10+ Metadata Parsing from H.265 & AV1 Bitstreams",
-          "description": "<p>Learn about GStreamer 1.30's support for HDR10+ metadata parsing from H.265 and AV1 bitstreams, ensuring enhanced video quality and performance.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/gstreamer-1-30-to-support-hdr10-metadata-parsing-from-h-265-av1-bitstreams/\">GStreamer 1.30 to Support HDR10+ Metadata Parsing from H.265 &amp; AV1 Bitstreams</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/gstreamer-1-30-to-support-hdr10-metadata-parsing-from-h-265-av1-bitstreams/",
+          "title": "Krita 5.3 and Krita 6.0 Released With New Text Engine and Wayland HDR Support",
+          "description": "<p>Discover the latest features in Krita 5.3 and 6.0, including a new text engine and Wayland HDR support. Elevate your digital art experience today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/krita-5-3-and-krita-6-0-released-with-new-text-engine-and-wayland-hdr-support/\">Krita 5.3 and Krita 6.0 Released With New Text Engine and Wayland HDR Support</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/krita-5-3-and-krita-6-0-released-with-new-text-engine-and-wayland-hdr-support/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:47:57 +0000",
+          "published": "Mon, 13 Apr 2026 10:30:28 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "HandBrake 1.11.1 Video Transcoder Improves Stability With Audio and UI Fixes",
-          "description": "<p>Discover the latest HandBrake 1.11.1 update, featuring enhanced stability, audio improvements, and UI fixes for a seamless video transcoding experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/handbrake-1-11-1-video-transcoder-improves-stability-with-audio-and-ui-fixes/\">HandBrake 1.11.1 Video Transcoder Improves Stability With Audio and UI Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/handbrake-1-11-1-video-transcoder-improves-stability-with-audio-and-ui-fixes/",
+          "title": "BOSGAME M4 Plus Mini PC running Linux: BIOS",
+          "description": "<p>Experience the BOSGAME M4 Plus Mini PC with Linux. Ideal for home or office use, this mini PC combines power and portability. Find out more here!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/bosgame-m4-plus-mini-pc-running-linux-bios/\">BOSGAME M4 Plus Mini PC running Linux: BIOS</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/bosgame-m4-plus-mini-pc-running-linux-bios/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:43:06 +0000",
+          "published": "Mon, 13 Apr 2026 10:28:16 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Canonical Announces MicroCloud 3.1 with Cluster Manager Integration",
-          "description": "<p>Canonical unveils MicroCloud 3.1 with integrated Cluster Manager. Explore new features designed to optimize your cloud infrastructure and streamline operations.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/canonical-announces-microcloud-3-1-with-cluster-manager-integration/\">Canonical Announces MicroCloud 3.1 with Cluster Manager Integration</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/canonical-announces-microcloud-3-1-with-cluster-manager-integration/",
+          "title": "Transmission Reimagined: A Fast, Lightweight, and Modern BitTorrent Client",
+          "description": "<p>Transform your downloading experience with Transmission Reimagined, a sleek and efficient BitTorrent client that prioritizes speed and user-friendly functionality.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/transmission-reimagined-a-fast-lightweight-and-modern-bittorrent-client/\">Transmission Reimagined: A Fast, Lightweight, and Modern BitTorrent Client</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/transmission-reimagined-a-fast-lightweight-and-modern-bittorrent-client/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:41:53 +0000",
+          "published": "Mon, 13 Apr 2026 10:23:55 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Turris Omnia NG Wired Launches as a Linux-Powered 10Gb Router",
-          "description": "<p>Discover the Turris Omnia NG, a powerful Linux-powered 10Gb router designed for high-speed connectivity and advanced network management.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/turris-omnia-ng-wired-launches-as-a-linux-powered-10gb-router/\">Turris Omnia NG Wired Launches as a Linux-Powered 10Gb Router</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/turris-omnia-ng-wired-launches-as-a-linux-powered-10gb-router/",
+          "title": "Microsoft Edge Stable on Linux: A Surprisingly Solid Chromium Alternative",
+          "description": "<p>Explore Microsoft Edge Stable on Linux, a surprisingly solid Chromium alternative that offers seamless performance and enhanced security for all users.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/microsoft-edge-stable-on-linux-a-surprisingly-solid-chromium-alternative/\">Microsoft Edge Stable on Linux: A Surprisingly Solid Chromium Alternative</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/microsoft-edge-stable-on-linux-a-surprisingly-solid-chromium-alternative/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:37:10 +0000",
+          "published": "Mon, 13 Apr 2026 10:15:09 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "SysVinit 3.16 Init System Released with Minor Fixes",
-          "description": "<p>Explore the release of SysVinit 3.16, which includes essential minor fixes. Learn how these updates can improve your init system's efficiency and reliability.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/sysvinit-3-16-init-system-released-with-minor-fixes/\">SysVinit 3.16 Init System Released with Minor Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/sysvinit-3-16-init-system-released-with-minor-fixes/",
+          "title": "Re-thinking Framebuffers in PanVK",
+          "description": "<p>Delve into the re-thinking of framebuffers in PanVK, where cutting-edge techniques meet improved graphics performance. Transform your rendering strategies today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/re-thinking-framebuffers-in-panvk/\">Re-thinking Framebuffers in PanVK</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/re-thinking-framebuffers-in-panvk/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:30:48 +0000",
+          "published": "Mon, 13 Apr 2026 10:13:15 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Developer of the Week: Matthew Forrester Wolffe",
-          "description": "<p>Meet Matthew Forrester Wolffe, this week's featured developer. Dive into his contributions and learn how he's making waves in the tech community.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/developer-of-the-week-matthew-forrester-wolffe/\">Developer of the Week: Matthew Forrester Wolffe</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/developer-of-the-week-matthew-forrester-wolffe/",
+          "title": "OpenSSF Welcomes New Members as SLSA, Gemara, and AI Security Efforts Mature",
+          "description": "<p>Discover how OpenSSF is expanding its community with new members as SLSA, Gemara, and AI security efforts evolve. Be part of the future of open-source security.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/openssf-welcomes-new-members-as-slsa-gemara-and-ai-security-efforts-mature/\">OpenSSF Welcomes New Members as SLSA, Gemara, and AI Security Efforts Mature</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/openssf-welcomes-new-members-as-slsa-gemara-and-ai-security-efforts-mature/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 10 Apr 2026 14:18:56 +0000",
+          "published": "Mon, 13 Apr 2026 10:03:29 +0000",
           "author": "Content Operations"
+        },
+        {
+          "title": "GitHub for Beginners: Getting started with GitHub Pages",
+          "description": "<p>Learn how to create a free website for any repository on GitHub Pages.</p>\n<p>The post <a href=\"https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-pages/\">GitHub for Beginners: Getting started with GitHub Pages</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-pages/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Mon, 13 Apr 2026 15:00:00 +0000",
+          "author": "Kedasha Kerr"
+        },
+        {
+          "title": "AWS Weekly Roundup: Claude Mythos Preview in Amazon Bedrock, AWS Agent Registry, and more (April 13, 2026)",
+          "description": "In my last Week in Review post, I mentioned how much time I’ve been spending on AI-Driven Development Lifecycle (AI-DLC) workshops with customers this year. A common theme in those sessions is the need for better cost visibility. Teams are moving fast with AI, but as they go from experimenting to full production, finance and […]",
+          "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-mythos-preview-in-amazon-bedrock-aws-agent-registry-and-more-april-13-2026/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Mon, 13 Apr 2026 16:16:20 +0000",
+          "author": "Micah Walter"
+        },
+        {
+          "title": "GitHub for Beginners: Getting started with GitHub Pages",
+          "description": "<p>Learn how to create a free website for any repository on GitHub Pages.</p>\n<p>The post <a href=\"https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-pages/\">GitHub for Beginners: Getting started with GitHub Pages</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-pages/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Mon, 13 Apr 2026 15:00:00 +0000",
+          "author": "Kedasha Kerr"
         },
         {
           "title": "GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI",
@@ -2492,15 +2528,6 @@
           "author": "Yiwen Xu"
         },
         {
-          "title": "What’s coming to our GitHub Actions 2026 security roadmap",
-          "description": "<p>A look at GitHub Actions’ 2026 roadmap, outlining how secure defaults, policy controls, and CI/CD observability harden the software supply chain end to end.</p>\n<p>The post <a href=\"https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/\">What&#8217;s coming to our GitHub Actions 2026 security roadmap</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Thu, 26 Mar 2026 16:49:14 +0000",
-          "author": "Greg Ose"
-        },
-        {
           "title": "Gemini 3.1 Flash Live: Making audio AI more natural and reliable",
           "description": "Our latest voice model has improved precision and lower latency to make voice interactions more fluid, natural and precise.",
           "link": "https://deepmind.google/blog/gemini-3-1-flash-live-making-audio-ai-more-natural-and-reliable/",
@@ -2517,15 +2544,6 @@
           "category": "Cloud",
           "published": "Thu, 26 Mar 2026 21:34:19 +0000",
           "author": "Channy Yun (윤석찬)"
-        },
-        {
-          "title": "What’s coming to our GitHub Actions 2026 security roadmap",
-          "description": "<p>A look at GitHub Actions’ 2026 roadmap, outlining how secure defaults, policy controls, and CI/CD observability harden the software supply chain end to end.</p>\n<p>The post <a href=\"https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/\">What&#8217;s coming to our GitHub Actions 2026 security roadmap</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Thu, 26 Mar 2026 16:49:14 +0000",
-          "author": "Greg Ose"
         },
         {
           "title": "Protecting people from harmful manipulation",
@@ -2717,15 +2735,6 @@
           "author": "Esra Kayabali"
         },
         {
-          "title": "Achieving Test Reliability for Native E2E Testing: Beyond Fixing Broken Tests",
-          "description": "End-to-end (E2E) tests are particularly important for native applications that run on various platforms (Android/iOS), screen sizes, and OS versions. E2E testing picks up differences in behavior across this fragmented ecosystem. But keeping E2E tests reliable is often more challenging than writing them in the first place.  The fragmented device ecosystem, gaps in test frameworks,...",
-          "link": "https://www.docker.com/blog/native-e2e-test-reliability/",
-          "source": "Docker Blog",
-          "category": "Infrastructure",
-          "published": "Fri, 13 Mar 2026 13:00:00 +0000",
-          "author": "Jin Kim"
-        },
-        {
           "title": "Twenty years of Amazon S3 and building what’s next",
           "description": "Some reflections on 20 years of innovations in Amazon S3 including S3 Tables, S3 Vectors and S3 Metadata.",
           "link": "https://aws.amazon.com/blogs/aws/twenty-years-of-amazon-s3-and-building-whats-next/",
@@ -2859,15 +2868,6 @@
           "category": "Cloud",
           "published": "Tue, 24 Feb 2026 18:55:11 +0000",
           "author": "Micah Walter"
-        },
-        {
-          "title": "AWS Weekly Roundup: Claude Sonnet 4.6 in Amazon Bedrock, Kiro in GovCloud Regions, new Agent Plugins, and more (February 23, 2026)",
-          "description": "Last week, my team met many developers at Developer Week in San Jose. My colleague, Vinicius Senger delivered a great keynote about renascent software—a new way of building and evolving applications where humans and AI collaborate as co-developers using Kiro. Other colleagues, Du’An Lightfoot, Elizabeth Fuentes, Laura Salinas, and Sandhya Subramani spoke about building and […]",
-          "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-4-6-in-amazon-bedrock-kiro-in-govcloud-regions-new-agent-plugins-and-more-february-23-2026/",
-          "source": "AWS Blog",
-          "category": "Cloud",
-          "published": "Mon, 23 Feb 2026 16:56:24 +0000",
-          "author": "Channy Yun (윤석찬)"
         },
         {
           "title": "Gemini 3.1 Pro: A smarter model for your most complex tasks",
