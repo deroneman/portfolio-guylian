@@ -1,9 +1,108 @@
 {
-  "lastUpdate": "2026-04-14T08:48:48.752848",
+  "lastUpdate": "2026-04-15T08:49:52.585891",
   "articles": {
     "infrastructure": {
       "icon": "🏗️",
       "articles": [
+        {
+          "title": "Why We Chose the Harder Path: Docker Hardened Images, One Year Later",
+          "description": "We're coming up on a year since launching Docker Hardened Images (DHI) this May, and crossing a milestone earlier this month made me stop and reflect on what we've actually been building. Earlier this month, we crossed over 500k daily pulls of DHIs, and over 25k continuously patched OS level artifacts in our SLSA Level...",
+          "link": "https://www.docker.com/blog/why-we-chose-the-harder-path-docker-hardened-images-one-year-later/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 21:48:03 +0000",
+          "author": "Aditya Tripathi"
+        },
+        {
+          "title": "Raspberry Pi Imager 2.0.7 Released With UI Fixes and Improved Device Support",
+          "description": "<p>Discover the latest Raspberry Pi Imager 2.0.7 update featuring UI fixes and enhanced device support. Upgrade your imaging experience today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/raspberry-pi-imager-2-0-7-released-with-ui-fixes-and-improved-device-support/\">Raspberry Pi Imager 2.0.7 Released With UI Fixes and Improved Device Support</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/raspberry-pi-imager-2-0-7-released-with-ui-fixes-and-improved-device-support/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 12:12:24 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Tails 7.6 Introduces Automatic Tor Bridges to Bypass Censorship",
+          "description": "<p>Discover Tails 7.6's new feature: Automatic Tor Bridges. Learn how it helps users bypass censorship and enhance online privacy effortlessly.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/tails-7-6-introduces-automatic-tor-bridges-to-bypass-censorship/\">Tails 7.6 Introduces Automatic Tor Bridges to Bypass Censorship</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/tails-7-6-introduces-automatic-tor-bridges-to-bypass-censorship/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 12:08:45 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Canonical Plans Controversial GRUB Changes for Ubuntu 26.10 Secure Boot",
+          "description": "<p>Explore the implications of Canonical's GRUB changes in Ubuntu 26.10 Secure Boot. Stay informed about the latest updates and their potential effects on your setup.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/canonical-plans-controversial-grub-changes-for-ubuntu-26-10-secure-boot/\">Canonical Plans Controversial GRUB Changes for Ubuntu 26.10 Secure Boot</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/canonical-plans-controversial-grub-changes-for-ubuntu-26-10-secure-boot/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 12:05:10 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Pay2Key Returns: A Deep Dive into the Linux Ransomware Targeting Servers and Cloud Infrastructure",
+          "description": "<p>Explore the resurgence of Pay2Key, the Linux ransomware targeting servers and cloud infrastructure. Learn about its impact and prevention strategies.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/pay2key-returns-a-deep-dive-into-the-linux-ransomware-targeting-servers-and-cloud-infrastructure/\">Pay2Key Returns: A Deep Dive into the Linux Ransomware Targeting Servers and Cloud Infrastructure</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/pay2key-returns-a-deep-dive-into-the-linux-ransomware-targeting-servers-and-cloud-infrastructure/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 11:58:11 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "VitruvianOS 0.3 Debuts as Haiku-Inspired Linux OS Without X11 or Wayland",
+          "description": "<p>Explore the debut of VitruvianOS 0.3, a Haiku-inspired Linux OS that eliminates X11 and Wayland for a streamlined, efficient user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/vitruvianos-0-3-debuts-as-haiku-inspired-linux-os-without-x11-or-wayland/\">VitruvianOS 0.3 Debuts as Haiku-Inspired Linux OS Without X11 or Wayland</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/vitruvianos-0-3-debuts-as-haiku-inspired-linux-os-without-x11-or-wayland/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 11:54:48 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "After 26 Years at EFF, Cindy Cohn Is Handing Reins to Nicole Ozer",
+          "description": "<p>After 26 impactful years at EFF, Cindy Cohn passes the leadership to Nicole Ozer. Discover the future direction of digital rights advocacy.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/after-26-years-at-eff-cindy-cohn-is-handing-reins-to-nicole-ozer/\">After 26 Years at EFF, Cindy Cohn Is Handing Reins to Nicole Ozer</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/after-26-years-at-eff-cindy-cohn-is-handing-reins-to-nicole-ozer/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 11:51:38 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Firefox 150 Promises Support for the GTK Emoji Picker on Linux, Beta Out Now",
+          "description": "<p>Discover Firefox's latest update: version 150 now supports the GTK Emoji Picker on Linux. Explore the new features in the beta release today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/firefox-150-promises-support-for-the-gtk-emoji-picker-on-linux-beta-out-now/\">Firefox 150 Promises Support for the GTK Emoji Picker on Linux, Beta Out Now</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/firefox-150-promises-support-for-the-gtk-emoji-picker-on-linux-beta-out-now/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 11:47:38 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Master Key for Linux’s Different Take on Password Management",
+          "description": "<p>Master Key for Linux offers an innovative solution for password management, combining security and usability. Learn how it can streamline your online experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/master-key-for-linuxs-different-take-on-password-management/\">Master Key for Linux’s Different Take on Password Management</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/master-key-for-linuxs-different-take-on-password-management/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 11:39:25 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Oracle Releases Unbreakable Enterprise Kernel 8.2 Based on Linux 6.12 LTS",
+          "description": "<p>Discover Oracle's Unbreakable Enterprise Kernel 8.2, built on Linux 6.12 LT, offering enhanced performance and security for enterprise applications.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/oracle-releases-unbreakable-enterprise-kernel-8-2-based-on-linux-6-12-lts/\">Oracle Releases Unbreakable Enterprise Kernel 8.2 Based on Linux 6.12 LTS</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/oracle-releases-unbreakable-enterprise-kernel-8-2-based-on-linux-6-12-lts/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 11:34:29 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Radiotrope – AI agent-enabled Internet Radio Player",
+          "description": "<p>Experience the future of radio with Radiotrope, an AI-driven Internet Radio Player that curates your favorite stations and enhances your audio enjoyment.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/radiotrope-ai-agent-enabled-internet-radio-player/\">Radiotrope &#8211; AI agent-enabled Internet Radio Player</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/radiotrope-ai-agent-enabled-internet-radio-player/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 11:31:29 +0000",
+          "author": "Content Operations"
+        },
         {
           "title": "How to Analyze Hugging Face for Arm64 Readiness",
           "description": "This post is a collaboration between Docker and Arm, demonstrating how Docker MCP Toolkit and the Arm MCP Server work together to scan Hugging Face Spaces for Arm64 Readiness. In our previous post, we walked through migrating a legacy C++ application with AVX2 intrinsics to Arm64 using Docker MCP Toolkit and the Arm MCP Server...",
@@ -12,96 +111,6 @@
           "category": "Infrastructure",
           "published": "Mon, 13 Apr 2026 15:59:37 +0000",
           "author": "Jennifer Kohl"
-        },
-        {
-          "title": "Calligra Suite: A Modern KDE-Native Office Experience for Linux Power Users",
-          "description": "<p>Experience the Calligra Suite, a cutting-edge office suite tailored for Linux power users. Enjoy a rich set of features and a user-friendly interface for all your needs.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/calligra-suite-a-modern-kde-native-office-experience-for-linux-power-users/\">Calligra Suite: A Modern KDE-Native Office Experience for Linux Power Users</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/calligra-suite-a-modern-kde-native-office-experience-for-linux-power-users/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:59:25 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "How to Install SSH on Ubuntu 26.04",
-          "description": "<p>Learn how to install SSH on Ubuntu 26.04 with our step-by-step guide. Secure your server and enable remote access effortlessly today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-install-ssh-on-ubuntu-26-04/\">How to Install SSH on Ubuntu 26.04</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/how-to-install-ssh-on-ubuntu-26-04/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:51:58 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "GNOME 48.10 Released as Final Bugfix Update for GNOME 48",
-          "description": "<p>Discover the final bugfix update for GNOME 48 with version 48.10. Explore enhancements and improvements that enhance your user experience today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/gnome-48-10-released-as-final-bugfix-update-for-gnome-48/\">GNOME 48.10 Released as Final Bugfix Update for GNOME 48</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/gnome-48-10-released-as-final-bugfix-update-for-gnome-48/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:42:33 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "NVIDIA 595 Linux Graphics Driver Released as Latest Production Branch Version",
-          "description": "<p>Discover the latest NVIDIA 595 Linux Graphics Driver, now available as the newest production branch version. Enhance your graphics performance today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/nvidia-595-linux-graphics-driver-released-as-latest-production-branch-version/\">NVIDIA 595 Linux Graphics Driver Released as Latest Production Branch Version</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/nvidia-595-linux-graphics-driver-released-as-latest-production-branch-version/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:36:56 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Krita 5.3 and Krita 6.0 Released With New Text Engine and Wayland HDR Support",
-          "description": "<p>Discover the latest features in Krita 5.3 and 6.0, including a new text engine and Wayland HDR support. Elevate your digital art experience today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/krita-5-3-and-krita-6-0-released-with-new-text-engine-and-wayland-hdr-support/\">Krita 5.3 and Krita 6.0 Released With New Text Engine and Wayland HDR Support</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/krita-5-3-and-krita-6-0-released-with-new-text-engine-and-wayland-hdr-support/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:30:28 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "BOSGAME M4 Plus Mini PC running Linux: BIOS",
-          "description": "<p>Experience the BOSGAME M4 Plus Mini PC with Linux. Ideal for home or office use, this mini PC combines power and portability. Find out more here!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/bosgame-m4-plus-mini-pc-running-linux-bios/\">BOSGAME M4 Plus Mini PC running Linux: BIOS</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/bosgame-m4-plus-mini-pc-running-linux-bios/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:28:16 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Transmission Reimagined: A Fast, Lightweight, and Modern BitTorrent Client",
-          "description": "<p>Transform your downloading experience with Transmission Reimagined, a sleek and efficient BitTorrent client that prioritizes speed and user-friendly functionality.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/transmission-reimagined-a-fast-lightweight-and-modern-bittorrent-client/\">Transmission Reimagined: A Fast, Lightweight, and Modern BitTorrent Client</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/transmission-reimagined-a-fast-lightweight-and-modern-bittorrent-client/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:23:55 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Microsoft Edge Stable on Linux: A Surprisingly Solid Chromium Alternative",
-          "description": "<p>Explore Microsoft Edge Stable on Linux, a surprisingly solid Chromium alternative that offers seamless performance and enhanced security for all users.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/microsoft-edge-stable-on-linux-a-surprisingly-solid-chromium-alternative/\">Microsoft Edge Stable on Linux: A Surprisingly Solid Chromium Alternative</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/microsoft-edge-stable-on-linux-a-surprisingly-solid-chromium-alternative/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:15:09 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Re-thinking Framebuffers in PanVK",
-          "description": "<p>Delve into the re-thinking of framebuffers in PanVK, where cutting-edge techniques meet improved graphics performance. Transform your rendering strategies today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/re-thinking-framebuffers-in-panvk/\">Re-thinking Framebuffers in PanVK</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/re-thinking-framebuffers-in-panvk/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:13:15 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "OpenSSF Welcomes New Members as SLSA, Gemara, and AI Security Efforts Mature",
-          "description": "<p>Discover how OpenSSF is expanding its community with new members as SLSA, Gemara, and AI security efforts evolve. Be part of the future of open-source security.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/openssf-welcomes-new-members-as-slsa-gemara-and-ai-security-efforts-mature/\">OpenSSF Welcomes New Members as SLSA, Gemara, and AI Security Efforts Mature</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/openssf-welcomes-new-members-as-slsa-gemara-and-ai-security-efforts-mature/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:03:29 +0000",
-          "author": "Content Operations"
         },
         {
           "title": "Reclaim Developer Hours through Smarter Vulnerability Prioritization with Docker and Mend.io",
@@ -210,15 +219,6 @@
           "category": "Infrastructure",
           "published": "Wed, 18 Mar 2026 10:00:00 -0800",
           "author": "Inconnu"
-        },
-        {
-          "title": "From the Captain’s Chair: Naga Santhosh Reddy Vootukuri",
-          "description": "Docker Captains are leaders from the developer community that are both experts in their field and are passionate about sharing their Docker knowledge with others. “From the Captain’s Chair” is a blog series where we get a closer look at one Captain to learn more about them and their experiences.  Today we are interviewing Naga...",
-          "link": "https://www.docker.com/blog/from-the-captains-chair-naga-santhosh-reddy-vootukuri/",
-          "source": "Docker Blog",
-          "category": "Infrastructure",
-          "published": "Wed, 18 Mar 2026 16:00:12 +0000",
-          "author": "Jennifer Kohl"
         },
         {
           "title": "The Invisible Rewrite: Modernizing the Kubernetes Image Promoter",
@@ -640,6 +640,42 @@
       "icon": "💻",
       "articles": [
         {
+          "title": ".NET and .NET Framework April 2026 servicing releases updates",
+          "description": "<p>A recap of the latest servicing updates for .NET and .NET Framework for April 2026.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-april-2026-servicing-updates/\">.NET and .NET Framework April 2026 servicing releases updates</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-april-2026-servicing-updates/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Tue, 14 Apr 2026 19:49:00 +0000",
+          "author": "Rahul Bhandari (MSFT), Tara Overfield"
+        },
+        {
+          "title": ".NET 11 Preview 3 is now available!",
+          "description": "<p>Find out about the new features in .NET 11 Preview 3 across the .NET runtime, SDK, libraries, ASP.NET Core, .NET MAUI, C#, Entity Framework Core, container images, and more!</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/dotnet-11-preview-3/\">.NET 11 Preview 3 is now available!</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/dotnet-11-preview-3/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Tue, 14 Apr 2026 19:30:00 +0000",
+          "author": ".NET Team"
+        },
+        {
+          "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
+          "description": "<p>Learn to find and exploit real-world agentic AI vulnerabilities through five progressive challenges in this free, open source game that over 10,000 developers have already used to sharpen their security skills.</p>\n<p>The post <a href=\"https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/\">Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Tue, 14 Apr 2026 18:17:59 +0000",
+          "author": "Joseph Katsioloudes"
+        },
+        {
+          "title": "How exposed is your code? Find out in minutes—for free",
+          "description": "<p>The new Code Security Risk Assessment gives you a one-click view of vulnerabilities across your organization, at no cost.</p>\n<p>The post <a href=\"https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/\">How exposed is your code? Find out in minutes—for free</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Tue, 14 Apr 2026 15:00:00 +0000",
+          "author": "Dorothy Pearce"
+        },
+        {
           "title": "GitHub for Beginners: Getting started with GitHub Pages",
           "description": "<p>Learn how to create a free website for any repository on GitHub Pages.</p>\n<p>The post <a href=\"https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-pages/\">GitHub for Beginners: Getting started with GitHub Pages</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
           "link": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-pages/",
@@ -739,24 +775,6 @@
           "author": "Matt Nigh"
         },
         {
-          "title": "Agent-driven development in Copilot Applied Science",
-          "description": "<p>I used coding agents to build agents that automated part of my job. Here's what I learned about working better with coding agents.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/\">Agent-driven development in Copilot Applied Science</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Tue, 31 Mar 2026 16:00:00 +0000",
-          "author": "Tyler McGoffin"
-        },
-        {
-          "title": "GitHub for Beginners: Getting started with GitHub security",
-          "description": "<p>Learn how to secure your projects and keep them safe with GitHub Advanced Security.</p>\n<p>The post <a href=\"https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-security/\">GitHub for Beginners: Getting started with GitHub security</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-security/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Mon, 30 Mar 2026 16:00:00 +0000",
-          "author": "Kedasha Kerr"
-        },
-        {
           "title": "Generative AI for Beginners .NET: Version 2 on .NET 10",
           "description": "<p>Announcement of Version 2 of Generative AI for Beginners .NET, a free course rebuilt for .NET 10 with Microsoft.Extensions.AI, updated RAG patterns, and new agent framework content across five structured lessons for building production-ready AI apps.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/generative-ai-for-beginners-dotnet-version-2-on-dotnet-10/\">Generative AI for Beginners .NET: Version 2 on .NET 10</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
           "link": "https://devblogs.microsoft.com/dotnet/generative-ai-for-beginners-dotnet-version-2-on-dotnet-10/",
@@ -800,24 +818,6 @@
           "category": "Développement",
           "published": "Thu, 12 Mar 2026 17:05:00 +0000",
           "author": "Mika Dumont"
-        },
-        {
-          "title": ".NET 10.0.5 Out-of-Band Release – macOS Debugger Fix",
-          "description": "<p>An out-of-band release of .NET 10.0.5 to fix a critical debugger crash affecting macOS users with Visual Studio Code.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/dotnet-10-0-5-oob-release-macos-debugger-fix/\">.NET 10.0.5 Out-of-Band Release &#8211; macOS Debugger Fix</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/dotnet-10-0-5-oob-release-macos-debugger-fix/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Thu, 12 Mar 2026 17:00:00 +0000",
-          "author": "Rahul Bhandari (MSFT)"
-        },
-        {
-          "title": ".NET 11 Preview 2 is now available!",
-          "description": "<p>Find out about the new features in .NET 11 Preview 2 across the .NET runtime, SDK, libraries, ASP.NET Core, Blazor, C#, .NET MAUI, and more!</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/dotnet-11-preview-2/\">.NET 11 Preview 2 is now available!</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/dotnet-11-preview-2/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Tue, 10 Mar 2026 20:35:00 +0000",
-          "author": ".NET Team"
         }
       ]
     },
@@ -1009,6 +1009,15 @@
     "ia": {
       "icon": "🤖",
       "articles": [
+        {
+          "title": "Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning",
+          "description": "Gemini Robotics ER 1.6: Enhancing spatial reasoning and multi-view understanding for autonomous robotics.",
+          "link": "https://deepmind.google/blog/gemini-robotics-er-1-6/",
+          "source": "DeepMind",
+          "category": "IA",
+          "published": "Mon, 13 Apr 2026 15:52:13 +0000",
+          "author": "Inconnu"
+        },
         {
           "title": "Gemma 4: Byte for byte, the most capable open models",
           "description": "Gemma 4: Our most intelligent open models to date, purpose-built for advanced reasoning and agentic workflows.",
@@ -1449,21 +1458,21 @@
           "category": "IA",
           "published": "Fri, 24 Oct 2025 02:58:37 +0000",
           "author": "Inconnu"
-        },
-        {
-          "title": "Genie 3: A new frontier for world models",
-          "description": "Genie 3 can generate dynamic worlds that you can navigate in real time at 24 frames per second, retaining consistency for a few minutes at a resolution of 720p.",
-          "link": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
-          "source": "DeepMind",
-          "category": "IA",
-          "published": "Fri, 24 Oct 2025 02:54:30 +0000",
-          "author": "Inconnu"
         }
       ]
     },
     "cloud": {
       "icon": "☁️",
       "articles": [
+        {
+          "title": "AWS Interconnect is now generally available, with a new option to simplify last-mile connectivity",
+          "description": "Today, we’re announcing the general availability of AWS Interconnect – multicloud, a managed private connectivity service that connects your Amazon Virtual Private Cloud (Amazon VPC) directly to VPCs on other cloud providers. We’re also introducing AWS Interconnect – last mile, a new capability that simplifies how you establish high-speed, private connections to AWS from your […]",
+          "link": "https://aws.amazon.com/blogs/aws/aws-interconnect-is-now-generally-available-with-a-new-option-to-simplify-last-mile-connectivity/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Tue, 14 Apr 2026 23:54:47 +0000",
+          "author": "Sébastien Stormacq"
+        },
         {
           "title": "AWS Weekly Roundup: Claude Mythos Preview in Amazon Bedrock, AWS Agent Registry, and more (April 13, 2026)",
           "description": "In my last Week in Review post, I mentioned how much time I’ve been spending on AI-Driven Development Lifecycle (AI-DLC) workshops with customers this year. A common theme in those sessions is the need for better cost visibility. Teams are moving fast with AI, but as they go from experimenting to full production, finance and […]",
@@ -1724,15 +1733,6 @@
           "category": "Cloud",
           "published": "Thu, 26 Feb 2026 18:52:06 +0000",
           "author": "Channy Yun (윤석찬)"
-        },
-        {
-          "title": "Transform live video for mobile audiences with AWS Elemental Inference",
-          "description": "AWS Elemental Inference is a fully managed AI service that automatically transforms live and on-demand video broadcasts into vertical formats optimized for mobile and social platforms in real time, enabling broadcasters to reach audiences on TikTok, Instagram Reels, and YouTube Shorts without manual editing or AI expertise.",
-          "link": "https://aws.amazon.com/blogs/aws/transform-live-video-for-mobile-audiences-with-aws-elemental-inference/",
-          "source": "AWS Blog",
-          "category": "Cloud",
-          "published": "Tue, 24 Feb 2026 18:55:11 +0000",
-          "author": "Micah Walter"
         }
       ]
     },
@@ -1745,7 +1745,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940532",
+          "published": "2026-04-15T08:49:51.739400",
           "author": "prombot"
         },
         {
@@ -1754,7 +1754,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940514",
+          "published": "2026-04-15T08:49:51.739396",
           "author": "prombot"
         },
         {
@@ -1763,7 +1763,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940506",
+          "published": "2026-04-15T08:49:51.739391",
           "author": "prombot"
         },
         {
@@ -1772,7 +1772,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940501",
+          "published": "2026-04-15T08:49:51.739387",
           "author": "roidelapluie"
         },
         {
@@ -1781,7 +1781,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940497",
+          "published": "2026-04-15T08:49:51.739383",
           "author": "roidelapluie"
         },
         {
@@ -1790,7 +1790,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940493",
+          "published": "2026-04-15T08:49:51.739378",
           "author": "prombot"
         },
         {
@@ -1799,7 +1799,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940488",
+          "published": "2026-04-15T08:49:51.739374",
           "author": "roidelapluie"
         },
         {
@@ -1808,7 +1808,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940484",
+          "published": "2026-04-15T08:49:51.739370",
           "author": "roidelapluie"
         },
         {
@@ -1817,7 +1817,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940479",
+          "published": "2026-04-15T08:49:51.739365",
           "author": "prombot"
         },
         {
@@ -1826,8 +1826,26 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940465",
+          "published": "2026-04-15T08:49:51.739351",
           "author": "prombot"
+        },
+        {
+          "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
+          "description": "<p>Learn to find and exploit real-world agentic AI vulnerabilities through five progressive challenges in this free, open source game that over 10,000 developers have already used to sharpen their security skills.</p>\n<p>The post <a href=\"https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/\">Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Tue, 14 Apr 2026 18:17:59 +0000",
+          "author": "Joseph Katsioloudes"
+        },
+        {
+          "title": "How exposed is your code? Find out in minutes—for free",
+          "description": "<p>The new Code Security Risk Assessment gives you a one-click view of vulnerabilities across your organization, at no cost.</p>\n<p>The post <a href=\"https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/\">How exposed is your code? Find out in minutes—for free</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Tue, 14 Apr 2026 15:00:00 +0000",
+          "author": "Dorothy Pearce"
         },
         {
           "title": "GitHub for Beginners: Getting started with GitHub Pages",
@@ -1900,24 +1918,6 @@
           "category": "DevOps",
           "published": "Wed, 01 Apr 2026 15:00:00 +0000",
           "author": "Matt Nigh"
-        },
-        {
-          "title": "Agent-driven development in Copilot Applied Science",
-          "description": "<p>I used coding agents to build agents that automated part of my job. Here's what I learned about working better with coding agents.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/\">Agent-driven development in Copilot Applied Science</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Tue, 31 Mar 2026 16:00:00 +0000",
-          "author": "Tyler McGoffin"
-        },
-        {
-          "title": "GitHub for Beginners: Getting started with GitHub security",
-          "description": "<p>Learn how to secure your projects and keep them safe with GitHub Advanced Security.</p>\n<p>The post <a href=\"https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-security/\">GitHub for Beginners: Getting started with GitHub security</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-security/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Mon, 30 Mar 2026 16:00:00 +0000",
-          "author": "Kedasha Kerr"
         }
       ]
     },
@@ -1930,7 +1930,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940532",
+          "published": "2026-04-15T08:49:51.739400",
           "author": "prombot"
         },
         {
@@ -1939,7 +1939,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940514",
+          "published": "2026-04-15T08:49:51.739396",
           "author": "prombot"
         },
         {
@@ -1948,7 +1948,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940506",
+          "published": "2026-04-15T08:49:51.739391",
           "author": "prombot"
         },
         {
@@ -1957,7 +1957,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940501",
+          "published": "2026-04-15T08:49:51.739387",
           "author": "roidelapluie"
         },
         {
@@ -1966,7 +1966,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940497",
+          "published": "2026-04-15T08:49:51.739383",
           "author": "roidelapluie"
         },
         {
@@ -1975,7 +1975,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940493",
+          "published": "2026-04-15T08:49:51.739378",
           "author": "prombot"
         },
         {
@@ -1984,7 +1984,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940488",
+          "published": "2026-04-15T08:49:51.739374",
           "author": "roidelapluie"
         },
         {
@@ -1993,7 +1993,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940484",
+          "published": "2026-04-15T08:49:51.739370",
           "author": "roidelapluie"
         },
         {
@@ -2002,7 +2002,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940479",
+          "published": "2026-04-15T08:49:51.739365",
           "author": "prombot"
         },
         {
@@ -2011,8 +2011,170 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-14T08:48:47.940465",
+          "published": "2026-04-15T08:49:51.739351",
           "author": "prombot"
+        },
+        {
+          "title": "Why We Chose the Harder Path: Docker Hardened Images, One Year Later",
+          "description": "We're coming up on a year since launching Docker Hardened Images (DHI) this May, and crossing a milestone earlier this month made me stop and reflect on what we've actually been building. Earlier this month, we crossed over 500k daily pulls of DHIs, and over 25k continuously patched OS level artifacts in our SLSA Level...",
+          "link": "https://www.docker.com/blog/why-we-chose-the-harder-path-docker-hardened-images-one-year-later/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 21:48:03 +0000",
+          "author": "Aditya Tripathi"
+        },
+        {
+          "title": "Raspberry Pi Imager 2.0.7 Released With UI Fixes and Improved Device Support",
+          "description": "<p>Discover the latest Raspberry Pi Imager 2.0.7 update featuring UI fixes and enhanced device support. Upgrade your imaging experience today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/raspberry-pi-imager-2-0-7-released-with-ui-fixes-and-improved-device-support/\">Raspberry Pi Imager 2.0.7 Released With UI Fixes and Improved Device Support</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/raspberry-pi-imager-2-0-7-released-with-ui-fixes-and-improved-device-support/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 12:12:24 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Tails 7.6 Introduces Automatic Tor Bridges to Bypass Censorship",
+          "description": "<p>Discover Tails 7.6's new feature: Automatic Tor Bridges. Learn how it helps users bypass censorship and enhance online privacy effortlessly.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/tails-7-6-introduces-automatic-tor-bridges-to-bypass-censorship/\">Tails 7.6 Introduces Automatic Tor Bridges to Bypass Censorship</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/tails-7-6-introduces-automatic-tor-bridges-to-bypass-censorship/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 12:08:45 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Canonical Plans Controversial GRUB Changes for Ubuntu 26.10 Secure Boot",
+          "description": "<p>Explore the implications of Canonical's GRUB changes in Ubuntu 26.10 Secure Boot. Stay informed about the latest updates and their potential effects on your setup.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/canonical-plans-controversial-grub-changes-for-ubuntu-26-10-secure-boot/\">Canonical Plans Controversial GRUB Changes for Ubuntu 26.10 Secure Boot</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/canonical-plans-controversial-grub-changes-for-ubuntu-26-10-secure-boot/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 12:05:10 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Pay2Key Returns: A Deep Dive into the Linux Ransomware Targeting Servers and Cloud Infrastructure",
+          "description": "<p>Explore the resurgence of Pay2Key, the Linux ransomware targeting servers and cloud infrastructure. Learn about its impact and prevention strategies.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/pay2key-returns-a-deep-dive-into-the-linux-ransomware-targeting-servers-and-cloud-infrastructure/\">Pay2Key Returns: A Deep Dive into the Linux Ransomware Targeting Servers and Cloud Infrastructure</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/pay2key-returns-a-deep-dive-into-the-linux-ransomware-targeting-servers-and-cloud-infrastructure/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 11:58:11 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "VitruvianOS 0.3 Debuts as Haiku-Inspired Linux OS Without X11 or Wayland",
+          "description": "<p>Explore the debut of VitruvianOS 0.3, a Haiku-inspired Linux OS that eliminates X11 and Wayland for a streamlined, efficient user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/vitruvianos-0-3-debuts-as-haiku-inspired-linux-os-without-x11-or-wayland/\">VitruvianOS 0.3 Debuts as Haiku-Inspired Linux OS Without X11 or Wayland</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/vitruvianos-0-3-debuts-as-haiku-inspired-linux-os-without-x11-or-wayland/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 11:54:48 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "After 26 Years at EFF, Cindy Cohn Is Handing Reins to Nicole Ozer",
+          "description": "<p>After 26 impactful years at EFF, Cindy Cohn passes the leadership to Nicole Ozer. Discover the future direction of digital rights advocacy.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/after-26-years-at-eff-cindy-cohn-is-handing-reins-to-nicole-ozer/\">After 26 Years at EFF, Cindy Cohn Is Handing Reins to Nicole Ozer</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/after-26-years-at-eff-cindy-cohn-is-handing-reins-to-nicole-ozer/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 11:51:38 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Firefox 150 Promises Support for the GTK Emoji Picker on Linux, Beta Out Now",
+          "description": "<p>Discover Firefox's latest update: version 150 now supports the GTK Emoji Picker on Linux. Explore the new features in the beta release today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/firefox-150-promises-support-for-the-gtk-emoji-picker-on-linux-beta-out-now/\">Firefox 150 Promises Support for the GTK Emoji Picker on Linux, Beta Out Now</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/firefox-150-promises-support-for-the-gtk-emoji-picker-on-linux-beta-out-now/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 11:47:38 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Master Key for Linux’s Different Take on Password Management",
+          "description": "<p>Master Key for Linux offers an innovative solution for password management, combining security and usability. Learn how it can streamline your online experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/master-key-for-linuxs-different-take-on-password-management/\">Master Key for Linux’s Different Take on Password Management</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/master-key-for-linuxs-different-take-on-password-management/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 11:39:25 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Oracle Releases Unbreakable Enterprise Kernel 8.2 Based on Linux 6.12 LTS",
+          "description": "<p>Discover Oracle's Unbreakable Enterprise Kernel 8.2, built on Linux 6.12 LT, offering enhanced performance and security for enterprise applications.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/oracle-releases-unbreakable-enterprise-kernel-8-2-based-on-linux-6-12-lts/\">Oracle Releases Unbreakable Enterprise Kernel 8.2 Based on Linux 6.12 LTS</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/oracle-releases-unbreakable-enterprise-kernel-8-2-based-on-linux-6-12-lts/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 11:34:29 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Radiotrope – AI agent-enabled Internet Radio Player",
+          "description": "<p>Experience the future of radio with Radiotrope, an AI-driven Internet Radio Player that curates your favorite stations and enhances your audio enjoyment.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/radiotrope-ai-agent-enabled-internet-radio-player/\">Radiotrope &#8211; AI agent-enabled Internet Radio Player</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/radiotrope-ai-agent-enabled-internet-radio-player/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 14 Apr 2026 11:31:29 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": ".NET and .NET Framework April 2026 servicing releases updates",
+          "description": "<p>A recap of the latest servicing updates for .NET and .NET Framework for April 2026.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-april-2026-servicing-updates/\">.NET and .NET Framework April 2026 servicing releases updates</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-april-2026-servicing-updates/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Tue, 14 Apr 2026 19:49:00 +0000",
+          "author": "Rahul Bhandari (MSFT), Tara Overfield"
+        },
+        {
+          "title": ".NET 11 Preview 3 is now available!",
+          "description": "<p>Find out about the new features in .NET 11 Preview 3 across the .NET runtime, SDK, libraries, ASP.NET Core, .NET MAUI, C#, Entity Framework Core, container images, and more!</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/dotnet-11-preview-3/\">.NET 11 Preview 3 is now available!</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/dotnet-11-preview-3/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Tue, 14 Apr 2026 19:30:00 +0000",
+          "author": ".NET Team"
+        },
+        {
+          "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
+          "description": "<p>Learn to find and exploit real-world agentic AI vulnerabilities through five progressive challenges in this free, open source game that over 10,000 developers have already used to sharpen their security skills.</p>\n<p>The post <a href=\"https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/\">Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Tue, 14 Apr 2026 18:17:59 +0000",
+          "author": "Joseph Katsioloudes"
+        },
+        {
+          "title": "How exposed is your code? Find out in minutes—for free",
+          "description": "<p>The new Code Security Risk Assessment gives you a one-click view of vulnerabilities across your organization, at no cost.</p>\n<p>The post <a href=\"https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/\">How exposed is your code? Find out in minutes—for free</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Tue, 14 Apr 2026 15:00:00 +0000",
+          "author": "Dorothy Pearce"
+        },
+        {
+          "title": "AWS Interconnect is now generally available, with a new option to simplify last-mile connectivity",
+          "description": "Today, we’re announcing the general availability of AWS Interconnect – multicloud, a managed private connectivity service that connects your Amazon Virtual Private Cloud (Amazon VPC) directly to VPCs on other cloud providers. We’re also introducing AWS Interconnect – last mile, a new capability that simplifies how you establish high-speed, private connections to AWS from your […]",
+          "link": "https://aws.amazon.com/blogs/aws/aws-interconnect-is-now-generally-available-with-a-new-option-to-simplify-last-mile-connectivity/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Tue, 14 Apr 2026 23:54:47 +0000",
+          "author": "Sébastien Stormacq"
+        },
+        {
+          "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
+          "description": "<p>Learn to find and exploit real-world agentic AI vulnerabilities through five progressive challenges in this free, open source game that over 10,000 developers have already used to sharpen their security skills.</p>\n<p>The post <a href=\"https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/\">Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Tue, 14 Apr 2026 18:17:59 +0000",
+          "author": "Joseph Katsioloudes"
+        },
+        {
+          "title": "How exposed is your code? Find out in minutes—for free",
+          "description": "<p>The new Code Security Risk Assessment gives you a one-click view of vulnerabilities across your organization, at no cost.</p>\n<p>The post <a href=\"https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/\">How exposed is your code? Find out in minutes—for free</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Tue, 14 Apr 2026 15:00:00 +0000",
+          "author": "Dorothy Pearce"
         },
         {
           "title": "How to Analyze Hugging Face for Arm64 Readiness",
@@ -2024,96 +2186,6 @@
           "author": "Jennifer Kohl"
         },
         {
-          "title": "Calligra Suite: A Modern KDE-Native Office Experience for Linux Power Users",
-          "description": "<p>Experience the Calligra Suite, a cutting-edge office suite tailored for Linux power users. Enjoy a rich set of features and a user-friendly interface for all your needs.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/calligra-suite-a-modern-kde-native-office-experience-for-linux-power-users/\">Calligra Suite: A Modern KDE-Native Office Experience for Linux Power Users</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/calligra-suite-a-modern-kde-native-office-experience-for-linux-power-users/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:59:25 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "How to Install SSH on Ubuntu 26.04",
-          "description": "<p>Learn how to install SSH on Ubuntu 26.04 with our step-by-step guide. Secure your server and enable remote access effortlessly today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-install-ssh-on-ubuntu-26-04/\">How to Install SSH on Ubuntu 26.04</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/how-to-install-ssh-on-ubuntu-26-04/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:51:58 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "GNOME 48.10 Released as Final Bugfix Update for GNOME 48",
-          "description": "<p>Discover the final bugfix update for GNOME 48 with version 48.10. Explore enhancements and improvements that enhance your user experience today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/gnome-48-10-released-as-final-bugfix-update-for-gnome-48/\">GNOME 48.10 Released as Final Bugfix Update for GNOME 48</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/gnome-48-10-released-as-final-bugfix-update-for-gnome-48/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:42:33 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "NVIDIA 595 Linux Graphics Driver Released as Latest Production Branch Version",
-          "description": "<p>Discover the latest NVIDIA 595 Linux Graphics Driver, now available as the newest production branch version. Enhance your graphics performance today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/nvidia-595-linux-graphics-driver-released-as-latest-production-branch-version/\">NVIDIA 595 Linux Graphics Driver Released as Latest Production Branch Version</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/nvidia-595-linux-graphics-driver-released-as-latest-production-branch-version/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:36:56 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Krita 5.3 and Krita 6.0 Released With New Text Engine and Wayland HDR Support",
-          "description": "<p>Discover the latest features in Krita 5.3 and 6.0, including a new text engine and Wayland HDR support. Elevate your digital art experience today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/krita-5-3-and-krita-6-0-released-with-new-text-engine-and-wayland-hdr-support/\">Krita 5.3 and Krita 6.0 Released With New Text Engine and Wayland HDR Support</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/krita-5-3-and-krita-6-0-released-with-new-text-engine-and-wayland-hdr-support/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:30:28 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "BOSGAME M4 Plus Mini PC running Linux: BIOS",
-          "description": "<p>Experience the BOSGAME M4 Plus Mini PC with Linux. Ideal for home or office use, this mini PC combines power and portability. Find out more here!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/bosgame-m4-plus-mini-pc-running-linux-bios/\">BOSGAME M4 Plus Mini PC running Linux: BIOS</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/bosgame-m4-plus-mini-pc-running-linux-bios/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:28:16 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Transmission Reimagined: A Fast, Lightweight, and Modern BitTorrent Client",
-          "description": "<p>Transform your downloading experience with Transmission Reimagined, a sleek and efficient BitTorrent client that prioritizes speed and user-friendly functionality.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/transmission-reimagined-a-fast-lightweight-and-modern-bittorrent-client/\">Transmission Reimagined: A Fast, Lightweight, and Modern BitTorrent Client</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/transmission-reimagined-a-fast-lightweight-and-modern-bittorrent-client/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:23:55 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Microsoft Edge Stable on Linux: A Surprisingly Solid Chromium Alternative",
-          "description": "<p>Explore Microsoft Edge Stable on Linux, a surprisingly solid Chromium alternative that offers seamless performance and enhanced security for all users.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/microsoft-edge-stable-on-linux-a-surprisingly-solid-chromium-alternative/\">Microsoft Edge Stable on Linux: A Surprisingly Solid Chromium Alternative</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/microsoft-edge-stable-on-linux-a-surprisingly-solid-chromium-alternative/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:15:09 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Re-thinking Framebuffers in PanVK",
-          "description": "<p>Delve into the re-thinking of framebuffers in PanVK, where cutting-edge techniques meet improved graphics performance. Transform your rendering strategies today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/re-thinking-framebuffers-in-panvk/\">Re-thinking Framebuffers in PanVK</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/re-thinking-framebuffers-in-panvk/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:13:15 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "OpenSSF Welcomes New Members as SLSA, Gemara, and AI Security Efforts Mature",
-          "description": "<p>Discover how OpenSSF is expanding its community with new members as SLSA, Gemara, and AI security efforts evolve. Be part of the future of open-source security.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/openssf-welcomes-new-members-as-slsa-gemara-and-ai-security-efforts-mature/\">OpenSSF Welcomes New Members as SLSA, Gemara, and AI Security Efforts Mature</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/openssf-welcomes-new-members-as-slsa-gemara-and-ai-security-efforts-mature/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 13 Apr 2026 10:03:29 +0000",
-          "author": "Content Operations"
-        },
-        {
           "title": "GitHub for Beginners: Getting started with GitHub Pages",
           "description": "<p>Learn how to create a free website for any repository on GitHub Pages.</p>\n<p>The post <a href=\"https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-pages/\">GitHub for Beginners: Getting started with GitHub Pages</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
           "link": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-pages/",
@@ -2121,6 +2193,15 @@
           "category": "Développement",
           "published": "Mon, 13 Apr 2026 15:00:00 +0000",
           "author": "Kedasha Kerr"
+        },
+        {
+          "title": "Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning",
+          "description": "Gemini Robotics ER 1.6: Enhancing spatial reasoning and multi-view understanding for autonomous robotics.",
+          "link": "https://deepmind.google/blog/gemini-robotics-er-1-6/",
+          "source": "DeepMind",
+          "category": "IA",
+          "published": "Mon, 13 Apr 2026 15:52:13 +0000",
+          "author": "Inconnu"
         },
         {
           "title": "AWS Weekly Roundup: Claude Mythos Preview in Amazon Bedrock, AWS Agent Registry, and more (April 13, 2026)",
@@ -2429,15 +2510,6 @@
           "author": "Srini Sekaran"
         },
         {
-          "title": "Agent-driven development in Copilot Applied Science",
-          "description": "<p>I used coding agents to build agents that automated part of my job. Here's what I learned about working better with coding agents.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/\">Agent-driven development in Copilot Applied Science</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Tue, 31 Mar 2026 16:00:00 +0000",
-          "author": "Tyler McGoffin"
-        },
-        {
           "title": "Announcing the AWS Sustainability console: Programmatic access, configurable CSV reports, and Scope 1–3 reporting in one place",
           "description": "AWS announces the Sustainability console, a new standalone service that consolidates carbon emissions reporting and resources, giving sustainability teams independent access to Scope 1, 2, and 3 emissions data without requiring billing permissions.",
           "link": "https://aws.amazon.com/blogs/aws/announcing-the-aws-sustainability-console-programmatic-access-configurable-csv-reports-and-scope-1-3-reporting-in-one-place/",
@@ -2456,15 +2528,6 @@
           "author": "Douglas Phillips"
         },
         {
-          "title": "Agent-driven development in Copilot Applied Science",
-          "description": "<p>I used coding agents to build agents that automated part of my job. Here's what I learned about working better with coding agents.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/\">Agent-driven development in Copilot Applied Science</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Tue, 31 Mar 2026 16:00:00 +0000",
-          "author": "Tyler McGoffin"
-        },
-        {
           "title": "Kubernetes v1.36 Sneak Peek",
           "description": "<p>Kubernetes v1.36 is coming at the end of April 2026. This release will include removals and deprecations, and it is packed with an impressive number of\nenhancements. Here are some of the features we are most excited about in this cycle!</p>\n<p>Please note that this information reflects the current state of v1.36 development and may change before release.</p>\n<h2 id=\"the-kubernetes-api-removal-and-deprecation-process\">The Kubernetes API removal and deprecation process</h2>\n<p>The Kubernetes project has a well-documented <a href=\"https://kubernetes.io/docs/reference/using-api/deprecation-policy/\">deprecation policy</a> for features. This policy states that stable APIs\nmay only be deprecated when a newer, stable version of that same API is available and that APIs have a minimum lifetime for each stability level. A deprecated API\nhas been marked for removal in a future Kubernetes release. It will continue to function until removal (at least one year from the deprecation), but usage will\nresult in a warning being displayed. Removed APIs are no longer available in the current version, at which point you must migrate to using the replacement.</p>\n<ul>\n<li>Generally available (GA) or stable API versions may be marked as deprecated but must not be removed within a major version of Kubernetes.</li>\n<li>Beta or pre-release API versions must be supported for 3 releases after the deprecation.</li>\n<li>Alpha or experimental API versions may be removed in any release without prior deprecation notice; this process can become a withdrawal in cases where a different implementation for the same feature is already in place.</li>\n</ul>\n<p>Whether an API is removed as a result of a feature graduating from beta to stable, or because that API simply did not succeed, all removals comply with this\ndeprecation policy. Whenever an API is removed, migration options are communicated in the <a href=\"https://kubernetes.io/docs/reference/using-api/deprecation-guide/\">deprecation guide</a>.</p>\n<p>A recent example of this principle in action is the retirement of the ingress-nginx project, announced\nby SIG-Security on March 24, 2026. As stewardship shifts away from the project, the community has been\nencouraged to evaluate alternative ingress controllers that align with current security and maintenance\nbest practices. This transition reflects the same lifecycle discipline that underpins Kubernetes itself,\nensuring continued evolution without abrupt disruption.</p>\n<h2 id=\"ingress-nginx-retirement\">Ingress NGINX retirement</h2>\n<p>To prioritize the safety and security of the ecosystem, Kubernetes SIG Network and the Security Response Committee have retired Ingress NGINX on March 24, 2026.\nSince that date, there have been no further releases, no bugfixes, and no updates to resolve any security vulnerabilities discovered. Existing deployments of\nIngress NGINX will continue to function, and installation artifacts like Helm charts and container images will remain available.</p>\n<p>For full details, see the <a href=\"https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/\">official retirement announcement</a>.</p>\n<h2 id=\"deprecations-and-removals-for-kubernetes-v1-36\">Deprecations and removals for Kubernetes v1.36</h2>\n<h3 id=\"deprecation-of-spec-externalips-in-service\">Deprecation of <code>.spec.externalIPs</code> in Service</h3>\n<p>The <code>externalIPs</code> field in Service <code>spec</code> is being deprecated, which means you’ll soon lose a quick way to route arbitrary externalIPs to your Services. This\nfield has been a known security headache for years, enabling man-in-the-middle attacks on your cluster traffic, as documented in <a href=\"https://github.com/kubernetes/kubernetes/issues/970760\">CVE-2020-8554</a>. From Kubernetes v1.36 and onwards, you will see deprecation warnings when using it, with full removal\nplanned for v1.43.</p>\n<p>If your Services still lean on <code>externalIPs</code>, consider using LoadBalancer services for cloud-managed ingress, NodePort for simple port exposure, or Gateway API\nfor a more flexible and secure way to handle external traffic.</p>\n<p>For more details on this enhancement, refer to <a href=\"https://kep.k8s.io/5707\">KEP-5707: Deprecate service.spec.externalIPs</a></p>\n<h3 id=\"removal-of-gitrepo-volume-driver\">Removal of <code>gitRepo</code> volume driver</h3>\n<p>The gitRepo volume type has been deprecated since v1.11. Starting Kubernetes v1.36, the <code>gitRepo</code> volume plugin is permanently disabled and cannot be turned back\non. This change protects clusters from a critical security issue where using <code>gitRepo</code> could let an attacker run code as root on the node.</p>\n<p>Although <code>gitRepo</code> has been deprecated for years and better alternatives have been recommended, it was still technically possible to use it in previous releases.\nFrom v1.36 onward, that path is closed for good, so any existing workloads depending on <code>gitRepo</code> will need to migrate to supported approaches such as init\ncontainers or external git-sync style tools.</p>\n<p>For more details on this enhancement, refer to <a href=\"https://kep.k8s.io/5040\">KEP-5040: Remove gitRepo volume driver</a></p>\n<h2 id=\"featured-enhancements-of-kubernetes-v1-36\">Featured enhancements of Kubernetes v1.36</h2>\n<p>The following list of enhancements is likely to be included in the upcoming v1.36 release. This is not a commitment and the release content is subject to change.</p>\n<h3 id=\"volume-selinux-labelling\">Faster SELinux labelling for volumes (GA)</h3>\n<p>Kubernetes v1.36 makes the SELinux volume mounting improvement generally available. This change replaced recursive file relabeling with <code>mount -o context=XYZ</code> option, applying the correct SELinux label to the entire volume at mount time. It brings more consistent performance and reduces Pod startup delays on SELinux-enforcing systems.</p>\n<p>This feature was introduced as beta in v1.28 for <code>ReadWriteOncePod</code> volumes. In v1.32, it gained metrics and an opt-out option\n(<code>securityContext.seLinuxChangePolicy: Recursive</code>) to help catch conflicts. Now in v1.36, it reaches stable and defaults to all volumes, with Pods or\nCSIDrivers opting in via <code>spec.SELinuxMount</code>.</p>\n<p>However, we expect this feature to create the risk of breaking changes in the future Kubernetes releases, due to the potential for mixing of privileged and unprivileged pods.\nSetting the <code>seLinuxChangePolicy</code> field and\nSELinux volume labels on Pods, correctly, is the responsibility of the Pod author\nDevelopers have that responsibility whether they are writing a Deployment, StatefulSet, DaemonSet or even a custom resource that includes a Pod template.\nBeing careless\nwith these settings can lead to a range of problems when Pods share volumes.</p>\n<p>For more details on this enhancement, refer to <a href=\"https://kep.k8s.io/1710\">KEP-1710: Speed up recursive SELinux label change</a></p>\n<h3 id=\"external-signing-of-serviceaccount-tokens\">External signing of ServiceAccount tokens</h3>\n<p>As a beta feature, Kubernetes already supports external signing of ServiceAccount tokens. This allows clusters to integrate with external key management systems\nor signing services instead of relying only on internally managed keys.</p>\n<p>With this enhancement, the <code>kube-apiserver</code> can delegate token signing to external systems such as cloud key management services or hardware security modules. This\nimproves security and simplifies key management services for clusters that rely on centralized signing infrastructure.\nWe expect that this will graduate to stable (GA) in Kubernetes v1.36.</p>\n<p>For more details on this enhancement, refer to <a href=\"https://kep.k8s.io/740\">KEP-740: Support external signing of service account tokens</a></p>\n<h3 id=\"dra-driver-support-for-device-taints-and-tolerations\">DRA Driver support for Device taints and tolerations</h3>\n<p>Kubernetes v1.33 introduced support for taints and tolerations for physical devices managed through <a href=\"https://kubernetes.io/docs/concepts/scheduling-eviction/dynamic-resource-allocation/\">Dynamic Resource Allocation (DRA)</a>. Normally, any device can be\nused for scheduling. However, this enhancement allows DRA drivers to mark devices as tainted, which ensures that they will not be used for scheduling purposes.\nAlternatively, cluster administrators can create a <code>DeviceTaintRule</code> to mark devices that match a certain selection criteria(such as all devices of a certain\ndriver) as tainted. This improves scheduling control and helps ensure that specialized hardware resources are only used by workloads that explicitly request them.</p>\n<p>In Kubernetes v1.36, this feature graduates to beta with more comprehensive testing complete, making it accessible by default without the need for a feature\nflag and open to user feedback.</p>\n<p>To learn about taints and tolerations, see <a href=\"https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/\">taints and tolerations</a>.<br />\nFor more details on this enhancement, refer to <a href=\"https://kep.k8s.io/5055\">KEP-5055: DRA: device taints and tolerations</a>.</p>\n<h3 id=\"dra-support-for-partitionable-devices\">DRA support for partitionable devices</h3>\n<p>Kubernetes v1.36 expands Dynamic Resource Allocation (DRA) by introducing support for partitionable devices, allowing a single hardware accelerator to be split\ninto multiple logical units that can be shared across workloads. This is especially useful for high-cost resources like GPUs, where dedicating an entire device\nto a single workload can lead to underutilization.</p>\n<p>With this enhancement, platform teams can improve overall cluster efficiency by allocating only the required portion of a device to each workload, rather than\nreserving it entirely. This makes it easier to run multiple workloads on the same hardware while maintaining isolation and control, helping organizations get more\nvalue out of their infrastructure.</p>\n<p>To learn more about this enhancement, refer to <a href=\"https://kep.k8s.io/4815\">KEP-4815: DRA Partitionable Devices</a></p>\n<h2 id=\"want-to-know-more\">Want to know more?</h2>\n<p>New features and deprecations are also announced in the Kubernetes release notes. We will formally announce what's new in <a href=\"https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.36.md\">Kubernetes v1.36</a> as part of the CHANGELOG for that release.</p>\n<p>Kubernetes v1.36 release is planned for Wednesday, April 22, 2026. Stay tuned for updates!</p>\n<p>You can also see the announcements of changes in the release notes for:</p>\n<ul>\n<li><a href=\"https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.35.md\">Kubernetes v1.35</a></li>\n<li><a href=\"https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.34.md\">Kubernetes v1.34</a></li>\n<li><a href=\"https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.33.md\">Kubernetes v1.33</a></li>\n<li><a href=\"https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.32.md\">Kubernetes v1.32</a></li>\n<li><a href=\"https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.31.md\">Kubernetes v1.31</a></li>\n<li><a href=\"https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.30.md\">Kubernetes v1.30</a></li>\n</ul>\n<h2 id=\"get-involved\">Get involved</h2>\n<p>The simplest way to get involved with Kubernetes is by joining one of the many <a href=\"https://github.com/kubernetes/community/blob/master/siglist.md\">Special Interest Groups</a> (SIGs) that align with your interests. Have something you’d like to broadcast to the Kubernetes community? Share your voice at our weekly\n<a href=\"https://github.com/kubernetes/community/tree/master/communication\">community meeting</a>, and through the channels below. Thank you for your continued feedback and support.</p>\n<ul>\n<li>Follow us on Bluesky <a href=\"https://bsky.app/profile/kubernetes.io\">@kubernetes.io</a> for the latest updates</li>\n<li>Join the community discussion on <a href=\"https://discuss.kubernetes.io/\">Discuss</a></li>\n<li>Join the community on <a href=\"http://slack.k8s.io/\">Slack</a></li>\n<li>Post questions (or answer questions) on <a href=\"https://serverfault.com/questions/tagged/kubernetes\">Server Fault</a> or <a href=\"http://stackoverflow.com/questions/tagged/kubernetes\">Stack Overflow</a></li>\n<li>Share your Kubernetes <a href=\"https://docs.google.com/a/linuxfoundation.org/forms/d/e/1FAIpQLScuI7Ye3VQHQTwBASrgkjQDSS5TP0g3AXfFhwSM9YpHgxRKFA/viewform\">story</a></li>\n<li>Read more about what’s happening with Kubernetes on the <a href=\"https://kubernetes.io/blog/\">blog</a></li>\n<li>Learn more about the <a href=\"https://github.com/kubernetes/sig-release/tree/master/release-team\">Kubernetes Release Team</a></li>\n</ul>",
           "link": "https://kubernetes.io/blog/2026/03/30/kubernetes-v1-36-sneak-peek/",
@@ -2472,15 +2535,6 @@
           "category": "Infrastructure",
           "published": "Mon, 30 Mar 2026 00:00:00 +0000",
           "author": "Inconnu"
-        },
-        {
-          "title": "GitHub for Beginners: Getting started with GitHub security",
-          "description": "<p>Learn how to secure your projects and keep them safe with GitHub Advanced Security.</p>\n<p>The post <a href=\"https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-security/\">GitHub for Beginners: Getting started with GitHub security</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-security/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Mon, 30 Mar 2026 16:00:00 +0000",
-          "author": "Kedasha Kerr"
         },
         {
           "title": "AWS Weekly Roundup: AWS AI/ML Scholars program, Agent Plugin for AWS Serverless, and more (March 30, 2026)",
@@ -2508,15 +2562,6 @@
           "category": "Cloud",
           "published": "Mon, 30 Mar 2026 16:00:00 +0000",
           "author": "Naga Surendran"
-        },
-        {
-          "title": "GitHub for Beginners: Getting started with GitHub security",
-          "description": "<p>Learn how to secure your projects and keep them safe with GitHub Advanced Security.</p>\n<p>The post <a href=\"https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-security/\">GitHub for Beginners: Getting started with GitHub security</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-security/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Mon, 30 Mar 2026 16:00:00 +0000",
-          "author": "Kedasha Kerr"
         },
         {
           "title": "Building a News Roundup with Docker Agent, Docker Model Runner, and Skill",
@@ -2672,15 +2717,6 @@
           "author": "Inconnu"
         },
         {
-          "title": "From the Captain’s Chair: Naga Santhosh Reddy Vootukuri",
-          "description": "Docker Captains are leaders from the developer community that are both experts in their field and are passionate about sharing their Docker knowledge with others. “From the Captain’s Chair” is a blog series where we get a closer look at one Captain to learn more about them and their experiences.  Today we are interviewing Naga...",
-          "link": "https://www.docker.com/blog/from-the-captains-chair-naga-santhosh-reddy-vootukuri/",
-          "source": "Docker Blog",
-          "category": "Infrastructure",
-          "published": "Wed, 18 Mar 2026 16:00:12 +0000",
-          "author": "Jennifer Kohl"
-        },
-        {
           "title": "Our First 2026 AWS Heroes Cohort Is Here!",
           "description": "We’re thrilled to celebrate three exceptional developer community leaders as AWS Heroes. These individuals represent the heart of what makes the AWS community so vibrant. In addition to sharing technical knowledge, they build connections, forge genuine human relationships, and create pathways for others to grow. From pioneering cloud culture in mountain villages to leading cybersecurity […]",
           "link": "https://aws.amazon.com/blogs/aws/our-first-2026-heroes-cohort-is-here/",
@@ -2753,15 +2789,6 @@
           "author": "Mika Dumont"
         },
         {
-          "title": ".NET 10.0.5 Out-of-Band Release – macOS Debugger Fix",
-          "description": "<p>An out-of-band release of .NET 10.0.5 to fix a critical debugger crash affecting macOS users with Visual Studio Code.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/dotnet-10-0-5-oob-release-macos-debugger-fix/\">.NET 10.0.5 Out-of-Band Release &#8211; macOS Debugger Fix</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/dotnet-10-0-5-oob-release-macos-debugger-fix/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Thu, 12 Mar 2026 17:00:00 +0000",
-          "author": "Rahul Bhandari (MSFT)"
-        },
-        {
           "title": "Introducing account regional namespaces for Amazon S3 general purpose buckets",
           "description": "AWS launches a new feature of Amazon S3 that lets you create general purpose buckets in your own account regional namespace simplifying bucket creation and management as your data storage needs grow in size and scope.",
           "link": "https://aws.amazon.com/blogs/aws/introducing-account-regional-namespaces-for-amazon-s3-general-purpose-buckets/",
@@ -2769,15 +2796,6 @@
           "category": "Cloud",
           "published": "Thu, 12 Mar 2026 21:18:55 +0000",
           "author": "Channy Yun (윤석찬)"
-        },
-        {
-          "title": ".NET 11 Preview 2 is now available!",
-          "description": "<p>Find out about the new features in .NET 11 Preview 2 across the .NET runtime, SDK, libraries, ASP.NET Core, Blazor, C#, .NET MAUI, and more!</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/dotnet-11-preview-2/\">.NET 11 Preview 2 is now available!</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/dotnet-11-preview-2/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Tue, 10 Mar 2026 20:35:00 +0000",
-          "author": ".NET Team"
         },
         {
           "title": "Announcing the AI Gateway Working Group",
@@ -2859,15 +2877,6 @@
           "category": "Cloud",
           "published": "Thu, 26 Feb 2026 18:52:06 +0000",
           "author": "Channy Yun (윤석찬)"
-        },
-        {
-          "title": "Transform live video for mobile audiences with AWS Elemental Inference",
-          "description": "AWS Elemental Inference is a fully managed AI service that automatically transforms live and on-demand video broadcasts into vertical formats optimized for mobile and social platforms in real time, enabling broadcasters to reach audiences on TikTok, Instagram Reels, and YouTube Shorts without manual editing or AI expertise.",
-          "link": "https://aws.amazon.com/blogs/aws/transform-live-video-for-mobile-audiences-with-aws-elemental-inference/",
-          "source": "AWS Blog",
-          "category": "Cloud",
-          "published": "Tue, 24 Feb 2026 18:55:11 +0000",
-          "author": "Micah Walter"
         },
         {
           "title": "Gemini 3.1 Pro: A smarter model for your most complex tasks",
@@ -3506,15 +3515,6 @@
           "source": "DeepMind",
           "category": "IA",
           "published": "Fri, 24 Oct 2025 02:58:37 +0000",
-          "author": "Inconnu"
-        },
-        {
-          "title": "Genie 3: A new frontier for world models",
-          "description": "Genie 3 can generate dynamic worlds that you can navigate in real time at 24 frames per second, retaining consistency for a few minutes at a resolution of 720p.",
-          "link": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
-          "source": "DeepMind",
-          "category": "IA",
-          "published": "Fri, 24 Oct 2025 02:54:30 +0000",
           "author": "Inconnu"
         },
         {
