@@ -1,107 +1,107 @@
 {
-  "lastUpdate": "2026-04-15T08:49:52.585891",
+  "lastUpdate": "2026-04-16T08:50:15.414274",
   "articles": {
     "infrastructure": {
       "icon": "🏗️",
       "articles": [
         {
+          "title": "SystemRescue 13 Released With Linux Kernel 6.18 and GParted 1.8.1",
+          "description": "<p>SystemRescue 13 has arrived! Experience the power of Linux Kernel 6.18 and GParted 1.8.1 for efficient system recovery and management. Download now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/systemrescue-13-released-with-linux-kernel-6-18-and-gparted-1-8-1/\">SystemRescue 13 Released With Linux Kernel 6.18 and GParted 1.8.1</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/systemrescue-13-released-with-linux-kernel-6-18-and-gparted-1-8-1/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 09:18:28 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Fish Shell 4.6 Brings Better Emoji Handling, Bash Compatibility",
+          "description": "<p>Discover Fish Shell 4.6, featuring enhanced emoji handling and improved Bash compatibility. Upgrade your command line experience today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/fish-shell-4-6-brings-better-emoji-handling-bash-compatibility/\">Fish Shell 4.6 Brings Better Emoji Handling, Bash Compatibility</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/fish-shell-4-6-brings-better-emoji-handling-bash-compatibility/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 09:08:48 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Fooyin’s Release 0.10.x Adds Important Improvements",
+          "description": "<p>Explore the vital improvements in Fooyin's Release 0.10.x. Stay ahead with the latest features designed to boost efficiency and user satisfaction.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/fooyins-release-0-10-x-adds-important-improvements/\">Fooyin’s Release 0.10.x Adds Important Improvements</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/fooyins-release-0-10-x-adds-important-improvements/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 08:58:58 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Mixxx 2.5.6 Open-Source DJ App Improves Controller Mapping Support and Effects",
+          "description": "<p>Elevate your DJ skills with Mixxx 2.5.6! This open-source app offers improved controller mapping and effects, perfect for both beginners and pros.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/mixxx-2-5-6-open-source-dj-app-improves-controller-mapping-support-and-effects/\">Mixxx 2.5.6 Open-Source DJ App Improves Controller Mapping Support and Effects</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/mixxx-2-5-6-open-source-dj-app-improves-controller-mapping-support-and-effects/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 08:34:33 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Hyprland 0.54.3 Wayland Compositor Released With Crash Fixes",
+          "description": "<p>Explore the new Hyprland 0.54.3 release, packed with crucial crash fixes to enhance your Wayland compositor performance. Don't miss out on these updates!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/hyprland-0-54-3-wayland-compositor-released-with-crash-fixes/\">Hyprland 0.54.3 Wayland Compositor Released With Crash Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/hyprland-0-54-3-wayland-compositor-released-with-crash-fixes/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 08:27:42 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Ubuntu 26.04 LTS Beta: GNOME 50, Kernel 7.0 and a Bold Step Into the Future",
+          "description": "<p>Unveil the power of Ubuntu 26.04 LTS Beta. With GNOME 50 and Kernel 7.0, this release promises bold advancements and a seamless user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/ubuntu-26-04-lts-beta-gnome-50-kernel-7-0-and-a-bold-step-into-the-future/\">Ubuntu 26.04 LTS Beta: GNOME 50, Kernel 7.0 and a Bold Step Into the Future</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/ubuntu-26-04-lts-beta-gnome-50-kernel-7-0-and-a-bold-step-into-the-future/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 08:20:52 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Red Hat Warns of Backdoored Linux Tool: CVE-2024-3094 Puts Systems at Risk",
+          "description": "<p>Red Hat alerts users about CVE-2024-3094, a backdoored Linux tool that jeopardizes system security. Learn how to protect your systems effectively.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/red-hat-warns-of-backdoored-linux-tool-cve-2024-3094-puts-systems-at-risk/\">Red Hat Warns of Backdoored Linux Tool: CVE-2024-3094 Puts Systems at Risk</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/red-hat-warns-of-backdoored-linux-tool-cve-2024-3094-puts-systems-at-risk/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 08:12:34 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Ubuntu Rust Strategy Expands Again With ntpd-rs Proposal",
+          "description": "<p>Explore the latest advancements in Ubuntu's Rust strategy with the ntpd-rs proposal, aimed at improving time synchronization. Click to find out more!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/ubuntu-rust-strategy-expands-again-with-ntpd-rs-proposal/\">Ubuntu Rust Strategy Expands Again With ntpd-rs Proposal</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/ubuntu-rust-strategy-expands-again-with-ntpd-rs-proposal/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 08:08:04 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Grafana Loki 3.7 Log Aggregation System Released with Helm Chart Changes",
+          "description": "<p>Discover the latest features of Grafana Loki 3.7, including significant Helm chart updates for enhanced log aggregation. Stay ahead in monitoring!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/grafana-loki-3-7-log-aggregation-system-released-with-helm-chart-changes/\">Grafana Loki 3.7 Log Aggregation System Released with Helm Chart Changes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/grafana-loki-3-7-log-aggregation-system-released-with-helm-chart-changes/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 08:04:21 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "LibreOffice 26.2.2 Arrives with Over 80 Bug Fixes and Stability Improvements",
+          "description": "<p>Discover the latest LibreOffice 26.2.2 update, featuring over 80 bug fixes and stability improvements for a smoother, more efficient experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/libreoffice-26-2-2-arrives-with-over-80-bug-fixes-and-stability-improvements/\">LibreOffice 26.2.2 Arrives with Over 80 Bug Fixes and Stability Improvements</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/libreoffice-26-2-2-arrives-with-over-80-bug-fixes-and-stability-improvements/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 07:58:58 +0000",
+          "author": "Content Operations"
+        },
+        {
           "title": "Why We Chose the Harder Path: Docker Hardened Images, One Year Later",
-          "description": "We're coming up on a year since launching Docker Hardened Images (DHI) this May, and crossing a milestone earlier this month made me stop and reflect on what we've actually been building. Earlier this month, we crossed over 500k daily pulls of DHIs, and over 25k continuously patched OS level artifacts in our SLSA Level...",
+          "description": "We're coming up on a year since launching Docker Hardened Images (DHI) last May, and crossing a milestone earlier this month made me stop and reflect on what we've actually been building. Earlier this month, we crossed over 500k daily pulls of DHIs, and over 25k continuously patched OS level artifacts in our SLSA Build...",
           "link": "https://www.docker.com/blog/why-we-chose-the-harder-path-docker-hardened-images-one-year-later/",
           "source": "Docker Blog",
           "category": "Infrastructure",
           "published": "Tue, 14 Apr 2026 21:48:03 +0000",
           "author": "Aditya Tripathi"
-        },
-        {
-          "title": "Raspberry Pi Imager 2.0.7 Released With UI Fixes and Improved Device Support",
-          "description": "<p>Discover the latest Raspberry Pi Imager 2.0.7 update featuring UI fixes and enhanced device support. Upgrade your imaging experience today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/raspberry-pi-imager-2-0-7-released-with-ui-fixes-and-improved-device-support/\">Raspberry Pi Imager 2.0.7 Released With UI Fixes and Improved Device Support</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/raspberry-pi-imager-2-0-7-released-with-ui-fixes-and-improved-device-support/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 12:12:24 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Tails 7.6 Introduces Automatic Tor Bridges to Bypass Censorship",
-          "description": "<p>Discover Tails 7.6's new feature: Automatic Tor Bridges. Learn how it helps users bypass censorship and enhance online privacy effortlessly.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/tails-7-6-introduces-automatic-tor-bridges-to-bypass-censorship/\">Tails 7.6 Introduces Automatic Tor Bridges to Bypass Censorship</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/tails-7-6-introduces-automatic-tor-bridges-to-bypass-censorship/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 12:08:45 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Canonical Plans Controversial GRUB Changes for Ubuntu 26.10 Secure Boot",
-          "description": "<p>Explore the implications of Canonical's GRUB changes in Ubuntu 26.10 Secure Boot. Stay informed about the latest updates and their potential effects on your setup.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/canonical-plans-controversial-grub-changes-for-ubuntu-26-10-secure-boot/\">Canonical Plans Controversial GRUB Changes for Ubuntu 26.10 Secure Boot</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/canonical-plans-controversial-grub-changes-for-ubuntu-26-10-secure-boot/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 12:05:10 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Pay2Key Returns: A Deep Dive into the Linux Ransomware Targeting Servers and Cloud Infrastructure",
-          "description": "<p>Explore the resurgence of Pay2Key, the Linux ransomware targeting servers and cloud infrastructure. Learn about its impact and prevention strategies.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/pay2key-returns-a-deep-dive-into-the-linux-ransomware-targeting-servers-and-cloud-infrastructure/\">Pay2Key Returns: A Deep Dive into the Linux Ransomware Targeting Servers and Cloud Infrastructure</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/pay2key-returns-a-deep-dive-into-the-linux-ransomware-targeting-servers-and-cloud-infrastructure/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 11:58:11 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "VitruvianOS 0.3 Debuts as Haiku-Inspired Linux OS Without X11 or Wayland",
-          "description": "<p>Explore the debut of VitruvianOS 0.3, a Haiku-inspired Linux OS that eliminates X11 and Wayland for a streamlined, efficient user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/vitruvianos-0-3-debuts-as-haiku-inspired-linux-os-without-x11-or-wayland/\">VitruvianOS 0.3 Debuts as Haiku-Inspired Linux OS Without X11 or Wayland</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/vitruvianos-0-3-debuts-as-haiku-inspired-linux-os-without-x11-or-wayland/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 11:54:48 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "After 26 Years at EFF, Cindy Cohn Is Handing Reins to Nicole Ozer",
-          "description": "<p>After 26 impactful years at EFF, Cindy Cohn passes the leadership to Nicole Ozer. Discover the future direction of digital rights advocacy.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/after-26-years-at-eff-cindy-cohn-is-handing-reins-to-nicole-ozer/\">After 26 Years at EFF, Cindy Cohn Is Handing Reins to Nicole Ozer</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/after-26-years-at-eff-cindy-cohn-is-handing-reins-to-nicole-ozer/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 11:51:38 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Firefox 150 Promises Support for the GTK Emoji Picker on Linux, Beta Out Now",
-          "description": "<p>Discover Firefox's latest update: version 150 now supports the GTK Emoji Picker on Linux. Explore the new features in the beta release today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/firefox-150-promises-support-for-the-gtk-emoji-picker-on-linux-beta-out-now/\">Firefox 150 Promises Support for the GTK Emoji Picker on Linux, Beta Out Now</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/firefox-150-promises-support-for-the-gtk-emoji-picker-on-linux-beta-out-now/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 11:47:38 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Master Key for Linux’s Different Take on Password Management",
-          "description": "<p>Master Key for Linux offers an innovative solution for password management, combining security and usability. Learn how it can streamline your online experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/master-key-for-linuxs-different-take-on-password-management/\">Master Key for Linux’s Different Take on Password Management</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/master-key-for-linuxs-different-take-on-password-management/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 11:39:25 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Oracle Releases Unbreakable Enterprise Kernel 8.2 Based on Linux 6.12 LTS",
-          "description": "<p>Discover Oracle's Unbreakable Enterprise Kernel 8.2, built on Linux 6.12 LT, offering enhanced performance and security for enterprise applications.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/oracle-releases-unbreakable-enterprise-kernel-8-2-based-on-linux-6-12-lts/\">Oracle Releases Unbreakable Enterprise Kernel 8.2 Based on Linux 6.12 LTS</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/oracle-releases-unbreakable-enterprise-kernel-8-2-based-on-linux-6-12-lts/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 11:34:29 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Radiotrope – AI agent-enabled Internet Radio Player",
-          "description": "<p>Experience the future of radio with Radiotrope, an AI-driven Internet Radio Player that curates your favorite stations and enhances your audio enjoyment.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/radiotrope-ai-agent-enabled-internet-radio-player/\">Radiotrope &#8211; AI agent-enabled Internet Radio Player</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/radiotrope-ai-agent-enabled-internet-radio-player/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 11:31:29 +0000",
-          "author": "Content Operations"
         },
         {
           "title": "How to Analyze Hugging Face for Arm64 Readiness",
@@ -640,6 +640,33 @@
       "icon": "💻",
       "articles": [
         {
+          "title": "Pin Clustering in .NET MAUI Maps",
+          "description": "<p>.NET MAUI 11 adds pin clustering to the Map control, automatically grouping nearby pins into cluster markers. Learn how to enable clustering, create separate clustering groups, and handle cluster taps on Android and iOS.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/pin-clustering-in-dotnet-maui-maps/\">Pin Clustering in .NET MAUI Maps</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/pin-clustering-in-dotnet-maui-maps/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Wed, 15 Apr 2026 16:45:00 +0000",
+          "author": "David Ortinau"
+        },
+        {
+          "title": "Build a personal organization command center with GitHub Copilot CLI",
+          "description": "<p>Learn about the productivity tool one GitHub engineer built, and how AI supported the development process.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/build-a-personal-organization-command-center-with-github-copilot-cli/\">Build a personal organization command center with GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/ai-and-ml/github-copilot/build-a-personal-organization-command-center-with-github-copilot-cli/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Wed, 15 Apr 2026 17:00:00 +0000",
+          "author": "Cassidy Williams"
+        },
+        {
+          "title": "Developer policy update: Intermediary liability, copyright, and transparency",
+          "description": "<p>We’re sharing recent policy updates that developers should know about, updating our Transparency Center with the full year of 2025 data, and looking to what’s ahead.</p>\n<p>The post <a href=\"https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/\">Developer policy update: Intermediary liability, copyright, and transparency</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Wed, 15 Apr 2026 15:00:00 +0000",
+          "author": "Margaret Tucker"
+        },
+        {
           "title": ".NET and .NET Framework April 2026 servicing releases updates",
           "description": "<p>A recap of the latest servicing updates for .NET and .NET Framework for April 2026.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-april-2026-servicing-updates/\">.NET and .NET Framework April 2026 servicing releases updates</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
           "link": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-april-2026-servicing-updates/",
@@ -757,24 +784,6 @@
           "author": "Bill Wagner"
         },
         {
-          "title": "Securing the open source supply chain across GitHub",
-          "description": "<p>Recent attacks on open source focus on exfiltrating secrets; here are the prevention steps you can take today, plus a look at the security capabilities GitHub is working on.</p>\n<p>The post <a href=\"https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/\">Securing the open source supply chain across GitHub</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Wed, 01 Apr 2026 19:20:12 +0000",
-          "author": "Zachary Steindler"
-        },
-        {
-          "title": "Run multiple agents at once with /fleet in Copilot CLI",
-          "description": "<p>/fleet lets Copilot CLI dispatch multiple agents in parallel. Learn how to write prompts that split work across files, declare dependencies, and avoid common pitfalls.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/\">Run multiple agents at once with /fleet in Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Wed, 01 Apr 2026 15:00:00 +0000",
-          "author": "Matt Nigh"
-        },
-        {
           "title": "Generative AI for Beginners .NET: Version 2 on .NET 10",
           "description": "<p>Announcement of Version 2 of Generative AI for Beginners .NET, a free course rebuilt for .NET 10 with Microsoft.Extensions.AI, updated RAG patterns, and new agent framework content across five structured lessons for building production-ready AI apps.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/generative-ai-for-beginners-dotnet-version-2-on-dotnet-10/\">Generative AI for Beginners .NET: Version 2 on .NET 10</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
           "link": "https://devblogs.microsoft.com/dotnet/generative-ai-for-beginners-dotnet-version-2-on-dotnet-10/",
@@ -809,15 +818,6 @@
           "category": "Développement",
           "published": "Tue, 17 Mar 2026 17:05:00 +0000",
           "author": "Faisal Waris"
-        },
-        {
-          "title": "Modernize .NET Anywhere with GitHub Copilot",
-          "description": "<p>See how the modernize-dotnet agent helps you assess apps, create upgrade plans, and modernize .NET projects from Visual Studio, VS Code, GitHub Copilot CLI, and GitHub.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/modernize-dotnet-anywhere-with-ghcp/\">Modernize .NET Anywhere with GitHub Copilot</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/modernize-dotnet-anywhere-with-ghcp/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Thu, 12 Mar 2026 17:05:00 +0000",
-          "author": "Mika Dumont"
         }
       ]
     },
@@ -1009,6 +1009,15 @@
     "ia": {
       "icon": "🤖",
       "articles": [
+        {
+          "title": "Gemini 3.1 Flash TTS: the next generation of expressive AI speech",
+          "description": "Our newest audio model introduces granular audio tags that give you precise control to direct AI speech for expressive audio generation.",
+          "link": "https://deepmind.google/blog/gemini-3-1-flash-tts-the-next-generation-of-expressive-ai-speech/",
+          "source": "DeepMind",
+          "category": "IA",
+          "published": "Wed, 15 Apr 2026 16:03:19 +0000",
+          "author": "Inconnu"
+        },
         {
           "title": "Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning",
           "description": "Gemini Robotics ER 1.6: Enhancing spatial reasoning and multi-view understanding for autonomous robotics.",
@@ -1449,15 +1458,6 @@
           "category": "IA",
           "published": "Fri, 24 Oct 2025 03:12:29 +0000",
           "author": "Inconnu"
-        },
-        {
-          "title": "Aeneas transforms how historians connect the past",
-          "description": "Introducing the first model for contextualizing ancient inscriptions, designed to help historians better interpret, attribute and restore fragmentary texts.",
-          "link": "https://deepmind.google/blog/aeneas-transforms-how-historians-connect-the-past/",
-          "source": "DeepMind",
-          "category": "IA",
-          "published": "Fri, 24 Oct 2025 02:58:37 +0000",
-          "author": "Inconnu"
         }
       ]
     },
@@ -1745,7 +1745,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739400",
+          "published": "2026-04-16T08:50:14.660278",
           "author": "prombot"
         },
         {
@@ -1754,7 +1754,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739396",
+          "published": "2026-04-16T08:50:14.660273",
           "author": "prombot"
         },
         {
@@ -1763,7 +1763,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739391",
+          "published": "2026-04-16T08:50:14.660269",
           "author": "prombot"
         },
         {
@@ -1772,7 +1772,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739387",
+          "published": "2026-04-16T08:50:14.660264",
           "author": "roidelapluie"
         },
         {
@@ -1781,7 +1781,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739383",
+          "published": "2026-04-16T08:50:14.660260",
           "author": "roidelapluie"
         },
         {
@@ -1790,7 +1790,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739378",
+          "published": "2026-04-16T08:50:14.660255",
           "author": "prombot"
         },
         {
@@ -1799,7 +1799,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739374",
+          "published": "2026-04-16T08:50:14.660251",
           "author": "roidelapluie"
         },
         {
@@ -1808,7 +1808,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739370",
+          "published": "2026-04-16T08:50:14.660246",
           "author": "roidelapluie"
         },
         {
@@ -1817,7 +1817,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739365",
+          "published": "2026-04-16T08:50:14.660241",
           "author": "prombot"
         },
         {
@@ -1826,8 +1826,26 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739351",
+          "published": "2026-04-16T08:50:14.660225",
           "author": "prombot"
+        },
+        {
+          "title": "Build a personal organization command center with GitHub Copilot CLI",
+          "description": "<p>Learn about the productivity tool one GitHub engineer built, and how AI supported the development process.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/build-a-personal-organization-command-center-with-github-copilot-cli/\">Build a personal organization command center with GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/ai-and-ml/github-copilot/build-a-personal-organization-command-center-with-github-copilot-cli/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Wed, 15 Apr 2026 17:00:00 +0000",
+          "author": "Cassidy Williams"
+        },
+        {
+          "title": "Developer policy update: Intermediary liability, copyright, and transparency",
+          "description": "<p>We’re sharing recent policy updates that developers should know about, updating our Transparency Center with the full year of 2025 data, and looking to what’s ahead.</p>\n<p>The post <a href=\"https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/\">Developer policy update: Intermediary liability, copyright, and transparency</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Wed, 15 Apr 2026 15:00:00 +0000",
+          "author": "Margaret Tucker"
         },
         {
           "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
@@ -1900,24 +1918,6 @@
           "category": "DevOps",
           "published": "Fri, 03 Apr 2026 16:00:00 +0000",
           "author": "Luke Ghenco"
-        },
-        {
-          "title": "Securing the open source supply chain across GitHub",
-          "description": "<p>Recent attacks on open source focus on exfiltrating secrets; here are the prevention steps you can take today, plus a look at the security capabilities GitHub is working on.</p>\n<p>The post <a href=\"https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/\">Securing the open source supply chain across GitHub</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Wed, 01 Apr 2026 19:20:12 +0000",
-          "author": "Zachary Steindler"
-        },
-        {
-          "title": "Run multiple agents at once with /fleet in Copilot CLI",
-          "description": "<p>/fleet lets Copilot CLI dispatch multiple agents in parallel. Learn how to write prompts that split work across files, declare dependencies, and avoid common pitfalls.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/\">Run multiple agents at once with /fleet in Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Wed, 01 Apr 2026 15:00:00 +0000",
-          "author": "Matt Nigh"
         }
       ]
     },
@@ -1930,7 +1930,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739400",
+          "published": "2026-04-16T08:50:14.660278",
           "author": "prombot"
         },
         {
@@ -1939,7 +1939,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739396",
+          "published": "2026-04-16T08:50:14.660273",
           "author": "prombot"
         },
         {
@@ -1948,7 +1948,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739391",
+          "published": "2026-04-16T08:50:14.660269",
           "author": "prombot"
         },
         {
@@ -1957,7 +1957,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739387",
+          "published": "2026-04-16T08:50:14.660264",
           "author": "roidelapluie"
         },
         {
@@ -1966,7 +1966,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739383",
+          "published": "2026-04-16T08:50:14.660260",
           "author": "roidelapluie"
         },
         {
@@ -1975,7 +1975,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739378",
+          "published": "2026-04-16T08:50:14.660255",
           "author": "prombot"
         },
         {
@@ -1984,7 +1984,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739374",
+          "published": "2026-04-16T08:50:14.660251",
           "author": "roidelapluie"
         },
         {
@@ -1993,7 +1993,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739370",
+          "published": "2026-04-16T08:50:14.660246",
           "author": "roidelapluie"
         },
         {
@@ -2002,7 +2002,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739365",
+          "published": "2026-04-16T08:50:14.660241",
           "author": "prombot"
         },
         {
@@ -2011,107 +2011,161 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-15T08:49:51.739351",
+          "published": "2026-04-16T08:50:14.660225",
           "author": "prombot"
         },
         {
+          "title": "SystemRescue 13 Released With Linux Kernel 6.18 and GParted 1.8.1",
+          "description": "<p>SystemRescue 13 has arrived! Experience the power of Linux Kernel 6.18 and GParted 1.8.1 for efficient system recovery and management. Download now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/systemrescue-13-released-with-linux-kernel-6-18-and-gparted-1-8-1/\">SystemRescue 13 Released With Linux Kernel 6.18 and GParted 1.8.1</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/systemrescue-13-released-with-linux-kernel-6-18-and-gparted-1-8-1/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 09:18:28 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Fish Shell 4.6 Brings Better Emoji Handling, Bash Compatibility",
+          "description": "<p>Discover Fish Shell 4.6, featuring enhanced emoji handling and improved Bash compatibility. Upgrade your command line experience today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/fish-shell-4-6-brings-better-emoji-handling-bash-compatibility/\">Fish Shell 4.6 Brings Better Emoji Handling, Bash Compatibility</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/fish-shell-4-6-brings-better-emoji-handling-bash-compatibility/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 09:08:48 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Fooyin’s Release 0.10.x Adds Important Improvements",
+          "description": "<p>Explore the vital improvements in Fooyin's Release 0.10.x. Stay ahead with the latest features designed to boost efficiency and user satisfaction.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/fooyins-release-0-10-x-adds-important-improvements/\">Fooyin’s Release 0.10.x Adds Important Improvements</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/fooyins-release-0-10-x-adds-important-improvements/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 08:58:58 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Mixxx 2.5.6 Open-Source DJ App Improves Controller Mapping Support and Effects",
+          "description": "<p>Elevate your DJ skills with Mixxx 2.5.6! This open-source app offers improved controller mapping and effects, perfect for both beginners and pros.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/mixxx-2-5-6-open-source-dj-app-improves-controller-mapping-support-and-effects/\">Mixxx 2.5.6 Open-Source DJ App Improves Controller Mapping Support and Effects</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/mixxx-2-5-6-open-source-dj-app-improves-controller-mapping-support-and-effects/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 08:34:33 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Hyprland 0.54.3 Wayland Compositor Released With Crash Fixes",
+          "description": "<p>Explore the new Hyprland 0.54.3 release, packed with crucial crash fixes to enhance your Wayland compositor performance. Don't miss out on these updates!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/hyprland-0-54-3-wayland-compositor-released-with-crash-fixes/\">Hyprland 0.54.3 Wayland Compositor Released With Crash Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/hyprland-0-54-3-wayland-compositor-released-with-crash-fixes/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 08:27:42 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Ubuntu 26.04 LTS Beta: GNOME 50, Kernel 7.0 and a Bold Step Into the Future",
+          "description": "<p>Unveil the power of Ubuntu 26.04 LTS Beta. With GNOME 50 and Kernel 7.0, this release promises bold advancements and a seamless user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/ubuntu-26-04-lts-beta-gnome-50-kernel-7-0-and-a-bold-step-into-the-future/\">Ubuntu 26.04 LTS Beta: GNOME 50, Kernel 7.0 and a Bold Step Into the Future</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/ubuntu-26-04-lts-beta-gnome-50-kernel-7-0-and-a-bold-step-into-the-future/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 08:20:52 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Red Hat Warns of Backdoored Linux Tool: CVE-2024-3094 Puts Systems at Risk",
+          "description": "<p>Red Hat alerts users about CVE-2024-3094, a backdoored Linux tool that jeopardizes system security. Learn how to protect your systems effectively.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/red-hat-warns-of-backdoored-linux-tool-cve-2024-3094-puts-systems-at-risk/\">Red Hat Warns of Backdoored Linux Tool: CVE-2024-3094 Puts Systems at Risk</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/red-hat-warns-of-backdoored-linux-tool-cve-2024-3094-puts-systems-at-risk/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 08:12:34 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Ubuntu Rust Strategy Expands Again With ntpd-rs Proposal",
+          "description": "<p>Explore the latest advancements in Ubuntu's Rust strategy with the ntpd-rs proposal, aimed at improving time synchronization. Click to find out more!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/ubuntu-rust-strategy-expands-again-with-ntpd-rs-proposal/\">Ubuntu Rust Strategy Expands Again With ntpd-rs Proposal</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/ubuntu-rust-strategy-expands-again-with-ntpd-rs-proposal/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 08:08:04 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Grafana Loki 3.7 Log Aggregation System Released with Helm Chart Changes",
+          "description": "<p>Discover the latest features of Grafana Loki 3.7, including significant Helm chart updates for enhanced log aggregation. Stay ahead in monitoring!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/grafana-loki-3-7-log-aggregation-system-released-with-helm-chart-changes/\">Grafana Loki 3.7 Log Aggregation System Released with Helm Chart Changes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/grafana-loki-3-7-log-aggregation-system-released-with-helm-chart-changes/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 08:04:21 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "LibreOffice 26.2.2 Arrives with Over 80 Bug Fixes and Stability Improvements",
+          "description": "<p>Discover the latest LibreOffice 26.2.2 update, featuring over 80 bug fixes and stability improvements for a smoother, more efficient experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/libreoffice-26-2-2-arrives-with-over-80-bug-fixes-and-stability-improvements/\">LibreOffice 26.2.2 Arrives with Over 80 Bug Fixes and Stability Improvements</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/libreoffice-26-2-2-arrives-with-over-80-bug-fixes-and-stability-improvements/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 15 Apr 2026 07:58:58 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Pin Clustering in .NET MAUI Maps",
+          "description": "<p>.NET MAUI 11 adds pin clustering to the Map control, automatically grouping nearby pins into cluster markers. Learn how to enable clustering, create separate clustering groups, and handle cluster taps on Android and iOS.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/pin-clustering-in-dotnet-maui-maps/\">Pin Clustering in .NET MAUI Maps</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/pin-clustering-in-dotnet-maui-maps/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Wed, 15 Apr 2026 16:45:00 +0000",
+          "author": "David Ortinau"
+        },
+        {
+          "title": "Build a personal organization command center with GitHub Copilot CLI",
+          "description": "<p>Learn about the productivity tool one GitHub engineer built, and how AI supported the development process.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/build-a-personal-organization-command-center-with-github-copilot-cli/\">Build a personal organization command center with GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/ai-and-ml/github-copilot/build-a-personal-organization-command-center-with-github-copilot-cli/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Wed, 15 Apr 2026 17:00:00 +0000",
+          "author": "Cassidy Williams"
+        },
+        {
+          "title": "Developer policy update: Intermediary liability, copyright, and transparency",
+          "description": "<p>We’re sharing recent policy updates that developers should know about, updating our Transparency Center with the full year of 2025 data, and looking to what’s ahead.</p>\n<p>The post <a href=\"https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/\">Developer policy update: Intermediary liability, copyright, and transparency</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Wed, 15 Apr 2026 15:00:00 +0000",
+          "author": "Margaret Tucker"
+        },
+        {
+          "title": "Gemini 3.1 Flash TTS: the next generation of expressive AI speech",
+          "description": "Our newest audio model introduces granular audio tags that give you precise control to direct AI speech for expressive audio generation.",
+          "link": "https://deepmind.google/blog/gemini-3-1-flash-tts-the-next-generation-of-expressive-ai-speech/",
+          "source": "DeepMind",
+          "category": "IA",
+          "published": "Wed, 15 Apr 2026 16:03:19 +0000",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Build a personal organization command center with GitHub Copilot CLI",
+          "description": "<p>Learn about the productivity tool one GitHub engineer built, and how AI supported the development process.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/build-a-personal-organization-command-center-with-github-copilot-cli/\">Build a personal organization command center with GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/ai-and-ml/github-copilot/build-a-personal-organization-command-center-with-github-copilot-cli/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Wed, 15 Apr 2026 17:00:00 +0000",
+          "author": "Cassidy Williams"
+        },
+        {
+          "title": "Developer policy update: Intermediary liability, copyright, and transparency",
+          "description": "<p>We’re sharing recent policy updates that developers should know about, updating our Transparency Center with the full year of 2025 data, and looking to what’s ahead.</p>\n<p>The post <a href=\"https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/\">Developer policy update: Intermediary liability, copyright, and transparency</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Wed, 15 Apr 2026 15:00:00 +0000",
+          "author": "Margaret Tucker"
+        },
+        {
           "title": "Why We Chose the Harder Path: Docker Hardened Images, One Year Later",
-          "description": "We're coming up on a year since launching Docker Hardened Images (DHI) this May, and crossing a milestone earlier this month made me stop and reflect on what we've actually been building. Earlier this month, we crossed over 500k daily pulls of DHIs, and over 25k continuously patched OS level artifacts in our SLSA Level...",
+          "description": "We're coming up on a year since launching Docker Hardened Images (DHI) last May, and crossing a milestone earlier this month made me stop and reflect on what we've actually been building. Earlier this month, we crossed over 500k daily pulls of DHIs, and over 25k continuously patched OS level artifacts in our SLSA Build...",
           "link": "https://www.docker.com/blog/why-we-chose-the-harder-path-docker-hardened-images-one-year-later/",
           "source": "Docker Blog",
           "category": "Infrastructure",
           "published": "Tue, 14 Apr 2026 21:48:03 +0000",
           "author": "Aditya Tripathi"
-        },
-        {
-          "title": "Raspberry Pi Imager 2.0.7 Released With UI Fixes and Improved Device Support",
-          "description": "<p>Discover the latest Raspberry Pi Imager 2.0.7 update featuring UI fixes and enhanced device support. Upgrade your imaging experience today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/raspberry-pi-imager-2-0-7-released-with-ui-fixes-and-improved-device-support/\">Raspberry Pi Imager 2.0.7 Released With UI Fixes and Improved Device Support</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/raspberry-pi-imager-2-0-7-released-with-ui-fixes-and-improved-device-support/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 12:12:24 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Tails 7.6 Introduces Automatic Tor Bridges to Bypass Censorship",
-          "description": "<p>Discover Tails 7.6's new feature: Automatic Tor Bridges. Learn how it helps users bypass censorship and enhance online privacy effortlessly.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/tails-7-6-introduces-automatic-tor-bridges-to-bypass-censorship/\">Tails 7.6 Introduces Automatic Tor Bridges to Bypass Censorship</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/tails-7-6-introduces-automatic-tor-bridges-to-bypass-censorship/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 12:08:45 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Canonical Plans Controversial GRUB Changes for Ubuntu 26.10 Secure Boot",
-          "description": "<p>Explore the implications of Canonical's GRUB changes in Ubuntu 26.10 Secure Boot. Stay informed about the latest updates and their potential effects on your setup.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/canonical-plans-controversial-grub-changes-for-ubuntu-26-10-secure-boot/\">Canonical Plans Controversial GRUB Changes for Ubuntu 26.10 Secure Boot</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/canonical-plans-controversial-grub-changes-for-ubuntu-26-10-secure-boot/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 12:05:10 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Pay2Key Returns: A Deep Dive into the Linux Ransomware Targeting Servers and Cloud Infrastructure",
-          "description": "<p>Explore the resurgence of Pay2Key, the Linux ransomware targeting servers and cloud infrastructure. Learn about its impact and prevention strategies.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/pay2key-returns-a-deep-dive-into-the-linux-ransomware-targeting-servers-and-cloud-infrastructure/\">Pay2Key Returns: A Deep Dive into the Linux Ransomware Targeting Servers and Cloud Infrastructure</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/pay2key-returns-a-deep-dive-into-the-linux-ransomware-targeting-servers-and-cloud-infrastructure/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 11:58:11 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "VitruvianOS 0.3 Debuts as Haiku-Inspired Linux OS Without X11 or Wayland",
-          "description": "<p>Explore the debut of VitruvianOS 0.3, a Haiku-inspired Linux OS that eliminates X11 and Wayland for a streamlined, efficient user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/vitruvianos-0-3-debuts-as-haiku-inspired-linux-os-without-x11-or-wayland/\">VitruvianOS 0.3 Debuts as Haiku-Inspired Linux OS Without X11 or Wayland</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/vitruvianos-0-3-debuts-as-haiku-inspired-linux-os-without-x11-or-wayland/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 11:54:48 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "After 26 Years at EFF, Cindy Cohn Is Handing Reins to Nicole Ozer",
-          "description": "<p>After 26 impactful years at EFF, Cindy Cohn passes the leadership to Nicole Ozer. Discover the future direction of digital rights advocacy.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/after-26-years-at-eff-cindy-cohn-is-handing-reins-to-nicole-ozer/\">After 26 Years at EFF, Cindy Cohn Is Handing Reins to Nicole Ozer</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/after-26-years-at-eff-cindy-cohn-is-handing-reins-to-nicole-ozer/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 11:51:38 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Firefox 150 Promises Support for the GTK Emoji Picker on Linux, Beta Out Now",
-          "description": "<p>Discover Firefox's latest update: version 150 now supports the GTK Emoji Picker on Linux. Explore the new features in the beta release today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/firefox-150-promises-support-for-the-gtk-emoji-picker-on-linux-beta-out-now/\">Firefox 150 Promises Support for the GTK Emoji Picker on Linux, Beta Out Now</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/firefox-150-promises-support-for-the-gtk-emoji-picker-on-linux-beta-out-now/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 11:47:38 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Master Key for Linux’s Different Take on Password Management",
-          "description": "<p>Master Key for Linux offers an innovative solution for password management, combining security and usability. Learn how it can streamline your online experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/master-key-for-linuxs-different-take-on-password-management/\">Master Key for Linux’s Different Take on Password Management</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/master-key-for-linuxs-different-take-on-password-management/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 11:39:25 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Oracle Releases Unbreakable Enterprise Kernel 8.2 Based on Linux 6.12 LTS",
-          "description": "<p>Discover Oracle's Unbreakable Enterprise Kernel 8.2, built on Linux 6.12 LT, offering enhanced performance and security for enterprise applications.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/oracle-releases-unbreakable-enterprise-kernel-8-2-based-on-linux-6-12-lts/\">Oracle Releases Unbreakable Enterprise Kernel 8.2 Based on Linux 6.12 LTS</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/oracle-releases-unbreakable-enterprise-kernel-8-2-based-on-linux-6-12-lts/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 11:34:29 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Radiotrope – AI agent-enabled Internet Radio Player",
-          "description": "<p>Experience the future of radio with Radiotrope, an AI-driven Internet Radio Player that curates your favorite stations and enhances your audio enjoyment.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/radiotrope-ai-agent-enabled-internet-radio-player/\">Radiotrope &#8211; AI agent-enabled Internet Radio Player</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/radiotrope-ai-agent-enabled-internet-radio-player/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 14 Apr 2026 11:31:29 +0000",
-          "author": "Content Operations"
         },
         {
           "title": ".NET and .NET Framework April 2026 servicing releases updates",
@@ -2438,24 +2492,6 @@
           "author": "Inconnu"
         },
         {
-          "title": "Securing the open source supply chain across GitHub",
-          "description": "<p>Recent attacks on open source focus on exfiltrating secrets; here are the prevention steps you can take today, plus a look at the security capabilities GitHub is working on.</p>\n<p>The post <a href=\"https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/\">Securing the open source supply chain across GitHub</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Wed, 01 Apr 2026 19:20:12 +0000",
-          "author": "Zachary Steindler"
-        },
-        {
-          "title": "Run multiple agents at once with /fleet in Copilot CLI",
-          "description": "<p>/fleet lets Copilot CLI dispatch multiple agents in parallel. Learn how to write prompts that split work across files, declare dependencies, and avoid common pitfalls.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/\">Run multiple agents at once with /fleet in Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Wed, 01 Apr 2026 15:00:00 +0000",
-          "author": "Matt Nigh"
-        },
-        {
           "title": "Announcing managed daemon support for Amazon ECS Managed Instances",
           "description": "Amazon ECS Managed Daemons gives platform engineers independent control over monitoring, logging, and tracing agents without application team coordination, ensuring consistent daemon deployment and comprehensive host-level observability at scale.",
           "link": "https://aws.amazon.com/blogs/aws/announcing-managed-daemon-support-for-amazon-ecs-managed-instances/",
@@ -2472,24 +2508,6 @@
           "category": "Cloud",
           "published": "Wed, 01 Apr 2026 16:00:00 +0000",
           "author": "Igal Figlin"
-        },
-        {
-          "title": "Securing the open source supply chain across GitHub",
-          "description": "<p>Recent attacks on open source focus on exfiltrating secrets; here are the prevention steps you can take today, plus a look at the security capabilities GitHub is working on.</p>\n<p>The post <a href=\"https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/\">Securing the open source supply chain across GitHub</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Wed, 01 Apr 2026 19:20:12 +0000",
-          "author": "Zachary Steindler"
-        },
-        {
-          "title": "Run multiple agents at once with /fleet in Copilot CLI",
-          "description": "<p>/fleet lets Copilot CLI dispatch multiple agents in parallel. Learn how to write prompts that split work across files, declare dependencies, and avoid common pitfalls.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/\">Run multiple agents at once with /fleet in Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Wed, 01 Apr 2026 15:00:00 +0000",
-          "author": "Matt Nigh"
         },
         {
           "title": "Run and Iterate on LLMs Faster with Docker Model Runner on DGX Station",
@@ -2778,15 +2796,6 @@
           "category": "Cloud",
           "published": "Fri, 13 Mar 2026 12:58:39 +0000",
           "author": "Sébastien Stormacq"
-        },
-        {
-          "title": "Modernize .NET Anywhere with GitHub Copilot",
-          "description": "<p>See how the modernize-dotnet agent helps you assess apps, create upgrade plans, and modernize .NET projects from Visual Studio, VS Code, GitHub Copilot CLI, and GitHub.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/modernize-dotnet-anywhere-with-ghcp/\">Modernize .NET Anywhere with GitHub Copilot</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/modernize-dotnet-anywhere-with-ghcp/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Thu, 12 Mar 2026 17:05:00 +0000",
-          "author": "Mika Dumont"
         },
         {
           "title": "Introducing account regional namespaces for Amazon S3 general purpose buckets",
@@ -3506,15 +3515,6 @@
           "source": "DeepMind",
           "category": "IA",
           "published": "Fri, 24 Oct 2025 03:12:29 +0000",
-          "author": "Inconnu"
-        },
-        {
-          "title": "Aeneas transforms how historians connect the past",
-          "description": "Introducing the first model for contextualizing ancient inscriptions, designed to help historians better interpret, attribute and restore fragmentary texts.",
-          "link": "https://deepmind.google/blog/aeneas-transforms-how-historians-connect-the-past/",
-          "source": "DeepMind",
-          "category": "IA",
-          "published": "Fri, 24 Oct 2025 02:58:37 +0000",
           "author": "Inconnu"
         },
         {
