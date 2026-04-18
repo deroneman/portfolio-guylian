@@ -1,9 +1,99 @@
 {
-  "lastUpdate": "2026-04-17T08:49:37.026534",
+  "lastUpdate": "2026-04-18T08:02:44.876421",
   "articles": {
     "infrastructure": {
       "icon": "🏗️",
       "articles": [
+        {
+          "title": "Proudly Canadian Maple Linux 1.4: Who Knew Tux Could Be So Polite?",
+          "description": "<p>Discover Proudly Canadian Maple Linux 1.4, where Tux embodies politeness. Explore its features and experience a unique blend of functionality and charm.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/proudly-canadian-maple-linux-1-4-who-knew-tux-could-be-so-polite/\">Proudly Canadian Maple Linux 1.4: Who Knew Tux Could Be So Polite?</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/proudly-canadian-maple-linux-1-4-who-knew-tux-could-be-so-polite/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 09:36:31 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Springing into AI: PyTorch Conference Europe & ICLR 2026",
+          "description": "<p>Join us at the Springing into AI: PyTorch Conference Europe &#038; ICLR 2026. Discover cutting-edge research, network with experts, and shape the future of AI.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/springing-into-ai-pytorch-conference-europe-iclr-2026/\">Springing into AI: PyTorch Conference Europe &amp; ICLR 2026</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/springing-into-ai-pytorch-conference-europe-iclr-2026/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 09:32:44 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Linux Continues to Make History, Hitting 5% Usage on Steam",
+          "description": "<p>Learn about Linux's remarkable journey as it achieves 5% usage on Steam, showcasing its increasing popularity and influence in the gaming industry.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linux-continues-to-make-history-hitting-5-usage-on-steam/\">Linux Continues to Make History, Hitting 5% Usage on Steam</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/linux-continues-to-make-history-hitting-5-usage-on-steam/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 09:31:05 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "OpenSSH 10.3 Brings Agent Forwarding Updates And Improvements",
+          "description": "<p>Learn about the significant enhancements in OpenSSH 10.3, focusing on agent forwarding updates that boost security and improve user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/openssh-10-3-brings-agent-forwarding-updates-and-improvements/\">OpenSSH 10.3 Brings Agent Forwarding Updates And Improvements</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/openssh-10-3-brings-agent-forwarding-updates-and-improvements/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 09:12:58 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Netrunner 26 Released with XLibre Xserver, Based on Debian 13 “Trixie”",
+          "description": "<p>Discover Netrunner 26, featuring the XLibre Xserver and built on Debian 13 “Trixie.” Experience enhanced performance and user-friendly features today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/netrunner-26-released-with-xlibre-xserver-based-on-debian-13-trixie/\">Netrunner 26 Released with XLibre Xserver, Based on Debian 13 “Trixie”</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/netrunner-26-released-with-xlibre-xserver-based-on-debian-13-trixie/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 09:04:52 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Must Be April Fools’ Day. Gentoo Says It’s Moving to Hurd",
+          "description": "<p>Gentoo has a Hurd port you can boot today, plus a straight-faced promise to ditch Linux by year’s end. We’re guessing only one of those things is real.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/must-be-april-fools-day-gentoo-says-its-moving-to-hurd/\">Must Be April Fools’ Day. Gentoo Says It’s Moving to Hurd</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/must-be-april-fools-day-gentoo-says-its-moving-to-hurd/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 08:59:36 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Komodo 2.0 Build and Deploy Tool Adds Docker Swarm Support",
+          "description": "<p>Elevate your development process with Komodo 2.0, featuring Docker Swarm support for seamless builds and deployments. Optimize your workflow today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/komodo-2-0-build-and-deploy-tool-adds-docker-swarm-support/\">Komodo 2.0 Build and Deploy Tool Adds Docker Swarm Support</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/komodo-2-0-build-and-deploy-tool-adds-docker-swarm-support/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 08:21:41 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Daphne – Audio Player and Music Library Manager for Linux",
+          "description": "<p>Discover Daphne, the ultimate audio player and music library manager for Linux. Organize, play, and enjoy your music collection effortlessly.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/daphne-audio-player-and-music-library-manager-for-linux/\">Daphne &#8211; Audio Player and Music Library Manager for Linux</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/daphne-audio-player-and-music-library-manager-for-linux/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 08:18:20 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Linux Kernel 7.0 RC6: Fixes, Improvements, and Installation Guide",
+          "description": "<p>Explore Linux Kernel 7.0 RC6 with essential fixes and enhancements. Follow our detailed installation guide to optimize your system effortlessly.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linux-kernel-7-0-rc6-fixes-improvements-and-installation-guide/\">Linux Kernel 7.0 RC6: Fixes, Improvements, and Installation Guide</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/linux-kernel-7-0-rc6-fixes-improvements-and-installation-guide/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 08:11:11 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "AerynOS 2026.03 Released with the Latest GNOME 50 Desktop Environment",
+          "description": "<p>AerynOS 2026.03 is here! Explore the new GNOME 50 desktop environment, offering improved features and a modern design for an exceptional user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/aerynos-2026-03-released-with-the-latest-gnome-50-desktop-environment/\">AerynOS 2026.03 Released with the Latest GNOME 50 Desktop Environment</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/aerynos-2026-03-released-with-the-latest-gnome-50-desktop-environment/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 08:05:13 +0000",
+          "author": "Content Operations"
+        },
         {
           "title": "Why MicroVMs: The Architecture Behind Docker Sandboxes",
           "description": "Last week, we launched Docker Sandboxes with a bold goal: to deliver the strongest agent isolation in the market. This post unpacks that claim, how microVMs enable it, and some of the architectural choices we made in this approach. The Problem With Every Other Approach Every sandboxing model asks you to give something up. We...",
@@ -12,96 +102,6 @@
           "category": "Infrastructure",
           "published": "Thu, 16 Apr 2026 17:14:19 +0000",
           "author": "Srini Sekaran"
-        },
-        {
-          "title": "Archinstall 4.0 Arch Linux Installer Released with New Textual UI",
-          "description": "<p>Archinstall 4.0 is here! Explore the latest Arch Linux installer with a user-friendly textual UI, making installations easier and more efficient than ever.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/archinstall-4-0-arch-linux-installer-released-with-new-textual-ui/\">Archinstall 4.0 Arch Linux Installer Released with New Textual UI</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/archinstall-4-0-arch-linux-installer-released-with-new-textual-ui/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 12:12:47 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Debian-Based Elive Linux Distro Is Back with First Stable Release in Seven Years",
-          "description": "<p>Elive Linux is back! Experience the first stable release in seven years of this Debian-based distro, packed with exciting features and improvements.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/debian-based-elive-linux-distro-is-back-with-first-stable-release-in-seven-years/\">Debian-Based Elive Linux Distro Is Back with First Stable Release in Seven Years</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/debian-based-elive-linux-distro-is-back-with-first-stable-release-in-seven-years/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 12:08:46 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Coreboot 26.03 Open-Source Firmware Adds Full Support for Intel PantherLake SoCs",
-          "description": "<p>Discover Coreboot 26.03, the latest open-source firmware that now fully supports Intel PantherLake SoCs, enhancing performance and compatibility.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/coreboot-26-03-open-source-firmware-adds-full-support-for-intel-pantherlake-socs/\">Coreboot 26.03 Open-Source Firmware Adds Full Support for Intel PantherLake SoCs</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/coreboot-26-03-open-source-firmware-adds-full-support-for-intel-pantherlake-socs/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 12:02:45 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "4MLinux 51.0 Released with Improved Support for ZX Spectrum and Atari Music",
-          "description": "<p>Discover the latest 4MLinux 51.0 release, featuring enhanced support for ZX Spectrum and Atari music. Explore new features and improvements today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/4mlinux-51-0-released-with-improved-support-for-zx-spectrum-and-atari-music/\">4MLinux 51.0 Released with Improved Support for ZX Spectrum and Atari Music</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/4mlinux-51-0-released-with-improved-support-for-zx-spectrum-and-atari-music/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 11:56:36 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Rspamd 4.0 Spam Filtering System Released With checkv3 Protocol",
-          "description": "<p>Discover the new Rspamd 4.0 release featuring the advanced checkv3 protocol. Enhance your spam filtering capabilities with this powerful system today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/rspamd-4-0-spam-filtering-system-released-with-checkv3-protocol/\">Rspamd 4.0 Spam Filtering System Released With checkv3 Protocol</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/rspamd-4-0-spam-filtering-system-released-with-checkv3-protocol/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 11:52:56 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "AI is Open Source’s Big Moment. Is it Ready?",
-          "description": "<p>Explore the transformative potential of open-source AI. Is the technology ready to revolutionize industries? Discover insights and expert opinions here.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/ai-is-open-sources-big-moment-is-it-ready/\">AI is Open Source’s Big Moment. Is it Ready?</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/ai-is-open-sources-big-moment-is-it-ready/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 11:25:04 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Grocy – ERP Beyond Your Fridge",
-          "description": "<p>Transform your kitchen management with Grocy. This ERP tool helps you track inventory, plan meals, and streamline shopping for a more efficient lifestyle.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/grocy-erp-beyond-your-fridge/\">Grocy – ERP Beyond Your Fridge</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/grocy-erp-beyond-your-fridge/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 11:13:13 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "How to Install PIP on Ubuntu 26.04",
-          "description": "<p>Learn how to install PIP on Ubuntu 26.04 with our step-by-step guide. Simplify your Python package management today and enhance your development experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-install-pip-on-ubuntu-26-04/\">How to Install PIP on Ubuntu 26.04</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/how-to-install-pip-on-ubuntu-26-04/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 11:09:22 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Shipsec Studio Brings Open-Source Workflow Orchestration to Security Operations",
-          "description": "<p>Transform your security operations with Shipsec Studio's open-source workflow orchestration, delivering efficiency and effectiveness in managing security tasks.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/shipsec-studio-brings-open-source-workflow-orchestration-to-security-operations/\">Shipsec Studio Brings Open-Source Workflow Orchestration to Security Operations</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/shipsec-studio-brings-open-source-workflow-orchestration-to-security-operations/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 11:05:04 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Ubuntu MATE Founder Martin Wimpress Steps Back After 12 Years",
-          "description": "<p>After 12 years of leadership, Ubuntu MATE founder Martin Wimpress steps back. Discover the impact of his contributions and the future of the project.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/ubuntu-mate-founder-martin-wimpress-steps-back-after-12-years/\">Ubuntu MATE Founder Martin Wimpress Steps Back After 12 Years</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/ubuntu-mate-founder-martin-wimpress-steps-back-after-12-years/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 11:01:53 +0000",
-          "author": "Content Operations"
         },
         {
           "title": "Why We Chose the Harder Path: Docker Hardened Images, One Year Later",
@@ -640,6 +640,24 @@
       "icon": "💻",
       "articles": [
         {
+          "title": "Building an emoji list generator with the GitHub Copilot CLI",
+          "description": "<p>See how we created an emoji list generator during the Rubber Duck Thursday stream.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/\">Building an emoji list generator with the GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Fri, 17 Apr 2026 18:00:00 +0000",
+          "author": "Cassidy Williams"
+        },
+        {
+          "title": "Bringing more transparency to GitHub’s status page",
+          "description": "<p>Changes to the status page will provide more specific data, so you'll have better insight into the overall health of the platform.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/\">Bringing more transparency to GitHub’s status page</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Fri, 17 Apr 2026 16:00:00 +0000",
+          "author": "Jakub Oleksy"
+        },
+        {
           "title": "How GitHub uses eBPF to improve deployment safety",
           "description": "<p>Learn how Github uses eBPF to detect and prevent circular dependencies in its deployment tooling. </p>\n<p>The post <a href=\"https://github.blog/engineering/infrastructure/how-github-uses-ebpf-to-improve-deployment-safety/\">How GitHub uses eBPF to improve deployment safety</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
           "link": "https://github.blog/engineering/infrastructure/how-github-uses-ebpf-to-improve-deployment-safety/",
@@ -739,15 +757,6 @@
           "author": "Jakub Oleksy"
         },
         {
-          "title": "GitHub Universe is back: We want you to take the stage",
-          "description": "<p>Get inspired by five of the most memorable, magical, and quirky Universe sessions to date.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/\">GitHub Universe is back: We want you to take the stage</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Wed, 08 Apr 2026 16:35:46 +0000",
-          "author": "Rachel Cohen"
-        },
-        {
           "title": "Your Migration’s Source of Truth: The Modernization Assessment",
           "description": "<p>Introducing GitHub Copilot Modernization and diving into the assessment report as part of cloud modernization process</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/your-migrations-source-of-truth-the-modernization-assessment/\">Your Migration&#8217;s Source of Truth: The Modernization Assessment</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
           "link": "https://devblogs.microsoft.com/dotnet/your-migrations-source-of-truth-the-modernization-assessment/",
@@ -764,15 +773,6 @@
           "category": "Développement",
           "published": "Tue, 07 Apr 2026 17:00:00 +0000",
           "author": "Daniel Roth"
-        },
-        {
-          "title": "GitHub Copilot CLI combines model families for a second opinion",
-          "description": "<p>Discover how Rubber Duck provides a different perspective to GitHub Copilot CLI. </p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/\">GitHub Copilot CLI combines model families for a second opinion</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Mon, 06 Apr 2026 21:53:49 +0000",
-          "author": "Nick McKenna"
         },
         {
           "title": "Explore union types in C# 15",
@@ -1483,6 +1483,15 @@
           "author": "Sébastien Stormacq"
         },
         {
+          "title": "Optimize object storage costs automatically with smart tier—now generally available",
+          "description": "<p>By continuously optimizing data placement, smart tier ensures your storage costs are aligned with actual usage.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/optimize-object-storage-costs-automatically-with-smart-tier-now-generally-available/\">Optimize object storage costs automatically with smart tier—now generally available</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/optimize-object-storage-costs-automatically-with-smart-tier-now-generally-available/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Tue, 14 Apr 2026 15:00:00 +0000",
+          "author": "Aung Oo"
+        },
+        {
           "title": "AWS Weekly Roundup: Claude Mythos Preview in Amazon Bedrock, AWS Agent Registry, and more (April 13, 2026)",
           "description": "In my last Week in Review post, I mentioned how much time I’ve been spending on AI-Driven Development Lifecycle (AI-DLC) workshops with customers this year. A common theme in those sessions is the need for better cost visibility. Teams are moving fast with AI, but as they go from experimenting to full production, finance and […]",
           "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-mythos-preview-in-amazon-bedrock-aws-agent-registry-and-more-april-13-2026/",
@@ -1672,15 +1681,6 @@
           "author": "Taylor Jacobsen"
         },
         {
-          "title": "Advancing agentic AI with Microsoft databases across a unified data estate",
-          "description": "<p>Built on a consistent Microsoft SQL foundation from on premises to the cloud, Azure SQL brings AI capabilities directly into your database experience.</p>\n<p>The post <a href=\"https://www.microsoft.com/en-us/sql-server/blog/2026/03/18/advancing-agentic-ai-with-microsoft-databases-across-a-unified-data-estate/\">Advancing agentic AI with Microsoft databases across a unified data estate</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://www.microsoft.com/en-us/sql-server/blog/2026/03/18/advancing-agentic-ai-with-microsoft-databases-across-a-unified-data-estate/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Wed, 18 Mar 2026 12:50:00 +0000",
-          "author": "Shireesh Thota"
-        },
-        {
           "title": "AWS Weekly Roundup: Amazon S3 turns 20, Amazon Route 53 Global Resolver general availability, and more (March 16, 2026)",
           "description": "Twenty years ago this past week, Amazon S3 launched publicly on March 14, 2006. While Amazon Simple Storage Service is often considered the foundational storage service that defined cloud infrastructure, what began as a simple object storage service has grown into something far larger in scope and scale. As of March 2026, S3 stores more […]",
           "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-turns-20-amazon-route-53-global-resolver-general-availability-and-more-march-16-2026/",
@@ -1745,7 +1745,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148331",
+          "published": "2026-04-18T08:02:42.207469",
           "author": "prombot"
         },
         {
@@ -1754,7 +1754,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148327",
+          "published": "2026-04-18T08:02:42.207455",
           "author": "prombot"
         },
         {
@@ -1763,7 +1763,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148323",
+          "published": "2026-04-18T08:02:42.207450",
           "author": "prombot"
         },
         {
@@ -1772,7 +1772,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148318",
+          "published": "2026-04-18T08:02:42.207444",
           "author": "roidelapluie"
         },
         {
@@ -1781,7 +1781,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148314",
+          "published": "2026-04-18T08:02:42.207439",
           "author": "roidelapluie"
         },
         {
@@ -1790,7 +1790,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148310",
+          "published": "2026-04-18T08:02:42.207434",
           "author": "prombot"
         },
         {
@@ -1799,7 +1799,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148306",
+          "published": "2026-04-18T08:02:42.207428",
           "author": "roidelapluie"
         },
         {
@@ -1808,7 +1808,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148301",
+          "published": "2026-04-18T08:02:42.207423",
           "author": "roidelapluie"
         },
         {
@@ -1817,7 +1817,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148296",
+          "published": "2026-04-18T08:02:42.207417",
           "author": "prombot"
         },
         {
@@ -1826,8 +1826,26 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148283",
+          "published": "2026-04-18T08:02:42.207403",
           "author": "prombot"
+        },
+        {
+          "title": "Building an emoji list generator with the GitHub Copilot CLI",
+          "description": "<p>See how we created an emoji list generator during the Rubber Duck Thursday stream.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/\">Building an emoji list generator with the GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Fri, 17 Apr 2026 18:00:00 +0000",
+          "author": "Cassidy Williams"
+        },
+        {
+          "title": "Bringing more transparency to GitHub’s status page",
+          "description": "<p>Changes to the status page will provide more specific data, so you'll have better insight into the overall health of the platform.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/\">Bringing more transparency to GitHub’s status page</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Fri, 17 Apr 2026 16:00:00 +0000",
+          "author": "Jakub Oleksy"
         },
         {
           "title": "How GitHub uses eBPF to improve deployment safety",
@@ -1900,24 +1918,6 @@
           "category": "DevOps",
           "published": "Thu, 09 Apr 2026 02:21:17 +0000",
           "author": "Jakub Oleksy"
-        },
-        {
-          "title": "GitHub Universe is back: We want you to take the stage",
-          "description": "<p>Get inspired by five of the most memorable, magical, and quirky Universe sessions to date.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/\">GitHub Universe is back: We want you to take the stage</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Wed, 08 Apr 2026 16:35:46 +0000",
-          "author": "Rachel Cohen"
-        },
-        {
-          "title": "GitHub Copilot CLI combines model families for a second opinion",
-          "description": "<p>Discover how Rubber Duck provides a different perspective to GitHub Copilot CLI. </p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/\">GitHub Copilot CLI combines model families for a second opinion</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Mon, 06 Apr 2026 21:53:49 +0000",
-          "author": "Nick McKenna"
         }
       ]
     },
@@ -1930,7 +1930,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148331",
+          "published": "2026-04-18T08:02:42.207469",
           "author": "prombot"
         },
         {
@@ -1939,7 +1939,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148327",
+          "published": "2026-04-18T08:02:42.207455",
           "author": "prombot"
         },
         {
@@ -1948,7 +1948,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148323",
+          "published": "2026-04-18T08:02:42.207450",
           "author": "prombot"
         },
         {
@@ -1957,7 +1957,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148318",
+          "published": "2026-04-18T08:02:42.207444",
           "author": "roidelapluie"
         },
         {
@@ -1966,7 +1966,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148314",
+          "published": "2026-04-18T08:02:42.207439",
           "author": "roidelapluie"
         },
         {
@@ -1975,7 +1975,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148310",
+          "published": "2026-04-18T08:02:42.207434",
           "author": "prombot"
         },
         {
@@ -1984,7 +1984,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148306",
+          "published": "2026-04-18T08:02:42.207428",
           "author": "roidelapluie"
         },
         {
@@ -1993,7 +1993,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148301",
+          "published": "2026-04-18T08:02:42.207423",
           "author": "roidelapluie"
         },
         {
@@ -2002,7 +2002,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148296",
+          "published": "2026-04-18T08:02:42.207417",
           "author": "prombot"
         },
         {
@@ -2011,8 +2011,134 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-17T08:49:36.148283",
+          "published": "2026-04-18T08:02:42.207403",
           "author": "prombot"
+        },
+        {
+          "title": "Proudly Canadian Maple Linux 1.4: Who Knew Tux Could Be So Polite?",
+          "description": "<p>Discover Proudly Canadian Maple Linux 1.4, where Tux embodies politeness. Explore its features and experience a unique blend of functionality and charm.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/proudly-canadian-maple-linux-1-4-who-knew-tux-could-be-so-polite/\">Proudly Canadian Maple Linux 1.4: Who Knew Tux Could Be So Polite?</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/proudly-canadian-maple-linux-1-4-who-knew-tux-could-be-so-polite/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 09:36:31 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Springing into AI: PyTorch Conference Europe & ICLR 2026",
+          "description": "<p>Join us at the Springing into AI: PyTorch Conference Europe &#038; ICLR 2026. Discover cutting-edge research, network with experts, and shape the future of AI.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/springing-into-ai-pytorch-conference-europe-iclr-2026/\">Springing into AI: PyTorch Conference Europe &amp; ICLR 2026</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/springing-into-ai-pytorch-conference-europe-iclr-2026/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 09:32:44 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Linux Continues to Make History, Hitting 5% Usage on Steam",
+          "description": "<p>Learn about Linux's remarkable journey as it achieves 5% usage on Steam, showcasing its increasing popularity and influence in the gaming industry.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linux-continues-to-make-history-hitting-5-usage-on-steam/\">Linux Continues to Make History, Hitting 5% Usage on Steam</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/linux-continues-to-make-history-hitting-5-usage-on-steam/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 09:31:05 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "OpenSSH 10.3 Brings Agent Forwarding Updates And Improvements",
+          "description": "<p>Learn about the significant enhancements in OpenSSH 10.3, focusing on agent forwarding updates that boost security and improve user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/openssh-10-3-brings-agent-forwarding-updates-and-improvements/\">OpenSSH 10.3 Brings Agent Forwarding Updates And Improvements</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/openssh-10-3-brings-agent-forwarding-updates-and-improvements/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 09:12:58 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Netrunner 26 Released with XLibre Xserver, Based on Debian 13 “Trixie”",
+          "description": "<p>Discover Netrunner 26, featuring the XLibre Xserver and built on Debian 13 “Trixie.” Experience enhanced performance and user-friendly features today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/netrunner-26-released-with-xlibre-xserver-based-on-debian-13-trixie/\">Netrunner 26 Released with XLibre Xserver, Based on Debian 13 “Trixie”</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/netrunner-26-released-with-xlibre-xserver-based-on-debian-13-trixie/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 09:04:52 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Must Be April Fools’ Day. Gentoo Says It’s Moving to Hurd",
+          "description": "<p>Gentoo has a Hurd port you can boot today, plus a straight-faced promise to ditch Linux by year’s end. We’re guessing only one of those things is real.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/must-be-april-fools-day-gentoo-says-its-moving-to-hurd/\">Must Be April Fools’ Day. Gentoo Says It’s Moving to Hurd</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/must-be-april-fools-day-gentoo-says-its-moving-to-hurd/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 08:59:36 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Komodo 2.0 Build and Deploy Tool Adds Docker Swarm Support",
+          "description": "<p>Elevate your development process with Komodo 2.0, featuring Docker Swarm support for seamless builds and deployments. Optimize your workflow today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/komodo-2-0-build-and-deploy-tool-adds-docker-swarm-support/\">Komodo 2.0 Build and Deploy Tool Adds Docker Swarm Support</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/komodo-2-0-build-and-deploy-tool-adds-docker-swarm-support/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 08:21:41 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Daphne – Audio Player and Music Library Manager for Linux",
+          "description": "<p>Discover Daphne, the ultimate audio player and music library manager for Linux. Organize, play, and enjoy your music collection effortlessly.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/daphne-audio-player-and-music-library-manager-for-linux/\">Daphne &#8211; Audio Player and Music Library Manager for Linux</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/daphne-audio-player-and-music-library-manager-for-linux/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 08:18:20 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Linux Kernel 7.0 RC6: Fixes, Improvements, and Installation Guide",
+          "description": "<p>Explore Linux Kernel 7.0 RC6 with essential fixes and enhancements. Follow our detailed installation guide to optimize your system effortlessly.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linux-kernel-7-0-rc6-fixes-improvements-and-installation-guide/\">Linux Kernel 7.0 RC6: Fixes, Improvements, and Installation Guide</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/linux-kernel-7-0-rc6-fixes-improvements-and-installation-guide/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 08:11:11 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "AerynOS 2026.03 Released with the Latest GNOME 50 Desktop Environment",
+          "description": "<p>AerynOS 2026.03 is here! Explore the new GNOME 50 desktop environment, offering improved features and a modern design for an exceptional user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/aerynos-2026-03-released-with-the-latest-gnome-50-desktop-environment/\">AerynOS 2026.03 Released with the Latest GNOME 50 Desktop Environment</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/aerynos-2026-03-released-with-the-latest-gnome-50-desktop-environment/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 17 Apr 2026 08:05:13 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Building an emoji list generator with the GitHub Copilot CLI",
+          "description": "<p>See how we created an emoji list generator during the Rubber Duck Thursday stream.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/\">Building an emoji list generator with the GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Fri, 17 Apr 2026 18:00:00 +0000",
+          "author": "Cassidy Williams"
+        },
+        {
+          "title": "Bringing more transparency to GitHub’s status page",
+          "description": "<p>Changes to the status page will provide more specific data, so you'll have better insight into the overall health of the platform.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/\">Bringing more transparency to GitHub’s status page</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Fri, 17 Apr 2026 16:00:00 +0000",
+          "author": "Jakub Oleksy"
+        },
+        {
+          "title": "Building an emoji list generator with the GitHub Copilot CLI",
+          "description": "<p>See how we created an emoji list generator during the Rubber Duck Thursday stream.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/\">Building an emoji list generator with the GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Fri, 17 Apr 2026 18:00:00 +0000",
+          "author": "Cassidy Williams"
+        },
+        {
+          "title": "Bringing more transparency to GitHub’s status page",
+          "description": "<p>Changes to the status page will provide more specific data, so you'll have better insight into the overall health of the platform.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/\">Bringing more transparency to GitHub’s status page</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Fri, 17 Apr 2026 16:00:00 +0000",
+          "author": "Jakub Oleksy"
         },
         {
           "title": "Why MicroVMs: The Architecture Behind Docker Sandboxes",
@@ -2022,96 +2148,6 @@
           "category": "Infrastructure",
           "published": "Thu, 16 Apr 2026 17:14:19 +0000",
           "author": "Srini Sekaran"
-        },
-        {
-          "title": "Archinstall 4.0 Arch Linux Installer Released with New Textual UI",
-          "description": "<p>Archinstall 4.0 is here! Explore the latest Arch Linux installer with a user-friendly textual UI, making installations easier and more efficient than ever.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/archinstall-4-0-arch-linux-installer-released-with-new-textual-ui/\">Archinstall 4.0 Arch Linux Installer Released with New Textual UI</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/archinstall-4-0-arch-linux-installer-released-with-new-textual-ui/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 12:12:47 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Debian-Based Elive Linux Distro Is Back with First Stable Release in Seven Years",
-          "description": "<p>Elive Linux is back! Experience the first stable release in seven years of this Debian-based distro, packed with exciting features and improvements.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/debian-based-elive-linux-distro-is-back-with-first-stable-release-in-seven-years/\">Debian-Based Elive Linux Distro Is Back with First Stable Release in Seven Years</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/debian-based-elive-linux-distro-is-back-with-first-stable-release-in-seven-years/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 12:08:46 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Coreboot 26.03 Open-Source Firmware Adds Full Support for Intel PantherLake SoCs",
-          "description": "<p>Discover Coreboot 26.03, the latest open-source firmware that now fully supports Intel PantherLake SoCs, enhancing performance and compatibility.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/coreboot-26-03-open-source-firmware-adds-full-support-for-intel-pantherlake-socs/\">Coreboot 26.03 Open-Source Firmware Adds Full Support for Intel PantherLake SoCs</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/coreboot-26-03-open-source-firmware-adds-full-support-for-intel-pantherlake-socs/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 12:02:45 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "4MLinux 51.0 Released with Improved Support for ZX Spectrum and Atari Music",
-          "description": "<p>Discover the latest 4MLinux 51.0 release, featuring enhanced support for ZX Spectrum and Atari music. Explore new features and improvements today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/4mlinux-51-0-released-with-improved-support-for-zx-spectrum-and-atari-music/\">4MLinux 51.0 Released with Improved Support for ZX Spectrum and Atari Music</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/4mlinux-51-0-released-with-improved-support-for-zx-spectrum-and-atari-music/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 11:56:36 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Rspamd 4.0 Spam Filtering System Released With checkv3 Protocol",
-          "description": "<p>Discover the new Rspamd 4.0 release featuring the advanced checkv3 protocol. Enhance your spam filtering capabilities with this powerful system today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/rspamd-4-0-spam-filtering-system-released-with-checkv3-protocol/\">Rspamd 4.0 Spam Filtering System Released With checkv3 Protocol</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/rspamd-4-0-spam-filtering-system-released-with-checkv3-protocol/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 11:52:56 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "AI is Open Source’s Big Moment. Is it Ready?",
-          "description": "<p>Explore the transformative potential of open-source AI. Is the technology ready to revolutionize industries? Discover insights and expert opinions here.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/ai-is-open-sources-big-moment-is-it-ready/\">AI is Open Source’s Big Moment. Is it Ready?</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/ai-is-open-sources-big-moment-is-it-ready/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 11:25:04 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Grocy – ERP Beyond Your Fridge",
-          "description": "<p>Transform your kitchen management with Grocy. This ERP tool helps you track inventory, plan meals, and streamline shopping for a more efficient lifestyle.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/grocy-erp-beyond-your-fridge/\">Grocy – ERP Beyond Your Fridge</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/grocy-erp-beyond-your-fridge/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 11:13:13 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "How to Install PIP on Ubuntu 26.04",
-          "description": "<p>Learn how to install PIP on Ubuntu 26.04 with our step-by-step guide. Simplify your Python package management today and enhance your development experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-install-pip-on-ubuntu-26-04/\">How to Install PIP on Ubuntu 26.04</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/how-to-install-pip-on-ubuntu-26-04/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 11:09:22 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Shipsec Studio Brings Open-Source Workflow Orchestration to Security Operations",
-          "description": "<p>Transform your security operations with Shipsec Studio's open-source workflow orchestration, delivering efficiency and effectiveness in managing security tasks.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/shipsec-studio-brings-open-source-workflow-orchestration-to-security-operations/\">Shipsec Studio Brings Open-Source Workflow Orchestration to Security Operations</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/shipsec-studio-brings-open-source-workflow-orchestration-to-security-operations/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 11:05:04 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Ubuntu MATE Founder Martin Wimpress Steps Back After 12 Years",
-          "description": "<p>After 12 years of leadership, Ubuntu MATE founder Martin Wimpress steps back. Discover the impact of his contributions and the future of the project.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/ubuntu-mate-founder-martin-wimpress-steps-back-after-12-years/\">Ubuntu MATE Founder Martin Wimpress Steps Back After 12 Years</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/ubuntu-mate-founder-martin-wimpress-steps-back-after-12-years/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Thu, 16 Apr 2026 11:01:53 +0000",
-          "author": "Content Operations"
         },
         {
           "title": "How GitHub uses eBPF to improve deployment safety",
@@ -2249,6 +2285,15 @@
           "author": "Sébastien Stormacq"
         },
         {
+          "title": "Optimize object storage costs automatically with smart tier—now generally available",
+          "description": "<p>By continuously optimizing data placement, smart tier ensures your storage costs are aligned with actual usage.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/optimize-object-storage-costs-automatically-with-smart-tier-now-generally-available/\">Optimize object storage costs automatically with smart tier—now generally available</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/optimize-object-storage-costs-automatically-with-smart-tier-now-generally-available/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Tue, 14 Apr 2026 15:00:00 +0000",
+          "author": "Aung Oo"
+        },
+        {
           "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
           "description": "<p>Learn to find and exploit real-world agentic AI vulnerabilities through five progressive challenges in this free, open source game that over 10,000 developers have already used to sharpen their security skills.</p>\n<p>The post <a href=\"https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/\">Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
           "link": "https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/",
@@ -2375,15 +2420,6 @@
           "author": "Dan Berezin Stelzer"
         },
         {
-          "title": "GitHub Universe is back: We want you to take the stage",
-          "description": "<p>Get inspired by five of the most memorable, magical, and quirky Universe sessions to date.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/\">GitHub Universe is back: We want you to take the stage</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Wed, 08 Apr 2026 16:35:46 +0000",
-          "author": "Rachel Cohen"
-        },
-        {
           "title": "Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value",
           "description": "<p>Get practical strategies and best practices to help you plan, design, and manage AI investments for sustainable value and efficiency.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/\">Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
           "link": "https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/",
@@ -2391,15 +2427,6 @@
           "category": "Cloud",
           "published": "Wed, 08 Apr 2026 16:00:00 +0000",
           "author": "Fernando Vasconcellos"
-        },
-        {
-          "title": "GitHub Universe is back: We want you to take the stage",
-          "description": "<p>Get inspired by five of the most memorable, magical, and quirky Universe sessions to date.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/\">GitHub Universe is back: We want you to take the stage</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Wed, 08 Apr 2026 16:35:46 +0000",
-          "author": "Rachel Cohen"
         },
         {
           "title": "Your Migration’s Source of Truth: The Modernization Assessment",
@@ -2429,15 +2456,6 @@
           "author": "Sébastien Stormacq"
         },
         {
-          "title": "GitHub Copilot CLI combines model families for a second opinion",
-          "description": "<p>Discover how Rubber Duck provides a different perspective to GitHub Copilot CLI. </p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/\">GitHub Copilot CLI combines model families for a second opinion</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Mon, 06 Apr 2026 21:53:49 +0000",
-          "author": "Nick McKenna"
-        },
-        {
           "title": "AWS Weekly Roundup: AWS DevOps Agent & Security Agent GA, Product Lifecycle updates, and more (April 6, 2026)",
           "description": "Last week, I visited AWS Hong Kong User Group with my team. Hong Kong has a small but strong community, and their energy and passion are high. They recently started a new AI user group, and we hope more people will join. I was able to strengthen my bond with the community through great food […]",
           "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-devops-agent-security-agent-ga-product-lifecycle-updates-and-more-april-6-2026/",
@@ -2445,15 +2463,6 @@
           "category": "Cloud",
           "published": "Mon, 06 Apr 2026 16:51:00 +0000",
           "author": "Channy Yun (윤석찬)"
-        },
-        {
-          "title": "GitHub Copilot CLI combines model families for a second opinion",
-          "description": "<p>Discover how Rubber Duck provides a different perspective to GitHub Copilot CLI. </p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/\">GitHub Copilot CLI combines model families for a second opinion</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Mon, 06 Apr 2026 21:53:49 +0000",
-          "author": "Nick McKenna"
         },
         {
           "title": "Amazon Bedrock Guardrails supports cross-account safeguards with centralized control and management",
@@ -2751,15 +2760,6 @@
           "category": "Cloud",
           "published": "Wed, 18 Mar 2026 16:26:15 +0000",
           "author": "Taylor Jacobsen"
-        },
-        {
-          "title": "Advancing agentic AI with Microsoft databases across a unified data estate",
-          "description": "<p>Built on a consistent Microsoft SQL foundation from on premises to the cloud, Azure SQL brings AI capabilities directly into your database experience.</p>\n<p>The post <a href=\"https://www.microsoft.com/en-us/sql-server/blog/2026/03/18/advancing-agentic-ai-with-microsoft-databases-across-a-unified-data-estate/\">Advancing agentic AI with Microsoft databases across a unified data estate</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://www.microsoft.com/en-us/sql-server/blog/2026/03/18/advancing-agentic-ai-with-microsoft-databases-across-a-unified-data-estate/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Wed, 18 Mar 2026 12:50:00 +0000",
-          "author": "Shireesh Thota"
         },
         {
           "title": "The Invisible Rewrite: Modernizing the Kubernetes Image Promoter",
