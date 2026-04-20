@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-19T08:11:11.164504",
+  "lastUpdate": "2026-04-20T09:12:17.002347",
   "articles": {
     "infrastructure": {
       "icon": "🏗️",
@@ -1474,6 +1474,15 @@
           "author": "Channy Yun (윤석찬)"
         },
         {
+          "title": "Cloud Cost Optimization: Principles that still matter",
+          "description": "<p>Discover how cloud cost optimization adapts in the age of AI, with best practices for managing spend, improving efficiency, and maximizing value.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-principles-that-still-matter/\">Cloud Cost Optimization: Principles that still matter</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-principles-that-still-matter/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Wed, 15 Apr 2026 16:00:00 +0000",
+          "author": "Fernando Vasconcellos"
+        },
+        {
           "title": "AWS Interconnect is now generally available, with a new option to simplify last-mile connectivity",
           "description": "Today, we’re announcing the general availability of AWS Interconnect – multicloud, a managed private connectivity service that connects your Amazon Virtual Private Cloud (Amazon VPC) directly to VPCs on other cloud providers. We’re also introducing AWS Interconnect – last mile, a new capability that simplifies how you establish high-speed, private connections to AWS from your […]",
           "link": "https://aws.amazon.com/blogs/aws/aws-interconnect-is-now-generally-available-with-a-new-option-to-simplify-last-mile-connectivity/",
@@ -1645,15 +1654,6 @@
           "author": "Darryl Willis"
         },
         {
-          "title": "What’s new with Microsoft in open-source and Kubernetes at KubeCon + CloudNativeCon Europe 2026",
-          "description": "<p>At KubeCon + CloudNativeCon Europe 2026 in Amsterdam, we're making announcements that reflect the goal of bringing the operational maturity of Kubernetes to today's workloads and demands.</p>\n<p>The post <a href=\"https://opensource.microsoft.com/blog/2026/03/24/whats-new-with-microsoft-in-open-source-and-kubernetes-at-kubecon-cloudnativecon-europe-2026/\">What’s new with Microsoft in open-source and Kubernetes at KubeCon + CloudNativeCon Europe 2026</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://opensource.microsoft.com/blog/2026/03/24/whats-new-with-microsoft-in-open-source-and-kubernetes-at-kubecon-cloudnativecon-europe-2026/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Tue, 24 Mar 2026 07:05:00 +0000",
-          "author": "Brendan Burns"
-        },
-        {
           "title": "AWS Weekly Roundup: NVIDIA Nemotron 3 Super on Amazon Bedrock, Nova Forge SDK, Amazon Corretto 26, and more (March 23, 2026)",
           "description": "Hello! I’m Daniel Abib, and this is my first AWS Weekly Roundup. I’m a Senior Specialist Solutions Architect at AWS, focused on the generative AI and Amazon Bedrock. With over 28 years of experience in solution architecture, software development, and cloud architecture, I help Startups &amp; Enterprises harness the power of generative AI with Amazon […]",
           "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-nvidia-nemotron-3-super-on-amazon-bedrock-nova-forge-sdk-amazon-corretto-26-and-more-march-23-2026/",
@@ -1745,7 +1745,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164498",
+          "published": "2026-04-20T09:12:16.193737",
           "author": "prombot"
         },
         {
@@ -1754,7 +1754,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164494",
+          "published": "2026-04-20T09:12:16.193733",
           "author": "prombot"
         },
         {
@@ -1763,7 +1763,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164490",
+          "published": "2026-04-20T09:12:16.193729",
           "author": "prombot"
         },
         {
@@ -1772,7 +1772,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164485",
+          "published": "2026-04-20T09:12:16.193724",
           "author": "roidelapluie"
         },
         {
@@ -1781,7 +1781,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164481",
+          "published": "2026-04-20T09:12:16.193720",
           "author": "roidelapluie"
         },
         {
@@ -1790,7 +1790,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164476",
+          "published": "2026-04-20T09:12:16.193716",
           "author": "prombot"
         },
         {
@@ -1799,7 +1799,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164472",
+          "published": "2026-04-20T09:12:16.193712",
           "author": "roidelapluie"
         },
         {
@@ -1808,7 +1808,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164468",
+          "published": "2026-04-20T09:12:16.193707",
           "author": "roidelapluie"
         },
         {
@@ -1817,7 +1817,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164462",
+          "published": "2026-04-20T09:12:16.193702",
           "author": "prombot"
         },
         {
@@ -1826,7 +1826,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164451",
+          "published": "2026-04-20T09:12:16.193689",
           "author": "prombot"
         },
         {
@@ -1930,7 +1930,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164498",
+          "published": "2026-04-20T09:12:16.193737",
           "author": "prombot"
         },
         {
@@ -1939,7 +1939,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164494",
+          "published": "2026-04-20T09:12:16.193733",
           "author": "prombot"
         },
         {
@@ -1948,7 +1948,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164490",
+          "published": "2026-04-20T09:12:16.193729",
           "author": "prombot"
         },
         {
@@ -1957,7 +1957,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164485",
+          "published": "2026-04-20T09:12:16.193724",
           "author": "roidelapluie"
         },
         {
@@ -1966,7 +1966,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164481",
+          "published": "2026-04-20T09:12:16.193720",
           "author": "roidelapluie"
         },
         {
@@ -1975,7 +1975,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164476",
+          "published": "2026-04-20T09:12:16.193716",
           "author": "prombot"
         },
         {
@@ -1984,7 +1984,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164472",
+          "published": "2026-04-20T09:12:16.193712",
           "author": "roidelapluie"
         },
         {
@@ -1993,7 +1993,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164468",
+          "published": "2026-04-20T09:12:16.193707",
           "author": "roidelapluie"
         },
         {
@@ -2002,7 +2002,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164462",
+          "published": "2026-04-20T09:12:16.193702",
           "author": "prombot"
         },
         {
@@ -2011,7 +2011,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-19T08:11:10.164451",
+          "published": "2026-04-20T09:12:16.193689",
           "author": "prombot"
         },
         {
@@ -2211,6 +2211,15 @@
           "category": "IA",
           "published": "Wed, 15 Apr 2026 16:03:19 +0000",
           "author": "Inconnu"
+        },
+        {
+          "title": "Cloud Cost Optimization: Principles that still matter",
+          "description": "<p>Discover how cloud cost optimization adapts in the age of AI, with best practices for managing spend, improving efficiency, and maximizing value.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-principles-that-still-matter/\">Cloud Cost Optimization: Principles that still matter</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-principles-that-still-matter/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Wed, 15 Apr 2026 16:00:00 +0000",
+          "author": "Fernando Vasconcellos"
         },
         {
           "title": "Build a personal organization command center with GitHub Copilot CLI",
@@ -2670,15 +2679,6 @@
           "category": "Cloud",
           "published": "Wed, 25 Mar 2026 15:00:00 +0000",
           "author": "Darryl Willis"
-        },
-        {
-          "title": "What’s new with Microsoft in open-source and Kubernetes at KubeCon + CloudNativeCon Europe 2026",
-          "description": "<p>At KubeCon + CloudNativeCon Europe 2026 in Amsterdam, we're making announcements that reflect the goal of bringing the operational maturity of Kubernetes to today's workloads and demands.</p>\n<p>The post <a href=\"https://opensource.microsoft.com/blog/2026/03/24/whats-new-with-microsoft-in-open-source-and-kubernetes-at-kubecon-cloudnativecon-europe-2026/\">What’s new with Microsoft in open-source and Kubernetes at KubeCon + CloudNativeCon Europe 2026</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://opensource.microsoft.com/blog/2026/03/24/whats-new-with-microsoft-in-open-source-and-kubernetes-at-kubecon-cloudnativecon-europe-2026/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Tue, 24 Mar 2026 07:05:00 +0000",
-          "author": "Brendan Burns"
         },
         {
           "title": "Generative AI for Beginners .NET: Version 2 on .NET 10",
