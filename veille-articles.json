@@ -1,97 +1,97 @@
 {
-  "lastUpdate": "2026-04-20T09:12:17.002347",
+  "lastUpdate": "2026-04-21T08:57:56.015909",
   "articles": {
     "infrastructure": {
       "icon": "🏗️",
       "articles": [
         {
-          "title": "Proudly Canadian Maple Linux 1.4: Who Knew Tux Could Be So Polite?",
-          "description": "<p>Discover Proudly Canadian Maple Linux 1.4, where Tux embodies politeness. Explore its features and experience a unique blend of functionality and charm.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/proudly-canadian-maple-linux-1-4-who-knew-tux-could-be-so-polite/\">Proudly Canadian Maple Linux 1.4: Who Knew Tux Could Be So Polite?</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/proudly-canadian-maple-linux-1-4-who-knew-tux-could-be-so-polite/",
+          "title": "KDE Plasma 6.7 Desktop Environment Is Coming on June 16th, Here’s What to Expect",
+          "description": "<p> KDE Plasma 6.7 is set to launch on June 16th! Explore the innovative features and improvements that will transform your desktop environment for the better.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/kde-plasma-6-7-desktop-environment-is-coming-on-june-16th-heres-what-to-expect/\">KDE Plasma 6.7 Desktop Environment Is Coming on June 16th, Here’s What to Expect</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/kde-plasma-6-7-desktop-environment-is-coming-on-june-16th-heres-what-to-expect/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 09:36:31 +0000",
+          "published": "Mon, 20 Apr 2026 14:41:28 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Springing into AI: PyTorch Conference Europe & ICLR 2026",
-          "description": "<p>Join us at the Springing into AI: PyTorch Conference Europe &#038; ICLR 2026. Discover cutting-edge research, network with experts, and shape the future of AI.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/springing-into-ai-pytorch-conference-europe-iclr-2026/\">Springing into AI: PyTorch Conference Europe &amp; ICLR 2026</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/springing-into-ai-pytorch-conference-europe-iclr-2026/",
+          "title": "Wine 11.6 Brings Android Driver Work, Game Mod Fixes",
+          "description": "<p>Explore Wine 11.6, featuring enhanced Android driver functionality and essential game mod fixes. Upgrade your gaming setup for optimal performance now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/wine-11-6-brings-android-driver-work-game-mod-fixes/\">Wine 11.6 Brings Android Driver Work, Game Mod Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/wine-11-6-brings-android-driver-work-game-mod-fixes/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 09:32:44 +0000",
+          "published": "Mon, 20 Apr 2026 14:37:45 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Linux Continues to Make History, Hitting 5% Usage on Steam",
-          "description": "<p>Learn about Linux's remarkable journey as it achieves 5% usage on Steam, showcasing its increasing popularity and influence in the gaming industry.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linux-continues-to-make-history-hitting-5-usage-on-steam/\">Linux Continues to Make History, Hitting 5% Usage on Steam</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/linux-continues-to-make-history-hitting-5-usage-on-steam/",
+          "title": "Arch-Based Omarchy 3.5 Brings Full Intel Panther Lake Support",
+          "description": "<p>Explore the capabilities of Arch-Based Omarchy 3.5, offering complete Intel Panther Lake support. Upgrade your experience with cutting-edge features and stability.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/arch-based-omarchy-3-5-brings-full-intel-panther-lake-support/\">Arch-Based Omarchy 3.5 Brings Full Intel Panther Lake Support</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/arch-based-omarchy-3-5-brings-full-intel-panther-lake-support/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 09:31:05 +0000",
+          "published": "Mon, 20 Apr 2026 14:32:36 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "OpenSSH 10.3 Brings Agent Forwarding Updates And Improvements",
-          "description": "<p>Learn about the significant enhancements in OpenSSH 10.3, focusing on agent forwarding updates that boost security and improve user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/openssh-10-3-brings-agent-forwarding-updates-and-improvements/\">OpenSSH 10.3 Brings Agent Forwarding Updates And Improvements</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/openssh-10-3-brings-agent-forwarding-updates-and-improvements/",
+          "title": "Gentoo GNU/Hurd Port Is Real, Despite the April 1 Joke",
+          "description": "<p>Discover the truth behind the Gentoo GNU/Hurd port. Learn how this project is more than just an April 1 joke and explore its real potential.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/gentoo-gnu-hurd-port-is-real-despite-the-april-1-joke/\">Gentoo GNU/Hurd Port Is Real, Despite the April 1 Joke</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/gentoo-gnu-hurd-port-is-real-despite-the-april-1-joke/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 09:12:58 +0000",
+          "published": "Mon, 20 Apr 2026 14:28:57 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Netrunner 26 Released with XLibre Xserver, Based on Debian 13 “Trixie”",
-          "description": "<p>Discover Netrunner 26, featuring the XLibre Xserver and built on Debian 13 “Trixie.” Experience enhanced performance and user-friendly features today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/netrunner-26-released-with-xlibre-xserver-based-on-debian-13-trixie/\">Netrunner 26 Released with XLibre Xserver, Based on Debian 13 “Trixie”</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/netrunner-26-released-with-xlibre-xserver-based-on-debian-13-trixie/",
+          "title": "Ubuntu 26.04 LTS Raises Desktop Minimum RAM Requirement",
+          "description": "<p>Learn about the new RAM requirements for Ubuntu 26.04 LTS and how this change impacts your desktop experience and system upgrades.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/ubuntu-26-04-lts-raises-desktop-minimum-ram-requirement/\">Ubuntu 26.04 LTS Raises Desktop Minimum RAM Requirement</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/ubuntu-26-04-lts-raises-desktop-minimum-ram-requirement/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 09:04:52 +0000",
+          "published": "Mon, 20 Apr 2026 14:25:40 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Must Be April Fools’ Day. Gentoo Says It’s Moving to Hurd",
-          "description": "<p>Gentoo has a Hurd port you can boot today, plus a straight-faced promise to ditch Linux by year’s end. We’re guessing only one of those things is real.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/must-be-april-fools-day-gentoo-says-its-moving-to-hurd/\">Must Be April Fools’ Day. Gentoo Says It’s Moving to Hurd</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/must-be-april-fools-day-gentoo-says-its-moving-to-hurd/",
+          "title": "ImageMagick Zero-Day RCE Impacts Linux and WordPress Servers",
+          "description": "<p>Discover the critical impacts of the ImageMagick zero-day RCE vulnerability on Linux and WordPress servers. Learn how to protect your systems today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/imagemagick-zero-day-rce-impacts-linux-and-wordpress-servers/\">ImageMagick Zero-Day RCE Impacts Linux and WordPress Servers</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/imagemagick-zero-day-rce-impacts-linux-and-wordpress-servers/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 08:59:36 +0000",
+          "published": "Mon, 20 Apr 2026 14:21:10 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Komodo 2.0 Build and Deploy Tool Adds Docker Swarm Support",
-          "description": "<p>Elevate your development process with Komodo 2.0, featuring Docker Swarm support for seamless builds and deployments. Optimize your workflow today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/komodo-2-0-build-and-deploy-tool-adds-docker-swarm-support/\">Komodo 2.0 Build and Deploy Tool Adds Docker Swarm Support</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/komodo-2-0-build-and-deploy-tool-adds-docker-swarm-support/",
+          "title": "GIMP 3.2.2 Released: Install and Use on Linux (Snap, Flatpak, AppImage)",
+          "description": "<p>GIMP 3.2.2 is here! Explore installation methods for Linux users, including Snap, Flatpak, and AppImage, and elevate your graphic design projects today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/gimp-3-2-2-released-install-and-use-on-linux-snap-flatpak-appimage/\">GIMP 3.2.2 Released: Install and Use on Linux (Snap, Flatpak, AppImage)</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/gimp-3-2-2-released-install-and-use-on-linux-snap-flatpak-appimage/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 08:21:41 +0000",
+          "published": "Mon, 20 Apr 2026 14:16:09 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Daphne – Audio Player and Music Library Manager for Linux",
-          "description": "<p>Discover Daphne, the ultimate audio player and music library manager for Linux. Organize, play, and enjoy your music collection effortlessly.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/daphne-audio-player-and-music-library-manager-for-linux/\">Daphne &#8211; Audio Player and Music Library Manager for Linux</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/daphne-audio-player-and-music-library-manager-for-linux/",
+          "title": "Systemd-Free Artix Linux Sees First Release in 2026 with XLibre and PipeWire",
+          "description": "<p>Discover the groundbreaking release of Systemd-Free Artix Linux in 2026, featuring XLibre and PipeWire for a seamless user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/systemd-free-artix-linux-sees-first-release-in-2026-with-xlibre-and-pipewire/\">Systemd-Free Artix Linux Sees First Release in 2026 with XLibre and PipeWire</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/systemd-free-artix-linux-sees-first-release-in-2026-with-xlibre-and-pipewire/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 08:18:20 +0000",
+          "published": "Mon, 20 Apr 2026 14:08:44 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Linux Kernel 7.0 RC6: Fixes, Improvements, and Installation Guide",
-          "description": "<p>Explore Linux Kernel 7.0 RC6 with essential fixes and enhancements. Follow our detailed installation guide to optimize your system effortlessly.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linux-kernel-7-0-rc6-fixes-improvements-and-installation-guide/\">Linux Kernel 7.0 RC6: Fixes, Improvements, and Installation Guide</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/linux-kernel-7-0-rc6-fixes-improvements-and-installation-guide/",
+          "title": "Parrot Linux Takes Stand Against Age Verification",
+          "description": "<p>Explore how Parrot Linux is challenging age verification laws, promoting privacy and security for users. Learn about their commitment to digital freedom.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/parrot-linux-takes-stand-against-age-verification/\">Parrot Linux Takes Stand Against Age Verification</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/parrot-linux-takes-stand-against-age-verification/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 08:11:11 +0000",
+          "published": "Mon, 20 Apr 2026 14:05:15 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "AerynOS 2026.03 Released with the Latest GNOME 50 Desktop Environment",
-          "description": "<p>AerynOS 2026.03 is here! Explore the new GNOME 50 desktop environment, offering improved features and a modern design for an exceptional user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/aerynos-2026-03-released-with-the-latest-gnome-50-desktop-environment/\">AerynOS 2026.03 Released with the Latest GNOME 50 Desktop Environment</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/aerynos-2026-03-released-with-the-latest-gnome-50-desktop-environment/",
+          "title": "OBS Studio 32.1.1 Is Out to Improve the Audio Mixer and Audio Deduplication",
+          "description": "<p>Discover the latest features in OBS Studio 32.1.1, enhancing the audio mixer and improving audio deduplication for a seamless streaming experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/obs-studio-32-1-1-is-out-to-improve-the-audio-mixer-and-audio-deduplication/\">OBS Studio 32.1.1 Is Out to Improve the Audio Mixer and Audio Deduplication</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/obs-studio-32-1-1-is-out-to-improve-the-audio-mixer-and-audio-deduplication/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 08:05:13 +0000",
+          "published": "Mon, 20 Apr 2026 13:55:38 +0000",
           "author": "Content Operations"
         },
         {
@@ -640,6 +640,33 @@
       "icon": "💻",
       "articles": [
         {
+          "title": "Writing Node.js addons with .NET Native AOT",
+          "description": "<p>The C# Dev Kit team replaced C++ Node.js addons with C# and Native AOT, removing a dependency on Python. This post walks through building a Node.js native addon entirely in C# using N-API, LibraryImport, and UnmanagedCallersOnly.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/writing-nodejs-addons-with-dotnet-native-aot/\">Writing Node.js addons with .NET Native AOT</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/writing-nodejs-addons-with-dotnet-native-aot/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Mon, 20 Apr 2026 20:00:00 +0000",
+          "author": "Drew Noakes"
+        },
+        {
+          "title": "Changes to GitHub Copilot Individual plans",
+          "description": "<p>We're making these changes to ensure a reliable and predictable experience for existing customers.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/\">Changes to GitHub Copilot Individual plans</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Mon, 20 Apr 2026 18:15:28 +0000",
+          "author": "Joe Binder"
+        },
+        {
+          "title": "Highlights from Git 2.54",
+          "description": "<p>The open source Git project just released Git 2.54. Here is GitHub’s look at some of the most interesting features and changes introduced since last time.</p>\n<p>The post <a href=\"https://github.blog/open-source/git/highlights-from-git-2-54/\">Highlights from Git 2.54</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/open-source/git/highlights-from-git-2-54/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Mon, 20 Apr 2026 16:43:57 +0000",
+          "author": "Taylor Blau"
+        },
+        {
           "title": "Building an emoji list generator with the GitHub Copilot CLI",
           "description": "<p>See how we created an emoji list generator during the Rubber Duck Thursday stream.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/\">Building an emoji list generator with the GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
           "link": "https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/",
@@ -739,24 +766,6 @@
           "author": "Kedasha Kerr"
         },
         {
-          "title": "GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI",
-          "description": "<p>GitHub for Beginners: Getting started with the GitHub Copilot CLI, a step-by-step tutorial.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/\">GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Fri, 10 Apr 2026 16:00:00 +0000",
-          "author": "Christopher Harrison"
-        },
-        {
-          "title": "GitHub availability report: March 2026",
-          "description": "<p>In March, we experienced four incidents that resulted in degraded performance across GitHub services.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-availability-report-march-2026/\">GitHub availability report: March 2026</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/company-news/github-availability-report-march-2026/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Thu, 09 Apr 2026 02:21:17 +0000",
-          "author": "Jakub Oleksy"
-        },
-        {
           "title": "Your Migration’s Source of Truth: The Modernization Assessment",
           "description": "<p>Introducing GitHub Copilot Modernization and diving into the assessment report as part of cloud modernization process</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/your-migrations-source-of-truth-the-modernization-assessment/\">Your Migration&#8217;s Source of Truth: The Modernization Assessment</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
           "link": "https://devblogs.microsoft.com/dotnet/your-migrations-source-of-truth-the-modernization-assessment/",
@@ -809,21 +818,21 @@
           "category": "Développement",
           "published": "Thu, 19 Mar 2026 21:12:42 +0000",
           "author": "David Ortinau"
-        },
-        {
-          "title": "RT.Assistant: A Multi-Agent Voice Bot Using .NET and OpenAI",
-          "description": "<p>Guest blog post on building a real time assistant using OpenAI Realtime API using .NET, F#, Microsoft.Extensions.AI and .NET MAUI.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/rt-assistant-a-realtime-multiagent-voice-bot-using-dotnet-and-open-ai-api/\">RT.Assistant: A Multi-Agent Voice Bot Using .NET and OpenAI</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/rt-assistant-a-realtime-multiagent-voice-bot-using-dotnet-and-open-ai-api/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Tue, 17 Mar 2026 17:05:00 +0000",
-          "author": "Faisal Waris"
         }
       ]
     },
     "securite": {
       "icon": "🔐",
       "articles": [
+        {
+          "title": "Bridging the Gap in Product Lifecycle Management: How OpenEoX and CLE Work Together",
+          "description": "<p><em>OpenEoX and CLE are two emerging standards that work together to solve a critical gap in how organizations track whether the software and hardware they depend on is still supported, and their collaboration could reshape how the entire industry manages product lifecycle risk.</em></p>\n\n<!--more-->\n\n<p>In the rapidly evolving landscape of software and hardware supply chains, tracking  products’ longevity is a notable challenge, especially it is a critical challenge for organizations managing complex technology portfolios. As highlighted in the <a href=\"https://docs.oasis-open.org/openeox/standardization-framework/openeox-standardization-framework-technical-report.pdf\">OpenEoX Standardization Framework Technical Report</a>, industry is facing significant security and operational risks due to inconsistent, unreliable, and often missing End-of-Life (EoL) and End-of-Security-Support (EoSSec) or End-of-Sales (EoS) information. Emerging regulations like EU Cyber Resilience Act (CRA) elevate lifecycle transparency from a risk management concern to a mandatory compliance requirement with potential legal and financial consequences for non-compliance.</p>\n\n<p>Without a standardized machine readable language for lifecycle information exchange, organizations struggle to identify unsupported products, leading to security blind spots where unpatched vulnerabilities can persist indefinitely and present risk. Product users might not even be aware that the specific product is no longer supported or close to the EoL, and quick remediation steps are required. The lack of a unified framework to exchange this information often leaves consumers guessing about the support status of the technologies they rely on, increasing the likelihood of cyberattacks and operational disruptions.</p>\n\n<p>To solve these systemic issues, two major initiatives have emerged: the <strong>OpenEoX framework</strong> and the <strong>Common Lifecycle Enumeration (CLE) standard</strong>.</p>\n\n<h2 id=\"understanding-openeox-and-cle\">Understanding OpenEoX and CLE</h2>\n<p>While both initiatives aim to bring clarity to product lifecycles, they approach the problem from different, yet complementary, angles.</p>\n\n<p><strong>OpenEoX</strong> (managed by the OASIS OpenEoX Technical Committee) is a comprehensive framework designed and still developed to standardize the <strong>exchange of life cycle information</strong>. It focuses on the broader “policy” aspect of lifecycle management, defining a common taxonomy for critical milestones such as:</p>\n<ul>\n  <li>General Availability (GA): Initial product release date</li>\n  <li>End-of-Sales (EoS): Last date for product purchase from vendor channels</li>\n  <li>End-of-Security-Support (EoSSec): Termination of security patch availability</li>\n  <li>End-of-Life (EoL): Cessation of all vendor support and maintenance</li>\n</ul>\n\n<p>The OpenEoX schema is structured to communicate a product’s entire support policy and timeline, making it ideal for describing complex support scenarios often found in commercial software and hardware.</p>\n\n<p><strong>Common Lifecycle Enumeration (CLE)</strong> (standardized as <a href=\"https://ecma-international.org/publications-and-standards/standards/ecma-428/\">ECMA-428</a> and managed by Ecma TC54-TG3) is an open standard focused on <strong>enumerating specific lifecycle events</strong> and handling <strong>component aliasing</strong>. The CLE schema excels at providing a structured, machine-readable format for discrete events (like a specific version going EoL) and tracking identity changes (aliasing) as a component evolves or changes ownership. It is designed to be a lightweight, precise method for linking a specific component artifact to a lifecycle status.</p>\n\n<h2 id=\"distinct-use-cases-vendors-vs-maintainers\">Distinct Use Cases: Vendors vs. Maintainers</h2>\n<p>The fundamental distinction between OpenEoX and CLE lies in their architectural complexity and target adoption contexts, reflecting different organizational needs and operational constraints:</p>\n\n<p><strong>OpenEoX</strong> is tailored for <strong>complex use cases</strong>, particularly those involving larger software and hardware vendors. Its schema allows for the definition of detailed support policies that may include multiple tiers of support (e.g., standard vs. extended support), regional variations, and dependency relationships. It provides a “big picture” view of a product’s lifecycle strategy, which is essential for enterprise vendors managing extensive portfolios. It can cover complex software and hardware products, which rely on many artifacts and dependencies (downstream and upstream).</p>\n\n<p><strong>CLE</strong>, in contrast, is designed to be <strong>easily adopted by single open-source content maintainers</strong>. Its lightweight nature means a maintainer can quickly publish a CLE record to signal a specific event, such as “Version 1.2.3 is now End-of-Life” or “Project X has been renamed to Project Y”, without needing to construct a complex policy document. This makes CLE highly effective for the decentralized nature of the open-source ecosystem, where speed and simplicity are paramount.</p>\n\n<h2 id=\"collaboration-a-unified-future\">Collaboration: A Unified Future</h2>\n<p>Recognizing the complementary strengths of both frameworks, stakeholders from the OASIS OpenEoX Technical Committee and Ecma TC54-TG3 (CLE working group) have formally established a collaborative partnership, explicitly affirming that OpenEoX and CLE address distinct yet interconnected aspects of lifecycle management rather than competing alternatives. In short, these standards <strong>do not compete with each other</strong>. Instead, both working groups are committed to a collaborative model where each standard supplements the other to cover the full spectrum of lifecycle management.</p>\n\n<p>In a unified ecosystem, <strong>OpenEoX</strong> can be used to transport high-level policy data and extensive vendor timelines, while <strong>CLE</strong> can serve as the granular identifier mechanism that links those policies to specific software artifacts and tracks their evolution over time. For example, an OpenEoX document might reference CLE identifiers to precisely pinpoint the components affected by a policy change, or a CLE event might point to an OpenEoX document for further context on a migration path.</p>\n\n<h2 id=\"summary\">Summary</h2>\n<p>The OpenEoX and CLE standardization initiatives are actively engaged in collaborative development to ensure interoperability and prevent specification conflicts that could fragment the lifecycle management ecosystem. By aligning their efforts, they aim to address all types of product lifecycle problems, from the complex, policy-driven requirements of major vendors to the agile, event-driven needs of open-source maintainers. Together, OpenEoX and CLE establish a robust, interoperable foundation for systematic lifecycle management, enabling organizations to proactively identify unsupported dependencies, satisfy emerging regulatory compliance requirements and mitigate supply chain security risks through transparent, machine-readable lifecycle information exchange.</p>\n\n<h2 id=\"openeox-and-cle-communities\">OpenEoX and CLE communities</h2>\n<ul>\n  <li><a href=\"https://github.com/Ecma-TC54/tg3\">https://github.com/Ecma-TC54/tg3</a></li>\n  <li><a href=\"https://tc54.org/cle\">https://tc54.org/cle</a></li>\n  <li><a href=\"https://github.com/oasis-tcs/openeox\">https://github.com/oasis-tcs/openeox</a></li>\n  <li><a href=\"https://openeox.org/\">https://openeox.org/</a></li>\n</ul>\n\n<h2 id=\"references\">References</h2>\n\n<ol>\n  <li>\n    <p>OASIS OpenEoX Technical Committee. (2025). OpenEoX Standardization Framework Technical Report. OASIS Open.</p>\n  </li>\n  <li>\n    <p>Ecma International. (2024). ECMA-428: Common Lifecycle Enumeration (CLE) Standard. Ecma TC54-TG3.</p>\n  </li>\n  <li>\n    <p>European Parliament and Council. (2024). Regulation (EU) 2024/2847 on Cybersecurity Requirements for Products with Digital Elements (Cyber Resilience Act).</p>\n  </li>\n</ol>\n\n<div style=\"display: flex;\">\n    <div>\n      <strong>Jordan Harband</strong><br />Ecma Technical Committee 54, TG3 Convenor\n    </div>\n    <div>\n      <strong>Przemyslaw (Rogue) Roguski</strong><br />OASIS OpenEoX Technical Committee member\n    </div>\n  </div>",
+          "link": "http://owasp.org/blog/2026/04/15/end-of-life-cle-and-openeox.html",
+          "source": "OWASP",
+          "category": "Sécurité",
+          "published": "2026-04-15T07:00:00+00:00",
+          "author": "Jordan Harband and Przemyslaw (Rogue) Roguski"
+        },
         {
           "title": "Announcing the Retirement of OWASP Meetup Platform",
           "description": "<p>There is no easy way to say this, so here goes. OWASP will be retiring Meetup, effective January 31, 2026. This impacts attendees and chapter leaders. Retiring Meetup in such a short time is not how any of us would have planned to do it, but we must make the best of a tough situation. OWASP’s new website will shortly go live and take over the hosting of all chapter meetings, improving the usability for attendees and chapter leaders, and reducing the complexity of managing chapters to a single platform. Initially, not all necessary functionality that is currently available to organizers will be present, but it will get there in the end.</p>\n\n<!--more-->\n\n<h2 id=\"calls-to-action\">Calls to Action:</h2>\n\n<ul>\n  <li><strong>Attendees</strong>. If you want to attend a chapter meeting, you will be able to search for your chapter and find the next meetings through a meeting calendar. We will have further improvements as time goes on, such as finding your nearest chapter, but for now, discovery of new chapter meetings will be straightforward if you know the name of your chapter.</li>\n  <li><strong>Chapter Leaders</strong>. If you are due to host a meeting in early February, please update your chapter home page on GitHub to include the meeting, as any delays in the new website going live will mean your chapter event may not get noticed. Please notify us in #leaders on Slack so we can prioritize your onboarding so you can publish your meetings on the new website as soon as it goes live. For all other Chapter leaders, please stay tuned in #leaders for more communications and training to help you migrate to our new website. If you need to have RSVPs for your meetings (such as site security needing a visitor list), please use a Google Form for this until we have the functionality built into the website. Only store Google Forms in your OWASP account to ensure that we meet our obligations under the GDPR. Please delete the form and its data once the meeting has passed.</li>\n</ul>\n\n<h2 id=\"why-must-we-make-this-change\">Why must we make this change?</h2>\n\n<p>In the last few working days of 2025, we learned that our annual Meetup renewal pricing was due to dramatically increase, tripling our costs by 2027 if we maintained our current group numbers. Our Meetup Pro subscription is already OWASP’s largest single software cost. We are a non-profit organization with limited financial resources, and if we renewed, it would mean cutting other programs sharply, such as projects and outreach, and reducing the number of chapters that have a Meetup group, something that goes against our mission. Renewing would hamper chapter growth, and create two tiers of chapters, create an operational nightmare, and we would still need to come up with something for chapters without Meetup, and then try to work out how to fix the user experience of attending chapter meetings. No matter what, we were going to have to create additional functionality in our website for some of our chapters and then figure out which programs to cut. Renewing creates more work, not less. Not renewing, although painful, we invest once in improving the website to cover all chapters and attendees over time.</p>\n\n<p>As stated above, not all Meetup functionality will be present on launch day, but we will get there with Chapter Leaders’ help by prioritizing the creation of missing functionality. For example, current Meetup functionality, such as attendees joining a chapter, mail outs to past attendees, RSVPs, hidden Zoom links, meeting metrics, and searching for inactive chapters will not be available. We need time to develop and mature the functionality to ensure data security and privacy of attendees is in place and is in line with our obligations under the GDPR and other privacy laws and regulations. In an ideal world, we would have more time to make the change, but OWASP must move off Meetup by the end of January.</p>\n\n<p>Sadly, this is the end of the road for OWASP and Meetup. This decision was mine to make and I did not make it lightly. It will be painful to many. Meetup served our community well for nearly two decades, helping local chapters grow and connect with security practitioners, executives and leadership, and developers worldwide. This parting reminds me of one of my favorite books, from the Hitch Hiker’s Guide to the Galaxy: “So long, and thanks for all the fish.”  This is the farewell message the dolphins gave humans just before they evacuated Earth, just before the Earth was destroyed by the Vogons. I am not suggesting that Meetup will be destroyed; all similes break down if you push them hard. Our farewell is meant with good humor, warmth, and gratitude. We will miss Meetup. I wish Meetup well and hope their new pricing model works for them, even if I have doubts.</p>\n\n<p>If you are an attendee, please continue to use #owasp-community on Slack. If you are a Leader, and have questions or need assistance during the transition, please reach out to #leaders on Slack or the Leaders mailing list.</p>\n\n<p>thanks,</p>\n\n<p>Andrew van der Stock\nDistinguished Lifetime Member\nExecutive Director, OWASP</p>",
@@ -994,15 +1003,6 @@
           "category": "Sécurité",
           "published": "2024-10-30T07:00:00+00:00",
           "author": "Andrew van der Stock"
-        },
-        {
-          "title": "Securing React Native Mobile Apps with OWASP MAS",
-          "description": "<p>React Native is a popular cross-platform mobile development framework that allows developers to build native-looking apps for iOS and Android using a single codebase. Like any other software, React Native apps are also vulnerable to a variety of security threats.</p>\n\n<!--more-->\n\n<h2 id=\"1-securing-each-part-of-the-app\">1. Securing each part of the app</h2>\n\n<p>To secure a React Native app you should analyse all its parts and how they communicate. This requires an understanding of each block: React Native, iOS, and Android platforms and Bridge between them.</p>\n\n<p>The React Native app uses JavaScript that is run on the JS engine. Understanding native JS engines and Hermes engine from Facebook is also necessary as they have different threat vectors. Using native JS engines makes extracting minified JS code from application bundles easy, while <a href=\"https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=hermes\">Hermes had several reported vulnerabilities</a> in the past.</p>\n\n<h2 id=\"2-assessing-react-native-apps-with-owasp-guides\">2. Assessing React Native apps with OWASP guides</h2>\n\n<p>It is also important to follow general mobile application security best practices, such as those described in OWASP guides. While there are no React Native-specific guides, OWASP provides guidance on how to improve the security of native apps, protecting them from common threats and vulnerabilities:</p>\n\n<ul>\n  <li><a href=\"https://mas.owasp.org/MASVS/\">OWASP Mobile Application Security Verification Standard</a></li>\n  <li><a href=\"https://mas.owasp.org/MASTG/\">OWASP Mobile Application Security Testing Guide</a></li>\n  <li><a href=\"https://cheatsheetseries.owasp.org\">OWASP Cheat Sheet Series </a></li>\n</ul>\n\n<p>OWASP React Native guides can be used to assess platform-specific security controls, while OWASP JavaScript guides can be used to cover most of the remaining assessment areas:</p>\n\n<ul>\n  <li><a href=\"https://owasp.org/www-project-application-security-verification-standard/\">OWASP Application Security Verification Standard</a></li>\n  <li><a href=\"https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist\">OWASP Secure coding guide</a></li>\n</ul>\n\n<p>The common area for assessment in each cross-platform app is the way methods are bridged between native and non-native parts (like, how JavaScript and native code are communicating). For example, bridged methods may lack obfuscation making platform-specific security controls more visible for reverse engineers. The resilience sections of <a href=\"https://mas.owasp.org/MASTG/\">OWASP MASTG</a> can serve as a guide to protect against reverse engineering and tampering because they describe concepts that can be applied to cross-platform apps.</p>\n\n<h2 id=\"3-react-native-libraries-secure-choice\">3. React Native libraries: Secure choice</h2>\n\n<p>JavaScript brings to React Native one of its most painful stepping stones: Managing a large number of dependencies and dealing with vulnerabilities in them. Integrating dependency checkers like <a href=\"https://owasp.org/www-project-dependency-check/\">OWASP Dependency-Check</a> or GitHub Dependabot into the CI/CD process becomes a must-have for React Native apps.</p>\n\n<p>Many React Native libraries are ported from the JavaScript ecosystem, but they may not be suitable for mobile apps, especially for security-sensitive functionality.</p>\n\n<p>A secure React Native library is:</p>\n\n<ul>\n  <li><strong>Without vulnerabilities:</strong> The library doesn’t have known vulnerabilities and it has a reasonable history of patching known vulnerabilities.</li>\n  <li><strong>Without open security issues:</strong> Review GitHub issues and PRs to see how the maintainers respond to security issues.</li>\n  <li><strong>Actively maintained and supported</strong> by multiple people. The security-related library should be supported by people with security and cryptography expertise, and ideally audited by a third party.</li>\n  <li><strong>Optimised for mobile platforms:</strong> For example, a library with a cryptographically secure pseudorandom generator should not depend on mouse clicks (<a href=\"https://www.cossacklabs.com/blog/crypto-wallets-security/#dependency-issues-with-crypto-wallets\">example explained</a>).</li>\n  <li><strong>Easy-to-use API:</strong> The library has well-documented APIs that work the same on iOS and Android.</li>\n  <li><strong>Licence:</strong> Pay attention to the open-source licence, as not all open-source libraries are free to use.</li>\n  <li><strong>Tests:</strong> Make sure the library has unit and integration tests, especially if it deals with cryptography or operates highly sensitive data.</li>\n</ul>\n\n<p>Research <a href=\"https://www.cossacklabs.com/blog/react-native-libraries-security/\">React Native libraries</a> and their dependencies before using them for security-sensitive functionality.</p>\n\n<h2 id=\"4-seven-steps-to-secure-react-native-app\">4. Seven steps to secure React Native app</h2>\n\n<p>Find your way to a secure React Native app, by following the steps that we singled out to simplify this journey:</p>\n\n<ol>\n  <li>Understand the implication of adding one more vendor (Facebook) and put <strong>trust</strong> in the security of its platform.</li>\n  <li>Make sure your team has enough <strong>security expertise</strong> for iOS, Android, and React Native. Depending on data sensitivity, you may want to hire external security experts.</li>\n  <li><strong>Educate your development team</strong> about security best practices, secure coding, possibilities to automate security checks, OWASP <a href=\"https://owasp.org/www-project-mobile-top-10/\">Mobile Top-10</a>, and <a href=\"https://mas.owasp.org/\">OWASP MAS</a>.</li>\n  <li><strong>Creating security controls for mobile apps</strong> as React Native apps are still mobile apps. Use OWASP MAS as a main guidance. Add security controls specific to React Native, if needed.</li>\n  <li><strong>Managing dependencies</strong> in your React Native apps, and keeping them up to date. Automated dependency analysers and code scanning is a good proactive approach.</li>\n  <li><strong>Cover security controls with tests</strong>, especially if they deal with cryptographic operations, Secure Enclave, and StrongBox Keystore</li>\n  <li><strong>Send the app for security review</strong> by third-party experts. Implement mitigations, cover them with tests, and add the issue to the regression testing checklist.</li>\n</ol>\n\n<p>Securing React Native mobile apps requires a holistic approach, applied to all aspects of the development process, from choosing secure libraries to implementing security controls.</p>",
-          "link": "http://owasp.org/blog/2024/10/02/Securing-React-Native-Mobile-Apps-with-OWASP-MAS.html",
-          "source": "OWASP",
-          "category": "Sécurité",
-          "published": "2024-10-02T07:00:00+00:00",
-          "author": "Julia Mezher"
         }
       ]
     },
@@ -1465,6 +1465,15 @@
       "icon": "☁️",
       "articles": [
         {
+          "title": "AWS Weekly Roundup: Claude Opus 4.7 in Amazon Bedrock, AWS Interconnect GA, and more (April 20, 2026)",
+          "description": "Claude Opus 4.7 arrives in Amazon Bedrock with improved agentic coding and a 1M token context window. AWS Interconnect reaches general availability with multicloud private connectivity and a new last-mile option. Plus, post-quantum TLS for Secrets Manager, new C8in/C8ib EC2 instances, and more.",
+          "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-opus-4-7-in-amazon-bedrock-aws-interconnect-ga-and-more-april-20-2026/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Mon, 20 Apr 2026 15:53:21 +0000",
+          "author": "Sébastien Stormacq"
+        },
+        {
           "title": "Introducing Anthropic’s Claude Opus 4.7 model in Amazon Bedrock",
           "description": "AWS launches Claude Opus 4.7 in Amazon Bedrock, Anthropic's most intelligent Opus model for advancing performance across coding, long-running agents, and professional work. Claude Opus 4.7 is powered by Amazon Bedrock's next generation inference engine, purpose-built for generative AI inferencing and fine-tuning workloads.",
           "link": "https://aws.amazon.com/blogs/aws/introducing-anthropics-claude-opus-4-7-model-in-amazon-bedrock/",
@@ -1724,15 +1733,6 @@
           "category": "Cloud",
           "published": "Wed, 04 Mar 2026 20:04:16 +0000",
           "author": "Channy Yun (윤석찬)"
-        },
-        {
-          "title": "AWS Weekly Roundup: OpenAI partnership, AWS Elemental Inference, Strands Labs, and more (March 2, 2026)",
-          "description": "This past week, I’ve been deep in the trenches helping customers transform their businesses through AI-DLC (AI-Driven Lifecycle) workshops. Throughout 2026, I’ve had the privilege of facilitating these sessions for numerous customers, guiding them through a structured framework that helps organizations identify, prioritize, and implement AI use cases that deliver measurable business value. AI-DLC is […]",
-          "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-partnership-aws-elemental-inference-strands-labs-and-more-march-2-2026/",
-          "source": "AWS Blog",
-          "category": "Cloud",
-          "published": "Mon, 02 Mar 2026 19:05:12 +0000",
-          "author": "Micah Walter"
         }
       ]
     },
@@ -1745,7 +1745,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193737",
+          "published": "2026-04-21T08:57:54.558141",
           "author": "prombot"
         },
         {
@@ -1754,7 +1754,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193733",
+          "published": "2026-04-21T08:57:54.558128",
           "author": "prombot"
         },
         {
@@ -1763,7 +1763,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193729",
+          "published": "2026-04-21T08:57:54.558124",
           "author": "prombot"
         },
         {
@@ -1772,7 +1772,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193724",
+          "published": "2026-04-21T08:57:54.558119",
           "author": "roidelapluie"
         },
         {
@@ -1781,7 +1781,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193720",
+          "published": "2026-04-21T08:57:54.558115",
           "author": "roidelapluie"
         },
         {
@@ -1790,7 +1790,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193716",
+          "published": "2026-04-21T08:57:54.558111",
           "author": "prombot"
         },
         {
@@ -1799,7 +1799,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193712",
+          "published": "2026-04-21T08:57:54.558107",
           "author": "roidelapluie"
         },
         {
@@ -1808,7 +1808,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193707",
+          "published": "2026-04-21T08:57:54.558102",
           "author": "roidelapluie"
         },
         {
@@ -1817,7 +1817,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193702",
+          "published": "2026-04-21T08:57:54.558097",
           "author": "prombot"
         },
         {
@@ -1826,8 +1826,26 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193689",
+          "published": "2026-04-21T08:57:54.558083",
           "author": "prombot"
+        },
+        {
+          "title": "Changes to GitHub Copilot Individual plans",
+          "description": "<p>We're making these changes to ensure a reliable and predictable experience for existing customers.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/\">Changes to GitHub Copilot Individual plans</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Mon, 20 Apr 2026 18:15:28 +0000",
+          "author": "Joe Binder"
+        },
+        {
+          "title": "Highlights from Git 2.54",
+          "description": "<p>The open source Git project just released Git 2.54. Here is GitHub’s look at some of the most interesting features and changes introduced since last time.</p>\n<p>The post <a href=\"https://github.blog/open-source/git/highlights-from-git-2-54/\">Highlights from Git 2.54</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/open-source/git/highlights-from-git-2-54/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Mon, 20 Apr 2026 16:43:57 +0000",
+          "author": "Taylor Blau"
         },
         {
           "title": "Building an emoji list generator with the GitHub Copilot CLI",
@@ -1900,24 +1918,6 @@
           "category": "DevOps",
           "published": "Mon, 13 Apr 2026 15:00:00 +0000",
           "author": "Kedasha Kerr"
-        },
-        {
-          "title": "GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI",
-          "description": "<p>GitHub for Beginners: Getting started with the GitHub Copilot CLI, a step-by-step tutorial.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/\">GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Fri, 10 Apr 2026 16:00:00 +0000",
-          "author": "Christopher Harrison"
-        },
-        {
-          "title": "GitHub availability report: March 2026",
-          "description": "<p>In March, we experienced four incidents that resulted in degraded performance across GitHub services.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-availability-report-march-2026/\">GitHub availability report: March 2026</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/company-news/github-availability-report-march-2026/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Thu, 09 Apr 2026 02:21:17 +0000",
-          "author": "Jakub Oleksy"
         }
       ]
     },
@@ -1930,7 +1930,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193737",
+          "published": "2026-04-21T08:57:54.558141",
           "author": "prombot"
         },
         {
@@ -1939,7 +1939,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193733",
+          "published": "2026-04-21T08:57:54.558128",
           "author": "prombot"
         },
         {
@@ -1948,7 +1948,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193729",
+          "published": "2026-04-21T08:57:54.558124",
           "author": "prombot"
         },
         {
@@ -1957,7 +1957,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193724",
+          "published": "2026-04-21T08:57:54.558119",
           "author": "roidelapluie"
         },
         {
@@ -1966,7 +1966,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193720",
+          "published": "2026-04-21T08:57:54.558115",
           "author": "roidelapluie"
         },
         {
@@ -1975,7 +1975,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193716",
+          "published": "2026-04-21T08:57:54.558111",
           "author": "prombot"
         },
         {
@@ -1984,7 +1984,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193712",
+          "published": "2026-04-21T08:57:54.558107",
           "author": "roidelapluie"
         },
         {
@@ -1993,7 +1993,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193707",
+          "published": "2026-04-21T08:57:54.558102",
           "author": "roidelapluie"
         },
         {
@@ -2002,7 +2002,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193702",
+          "published": "2026-04-21T08:57:54.558097",
           "author": "prombot"
         },
         {
@@ -2011,98 +2011,152 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-20T09:12:16.193689",
+          "published": "2026-04-21T08:57:54.558083",
           "author": "prombot"
         },
         {
-          "title": "Proudly Canadian Maple Linux 1.4: Who Knew Tux Could Be So Polite?",
-          "description": "<p>Discover Proudly Canadian Maple Linux 1.4, where Tux embodies politeness. Explore its features and experience a unique blend of functionality and charm.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/proudly-canadian-maple-linux-1-4-who-knew-tux-could-be-so-polite/\">Proudly Canadian Maple Linux 1.4: Who Knew Tux Could Be So Polite?</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/proudly-canadian-maple-linux-1-4-who-knew-tux-could-be-so-polite/",
+          "title": "KDE Plasma 6.7 Desktop Environment Is Coming on June 16th, Here’s What to Expect",
+          "description": "<p> KDE Plasma 6.7 is set to launch on June 16th! Explore the innovative features and improvements that will transform your desktop environment for the better.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/kde-plasma-6-7-desktop-environment-is-coming-on-june-16th-heres-what-to-expect/\">KDE Plasma 6.7 Desktop Environment Is Coming on June 16th, Here’s What to Expect</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/kde-plasma-6-7-desktop-environment-is-coming-on-june-16th-heres-what-to-expect/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 09:36:31 +0000",
+          "published": "Mon, 20 Apr 2026 14:41:28 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Springing into AI: PyTorch Conference Europe & ICLR 2026",
-          "description": "<p>Join us at the Springing into AI: PyTorch Conference Europe &#038; ICLR 2026. Discover cutting-edge research, network with experts, and shape the future of AI.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/springing-into-ai-pytorch-conference-europe-iclr-2026/\">Springing into AI: PyTorch Conference Europe &amp; ICLR 2026</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/springing-into-ai-pytorch-conference-europe-iclr-2026/",
+          "title": "Wine 11.6 Brings Android Driver Work, Game Mod Fixes",
+          "description": "<p>Explore Wine 11.6, featuring enhanced Android driver functionality and essential game mod fixes. Upgrade your gaming setup for optimal performance now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/wine-11-6-brings-android-driver-work-game-mod-fixes/\">Wine 11.6 Brings Android Driver Work, Game Mod Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/wine-11-6-brings-android-driver-work-game-mod-fixes/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 09:32:44 +0000",
+          "published": "Mon, 20 Apr 2026 14:37:45 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Linux Continues to Make History, Hitting 5% Usage on Steam",
-          "description": "<p>Learn about Linux's remarkable journey as it achieves 5% usage on Steam, showcasing its increasing popularity and influence in the gaming industry.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linux-continues-to-make-history-hitting-5-usage-on-steam/\">Linux Continues to Make History, Hitting 5% Usage on Steam</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/linux-continues-to-make-history-hitting-5-usage-on-steam/",
+          "title": "Arch-Based Omarchy 3.5 Brings Full Intel Panther Lake Support",
+          "description": "<p>Explore the capabilities of Arch-Based Omarchy 3.5, offering complete Intel Panther Lake support. Upgrade your experience with cutting-edge features and stability.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/arch-based-omarchy-3-5-brings-full-intel-panther-lake-support/\">Arch-Based Omarchy 3.5 Brings Full Intel Panther Lake Support</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/arch-based-omarchy-3-5-brings-full-intel-panther-lake-support/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 09:31:05 +0000",
+          "published": "Mon, 20 Apr 2026 14:32:36 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "OpenSSH 10.3 Brings Agent Forwarding Updates And Improvements",
-          "description": "<p>Learn about the significant enhancements in OpenSSH 10.3, focusing on agent forwarding updates that boost security and improve user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/openssh-10-3-brings-agent-forwarding-updates-and-improvements/\">OpenSSH 10.3 Brings Agent Forwarding Updates And Improvements</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/openssh-10-3-brings-agent-forwarding-updates-and-improvements/",
+          "title": "Gentoo GNU/Hurd Port Is Real, Despite the April 1 Joke",
+          "description": "<p>Discover the truth behind the Gentoo GNU/Hurd port. Learn how this project is more than just an April 1 joke and explore its real potential.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/gentoo-gnu-hurd-port-is-real-despite-the-april-1-joke/\">Gentoo GNU/Hurd Port Is Real, Despite the April 1 Joke</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/gentoo-gnu-hurd-port-is-real-despite-the-april-1-joke/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 09:12:58 +0000",
+          "published": "Mon, 20 Apr 2026 14:28:57 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Netrunner 26 Released with XLibre Xserver, Based on Debian 13 “Trixie”",
-          "description": "<p>Discover Netrunner 26, featuring the XLibre Xserver and built on Debian 13 “Trixie.” Experience enhanced performance and user-friendly features today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/netrunner-26-released-with-xlibre-xserver-based-on-debian-13-trixie/\">Netrunner 26 Released with XLibre Xserver, Based on Debian 13 “Trixie”</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/netrunner-26-released-with-xlibre-xserver-based-on-debian-13-trixie/",
+          "title": "Ubuntu 26.04 LTS Raises Desktop Minimum RAM Requirement",
+          "description": "<p>Learn about the new RAM requirements for Ubuntu 26.04 LTS and how this change impacts your desktop experience and system upgrades.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/ubuntu-26-04-lts-raises-desktop-minimum-ram-requirement/\">Ubuntu 26.04 LTS Raises Desktop Minimum RAM Requirement</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/ubuntu-26-04-lts-raises-desktop-minimum-ram-requirement/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 09:04:52 +0000",
+          "published": "Mon, 20 Apr 2026 14:25:40 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Must Be April Fools’ Day. Gentoo Says It’s Moving to Hurd",
-          "description": "<p>Gentoo has a Hurd port you can boot today, plus a straight-faced promise to ditch Linux by year’s end. We’re guessing only one of those things is real.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/must-be-april-fools-day-gentoo-says-its-moving-to-hurd/\">Must Be April Fools’ Day. Gentoo Says It’s Moving to Hurd</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/must-be-april-fools-day-gentoo-says-its-moving-to-hurd/",
+          "title": "ImageMagick Zero-Day RCE Impacts Linux and WordPress Servers",
+          "description": "<p>Discover the critical impacts of the ImageMagick zero-day RCE vulnerability on Linux and WordPress servers. Learn how to protect your systems today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/imagemagick-zero-day-rce-impacts-linux-and-wordpress-servers/\">ImageMagick Zero-Day RCE Impacts Linux and WordPress Servers</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/imagemagick-zero-day-rce-impacts-linux-and-wordpress-servers/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 08:59:36 +0000",
+          "published": "Mon, 20 Apr 2026 14:21:10 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Komodo 2.0 Build and Deploy Tool Adds Docker Swarm Support",
-          "description": "<p>Elevate your development process with Komodo 2.0, featuring Docker Swarm support for seamless builds and deployments. Optimize your workflow today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/komodo-2-0-build-and-deploy-tool-adds-docker-swarm-support/\">Komodo 2.0 Build and Deploy Tool Adds Docker Swarm Support</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/komodo-2-0-build-and-deploy-tool-adds-docker-swarm-support/",
+          "title": "GIMP 3.2.2 Released: Install and Use on Linux (Snap, Flatpak, AppImage)",
+          "description": "<p>GIMP 3.2.2 is here! Explore installation methods for Linux users, including Snap, Flatpak, and AppImage, and elevate your graphic design projects today.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/gimp-3-2-2-released-install-and-use-on-linux-snap-flatpak-appimage/\">GIMP 3.2.2 Released: Install and Use on Linux (Snap, Flatpak, AppImage)</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/gimp-3-2-2-released-install-and-use-on-linux-snap-flatpak-appimage/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 08:21:41 +0000",
+          "published": "Mon, 20 Apr 2026 14:16:09 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Daphne – Audio Player and Music Library Manager for Linux",
-          "description": "<p>Discover Daphne, the ultimate audio player and music library manager for Linux. Organize, play, and enjoy your music collection effortlessly.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/daphne-audio-player-and-music-library-manager-for-linux/\">Daphne &#8211; Audio Player and Music Library Manager for Linux</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/daphne-audio-player-and-music-library-manager-for-linux/",
+          "title": "Systemd-Free Artix Linux Sees First Release in 2026 with XLibre and PipeWire",
+          "description": "<p>Discover the groundbreaking release of Systemd-Free Artix Linux in 2026, featuring XLibre and PipeWire for a seamless user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/systemd-free-artix-linux-sees-first-release-in-2026-with-xlibre-and-pipewire/\">Systemd-Free Artix Linux Sees First Release in 2026 with XLibre and PipeWire</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/systemd-free-artix-linux-sees-first-release-in-2026-with-xlibre-and-pipewire/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 08:18:20 +0000",
+          "published": "Mon, 20 Apr 2026 14:08:44 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "Linux Kernel 7.0 RC6: Fixes, Improvements, and Installation Guide",
-          "description": "<p>Explore Linux Kernel 7.0 RC6 with essential fixes and enhancements. Follow our detailed installation guide to optimize your system effortlessly.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linux-kernel-7-0-rc6-fixes-improvements-and-installation-guide/\">Linux Kernel 7.0 RC6: Fixes, Improvements, and Installation Guide</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/linux-kernel-7-0-rc6-fixes-improvements-and-installation-guide/",
+          "title": "Parrot Linux Takes Stand Against Age Verification",
+          "description": "<p>Explore how Parrot Linux is challenging age verification laws, promoting privacy and security for users. Learn about their commitment to digital freedom.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/parrot-linux-takes-stand-against-age-verification/\">Parrot Linux Takes Stand Against Age Verification</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/parrot-linux-takes-stand-against-age-verification/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 08:11:11 +0000",
+          "published": "Mon, 20 Apr 2026 14:05:15 +0000",
           "author": "Content Operations"
         },
         {
-          "title": "AerynOS 2026.03 Released with the Latest GNOME 50 Desktop Environment",
-          "description": "<p>AerynOS 2026.03 is here! Explore the new GNOME 50 desktop environment, offering improved features and a modern design for an exceptional user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/aerynos-2026-03-released-with-the-latest-gnome-50-desktop-environment/\">AerynOS 2026.03 Released with the Latest GNOME 50 Desktop Environment</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/aerynos-2026-03-released-with-the-latest-gnome-50-desktop-environment/",
+          "title": "OBS Studio 32.1.1 Is Out to Improve the Audio Mixer and Audio Deduplication",
+          "description": "<p>Discover the latest features in OBS Studio 32.1.1, enhancing the audio mixer and improving audio deduplication for a seamless streaming experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/obs-studio-32-1-1-is-out-to-improve-the-audio-mixer-and-audio-deduplication/\">OBS Studio 32.1.1 Is Out to Improve the Audio Mixer and Audio Deduplication</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/obs-studio-32-1-1-is-out-to-improve-the-audio-mixer-and-audio-deduplication/",
           "source": "Linux News",
           "category": "Infrastructure",
-          "published": "Fri, 17 Apr 2026 08:05:13 +0000",
+          "published": "Mon, 20 Apr 2026 13:55:38 +0000",
           "author": "Content Operations"
+        },
+        {
+          "title": "Writing Node.js addons with .NET Native AOT",
+          "description": "<p>The C# Dev Kit team replaced C++ Node.js addons with C# and Native AOT, removing a dependency on Python. This post walks through building a Node.js native addon entirely in C# using N-API, LibraryImport, and UnmanagedCallersOnly.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/writing-nodejs-addons-with-dotnet-native-aot/\">Writing Node.js addons with .NET Native AOT</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/writing-nodejs-addons-with-dotnet-native-aot/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Mon, 20 Apr 2026 20:00:00 +0000",
+          "author": "Drew Noakes"
+        },
+        {
+          "title": "Changes to GitHub Copilot Individual plans",
+          "description": "<p>We're making these changes to ensure a reliable and predictable experience for existing customers.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/\">Changes to GitHub Copilot Individual plans</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Mon, 20 Apr 2026 18:15:28 +0000",
+          "author": "Joe Binder"
+        },
+        {
+          "title": "Highlights from Git 2.54",
+          "description": "<p>The open source Git project just released Git 2.54. Here is GitHub’s look at some of the most interesting features and changes introduced since last time.</p>\n<p>The post <a href=\"https://github.blog/open-source/git/highlights-from-git-2-54/\">Highlights from Git 2.54</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/open-source/git/highlights-from-git-2-54/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Mon, 20 Apr 2026 16:43:57 +0000",
+          "author": "Taylor Blau"
+        },
+        {
+          "title": "AWS Weekly Roundup: Claude Opus 4.7 in Amazon Bedrock, AWS Interconnect GA, and more (April 20, 2026)",
+          "description": "Claude Opus 4.7 arrives in Amazon Bedrock with improved agentic coding and a 1M token context window. AWS Interconnect reaches general availability with multicloud private connectivity and a new last-mile option. Plus, post-quantum TLS for Secrets Manager, new C8in/C8ib EC2 instances, and more.",
+          "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-opus-4-7-in-amazon-bedrock-aws-interconnect-ga-and-more-april-20-2026/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Mon, 20 Apr 2026 15:53:21 +0000",
+          "author": "Sébastien Stormacq"
+        },
+        {
+          "title": "Changes to GitHub Copilot Individual plans",
+          "description": "<p>We're making these changes to ensure a reliable and predictable experience for existing customers.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/\">Changes to GitHub Copilot Individual plans</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Mon, 20 Apr 2026 18:15:28 +0000",
+          "author": "Joe Binder"
+        },
+        {
+          "title": "Highlights from Git 2.54",
+          "description": "<p>The open source Git project just released Git 2.54. Here is GitHub’s look at some of the most interesting features and changes introduced since last time.</p>\n<p>The post <a href=\"https://github.blog/open-source/git/highlights-from-git-2-54/\">Highlights from Git 2.54</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/open-source/git/highlights-from-git-2-54/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Mon, 20 Apr 2026 16:43:57 +0000",
+          "author": "Taylor Blau"
         },
         {
           "title": "Building an emoji list generator with the GitHub Copilot CLI",
@@ -2175,6 +2229,15 @@
           "category": "DevOps",
           "published": "Thu, 16 Apr 2026 16:00:00 +0000",
           "author": "Lawrence Gripper"
+        },
+        {
+          "title": "Bridging the Gap in Product Lifecycle Management: How OpenEoX and CLE Work Together",
+          "description": "<p><em>OpenEoX and CLE are two emerging standards that work together to solve a critical gap in how organizations track whether the software and hardware they depend on is still supported, and their collaboration could reshape how the entire industry manages product lifecycle risk.</em></p>\n\n<!--more-->\n\n<p>In the rapidly evolving landscape of software and hardware supply chains, tracking  products’ longevity is a notable challenge, especially it is a critical challenge for organizations managing complex technology portfolios. As highlighted in the <a href=\"https://docs.oasis-open.org/openeox/standardization-framework/openeox-standardization-framework-technical-report.pdf\">OpenEoX Standardization Framework Technical Report</a>, industry is facing significant security and operational risks due to inconsistent, unreliable, and often missing End-of-Life (EoL) and End-of-Security-Support (EoSSec) or End-of-Sales (EoS) information. Emerging regulations like EU Cyber Resilience Act (CRA) elevate lifecycle transparency from a risk management concern to a mandatory compliance requirement with potential legal and financial consequences for non-compliance.</p>\n\n<p>Without a standardized machine readable language for lifecycle information exchange, organizations struggle to identify unsupported products, leading to security blind spots where unpatched vulnerabilities can persist indefinitely and present risk. Product users might not even be aware that the specific product is no longer supported or close to the EoL, and quick remediation steps are required. The lack of a unified framework to exchange this information often leaves consumers guessing about the support status of the technologies they rely on, increasing the likelihood of cyberattacks and operational disruptions.</p>\n\n<p>To solve these systemic issues, two major initiatives have emerged: the <strong>OpenEoX framework</strong> and the <strong>Common Lifecycle Enumeration (CLE) standard</strong>.</p>\n\n<h2 id=\"understanding-openeox-and-cle\">Understanding OpenEoX and CLE</h2>\n<p>While both initiatives aim to bring clarity to product lifecycles, they approach the problem from different, yet complementary, angles.</p>\n\n<p><strong>OpenEoX</strong> (managed by the OASIS OpenEoX Technical Committee) is a comprehensive framework designed and still developed to standardize the <strong>exchange of life cycle information</strong>. It focuses on the broader “policy” aspect of lifecycle management, defining a common taxonomy for critical milestones such as:</p>\n<ul>\n  <li>General Availability (GA): Initial product release date</li>\n  <li>End-of-Sales (EoS): Last date for product purchase from vendor channels</li>\n  <li>End-of-Security-Support (EoSSec): Termination of security patch availability</li>\n  <li>End-of-Life (EoL): Cessation of all vendor support and maintenance</li>\n</ul>\n\n<p>The OpenEoX schema is structured to communicate a product’s entire support policy and timeline, making it ideal for describing complex support scenarios often found in commercial software and hardware.</p>\n\n<p><strong>Common Lifecycle Enumeration (CLE)</strong> (standardized as <a href=\"https://ecma-international.org/publications-and-standards/standards/ecma-428/\">ECMA-428</a> and managed by Ecma TC54-TG3) is an open standard focused on <strong>enumerating specific lifecycle events</strong> and handling <strong>component aliasing</strong>. The CLE schema excels at providing a structured, machine-readable format for discrete events (like a specific version going EoL) and tracking identity changes (aliasing) as a component evolves or changes ownership. It is designed to be a lightweight, precise method for linking a specific component artifact to a lifecycle status.</p>\n\n<h2 id=\"distinct-use-cases-vendors-vs-maintainers\">Distinct Use Cases: Vendors vs. Maintainers</h2>\n<p>The fundamental distinction between OpenEoX and CLE lies in their architectural complexity and target adoption contexts, reflecting different organizational needs and operational constraints:</p>\n\n<p><strong>OpenEoX</strong> is tailored for <strong>complex use cases</strong>, particularly those involving larger software and hardware vendors. Its schema allows for the definition of detailed support policies that may include multiple tiers of support (e.g., standard vs. extended support), regional variations, and dependency relationships. It provides a “big picture” view of a product’s lifecycle strategy, which is essential for enterprise vendors managing extensive portfolios. It can cover complex software and hardware products, which rely on many artifacts and dependencies (downstream and upstream).</p>\n\n<p><strong>CLE</strong>, in contrast, is designed to be <strong>easily adopted by single open-source content maintainers</strong>. Its lightweight nature means a maintainer can quickly publish a CLE record to signal a specific event, such as “Version 1.2.3 is now End-of-Life” or “Project X has been renamed to Project Y”, without needing to construct a complex policy document. This makes CLE highly effective for the decentralized nature of the open-source ecosystem, where speed and simplicity are paramount.</p>\n\n<h2 id=\"collaboration-a-unified-future\">Collaboration: A Unified Future</h2>\n<p>Recognizing the complementary strengths of both frameworks, stakeholders from the OASIS OpenEoX Technical Committee and Ecma TC54-TG3 (CLE working group) have formally established a collaborative partnership, explicitly affirming that OpenEoX and CLE address distinct yet interconnected aspects of lifecycle management rather than competing alternatives. In short, these standards <strong>do not compete with each other</strong>. Instead, both working groups are committed to a collaborative model where each standard supplements the other to cover the full spectrum of lifecycle management.</p>\n\n<p>In a unified ecosystem, <strong>OpenEoX</strong> can be used to transport high-level policy data and extensive vendor timelines, while <strong>CLE</strong> can serve as the granular identifier mechanism that links those policies to specific software artifacts and tracks their evolution over time. For example, an OpenEoX document might reference CLE identifiers to precisely pinpoint the components affected by a policy change, or a CLE event might point to an OpenEoX document for further context on a migration path.</p>\n\n<h2 id=\"summary\">Summary</h2>\n<p>The OpenEoX and CLE standardization initiatives are actively engaged in collaborative development to ensure interoperability and prevent specification conflicts that could fragment the lifecycle management ecosystem. By aligning their efforts, they aim to address all types of product lifecycle problems, from the complex, policy-driven requirements of major vendors to the agile, event-driven needs of open-source maintainers. Together, OpenEoX and CLE establish a robust, interoperable foundation for systematic lifecycle management, enabling organizations to proactively identify unsupported dependencies, satisfy emerging regulatory compliance requirements and mitigate supply chain security risks through transparent, machine-readable lifecycle information exchange.</p>\n\n<h2 id=\"openeox-and-cle-communities\">OpenEoX and CLE communities</h2>\n<ul>\n  <li><a href=\"https://github.com/Ecma-TC54/tg3\">https://github.com/Ecma-TC54/tg3</a></li>\n  <li><a href=\"https://tc54.org/cle\">https://tc54.org/cle</a></li>\n  <li><a href=\"https://github.com/oasis-tcs/openeox\">https://github.com/oasis-tcs/openeox</a></li>\n  <li><a href=\"https://openeox.org/\">https://openeox.org/</a></li>\n</ul>\n\n<h2 id=\"references\">References</h2>\n\n<ol>\n  <li>\n    <p>OASIS OpenEoX Technical Committee. (2025). OpenEoX Standardization Framework Technical Report. OASIS Open.</p>\n  </li>\n  <li>\n    <p>Ecma International. (2024). ECMA-428: Common Lifecycle Enumeration (CLE) Standard. Ecma TC54-TG3.</p>\n  </li>\n  <li>\n    <p>European Parliament and Council. (2024). Regulation (EU) 2024/2847 on Cybersecurity Requirements for Products with Digital Elements (Cyber Resilience Act).</p>\n  </li>\n</ol>\n\n<div style=\"display: flex;\">\n    <div>\n      <strong>Jordan Harband</strong><br />Ecma Technical Committee 54, TG3 Convenor\n    </div>\n    <div>\n      <strong>Przemyslaw (Rogue) Roguski</strong><br />OASIS OpenEoX Technical Committee member\n    </div>\n  </div>",
+          "link": "http://owasp.org/blog/2026/04/15/end-of-life-cle-and-openeox.html",
+          "source": "OWASP",
+          "category": "Sécurité",
+          "published": "2026-04-15T07:00:00+00:00",
+          "author": "Jordan Harband and Przemyslaw (Rogue) Roguski"
         },
         {
           "title": "Pin Clustering in .NET MAUI Maps",
@@ -2366,33 +2429,6 @@
           "author": "Kedasha Kerr"
         },
         {
-          "title": "GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI",
-          "description": "<p>GitHub for Beginners: Getting started with the GitHub Copilot CLI, a step-by-step tutorial.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/\">GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Fri, 10 Apr 2026 16:00:00 +0000",
-          "author": "Christopher Harrison"
-        },
-        {
-          "title": "GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI",
-          "description": "<p>GitHub for Beginners: Getting started with the GitHub Copilot CLI, a step-by-step tutorial.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/\">GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Fri, 10 Apr 2026 16:00:00 +0000",
-          "author": "Christopher Harrison"
-        },
-        {
-          "title": "GitHub availability report: March 2026",
-          "description": "<p>In March, we experienced four incidents that resulted in degraded performance across GitHub services.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-availability-report-march-2026/\">GitHub availability report: March 2026</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/company-news/github-availability-report-march-2026/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Thu, 09 Apr 2026 02:21:17 +0000",
-          "author": "Jakub Oleksy"
-        },
-        {
           "title": "Microsoft named a Leader in The Forrester Wave™ for Sovereign Cloud Platforms",
           "description": "<p>Microsoft is named a Leader in The Forrester Wave™ for Sovereign Cloud Platforms, recognizing Microsoft Sovereign Cloud leadership in evolving sovereignty needs.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-forrester-wave-for-sovereign-cloud-platforms/\">Microsoft named a Leader in The Forrester Wave™ for Sovereign Cloud Platforms</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
           "link": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-forrester-wave-for-sovereign-cloud-platforms/",
@@ -2409,15 +2445,6 @@
           "category": "Cloud",
           "published": "Thu, 09 Apr 2026 15:05:00 +0000",
           "author": "Aman Singh"
-        },
-        {
-          "title": "GitHub availability report: March 2026",
-          "description": "<p>In March, we experienced four incidents that resulted in degraded performance across GitHub services.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-availability-report-march-2026/\">GitHub availability report: March 2026</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/company-news/github-availability-report-march-2026/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Thu, 09 Apr 2026 02:21:17 +0000",
-          "author": "Jakub Oleksy"
         },
         {
           "title": "Reclaim Developer Hours through Smarter Vulnerability Prioritization with Docker and Mend.io",
@@ -2771,15 +2798,6 @@
           "author": "Inconnu"
         },
         {
-          "title": "RT.Assistant: A Multi-Agent Voice Bot Using .NET and OpenAI",
-          "description": "<p>Guest blog post on building a real time assistant using OpenAI Realtime API using .NET, F#, Microsoft.Extensions.AI and .NET MAUI.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/rt-assistant-a-realtime-multiagent-voice-bot-using-dotnet-and-open-ai-api/\">RT.Assistant: A Multi-Agent Voice Bot Using .NET and OpenAI</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/rt-assistant-a-realtime-multiagent-voice-bot-using-dotnet-and-open-ai-api/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Tue, 17 Mar 2026 17:05:00 +0000",
-          "author": "Faisal Waris"
-        },
-        {
           "title": "Measuring progress toward AGI: A cognitive framework",
           "description": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
           "link": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework/",
@@ -2859,15 +2877,6 @@
           "category": "IA",
           "published": "Tue, 03 Mar 2026 16:35:55 +0000",
           "author": "Inconnu"
-        },
-        {
-          "title": "AWS Weekly Roundup: OpenAI partnership, AWS Elemental Inference, Strands Labs, and more (March 2, 2026)",
-          "description": "This past week, I’ve been deep in the trenches helping customers transform their businesses through AI-DLC (AI-Driven Lifecycle) workshops. Throughout 2026, I’ve had the privilege of facilitating these sessions for numerous customers, guiding them through a structured framework that helps organizations identify, prioritize, and implement AI use cases that deliver measurable business value. AI-DLC is […]",
-          "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-partnership-aws-elemental-inference-strands-labs-and-more-march-2-2026/",
-          "source": "AWS Blog",
-          "category": "Cloud",
-          "published": "Mon, 02 Mar 2026 19:05:12 +0000",
-          "author": "Micah Walter"
         },
         {
           "title": "Before You Migrate: Five Surprising Ingress-NGINX Behaviors You Need to Know",
@@ -3804,15 +3813,6 @@
           "category": "Sécurité",
           "published": "2024-10-30T07:00:00+00:00",
           "author": "Andrew van der Stock"
-        },
-        {
-          "title": "Securing React Native Mobile Apps with OWASP MAS",
-          "description": "<p>React Native is a popular cross-platform mobile development framework that allows developers to build native-looking apps for iOS and Android using a single codebase. Like any other software, React Native apps are also vulnerable to a variety of security threats.</p>\n\n<!--more-->\n\n<h2 id=\"1-securing-each-part-of-the-app\">1. Securing each part of the app</h2>\n\n<p>To secure a React Native app you should analyse all its parts and how they communicate. This requires an understanding of each block: React Native, iOS, and Android platforms and Bridge between them.</p>\n\n<p>The React Native app uses JavaScript that is run on the JS engine. Understanding native JS engines and Hermes engine from Facebook is also necessary as they have different threat vectors. Using native JS engines makes extracting minified JS code from application bundles easy, while <a href=\"https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=hermes\">Hermes had several reported vulnerabilities</a> in the past.</p>\n\n<h2 id=\"2-assessing-react-native-apps-with-owasp-guides\">2. Assessing React Native apps with OWASP guides</h2>\n\n<p>It is also important to follow general mobile application security best practices, such as those described in OWASP guides. While there are no React Native-specific guides, OWASP provides guidance on how to improve the security of native apps, protecting them from common threats and vulnerabilities:</p>\n\n<ul>\n  <li><a href=\"https://mas.owasp.org/MASVS/\">OWASP Mobile Application Security Verification Standard</a></li>\n  <li><a href=\"https://mas.owasp.org/MASTG/\">OWASP Mobile Application Security Testing Guide</a></li>\n  <li><a href=\"https://cheatsheetseries.owasp.org\">OWASP Cheat Sheet Series </a></li>\n</ul>\n\n<p>OWASP React Native guides can be used to assess platform-specific security controls, while OWASP JavaScript guides can be used to cover most of the remaining assessment areas:</p>\n\n<ul>\n  <li><a href=\"https://owasp.org/www-project-application-security-verification-standard/\">OWASP Application Security Verification Standard</a></li>\n  <li><a href=\"https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist\">OWASP Secure coding guide</a></li>\n</ul>\n\n<p>The common area for assessment in each cross-platform app is the way methods are bridged between native and non-native parts (like, how JavaScript and native code are communicating). For example, bridged methods may lack obfuscation making platform-specific security controls more visible for reverse engineers. The resilience sections of <a href=\"https://mas.owasp.org/MASTG/\">OWASP MASTG</a> can serve as a guide to protect against reverse engineering and tampering because they describe concepts that can be applied to cross-platform apps.</p>\n\n<h2 id=\"3-react-native-libraries-secure-choice\">3. React Native libraries: Secure choice</h2>\n\n<p>JavaScript brings to React Native one of its most painful stepping stones: Managing a large number of dependencies and dealing with vulnerabilities in them. Integrating dependency checkers like <a href=\"https://owasp.org/www-project-dependency-check/\">OWASP Dependency-Check</a> or GitHub Dependabot into the CI/CD process becomes a must-have for React Native apps.</p>\n\n<p>Many React Native libraries are ported from the JavaScript ecosystem, but they may not be suitable for mobile apps, especially for security-sensitive functionality.</p>\n\n<p>A secure React Native library is:</p>\n\n<ul>\n  <li><strong>Without vulnerabilities:</strong> The library doesn’t have known vulnerabilities and it has a reasonable history of patching known vulnerabilities.</li>\n  <li><strong>Without open security issues:</strong> Review GitHub issues and PRs to see how the maintainers respond to security issues.</li>\n  <li><strong>Actively maintained and supported</strong> by multiple people. The security-related library should be supported by people with security and cryptography expertise, and ideally audited by a third party.</li>\n  <li><strong>Optimised for mobile platforms:</strong> For example, a library with a cryptographically secure pseudorandom generator should not depend on mouse clicks (<a href=\"https://www.cossacklabs.com/blog/crypto-wallets-security/#dependency-issues-with-crypto-wallets\">example explained</a>).</li>\n  <li><strong>Easy-to-use API:</strong> The library has well-documented APIs that work the same on iOS and Android.</li>\n  <li><strong>Licence:</strong> Pay attention to the open-source licence, as not all open-source libraries are free to use.</li>\n  <li><strong>Tests:</strong> Make sure the library has unit and integration tests, especially if it deals with cryptography or operates highly sensitive data.</li>\n</ul>\n\n<p>Research <a href=\"https://www.cossacklabs.com/blog/react-native-libraries-security/\">React Native libraries</a> and their dependencies before using them for security-sensitive functionality.</p>\n\n<h2 id=\"4-seven-steps-to-secure-react-native-app\">4. Seven steps to secure React Native app</h2>\n\n<p>Find your way to a secure React Native app, by following the steps that we singled out to simplify this journey:</p>\n\n<ol>\n  <li>Understand the implication of adding one more vendor (Facebook) and put <strong>trust</strong> in the security of its platform.</li>\n  <li>Make sure your team has enough <strong>security expertise</strong> for iOS, Android, and React Native. Depending on data sensitivity, you may want to hire external security experts.</li>\n  <li><strong>Educate your development team</strong> about security best practices, secure coding, possibilities to automate security checks, OWASP <a href=\"https://owasp.org/www-project-mobile-top-10/\">Mobile Top-10</a>, and <a href=\"https://mas.owasp.org/\">OWASP MAS</a>.</li>\n  <li><strong>Creating security controls for mobile apps</strong> as React Native apps are still mobile apps. Use OWASP MAS as a main guidance. Add security controls specific to React Native, if needed.</li>\n  <li><strong>Managing dependencies</strong> in your React Native apps, and keeping them up to date. Automated dependency analysers and code scanning is a good proactive approach.</li>\n  <li><strong>Cover security controls with tests</strong>, especially if they deal with cryptographic operations, Secure Enclave, and StrongBox Keystore</li>\n  <li><strong>Send the app for security review</strong> by third-party experts. Implement mitigations, cover them with tests, and add the issue to the regression testing checklist.</li>\n</ol>\n\n<p>Securing React Native mobile apps requires a holistic approach, applied to all aspects of the development process, from choosing secure libraries to implementing security controls.</p>",
-          "link": "http://owasp.org/blog/2024/10/02/Securing-React-Native-Mobile-Apps-with-OWASP-MAS.html",
-          "source": "OWASP",
-          "category": "Sécurité",
-          "published": "2024-10-02T07:00:00+00:00",
-          "author": "Julia Mezher"
         }
       ]
     }
