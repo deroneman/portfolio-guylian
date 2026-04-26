@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-25T08:09:57.833826",
+  "lastUpdate": "2026-04-26T08:20:54.629368",
   "articles": {
     "infrastructure": {
       "icon": "🏗️",
@@ -1465,6 +1465,15 @@
       "icon": "☁️",
       "articles": [
         {
+          "title": "OpenAI’s GPT-5.5 in Microsoft Foundry: Frontier intelligence on an enterprise ready platform",
+          "description": "<p>OpenAI’s GPT-5.5 will be generally available in Microsoft Foundry, bringing OpenAI’s latest frontier model to Azure and the enterprise teams building agents for real production work.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/openais-gpt-5-5-in-microsoft-foundry-frontier-intelligence-on-an-enterprise-ready-platform/\">OpenAI’s GPT-5.5 in Microsoft Foundry: Frontier intelligence on an enterprise ready platform</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/openais-gpt-5-5-in-microsoft-foundry-frontier-intelligence-on-an-enterprise-ready-platform/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Thu, 23 Apr 2026 22:00:00 +0000",
+          "author": "Naomi Moneypenny"
+        },
+        {
           "title": "Microsoft Discovery: Advancing agentic R&D at scale",
           "description": "<p>Expanded preview access for Microsoft Discovery brings new enterprise-grade, agentic AI capabilities for research and development teams.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/microsoft-discovery-advancing-agentic-rd-at-scale/\">Microsoft Discovery: Advancing agentic R&amp;D at scale</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
           "link": "https://azure.microsoft.com/en-us/blog/microsoft-discovery-advancing-agentic-rd-at-scale/",
@@ -1636,15 +1645,6 @@
           "author": "Prasad Rao"
         },
         {
-          "title": "Navigating digital sovereignty at the frontier of transformation",
-          "description": "<p>Digital sovereignty has become a practical leadership discipline grounded in risk management, continuity planning, and long-term accountability.</p>\n<p>The post <a href=\"https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/03/25/navigating-digital-sovereignty-at-the-frontier-of-transformation/\">Navigating digital sovereignty at the frontier of transformation</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/03/25/navigating-digital-sovereignty-at-the-frontier-of-transformation/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Mon, 30 Mar 2026 21:27:39 +0000",
-          "author": "Philippe Rogge"
-        },
-        {
           "title": "Customize your AWS Management Console experience with visual settings including account color, region and service visibility",
           "description": "AWS introduces visual customization capability in AWS Management Console that enables selective display of relevant AWS Regions and services for your team members. By hiding unused Regions and services, you can reduce cognitive load and eliminate unnecessary clicks and scrolling, helping you focus better and work faster.",
           "link": "https://aws.amazon.com/blogs/aws/customize-your-aws-management-console-experience-with-visual-settings-including-account-color-region-and-service-visibility/",
@@ -1745,7 +1745,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473511",
+          "published": "2026-04-26T08:20:02.134748",
           "author": "prombot"
         },
         {
@@ -1754,7 +1754,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473507",
+          "published": "2026-04-26T08:20:02.134744",
           "author": "prombot"
         },
         {
@@ -1763,7 +1763,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473503",
+          "published": "2026-04-26T08:20:02.134739",
           "author": "prombot"
         },
         {
@@ -1772,7 +1772,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473498",
+          "published": "2026-04-26T08:20:02.134735",
           "author": "roidelapluie"
         },
         {
@@ -1781,7 +1781,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473494",
+          "published": "2026-04-26T08:20:02.134731",
           "author": "roidelapluie"
         },
         {
@@ -1790,7 +1790,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473490",
+          "published": "2026-04-26T08:20:02.134727",
           "author": "prombot"
         },
         {
@@ -1799,7 +1799,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473485",
+          "published": "2026-04-26T08:20:02.134722",
           "author": "roidelapluie"
         },
         {
@@ -1808,7 +1808,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473480",
+          "published": "2026-04-26T08:20:02.134717",
           "author": "roidelapluie"
         },
         {
@@ -1817,7 +1817,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473475",
+          "published": "2026-04-26T08:20:02.134712",
           "author": "prombot"
         },
         {
@@ -1826,7 +1826,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473465",
+          "published": "2026-04-26T08:20:02.134696",
           "author": "prombot"
         },
         {
@@ -1930,7 +1930,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473511",
+          "published": "2026-04-26T08:20:02.134748",
           "author": "prombot"
         },
         {
@@ -1939,7 +1939,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473507",
+          "published": "2026-04-26T08:20:02.134744",
           "author": "prombot"
         },
         {
@@ -1948,7 +1948,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473503",
+          "published": "2026-04-26T08:20:02.134739",
           "author": "prombot"
         },
         {
@@ -1957,7 +1957,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473498",
+          "published": "2026-04-26T08:20:02.134735",
           "author": "roidelapluie"
         },
         {
@@ -1966,7 +1966,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473494",
+          "published": "2026-04-26T08:20:02.134731",
           "author": "roidelapluie"
         },
         {
@@ -1975,7 +1975,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473490",
+          "published": "2026-04-26T08:20:02.134727",
           "author": "prombot"
         },
         {
@@ -1984,7 +1984,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473485",
+          "published": "2026-04-26T08:20:02.134722",
           "author": "roidelapluie"
         },
         {
@@ -1993,7 +1993,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473480",
+          "published": "2026-04-26T08:20:02.134717",
           "author": "roidelapluie"
         },
         {
@@ -2002,7 +2002,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473475",
+          "published": "2026-04-26T08:20:02.134712",
           "author": "prombot"
         },
         {
@@ -2011,7 +2011,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-25T08:09:15.473465",
+          "published": "2026-04-26T08:20:02.134696",
           "author": "prombot"
         },
         {
@@ -2139,6 +2139,15 @@
           "category": "Développement",
           "published": "Thu, 23 Apr 2026 17:25:00 +0000",
           "author": "Richard Lander"
+        },
+        {
+          "title": "OpenAI’s GPT-5.5 in Microsoft Foundry: Frontier intelligence on an enterprise ready platform",
+          "description": "<p>OpenAI’s GPT-5.5 will be generally available in Microsoft Foundry, bringing OpenAI’s latest frontier model to Azure and the enterprise teams building agents for real production work.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/openais-gpt-5-5-in-microsoft-foundry-frontier-intelligence-on-an-enterprise-ready-platform/\">OpenAI’s GPT-5.5 in Microsoft Foundry: Frontier intelligence on an enterprise ready platform</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/openais-gpt-5-5-in-microsoft-foundry-frontier-intelligence-on-an-enterprise-ready-platform/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Thu, 23 Apr 2026 22:00:00 +0000",
+          "author": "Naomi Moneypenny"
         },
         {
           "title": "SELinux Volume Label Changes goes GA (and likely implications in v1.37)",
@@ -2733,15 +2742,6 @@
           "category": "Cloud",
           "published": "Mon, 30 Mar 2026 16:11:28 +0000",
           "author": "Prasad Rao"
-        },
-        {
-          "title": "Navigating digital sovereignty at the frontier of transformation",
-          "description": "<p>Digital sovereignty has become a practical leadership discipline grounded in risk management, continuity planning, and long-term accountability.</p>\n<p>The post <a href=\"https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/03/25/navigating-digital-sovereignty-at-the-frontier-of-transformation/\">Navigating digital sovereignty at the frontier of transformation</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/03/25/navigating-digital-sovereignty-at-the-frontier-of-transformation/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Mon, 30 Mar 2026 21:27:39 +0000",
-          "author": "Philippe Rogge"
         },
         {
           "title": "Gemini 3.1 Flash Live: Making audio AI more natural and reliable",
