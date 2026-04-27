@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-04-26T08:20:54.629368",
+  "lastUpdate": "2026-04-27T09:26:50.900782",
   "articles": {
     "infrastructure": {
       "icon": "🏗️",
@@ -1010,6 +1010,15 @@
       "icon": "🤖",
       "articles": [
         {
+          "title": "Announcing our partnership with the Republic of Korea",
+          "description": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
+          "link": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/",
+          "source": "DeepMind",
+          "category": "IA",
+          "published": "Mon, 27 Apr 2026 07:00:06 +0000",
+          "author": "Inconnu"
+        },
+        {
           "title": "Decoupled DiLoCo: A new frontier for resilient, distributed AI training",
           "description": "",
           "link": "https://deepmind.google/blog/decoupled-diloco/",
@@ -1449,15 +1458,6 @@
           "category": "IA",
           "published": "Sat, 25 Oct 2025 17:27:10 +0000",
           "author": "Inconnu"
-        },
-        {
-          "title": "AlphaEarth Foundations helps map our planet in unprecedented detail",
-          "description": "New AI model integrates petabytes of Earth observation data to generate a unified data representation that revolutionizes global mapping and monitoring",
-          "link": "https://deepmind.google/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/",
-          "source": "DeepMind",
-          "category": "IA",
-          "published": "Fri, 24 Oct 2025 19:06:32 +0000",
-          "author": "Inconnu"
         }
       ]
     },
@@ -1745,7 +1745,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134748",
+          "published": "2026-04-27T09:26:50.299606",
           "author": "prombot"
         },
         {
@@ -1754,7 +1754,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134744",
+          "published": "2026-04-27T09:26:50.299602",
           "author": "prombot"
         },
         {
@@ -1763,7 +1763,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134739",
+          "published": "2026-04-27T09:26:50.299597",
           "author": "prombot"
         },
         {
@@ -1772,7 +1772,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134735",
+          "published": "2026-04-27T09:26:50.299593",
           "author": "roidelapluie"
         },
         {
@@ -1781,7 +1781,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134731",
+          "published": "2026-04-27T09:26:50.299589",
           "author": "roidelapluie"
         },
         {
@@ -1790,7 +1790,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134727",
+          "published": "2026-04-27T09:26:50.299585",
           "author": "prombot"
         },
         {
@@ -1799,7 +1799,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134722",
+          "published": "2026-04-27T09:26:50.299580",
           "author": "roidelapluie"
         },
         {
@@ -1808,7 +1808,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134717",
+          "published": "2026-04-27T09:26:50.299576",
           "author": "roidelapluie"
         },
         {
@@ -1817,7 +1817,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134712",
+          "published": "2026-04-27T09:26:50.299571",
           "author": "prombot"
         },
         {
@@ -1826,7 +1826,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134696",
+          "published": "2026-04-27T09:26:50.299557",
           "author": "prombot"
         },
         {
@@ -1930,7 +1930,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.10.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134748",
+          "published": "2026-04-27T09:26:50.299606",
           "author": "prombot"
         },
         {
@@ -1939,7 +1939,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0-rc.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134744",
+          "published": "2026-04-27T09:26:50.299602",
           "author": "prombot"
         },
         {
@@ -1948,7 +1948,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134739",
+          "published": "2026-04-27T09:26:50.299597",
           "author": "prombot"
         },
         {
@@ -1957,7 +1957,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.0",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134735",
+          "published": "2026-04-27T09:26:50.299593",
           "author": "roidelapluie"
         },
         {
@@ -1966,7 +1966,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134731",
+          "published": "2026-04-27T09:26:50.299589",
           "author": "roidelapluie"
         },
         {
@@ -1975,7 +1975,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134727",
+          "published": "2026-04-27T09:26:50.299585",
           "author": "prombot"
         },
         {
@@ -1984,7 +1984,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134722",
+          "published": "2026-04-27T09:26:50.299580",
           "author": "roidelapluie"
         },
         {
@@ -1993,7 +1993,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134717",
+          "published": "2026-04-27T09:26:50.299576",
           "author": "roidelapluie"
         },
         {
@@ -2002,7 +2002,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134712",
+          "published": "2026-04-27T09:26:50.299571",
           "author": "prombot"
         },
         {
@@ -2011,8 +2011,17 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-26T08:20:02.134696",
+          "published": "2026-04-27T09:26:50.299557",
           "author": "prombot"
+        },
+        {
+          "title": "Announcing our partnership with the Republic of Korea",
+          "description": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
+          "link": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/",
+          "source": "DeepMind",
+          "category": "IA",
+          "published": "Mon, 27 Apr 2026 07:00:06 +0000",
+          "author": "Inconnu"
         },
         {
           "title": "Kubernetes v1.36: Fine-Grained Kubelet API Authorization Graduates to GA",
@@ -3569,15 +3578,6 @@
           "source": "DeepMind",
           "category": "IA",
           "published": "Sat, 25 Oct 2025 17:27:10 +0000",
-          "author": "Inconnu"
-        },
-        {
-          "title": "AlphaEarth Foundations helps map our planet in unprecedented detail",
-          "description": "New AI model integrates petabytes of Earth observation data to generate a unified data representation that revolutionizes global mapping and monitoring",
-          "link": "https://deepmind.google/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/",
-          "source": "DeepMind",
-          "category": "IA",
-          "published": "Fri, 24 Oct 2025 19:06:32 +0000",
           "author": "Inconnu"
         },
         {
