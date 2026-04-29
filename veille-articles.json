@@ -1,9 +1,108 @@
 {
-  "lastUpdate": "2026-04-28T09:30:25.151901",
+  "lastUpdate": "2026-04-29T09:19:31.116271",
   "articles": {
     "infrastructure": {
       "icon": "🏗️",
       "articles": [
+        {
+          "title": "Kubernetes v1.36: Staleness Mitigation and Observability for Controllers",
+          "description": "<p>Staleness in Kubernetes controllers is a problem that affects many controllers, and is something may affect controller behavior\nin subtle ways. It is usually not until it is too late, when a controller in production has already taken incorrect action, that\nstaleness is found to be an issue due to some underlying assumption made by the controller author. Some issues caused by staleness\ninclude controllers taking incorrect actions, controllers not taking action when they should, and controllers taking too long to\ntake action. I am excited to announce that Kubernetes v1.36 includes new features that help mitigate staleness in controllers\nand provide better observability into controller behavior.</p>\n<h2 id=\"what-is-staleness\">What is staleness?</h2>\n<p>Staleness in controllers comes from an outdated view of the world inside of the controller cache. In order to provide a fast user\nexperience, controllers typically maintain a local cache of the state of the cluster. This cache is populated by watching the\nKubernetes API server for changes to objects that the controller cares about. When the controller needs to take action, it will\nfirst check its cache to see if it has the latest information. If it does not, it will then update its cache by watching the API\nserver for changes to objects that the controller cares about. This process is known as <em>reconciliation</em>.</p>\n<p>However, there are some cases where the controller's cache may be outdated. For example, if the controller is restarted, it will\nneed to rebuild its cache by watching the API server for changes to objects that the controller cares about. During this time, the\ncontroller's cache will be outdated, and it will not be able to take action. Additionally, if the API server is down, the controller's\ncache will not be updated, and it will not be able to take action. These are just a few examples of cases where the controller's\ncache may be outdated.</p>\n<h2 id=\"improvements-in-1-36\">Improvements in 1.36</h2>\n<p>Kubernetes v1.36 includes improvements in both client-go as well as implementations of highly contended controllers in\nkube-controller-manager, using those client-go improvements.</p>\n<h3 id=\"client-go-improvements\">client-go improvements</h3>\n<p>In client-go, the project added <em>atomic FIFO processing</em> (feature gate\nname <code>AtomicFIFO</code>), which is on top of the existing FIFO queue implementation. The new approach allows for\nthe queue to atomically handle operations that are recieved in batches, such as the initial set of objects from a\n<em>list</em> operation that an informer uses to populate its cache. This ensures that the queue is always in a consistent state,\neven when events come out of order. Prior to this, events were added to the queue\nin the order that they were received, which could lead to an inconsistent state in the cache that does not accurately reflect\nthe state of the cluster.</p>\n<p>With this change, you can now ensure that the queue is always in a consistent state, even when events come out of order. To take\nadvantage of this, clients using client-go can now introspect into the cache to determine the latest resource version that the\ncontroller cache has seen. This is done with the newly added function <code>LastStoreSyncResourceVersion()</code> implemented on the <code>Store</code>\ninterface <a href=\"https://pkg.go.dev/k8s.io/client-go@v0.36.0/tools/cache#Store\">here</a>. This function is the basis for the staleness mitigation\nfeatures in kube-controller-manager.</p>\n<h3 id=\"kube-controller-manager-improvements\">kube-controller-manager improvements</h3>\n<p>In kube-controller-manager, the v1.36 release has added the ability for 4 different controllers to use this new capability. The controllers are:</p>\n<ol>\n<li>DaemonSet controller</li>\n<li>StatefulSet controller</li>\n<li>ReplicaSet controller</li>\n<li>Job controller</li>\n</ol>\n<p>These controllers all act on pods, which in most cases are under the highest amount of contention in a cluster. The changes are\non by default for these controllers, and can be disabled by setting the feature gates <code>StaleControllerConsistency&lt;API type&gt;</code>\nto <code>false</code> for the specific controller you wish to disable it for. For example, to disable the feature for the DaemonSet controller,\nyou would set the feature gate <code>StaleControllerConsistencyDaemonSet</code> to <code>false</code>.</p>\n<p>When the relevant feature gate is enabled, the controller will first check the latest\n<a href=\"https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions\">resource version</a> of the cache before taking action. If the\nlatest resource version of the cache is lower than what the controller has written to the API server for the object it is trying to\nreconcile, the controller will not take action. This is because the controller's cache is outdated, and it does not have the latest\ninformation about the state of the cluster.</p>\n<h3 id=\"use-for-informer-authors\">Use for informer authors</h3>\n<p>Informer authors using client-go can also immediately take advantage of these improvements. See an example of how to use this feature\nin the <a href=\"https://github.com/kubernetes/kubernetes/pull/137212\">ReplicaSet informer</a>. This PR shows how to use the new feature to check\nif the informer's cache is stale before taking action. The client-go library provides a <code>ConsistencyStore</code> data structure that queries the store\nand compares the latest resource version of the cache with the written resource version of the object.</p>\n<p>The ReplicaSet controller tracks both the ReplicaSet's resource version and the resource version of the pods that the ReplicaSet\nmanages. For a specific ReplicaSet, it tracks the latest written resource version of the pods that the ReplicaSet owns as well as\nany writes to the ReplicaSet itself. If the latest resource version of the cache is lower than what the controller has\nwritten to the API server for the object it is trying to reconcile, the controller will not take action. This is because the\ncontroller's cache is outdated, and it does not have the latest information about the state of the cluster.</p>\n<p>An informer author can use the <code>ConsistencyStore</code> to track the latest resource version of the objects that the informer cares about.\nIt provides 3 main functions:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-go\"><span style=\"display: flex;\"><span><span style=\"color: #a2f; font-weight: bold;\">type</span> ConsistencyStore <span style=\"color: #a2f; font-weight: bold;\">interface</span> {\n</span></span><span style=\"display: flex;\"><span> <span style=\"color: #080; font-style: italic;\">// WroteAt records that the given object was written at the given resource version.\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"></span> <span style=\"color: #00a000;\">WroteAt</span>(owningObj runtime.Object, uid types.UID, groupResource schema.GroupResource, resourceVersion <span style=\"color: #0b0; font-weight: bold;\">string</span>)\n</span></span><span style=\"display: flex;\"><span>\n</span></span><span style=\"display: flex;\"><span> <span style=\"color: #080; font-style: italic;\">// EnsureReady returns true if the cache is up to date for the given object.\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"></span> <span style=\"color: #080; font-style: italic;\">// It is used prior to reconciliation to decide whether to reconcile or not.\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"></span> <span style=\"color: #00a000;\">EnsureReady</span>(namespacedName types.NamespacedName) <span style=\"color: #0b0; font-weight: bold;\">bool</span>\n</span></span><span style=\"display: flex;\"><span>\n</span></span><span style=\"display: flex;\"><span> <span style=\"color: #080; font-style: italic;\">// Clear removes the given object from the consistency store.\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"></span> <span style=\"color: #080; font-style: italic;\">// It is used when an object is deleted.\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"></span> <span style=\"color: #00a000;\">Clear</span>(namespacedName types.NamespacedName, uid types.UID)\n</span></span><span style=\"display: flex;\"><span>}\n</span></span></code></pre></div><ol>\n<li><code>WroteAt</code>: This function is called by the controller when it writes to the API server for an object. It is used to record the\nlatest resource version of the object that the controller has written to the API server. The <code>owningObj</code> is the object that the\ncontroller is reconciling, and the <code>uid</code> is the UID of that object. The resource version and GroupResource are the resource version\nand GroupResource of the object that the controller has written to the API server. The object is not explicitly tracked, since the\ncontroller only cares about waiting to catch up to the latest resource version of the written object.</li>\n<li><code>EnsureReady</code>: This function is called by the controller to ensure that the cache is up to date for the object. It is used prior\nto reconciliation to decide whether to reconcile or not. It returns true if the cache is up to date for the object, and false\notherwise. It will use the information provided by <code>WroteAt</code> to determine if the cache is up to date.</li>\n<li><code>Clear</code>: This function is called by the controller when an object is deleted. It is used to remove the object from the consistency\nstore. This is mostly used for cleanup when an object is deleted to prevent the consistency store from growing indefinitely.</li>\n</ol>\n<p>The UID is used to distinguish between different objects that have the same name, such as when an object is deleted and then\nrecreated. It is not needed for EnsureReady because the consistency store is only concerned with catching up to the latest resource\nversion of the object, not the specific object. It is primarily used to ensure that the controller doesn't delete the entry for\nan object when it is recreated with a new UID.</p>\n<p>With these 3 functions, an informer author can implement staleness mitigation in their controller.</p>\n<h2 id=\"observability\">Observability</h2>\n<p>In addition to the staleness mitigation features, the Kubernetes project has also added related instrumentation to kube-controller-manager\nin 1.36. These metrics are also enabled by default, and are controlled using the same set of feature gates.</p>\n<h3 id=\"metrics\">Metrics</h3>\n<p>The following <a href=\"https://kubernetes.io/docs/reference/instrumentation/metrics/#list-of-alpha-kubernetes-metrics\">alpha metrics</a> have been added to kube-controller-manager in 1.36:</p>\n<p><code>stale_sync_skips_total</code>: The number of times the controller has skipped a sync due to stale cache. This metric is exposed\nfor each controller that uses the staleness mitigation feature with the subsystem of the controller.</p>\n<p>This metric is exposed by the kube-controller-manager metrics endpoint, and can be used to monitor the health of the controller.</p>\n<p>Along with this metric, client-go also emits metrics that expose the latest resource version of every shared informer\nwith the subsystem of the informer. This allows you to see the latest resource version of each informer, and use that to\ndetermine if the controller's cache is stale, especially great for comparing against the resource version of the API server.</p>\n<p>This metric is named <code>store_resource_version</code> and has the Group, Version, and Resource as labels.</p>\n<h2 id=\"what-s-next\">What's next?</h2>\n<p>Kubernetes SIG API Machinery is excited to continue working on this feature and hope to bring it to more controllers in the future.\nWe are also interested in hearing your feedback on this feature. Please let us know what you think in the comments\nbelow or by opening an <a href=\"https://github.com/kubernetes/kubernetes/issues\">issue</a> on the Kubernetes GitHub repository.</p>\n<p>We are also working with <a href=\"https://github.com/kubernetes-sigs/controller-runtime/pull/3473\">controller-runtime</a> to enable this set of\nsemantics for all controllers built with controller-runtime. This will allow any controller built with controller-runtime to gain\nthe benefits of read your own writes, without having to implement the logic themselves.</p>",
+          "link": "https://kubernetes.io/blog/2026/04/28/kubernetes-v1-36-staleness-mitigation-for-controllers/",
+          "source": "Kubernetes Blog",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 10:35:00 -0800",
+          "author": "Inconnu"
+        },
+        {
+          "title": "KDE Frameworks 6.25 Adds Support for Converting Momme Units in KRunner",
+          "description": "<p>Discover how KDE Frameworks 6.25 enhances KRunner with new support for converting Momme units, streamlining your workflow and improving efficiency.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/kde-frameworks-6-25-adds-support-for-converting-momme-units-in-krunner/\">KDE Frameworks 6.25 Adds Support for Converting Momme Units in KRunner</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/kde-frameworks-6-25-adds-support-for-converting-momme-units-in-krunner/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 07:36:55 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Deepin 25.1 Arrives With Linux Kernel 6.18 and New AI Features",
+          "description": "<p>Discover Deepin 25.1, featuring the latest Linux Kernel 6.18 and innovative AI enhancements. Explore the future of user-friendly Linux today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/deepin-25-1-arrives-with-linux-kernel-6-18-and-new-ai-features/\">Deepin 25.1 Arrives With Linux Kernel 6.18 and New AI Features</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/deepin-25-1-arrives-with-linux-kernel-6-18-and-new-ai-features/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 07:35:10 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "How to Install n8n on Ubuntu 26.04",
+          "description": "<p>Learn how to install n8n on Ubuntu 26.04 with our step-by-step guide. Simplify your automation tasks and enhance productivity today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-install-n8n-on-ubuntu-26-04/\">How to Install n8n on Ubuntu 26.04</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/how-to-install-n8n-on-ubuntu-26-04/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 07:31:11 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "How to install Odoo 19 on Ubuntu 26.04",
+          "description": "<p>Learn how to effortlessly install Odoo 19 on Ubuntu 26.04 with our comprehensive guide. Boost your productivity and streamline operations now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-install-odoo-19-on-ubuntu-26-04/\">How to install Odoo 19 on Ubuntu 26.04</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/how-to-install-odoo-19-on-ubuntu-26-04/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 07:28:00 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Calibre 9.7 E-Book Manager Improves the Annotations Browser and Content Server",
+          "description": "<p>Explore the latest features of Calibre 9.7 E-Book Manager, including an upgraded annotations browser and a powerful content server for seamless e-book management.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/calibre-9-7-e-book-manager-improves-the-annotations-browser-and-content-server/\">Calibre 9.7 E-Book Manager Improves the Annotations Browser and Content Server</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/calibre-9-7-e-book-manager-improves-the-annotations-browser-and-content-server/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 07:26:19 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Apache Spins Anthropic’s $1.5M Into ‘Responsible AI’ Initiative",
+          "description": "<p>Learn about Apache's strategic use of Anthropic's $1.5M to launch a 'Responsible AI' initiative, fostering accountability and ethics in AI technology.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/apache-spins-anthropics-1-5m-into-responsible-ai-initiative/\">Apache Spins Anthropic’s $1.5M Into ‘Responsible AI’ Initiative</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/apache-spins-anthropics-1-5m-into-responsible-ai-initiative/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 07:16:08 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "France Launches Government Linux Desktop Plan as Windows Exit Begins",
+          "description": "<p>Discover how France's new Linux desktop initiative marks a significant shift from Windows, promoting innovation and security in public sector technology.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/france-launches-government-linux-desktop-plan-as-windows-exit-begins/\">France Launches Government Linux Desktop Plan as Windows Exit Begins</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/france-launches-government-linux-desktop-plan-as-windows-exit-begins/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 07:12:01 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "SQLite 3.53 Fixes WAL Corruption Bug, Adds New SQL Features",
+          "description": "<p>Stay updated with SQLite 3.53, featuring crucial fixes for WAL corruption and new SQL functionalities designed to improve performance and reliability.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/sqlite-3-53-fixes-wal-corruption-bug-adds-new-sql-features/\">SQLite 3.53 Fixes WAL Corruption Bug, Adds New SQL Features</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/sqlite-3-53-fixes-wal-corruption-bug-adds-new-sql-features/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 07:03:40 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Can Garuda Linux Mokka Take Manjaro’s Arch-Based Crown?",
+          "description": "<p>Can Garuda Linux Mokka surpass Manjaro's popularity in the Arch-based realm? Dive into a detailed comparison of features, performance, and user satisfaction.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/can-garuda-linux-mokka-take-manjaros-arch-based-crown/\">Can Garuda Linux Mokka Take Manjaro’s Arch-Based Crown?</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/can-garuda-linux-mokka-take-manjaros-arch-based-crown/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 06:59:12 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Wayland 1.25 Documentation Update",
+          "description": "<p>Discover the latest updates in Wayland 1.25 documentation. Enhance your understanding and implementation with comprehensive guides and resources.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/wayland-1-25-documentation-update/\">Wayland 1.25 Documentation Update</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/wayland-1-25-documentation-update/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 06:53:17 +0000",
+          "author": "Content Operations"
+        },
         {
           "title": "Kubernetes v1.36: Mutable Pod Resources for Suspended Jobs (beta)",
           "description": "<p>Kubernetes v1.36 promotes the ability to modify container resource requests and limits\nin the pod template of a suspended Job to beta. First introduced as alpha in v1.35, this\nfeature allows queue controllers and cluster administrators to adjust CPU, memory, GPU,\nand extended resource specifications on a Job while it is suspended, before it starts\nor resumes running.</p>\n<h2 id=\"why-mutable-pod-resources-for-suspended-jobs\">Why mutable pod resources for suspended Jobs?</h2>\n<p>Batch and machine learning workloads often have resource requirements that are not\nprecisely known at Job creation time. The optimal resource allocation depends on\ncurrent cluster capacity, queue priorities, and the availability of specialized hardware\nlike GPUs.</p>\n<p>Before this feature, resource requirements in a Job's pod template were immutable once set.\nIf a queue controller like <a href=\"https://kueue.sigs.k8s.io/\">Kueue</a> determined that a suspended\nJob should run with different resources, the only option was to delete and recreate the Job,\nlosing any associated metadata, status, or history. This feature also provides a way\nto let a specific Job instance for a CronJob progress slowly with reduced resources,\nrather than outright failing to run if the cluster is heavily loaded.</p>\n<p>Consider a machine learning training Job initially requesting 4 GPUs:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-yaml\"><span style=\"display: flex;\"><span><span style=\"color: #008000; font-weight: bold;\">apiVersion</span>:<span style=\"color: #bbb;\"> </span>batch/v1<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">kind</span>:<span style=\"color: #bbb;\"> </span>Job<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">metadata</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">name</span>:<span style=\"color: #bbb;\"> </span>training-job-example-abcd123<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">labels</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">app.kubernetes.io/name</span>:<span style=\"color: #bbb;\"> </span>trainer<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">spec</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">suspend</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #a2f; font-weight: bold;\">true</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">template</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">metadata</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">annotations</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">kubernetes.io/description</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"ML training, ID abcd123\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">spec</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">containers</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">name</span>:<span style=\"color: #bbb;\"> </span>trainer<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">image</span>:<span style=\"color: #bbb;\"> </span>example-registry.example.com/training:2026-04-23T150405.678<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">resources</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">requests</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">cpu</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"8\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">memory</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"32Gi\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">example-hardware-vendor.com/gpu</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"4\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">limits</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">cpu</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"8\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">memory</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"32Gi\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">example-hardware-vendor.com/gpu</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"4\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">restartPolicy</span>:<span style=\"color: #bbb;\"> </span>Never<span style=\"color: #bbb;\">\n</span></span></span></code></pre></div><p>A queue controller managing cluster resources might determine that only 2 GPUs\nare available. With this feature, the controller can update the Job's resource\nrequests before resuming it:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-yaml\"><span style=\"display: flex;\"><span><span style=\"color: #008000; font-weight: bold;\">apiVersion</span>:<span style=\"color: #bbb;\"> </span>batch/v1<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">kind</span>:<span style=\"color: #bbb;\"> </span>Job<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">metadata</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">name</span>:<span style=\"color: #bbb;\"> </span>training-job-example-abcd123<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">labels</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">app.kubernetes.io/name</span>:<span style=\"color: #bbb;\"> </span>trainer<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">spec</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">suspend</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #a2f; font-weight: bold;\">true</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">template</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">metadata</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">annotations</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">kubernetes.io/description</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"ML training, ID abcd123\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">spec</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">containers</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">name</span>:<span style=\"color: #bbb;\"> </span>trainer<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">image</span>:<span style=\"color: #bbb;\"> </span>example-registry.example.com/training:2026-04-23T150405.678<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">resources</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">requests</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">cpu</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"4\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">memory</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"16Gi\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">example-hardware-vendor.com/gpu</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"2\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">limits</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">cpu</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"4\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">memory</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"16Gi\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">example-hardware-vendor.com/gpu</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"2\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">restartPolicy</span>:<span style=\"color: #bbb;\"> </span>Never<span style=\"color: #bbb;\">\n</span></span></span></code></pre></div><p>Once the resources are updated, the controller resumes the Job by setting\n<code>spec.suspend</code> to <code>false</code>, and the new Pods are created with the adjusted\nresource specifications.</p>\n<h2 id=\"how-it-works\">How it works</h2>\n<p>The Kubernetes API server relaxes the immutability constraint on pod template\nresource fields specifically for suspended Jobs. No new API types have been introduced;\nthe existing Job and pod template structures accommodate the change through\nrelaxed validation.</p>\n<p>The mutable fields are:</p>\n<ul>\n<li><code>spec.template.spec.containers[*].resources.requests</code></li>\n<li><code>spec.template.spec.containers[*].resources.limits</code></li>\n<li><code>spec.template.spec.initContainers[*].resources.requests</code></li>\n<li><code>spec.template.spec.initContainers[*].resources.limits</code></li>\n</ul>\n<p>Resource updates are permitted when the following conditions are met:</p>\n<ol>\n<li>The Job has <code>spec.suspend</code> set to <code>true</code>.</li>\n<li>For a Job that was previously running and then suspended, all active\nPods must have terminated (<code>status.active</code> equals 0) before resource\nmutations are accepted.</li>\n</ol>\n<p>Standard resource validation still applies. For example, resource limits\nmust be greater than or equal to requests, and extended resources must be\nspecified as whole numbers where required.</p>\n<h2 id=\"what-s-new-in-beta\">What's new in beta</h2>\n<p>With the promotion to beta in Kubernetes v1.36, the\n<code>MutablePodResourcesForSuspendedJobs</code> feature gate is enabled by default.\nThis means clusters running v1.36 can use this feature without any additional\nconfiguration on the API server.</p>\n<h2 id=\"try-it-out\">Try it out</h2>\n<p>If your cluster is running Kubernetes v1.36 or later, this feature is available\nby default. For v1.35 clusters, enable the <code>MutablePodResourcesForSuspendedJobs</code>\n<a href=\"https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/\">feature gate</a> on\nthe <code>kube-apiserver</code>.</p>\n<p>You can test it by creating a suspended Job, updating its container resources\nusing <code>kubectl edit</code> or a controller, and then resuming the Job:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-shell\"><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"># Create a suspended Job</span>\n</span></span><span style=\"display: flex;\"><span>kubectl apply -f my-job.yaml --server-side\n</span></span><span style=\"display: flex;\"><span>\n</span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"># Edit the resource requests</span>\n</span></span><span style=\"display: flex;\"><span>kubectl edit job training-job-example-abcd123\n</span></span><span style=\"display: flex;\"><span>\n</span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"># Resume the Job</span>\n</span></span><span style=\"display: flex;\"><span>kubectl patch job training-job-example-abcd123 -p <span style=\"color: #b44;\">'{\"spec\":{\"suspend\":false}}'</span>\n</span></span></code></pre></div><h2 id=\"considerations\">Considerations</h2>\n<h3 id=\"running-jobs-that-are-suspended\">Running Jobs that are suspended</h3>\n<p>If you suspend a Job that was already running, you must wait for <strong>all</strong> of that Job's active\nPods to terminate before modifying resources. The API server rejects resource\nmutations while <code>status.active</code> is greater than zero. This prevents inconsistency\nbetween running Pods and the updated pod template.</p>\n<h3 id=\"pod-replacement-policy\">Pod replacement policy</h3>\n<p>When using this feature with Jobs that may have failed Pods, consider setting\n<code>podReplacementPolicy: Failed</code>. This ensures that replacement Pods are only\ncreated after the previous Pods have fully terminated, preventing resource\ncontention from overlapping Pods.</p>\n<h3 id=\"resourceclaims\">ResourceClaims</h3>\n<p>Dynamic Resource Allocation (DRA) <code>resourceClaimTemplates</code> remain immutable.\nIf your workload uses DRA, you must recreate the claim templates separately\nto match any resource changes.</p>\n<h2 id=\"getting-involved\">Getting involved</h2>\n<p>This feature was developed by <a href=\"https://github.com/kubernetes/community/tree/master/sig-apps\">SIG Apps</a>\nThis feature was developed by <a href=\"https://www.kubernetes.dev/community/community-groups/sigs/apps/\">SIG Apps</a>\nwith input from <a href=\"https://www.kubernetes.dev/community/community-groups/wg/batch/\">WG Batch</a>. Both groups welcome feedback\nas the feature progresses toward stable.</p>\n<p>You can reach out through:</p>\n<ul>\n<li>Slack channel <a href=\"https://kubernetes.slack.com/archives/C18NZM5K9\">#sig-apps</a>.</li>\n<li>Slack channel <a href=\"https://kubernetes.slack.com/archives/C032ZE66A2X\">#wg-batch</a>.</li>\n<li>The <a href=\"https://kep.k8s.io/5440\">KEP-5440</a> tracking issue.</li>\n</ul>",
@@ -12,96 +111,6 @@
           "category": "Infrastructure",
           "published": "Mon, 27 Apr 2026 10:35:00 -0800",
           "author": "Inconnu"
-        },
-        {
-          "title": "RadioGoGo – Surf Global Radio Waves",
-          "description": "<p>Experience the world of sound with RadioGoGo. Surf through global radio waves for the latest music, news, and cultural insights. Start listening now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/radiogogo-surf-global-radio-waves/\">RadioGoGo – Surf Global Radio Waves</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/radiogogo-surf-global-radio-waves/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 07:29:35 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "KDE Plasma 6.7 — Top Features You’ll Love",
-          "description": "<p>Discover the top features of KDE Plasma 6.7 that enhance your desktop experience. Explore customization, performance improvements, and more!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/kde-plasma-6-7-top-features-youll-love/\">KDE Plasma 6.7 — Top Features You’ll Love</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/kde-plasma-6-7-top-features-youll-love/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 07:24:43 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Firefox 149.0.2: VPN Integration and Bug Fixes",
-          "description": "<p>Discover the latest Firefox 149.0.2 update featuring seamless VPN integration and essential bug fixes to enhance your browsing experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/firefox-149-0-2-vpn-integration-and-bug-fixes/\">Firefox 149.0.2: VPN Integration and Bug Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/firefox-149-0-2-vpn-integration-and-bug-fixes/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 07:23:24 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Solus Says It Has No Plans to Implement Age Verification",
-          "description": "<p>Discover why Solus has no plans to implement age verification. Explore the implications for users and the broader industry in our detailed analysis.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/solus-says-it-has-no-plans-to-implement-age-verification/\">Solus Says It Has No Plans to Implement Age Verification</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/solus-says-it-has-no-plans-to-implement-age-verification/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 07:19:29 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Chaos Malware Expands to Linux Servers: What You Need to Know",
-          "description": "<p>Chaos malware is now expanding to Linux servers. Stay informed with crucial information and strategies to protect your infrastructure from this emerging risk.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/chaos-malware-expands-to-linux-servers-what-you-need-to-know/\">Chaos Malware Expands to Linux Servers: What You Need to Know</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/chaos-malware-expands-to-linux-servers-what-you-need-to-know/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 07:17:38 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Asqav: Open-source SDK for AI Agent Governance",
-          "description": "<p>Explore Asqav, an open-source SDK that streamlines AI agent governance. Enhance your AI solutions with comprehensive tools for responsible development.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/asqav-open-source-sdk-for-ai-agent-governance/\">Asqav: Open-source SDK for AI Agent Governance</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/asqav-open-source-sdk-for-ai-agent-governance/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 07:15:40 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "PipeWire 1.6.3 Multimedia Framework Improves RAOP, MIDI, and Stability",
-          "description": "<p>Discover the enhancements in PipeWire 1.6.3, featuring improved RAOP, MIDI support, and enhanced stability for a seamless multimedia experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/pipewire-1-6-3-multimedia-framework-improves-raop-midi-and-stability/\">PipeWire 1.6.3 Multimedia Framework Improves RAOP, MIDI, and Stability</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/pipewire-1-6-3-multimedia-framework-improves-raop-midi-and-stability/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 07:13:20 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Miracle-WM 0.9 Makes This Mir-Based Wayland Compositor Truly Hackable",
-          "description": "<p>Explore the features of Miracle-WM 0.9, the Mir-based Wayland compositor that empowers developers with unparalleled hackability and customization options.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/miracle-wm-0-9-makes-this-mir-based-wayland-compositor-truly-hackable/\">Miracle-WM 0.9 Makes This Mir-Based Wayland Compositor Truly Hackable</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/miracle-wm-0-9-makes-this-mir-based-wayland-compositor-truly-hackable/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 07:02:11 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Fedora 44: Best New Features",
-          "description": "<p>Uncover the exciting new features of Fedora 44! From improved performance to enhanced security, see how this release transforms your Linux environment.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/fedora-44-best-new-features/\">Fedora 44: Best New Features</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/fedora-44-best-new-features/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 06:59:03 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Rofi and Wofi: Keyboard Launchers That Keep Your Hands on the Keys",
-          "description": "<p>Elevate your workflow with Rofi and Wofi, efficient keyboard launchers that streamline access to applications while keeping your hands on the keys. Learn more!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/rofi-and-wofi-keyboard-launchers-that-keep-your-hands-on-the-keys/\">Rofi and Wofi: Keyboard Launchers That Keep Your Hands on the Keys</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/rofi-and-wofi-keyboard-launchers-that-keep-your-hands-on-the-keys/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 06:55:23 +0000",
-          "author": "Content Operations"
         },
         {
           "title": "Kubernetes v1.36: Fine-Grained Kubelet API Authorization Graduates to GA",
@@ -624,21 +633,57 @@
           "category": "Infrastructure",
           "published": "Thu, 18 Sep 2025 10:30:00 -0800",
           "author": "Inconnu"
-        },
-        {
-          "title": "Kubernetes v1.34: Pods Report DRA Resource Health",
-          "description": "<p>The rise of AI/ML and other high-performance workloads has made specialized hardware like GPUs, TPUs, and FPGAs a critical component of many Kubernetes clusters. However, as discussed in a <a href=\"https://kubernetes.io/blog/2025/07/03/navigating-failures-in-pods-with-devices/\">previous blog post about navigating failures in Pods with devices</a>, when this hardware fails, it can be difficult to diagnose, leading to significant downtime. With the release of Kubernetes v1.34, we are excited to announce a new alpha feature that brings much-needed visibility into the health of these devices.</p>\n<p>This work extends the functionality of <a href=\"https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/4680-add-resource-health-to-pod-status\">KEP-4680</a>, which first introduced a mechanism for reporting the health of devices managed by Device Plugins. Now, this capability is being extended to <em>Dynamic Resource Allocation (DRA)</em>. Controlled by the <code>ResourceHealthStatus</code> feature gate, this enhancement allows DRA drivers to report device health directly into a Pod's <code>.status</code> field, providing crucial insights for operators and developers.</p>\n<h2 id=\"why-expose-device-health-in-pod-status\">Why expose device health in Pod status?</h2>\n<p>For stateful applications or long-running jobs, a device failure can be disruptive and costly. By exposing device health in the <code>.status</code> field for a Pod, Kubernetes provides a standardized way for users and automation tools to quickly diagnose issues. If a Pod is failing, you can now check its status to see if an unhealthy device is the root cause, saving valuable time that might otherwise be spent debugging application code.</p>\n<h2 id=\"how-it-works\">How it works</h2>\n<p>This feature introduces a new, optional communication channel between the Kubelet and DRA drivers, built on three core components.</p>\n<h3 id=\"a-new-grpc-health-service\">A new gRPC health service</h3>\n<p>A new gRPC service, <code>DRAResourceHealth</code>, is defined in the <code>dra-health/v1alpha1</code> API group. DRA drivers can implement this service to stream device health updates to the Kubelet. The service includes a <code>NodeWatchResources</code> server-streaming RPC that sends the health status (<code>Healthy</code>, <code>Unhealthy</code>, or <code>Unknown</code>) for the devices it manages.</p>\n<h3 id=\"kubelet-integration\">Kubelet integration</h3>\n<p>The Kubelet’s <code>DRAPluginManager</code> discovers which drivers implement the health service. For each compatible driver, it starts a long-lived <code>NodeWatchResources</code> stream to receive health updates. The DRA Manager then consumes these updates and stores them in a persistent <code>healthInfoCache</code> that can survive Kubelet restarts.</p>\n<h3 id=\"populating-the-pod-status\">Populating the Pod status</h3>\n<p>When a device's health changes, the DRA manager identifies all Pods affected by the change and triggers a Pod status update. A new field, <code>allocatedResourcesStatus</code>, is now part of the <code>v1.ContainerStatus</code> API object. The Kubelet populates this field with the current health of each device allocated to the container.</p>\n<h2 id=\"a-practical-example\">A practical example</h2>\n<p>If a Pod is in a <code>CrashLoopBackOff</code> state, you can use <code>kubectl describe pod &lt;pod-name&gt;</code> to inspect its status. If an allocated device has failed, the output will now include the <code>allocatedResourcesStatus</code> field, clearly indicating the problem:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-yaml\"><span style=\"display: flex;\"><span><span style=\"color: #008000; font-weight: bold;\">status</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">containerStatuses</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">name</span>:<span style=\"color: #bbb;\"> </span>my-gpu-intensive-container<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #080; font-style: italic;\"># ... other container statuses</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">allocatedResourcesStatus</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">name</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"claim:my-gpu-claim\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">resources</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">resourceID</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"example.com/gpu-a1b2-c3d4\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">health</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"Unhealthy\"</span><span style=\"color: #bbb;\">\n</span></span></span></code></pre></div><p>This explicit status makes it clear that the issue is with the underlying hardware, not the application.</p>\n<p>Now you can improve the failure detection logic to react on the unhealthy devices associated with the Pod by de-scheduling a Pod.</p>\n<h2 id=\"how-to-use-this-feature\">How to use this feature</h2>\n<p>As this is an alpha feature in Kubernetes v1.34, you must take the following steps to use it:</p>\n<ol>\n<li>Enable the <code>ResourceHealthStatus</code> feature gate on your kube-apiserver and kubelets.</li>\n<li>Ensure you are using a DRA driver that implements the <code>v1alpha1 DRAResourceHealth</code> gRPC service.</li>\n</ol>\n<h2 id=\"dra-drivers\">DRA drivers</h2>\n<p>If you are developing a DRA driver, make sure to think about device failure detection strategy and ensure that your driver is integrated with this feature. This way, your driver will improve the user experience and simplify debuggability of hardware issues.</p>\n<h2 id=\"what-s-next\">What's next?</h2>\n<p>This is the first step in a broader effort to improve how Kubernetes handles device failures. As we gather feedback on this alpha feature, the community is planning several key enhancements before graduating to Beta:</p>\n<ul>\n<li><em>Detailed health messages:</em> To improve the troubleshooting experience, we plan to add a human-readable message field to the gRPC API. This will allow DRA drivers to provide specific context for a health status, such as &quot;GPU temperature exceeds threshold&quot; or &quot;NVLink connection lost&quot;.</li>\n<li><em>Configurable health timeouts:</em> The timeout for marking a device's health as &quot;Unknown&quot; is currently hardcoded. We plan to make this configurable, likely on a per-driver basis, to better accommodate the different health-reporting characteristics of various hardware.</li>\n<li><em>Improved post-mortem troubleshooting:</em> We will address a known limitation where health updates may not be applied to pods that have already terminated. This fix will ensure that the health status of a device at the time of failure is preserved, which is crucial for troubleshooting batch jobs and other &quot;run-to-completion&quot; workloads.</li>\n</ul>\n<p>This feature was developed as part of <a href=\"https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/4680-add-resource-health-to-pod-status\">KEP-4680</a>, and community feedback is crucial as we work toward graduating it to Beta. We have more improvements of device failure handling in k8s and encourage you to try it out and share your experiences with the SIG Node community!</p>",
-          "link": "https://kubernetes.io/blog/2025/09/17/kubernetes-v1-34-pods-report-dra-resource-health/",
-          "source": "Kubernetes Blog",
-          "category": "Infrastructure",
-          "published": "Wed, 17 Sep 2025 10:30:00 -0800",
-          "author": "Inconnu"
         }
       ]
     },
     "developpement": {
       "icon": "💻",
       "articles": [
+        {
+          "title": "Welcome to SkiaSharp 4.0 Preview 1",
+          "description": "<p>SkiaSharp 4.0 Preview 1 is here. Learn all about the new features and how Uno Platform has stepped up as a co-maintainer.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/welcome-to-skia-sharp-40-preview1/\">Welcome to SkiaSharp 4.0 Preview 1</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/welcome-to-skia-sharp-40-preview1/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Tue, 28 Apr 2026 17:06:00 +0000",
+          "author": "David Ortinau"
+        },
+        {
+          "title": "High-Performance Distributed Caching with .NET and Postgres on Azure",
+          "description": "<p>Adding caching to your application architecture can significantly improve key performance metrics, cut latency, and reduce load across downstream systems. In this walkthrough, we highlight the latest caching best practices and incorporate these design patterns into a reusable .NET application that you can reference when adding new capabilities to your application stack.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/high-performance-distributed-caching-dotnet-postgres-azure/\">High-Performance Distributed Caching with .NET and Postgres on Azure</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/high-performance-distributed-caching-dotnet-postgres-azure/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Tue, 28 Apr 2026 17:05:00 +0000",
+          "author": "Jared Meade"
+        },
+        {
+          "title": "GitHub for Beginners: Getting started with Markdown",
+          "description": "<p>Discover how to format and edit your comments and posts using Markdown.</p>\n<p>The post <a href=\"https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/\">GitHub for Beginners: Getting started with Markdown</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Tue, 28 Apr 2026 18:00:00 +0000",
+          "author": "Kedasha Kerr"
+        },
+        {
+          "title": "Securing the git push pipeline: Responding to a critical remote code execution vulnerability",
+          "description": "<p>How we validated, fixed, and investigated a critical vulnerability in under two hours, and confirmed no exploitation.</p>\n<p>The post <a href=\"https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/\">Securing the git push pipeline: Responding to a critical remote code execution vulnerability</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Tue, 28 Apr 2026 15:30:00 +0000",
+          "author": "Alexis Wales"
+        },
+        {
+          "title": "An update on GitHub availability",
+          "description": "<p>Here’s what we’ve done—and what we’re still doing—to improve our availability and reliability.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/an-update-on-github-availability/\">An update on GitHub availability</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/an-update-on-github-availability/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Tue, 28 Apr 2026 10:01:37 +0000",
+          "author": "Vlad Fedorov"
+        },
         {
           "title": "Combining API versioning with OpenAPI in .NET 10 applications",
           "description": "<p>Learn how to implement API versioning in your .NET 10 applications using OpenAPI for better API management and documentation.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/api-versioning-in-dotnet-10-applications/\">Combining API versioning with OpenAPI in .NET 10 applications</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
@@ -748,15 +793,6 @@
           "author": "Cassidy Williams"
         },
         {
-          "title": "Developer policy update: Intermediary liability, copyright, and transparency",
-          "description": "<p>We’re sharing recent policy updates that developers should know about, updating our Transparency Center with the full year of 2025 data, and looking to what’s ahead.</p>\n<p>The post <a href=\"https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/\">Developer policy update: Intermediary liability, copyright, and transparency</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Wed, 15 Apr 2026 15:00:00 +0000",
-          "author": "Margaret Tucker"
-        },
-        {
           "title": ".NET and .NET Framework April 2026 servicing releases updates",
           "description": "<p>A recap of the latest servicing updates for .NET and .NET Framework for April 2026.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-april-2026-servicing-updates/\">.NET and .NET Framework April 2026 servicing releases updates</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
           "link": "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-april-2026-servicing-updates/",
@@ -775,24 +811,6 @@
           "author": ".NET Team"
         },
         {
-          "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
-          "description": "<p>Learn to find and exploit real-world agentic AI vulnerabilities through five progressive challenges in this free, open source game that over 10,000 developers have already used to sharpen their security skills.</p>\n<p>The post <a href=\"https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/\">Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Tue, 14 Apr 2026 18:17:59 +0000",
-          "author": "Joseph Katsioloudes"
-        },
-        {
-          "title": "How exposed is your code? Find out in minutes—for free",
-          "description": "<p>The new Code Security Risk Assessment gives you a one-click view of vulnerabilities across your organization, at no cost.</p>\n<p>The post <a href=\"https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/\">How exposed is your code? Find out in minutes—for free</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Tue, 14 Apr 2026 15:00:00 +0000",
-          "author": "Dorothy Pearce"
-        },
-        {
           "title": "Your Migration’s Source of Truth: The Modernization Assessment",
           "description": "<p>Introducing GitHub Copilot Modernization and diving into the assessment report as part of cloud modernization process</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/your-migrations-source-of-truth-the-modernization-assessment/\">Your Migration&#8217;s Source of Truth: The Modernization Assessment</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
           "link": "https://devblogs.microsoft.com/dotnet/your-migrations-source-of-truth-the-modernization-assessment/",
@@ -800,24 +818,6 @@
           "category": "Développement",
           "published": "Tue, 07 Apr 2026 18:00:00 +0000",
           "author": "Jeffrey Fritz"
-        },
-        {
-          "title": "ASP.NET Core 2.3 end of support announcement",
-          "description": "<p>ASP.NET Core 2.3 will reach end of support on April 13, 2027. Learn what this means for your applications and how to upgrade to a modern supported version of .NET.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/aspnet-core-2-3-end-of-support/\">ASP.NET Core 2.3 end of support announcement</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/aspnet-core-2-3-end-of-support/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Tue, 07 Apr 2026 17:00:00 +0000",
-          "author": "Daniel Roth"
-        },
-        {
-          "title": "Explore union types in C# 15",
-          "description": "<p>C# 15 introduces union types — declare a closed set of case types with implicit conversions and exhaustive pattern matching. Try unions in preview today and see the broader exhaustiveness roadmap.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/csharp-15-union-types/\">Explore union types in C# 15</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/csharp-15-union-types/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Thu, 02 Apr 2026 17:05:00 +0000",
-          "author": "Bill Wagner"
         }
       ]
     },
@@ -1465,6 +1465,15 @@
       "icon": "☁️",
       "articles": [
         {
+          "title": "Top announcements of the What’s Next with AWS, 2026",
+          "description": "At the \"What's Next with AWS\" 2026 event, AWS launched Amazon Quick—an AI assistant for work with a desktop app and expanded integrations—and expanded Amazon Connect into four agentic AI solutions for supply chain, hiring, customer experience, and healthcare. AWS also expended its partnership with OpenAI, bringing models like GPT-5.5, Codex, and Managed Agents to Amazon Bedrock in limited preview.",
+          "link": "https://aws.amazon.com/blogs/aws/top-announcements-of-the-whats-next-with-aws-2026/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Tue, 28 Apr 2026 18:11:39 +0000",
+          "author": "AWS News Blog Team"
+        },
+        {
           "title": "AWS Weekly Roundup: Anthropic & Meta partnership, AWS Lambda S3 Files, Amazon Bedrock AgentCore CLI, and more (April 27, 2026)",
           "description": "Late March took me to Seattle for the Specialist Tech Conference, one of the most energizing gatherings of AWS specialists from around the world. It was an incredible opportunity to connect with peers, exchange experiences, and go deep on the latest advancements in Generative AI and Amazon Bedrock — and a powerful reminder of something […]",
           "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-anthropic-meta-partnership-aws-lambda-s3-files-amazon-bedrock-agentcore-cli-and-more-april-27-2026/",
@@ -1724,15 +1733,6 @@
           "category": "Cloud",
           "published": "Thu, 12 Mar 2026 21:18:55 +0000",
           "author": "Channy Yun (윤석찬)"
-        },
-        {
-          "title": "AWS Weekly Roundup: Amazon Connect Health, Bedrock AgentCore Policy, GameDay Europe, and more (March 9, 2026)",
-          "description": "Fiti AWS Student Community Kenya! Last week was an incredible whirlwind: a round of meetups, hands-on workshops, and career discussions across Kenya that culminated with the AWS Student Community Day at Meru University of Science and Technology, with keynotes from my colleagues Veliswa and Tiffany, and sessions on everything from GitOps to cloud-native engineering, and […]",
-          "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-connect-health-bedrock-agentcore-policy-gameday-europe-and-more-march-9-2026/",
-          "source": "AWS Blog",
-          "category": "Cloud",
-          "published": "Mon, 09 Mar 2026 16:15:35 +0000",
-          "author": "Sébastien Stormacq"
         }
       ]
     },
@@ -1745,7 +1745,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569590",
+          "published": "2026-04-29T09:19:30.532545",
           "author": "roidelapluie"
         },
         {
@@ -1754,7 +1754,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569586",
+          "published": "2026-04-29T09:19:30.532540",
           "author": "prombot"
         },
         {
@@ -1763,7 +1763,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569582",
+          "published": "2026-04-29T09:19:30.532536",
           "author": "roidelapluie"
         },
         {
@@ -1772,7 +1772,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569578",
+          "published": "2026-04-29T09:19:30.532532",
           "author": "roidelapluie"
         },
         {
@@ -1781,7 +1781,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569574",
+          "published": "2026-04-29T09:19:30.532528",
           "author": "prombot"
         },
         {
@@ -1790,7 +1790,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569569",
+          "published": "2026-04-29T09:19:30.532523",
           "author": "prombot"
         },
         {
@@ -1799,7 +1799,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569565",
+          "published": "2026-04-29T09:19:30.532519",
           "author": "roidelapluie"
         },
         {
@@ -1808,7 +1808,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569561",
+          "published": "2026-04-29T09:19:30.532514",
           "author": "roidelapluie"
         },
         {
@@ -1817,7 +1817,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569556",
+          "published": "2026-04-29T09:19:30.532509",
           "author": "prombot"
         },
         {
@@ -1826,8 +1826,35 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569541",
+          "published": "2026-04-29T09:19:30.532495",
           "author": "prombot"
+        },
+        {
+          "title": "GitHub for Beginners: Getting started with Markdown",
+          "description": "<p>Discover how to format and edit your comments and posts using Markdown.</p>\n<p>The post <a href=\"https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/\">GitHub for Beginners: Getting started with Markdown</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Tue, 28 Apr 2026 18:00:00 +0000",
+          "author": "Kedasha Kerr"
+        },
+        {
+          "title": "Securing the git push pipeline: Responding to a critical remote code execution vulnerability",
+          "description": "<p>How we validated, fixed, and investigated a critical vulnerability in under two hours, and confirmed no exploitation.</p>\n<p>The post <a href=\"https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/\">Securing the git push pipeline: Responding to a critical remote code execution vulnerability</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Tue, 28 Apr 2026 15:30:00 +0000",
+          "author": "Alexis Wales"
+        },
+        {
+          "title": "An update on GitHub availability",
+          "description": "<p>Here’s what we’ve done—and what we’re still doing—to improve our availability and reliability.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/an-update-on-github-availability/\">An update on GitHub availability</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/an-update-on-github-availability/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Tue, 28 Apr 2026 10:01:37 +0000",
+          "author": "Vlad Fedorov"
         },
         {
           "title": "GitHub Copilot is moving to usage-based billing",
@@ -1891,33 +1918,6 @@
           "category": "DevOps",
           "published": "Wed, 15 Apr 2026 17:00:00 +0000",
           "author": "Cassidy Williams"
-        },
-        {
-          "title": "Developer policy update: Intermediary liability, copyright, and transparency",
-          "description": "<p>We’re sharing recent policy updates that developers should know about, updating our Transparency Center with the full year of 2025 data, and looking to what’s ahead.</p>\n<p>The post <a href=\"https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/\">Developer policy update: Intermediary liability, copyright, and transparency</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Wed, 15 Apr 2026 15:00:00 +0000",
-          "author": "Margaret Tucker"
-        },
-        {
-          "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
-          "description": "<p>Learn to find and exploit real-world agentic AI vulnerabilities through five progressive challenges in this free, open source game that over 10,000 developers have already used to sharpen their security skills.</p>\n<p>The post <a href=\"https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/\">Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Tue, 14 Apr 2026 18:17:59 +0000",
-          "author": "Joseph Katsioloudes"
-        },
-        {
-          "title": "How exposed is your code? Find out in minutes—for free",
-          "description": "<p>The new Code Security Risk Assessment gives you a one-click view of vulnerabilities across your organization, at no cost.</p>\n<p>The post <a href=\"https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/\">How exposed is your code? Find out in minutes—for free</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Tue, 14 Apr 2026 15:00:00 +0000",
-          "author": "Dorothy Pearce"
         }
       ]
     },
@@ -1930,7 +1930,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569590",
+          "published": "2026-04-29T09:19:30.532545",
           "author": "roidelapluie"
         },
         {
@@ -1939,7 +1939,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569586",
+          "published": "2026-04-29T09:19:30.532540",
           "author": "prombot"
         },
         {
@@ -1948,7 +1948,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569582",
+          "published": "2026-04-29T09:19:30.532536",
           "author": "roidelapluie"
         },
         {
@@ -1957,7 +1957,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569578",
+          "published": "2026-04-29T09:19:30.532532",
           "author": "roidelapluie"
         },
         {
@@ -1966,7 +1966,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569574",
+          "published": "2026-04-29T09:19:30.532528",
           "author": "prombot"
         },
         {
@@ -1975,7 +1975,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569569",
+          "published": "2026-04-29T09:19:30.532523",
           "author": "prombot"
         },
         {
@@ -1984,7 +1984,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569565",
+          "published": "2026-04-29T09:19:30.532519",
           "author": "roidelapluie"
         },
         {
@@ -1993,7 +1993,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569561",
+          "published": "2026-04-29T09:19:30.532514",
           "author": "roidelapluie"
         },
         {
@@ -2002,7 +2002,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569556",
+          "published": "2026-04-29T09:19:30.532509",
           "author": "prombot"
         },
         {
@@ -2011,8 +2011,188 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-28T09:30:24.569541",
+          "published": "2026-04-29T09:19:30.532495",
           "author": "prombot"
+        },
+        {
+          "title": "Kubernetes v1.36: Staleness Mitigation and Observability for Controllers",
+          "description": "<p>Staleness in Kubernetes controllers is a problem that affects many controllers, and is something may affect controller behavior\nin subtle ways. It is usually not until it is too late, when a controller in production has already taken incorrect action, that\nstaleness is found to be an issue due to some underlying assumption made by the controller author. Some issues caused by staleness\ninclude controllers taking incorrect actions, controllers not taking action when they should, and controllers taking too long to\ntake action. I am excited to announce that Kubernetes v1.36 includes new features that help mitigate staleness in controllers\nand provide better observability into controller behavior.</p>\n<h2 id=\"what-is-staleness\">What is staleness?</h2>\n<p>Staleness in controllers comes from an outdated view of the world inside of the controller cache. In order to provide a fast user\nexperience, controllers typically maintain a local cache of the state of the cluster. This cache is populated by watching the\nKubernetes API server for changes to objects that the controller cares about. When the controller needs to take action, it will\nfirst check its cache to see if it has the latest information. If it does not, it will then update its cache by watching the API\nserver for changes to objects that the controller cares about. This process is known as <em>reconciliation</em>.</p>\n<p>However, there are some cases where the controller's cache may be outdated. For example, if the controller is restarted, it will\nneed to rebuild its cache by watching the API server for changes to objects that the controller cares about. During this time, the\ncontroller's cache will be outdated, and it will not be able to take action. Additionally, if the API server is down, the controller's\ncache will not be updated, and it will not be able to take action. These are just a few examples of cases where the controller's\ncache may be outdated.</p>\n<h2 id=\"improvements-in-1-36\">Improvements in 1.36</h2>\n<p>Kubernetes v1.36 includes improvements in both client-go as well as implementations of highly contended controllers in\nkube-controller-manager, using those client-go improvements.</p>\n<h3 id=\"client-go-improvements\">client-go improvements</h3>\n<p>In client-go, the project added <em>atomic FIFO processing</em> (feature gate\nname <code>AtomicFIFO</code>), which is on top of the existing FIFO queue implementation. The new approach allows for\nthe queue to atomically handle operations that are recieved in batches, such as the initial set of objects from a\n<em>list</em> operation that an informer uses to populate its cache. This ensures that the queue is always in a consistent state,\neven when events come out of order. Prior to this, events were added to the queue\nin the order that they were received, which could lead to an inconsistent state in the cache that does not accurately reflect\nthe state of the cluster.</p>\n<p>With this change, you can now ensure that the queue is always in a consistent state, even when events come out of order. To take\nadvantage of this, clients using client-go can now introspect into the cache to determine the latest resource version that the\ncontroller cache has seen. This is done with the newly added function <code>LastStoreSyncResourceVersion()</code> implemented on the <code>Store</code>\ninterface <a href=\"https://pkg.go.dev/k8s.io/client-go@v0.36.0/tools/cache#Store\">here</a>. This function is the basis for the staleness mitigation\nfeatures in kube-controller-manager.</p>\n<h3 id=\"kube-controller-manager-improvements\">kube-controller-manager improvements</h3>\n<p>In kube-controller-manager, the v1.36 release has added the ability for 4 different controllers to use this new capability. The controllers are:</p>\n<ol>\n<li>DaemonSet controller</li>\n<li>StatefulSet controller</li>\n<li>ReplicaSet controller</li>\n<li>Job controller</li>\n</ol>\n<p>These controllers all act on pods, which in most cases are under the highest amount of contention in a cluster. The changes are\non by default for these controllers, and can be disabled by setting the feature gates <code>StaleControllerConsistency&lt;API type&gt;</code>\nto <code>false</code> for the specific controller you wish to disable it for. For example, to disable the feature for the DaemonSet controller,\nyou would set the feature gate <code>StaleControllerConsistencyDaemonSet</code> to <code>false</code>.</p>\n<p>When the relevant feature gate is enabled, the controller will first check the latest\n<a href=\"https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions\">resource version</a> of the cache before taking action. If the\nlatest resource version of the cache is lower than what the controller has written to the API server for the object it is trying to\nreconcile, the controller will not take action. This is because the controller's cache is outdated, and it does not have the latest\ninformation about the state of the cluster.</p>\n<h3 id=\"use-for-informer-authors\">Use for informer authors</h3>\n<p>Informer authors using client-go can also immediately take advantage of these improvements. See an example of how to use this feature\nin the <a href=\"https://github.com/kubernetes/kubernetes/pull/137212\">ReplicaSet informer</a>. This PR shows how to use the new feature to check\nif the informer's cache is stale before taking action. The client-go library provides a <code>ConsistencyStore</code> data structure that queries the store\nand compares the latest resource version of the cache with the written resource version of the object.</p>\n<p>The ReplicaSet controller tracks both the ReplicaSet's resource version and the resource version of the pods that the ReplicaSet\nmanages. For a specific ReplicaSet, it tracks the latest written resource version of the pods that the ReplicaSet owns as well as\nany writes to the ReplicaSet itself. If the latest resource version of the cache is lower than what the controller has\nwritten to the API server for the object it is trying to reconcile, the controller will not take action. This is because the\ncontroller's cache is outdated, and it does not have the latest information about the state of the cluster.</p>\n<p>An informer author can use the <code>ConsistencyStore</code> to track the latest resource version of the objects that the informer cares about.\nIt provides 3 main functions:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-go\"><span style=\"display: flex;\"><span><span style=\"color: #a2f; font-weight: bold;\">type</span> ConsistencyStore <span style=\"color: #a2f; font-weight: bold;\">interface</span> {\n</span></span><span style=\"display: flex;\"><span> <span style=\"color: #080; font-style: italic;\">// WroteAt records that the given object was written at the given resource version.\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"></span> <span style=\"color: #00a000;\">WroteAt</span>(owningObj runtime.Object, uid types.UID, groupResource schema.GroupResource, resourceVersion <span style=\"color: #0b0; font-weight: bold;\">string</span>)\n</span></span><span style=\"display: flex;\"><span>\n</span></span><span style=\"display: flex;\"><span> <span style=\"color: #080; font-style: italic;\">// EnsureReady returns true if the cache is up to date for the given object.\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"></span> <span style=\"color: #080; font-style: italic;\">// It is used prior to reconciliation to decide whether to reconcile or not.\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"></span> <span style=\"color: #00a000;\">EnsureReady</span>(namespacedName types.NamespacedName) <span style=\"color: #0b0; font-weight: bold;\">bool</span>\n</span></span><span style=\"display: flex;\"><span>\n</span></span><span style=\"display: flex;\"><span> <span style=\"color: #080; font-style: italic;\">// Clear removes the given object from the consistency store.\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"></span> <span style=\"color: #080; font-style: italic;\">// It is used when an object is deleted.\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"></span> <span style=\"color: #00a000;\">Clear</span>(namespacedName types.NamespacedName, uid types.UID)\n</span></span><span style=\"display: flex;\"><span>}\n</span></span></code></pre></div><ol>\n<li><code>WroteAt</code>: This function is called by the controller when it writes to the API server for an object. It is used to record the\nlatest resource version of the object that the controller has written to the API server. The <code>owningObj</code> is the object that the\ncontroller is reconciling, and the <code>uid</code> is the UID of that object. The resource version and GroupResource are the resource version\nand GroupResource of the object that the controller has written to the API server. The object is not explicitly tracked, since the\ncontroller only cares about waiting to catch up to the latest resource version of the written object.</li>\n<li><code>EnsureReady</code>: This function is called by the controller to ensure that the cache is up to date for the object. It is used prior\nto reconciliation to decide whether to reconcile or not. It returns true if the cache is up to date for the object, and false\notherwise. It will use the information provided by <code>WroteAt</code> to determine if the cache is up to date.</li>\n<li><code>Clear</code>: This function is called by the controller when an object is deleted. It is used to remove the object from the consistency\nstore. This is mostly used for cleanup when an object is deleted to prevent the consistency store from growing indefinitely.</li>\n</ol>\n<p>The UID is used to distinguish between different objects that have the same name, such as when an object is deleted and then\nrecreated. It is not needed for EnsureReady because the consistency store is only concerned with catching up to the latest resource\nversion of the object, not the specific object. It is primarily used to ensure that the controller doesn't delete the entry for\nan object when it is recreated with a new UID.</p>\n<p>With these 3 functions, an informer author can implement staleness mitigation in their controller.</p>\n<h2 id=\"observability\">Observability</h2>\n<p>In addition to the staleness mitigation features, the Kubernetes project has also added related instrumentation to kube-controller-manager\nin 1.36. These metrics are also enabled by default, and are controlled using the same set of feature gates.</p>\n<h3 id=\"metrics\">Metrics</h3>\n<p>The following <a href=\"https://kubernetes.io/docs/reference/instrumentation/metrics/#list-of-alpha-kubernetes-metrics\">alpha metrics</a> have been added to kube-controller-manager in 1.36:</p>\n<p><code>stale_sync_skips_total</code>: The number of times the controller has skipped a sync due to stale cache. This metric is exposed\nfor each controller that uses the staleness mitigation feature with the subsystem of the controller.</p>\n<p>This metric is exposed by the kube-controller-manager metrics endpoint, and can be used to monitor the health of the controller.</p>\n<p>Along with this metric, client-go also emits metrics that expose the latest resource version of every shared informer\nwith the subsystem of the informer. This allows you to see the latest resource version of each informer, and use that to\ndetermine if the controller's cache is stale, especially great for comparing against the resource version of the API server.</p>\n<p>This metric is named <code>store_resource_version</code> and has the Group, Version, and Resource as labels.</p>\n<h2 id=\"what-s-next\">What's next?</h2>\n<p>Kubernetes SIG API Machinery is excited to continue working on this feature and hope to bring it to more controllers in the future.\nWe are also interested in hearing your feedback on this feature. Please let us know what you think in the comments\nbelow or by opening an <a href=\"https://github.com/kubernetes/kubernetes/issues\">issue</a> on the Kubernetes GitHub repository.</p>\n<p>We are also working with <a href=\"https://github.com/kubernetes-sigs/controller-runtime/pull/3473\">controller-runtime</a> to enable this set of\nsemantics for all controllers built with controller-runtime. This will allow any controller built with controller-runtime to gain\nthe benefits of read your own writes, without having to implement the logic themselves.</p>",
+          "link": "https://kubernetes.io/blog/2026/04/28/kubernetes-v1-36-staleness-mitigation-for-controllers/",
+          "source": "Kubernetes Blog",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 10:35:00 -0800",
+          "author": "Inconnu"
+        },
+        {
+          "title": "KDE Frameworks 6.25 Adds Support for Converting Momme Units in KRunner",
+          "description": "<p>Discover how KDE Frameworks 6.25 enhances KRunner with new support for converting Momme units, streamlining your workflow and improving efficiency.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/kde-frameworks-6-25-adds-support-for-converting-momme-units-in-krunner/\">KDE Frameworks 6.25 Adds Support for Converting Momme Units in KRunner</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/kde-frameworks-6-25-adds-support-for-converting-momme-units-in-krunner/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 07:36:55 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Deepin 25.1 Arrives With Linux Kernel 6.18 and New AI Features",
+          "description": "<p>Discover Deepin 25.1, featuring the latest Linux Kernel 6.18 and innovative AI enhancements. Explore the future of user-friendly Linux today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/deepin-25-1-arrives-with-linux-kernel-6-18-and-new-ai-features/\">Deepin 25.1 Arrives With Linux Kernel 6.18 and New AI Features</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/deepin-25-1-arrives-with-linux-kernel-6-18-and-new-ai-features/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 07:35:10 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "How to Install n8n on Ubuntu 26.04",
+          "description": "<p>Learn how to install n8n on Ubuntu 26.04 with our step-by-step guide. Simplify your automation tasks and enhance productivity today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-install-n8n-on-ubuntu-26-04/\">How to Install n8n on Ubuntu 26.04</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/how-to-install-n8n-on-ubuntu-26-04/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 07:31:11 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "How to install Odoo 19 on Ubuntu 26.04",
+          "description": "<p>Learn how to effortlessly install Odoo 19 on Ubuntu 26.04 with our comprehensive guide. Boost your productivity and streamline operations now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-install-odoo-19-on-ubuntu-26-04/\">How to install Odoo 19 on Ubuntu 26.04</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/how-to-install-odoo-19-on-ubuntu-26-04/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 07:28:00 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Calibre 9.7 E-Book Manager Improves the Annotations Browser and Content Server",
+          "description": "<p>Explore the latest features of Calibre 9.7 E-Book Manager, including an upgraded annotations browser and a powerful content server for seamless e-book management.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/calibre-9-7-e-book-manager-improves-the-annotations-browser-and-content-server/\">Calibre 9.7 E-Book Manager Improves the Annotations Browser and Content Server</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/calibre-9-7-e-book-manager-improves-the-annotations-browser-and-content-server/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 07:26:19 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Apache Spins Anthropic’s $1.5M Into ‘Responsible AI’ Initiative",
+          "description": "<p>Learn about Apache's strategic use of Anthropic's $1.5M to launch a 'Responsible AI' initiative, fostering accountability and ethics in AI technology.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/apache-spins-anthropics-1-5m-into-responsible-ai-initiative/\">Apache Spins Anthropic’s $1.5M Into ‘Responsible AI’ Initiative</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/apache-spins-anthropics-1-5m-into-responsible-ai-initiative/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 07:16:08 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "France Launches Government Linux Desktop Plan as Windows Exit Begins",
+          "description": "<p>Discover how France's new Linux desktop initiative marks a significant shift from Windows, promoting innovation and security in public sector technology.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/france-launches-government-linux-desktop-plan-as-windows-exit-begins/\">France Launches Government Linux Desktop Plan as Windows Exit Begins</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/france-launches-government-linux-desktop-plan-as-windows-exit-begins/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 07:12:01 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "SQLite 3.53 Fixes WAL Corruption Bug, Adds New SQL Features",
+          "description": "<p>Stay updated with SQLite 3.53, featuring crucial fixes for WAL corruption and new SQL functionalities designed to improve performance and reliability.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/sqlite-3-53-fixes-wal-corruption-bug-adds-new-sql-features/\">SQLite 3.53 Fixes WAL Corruption Bug, Adds New SQL Features</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/sqlite-3-53-fixes-wal-corruption-bug-adds-new-sql-features/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 07:03:40 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Can Garuda Linux Mokka Take Manjaro’s Arch-Based Crown?",
+          "description": "<p>Can Garuda Linux Mokka surpass Manjaro's popularity in the Arch-based realm? Dive into a detailed comparison of features, performance, and user satisfaction.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/can-garuda-linux-mokka-take-manjaros-arch-based-crown/\">Can Garuda Linux Mokka Take Manjaro’s Arch-Based Crown?</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/can-garuda-linux-mokka-take-manjaros-arch-based-crown/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 06:59:12 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Wayland 1.25 Documentation Update",
+          "description": "<p>Discover the latest updates in Wayland 1.25 documentation. Enhance your understanding and implementation with comprehensive guides and resources.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/wayland-1-25-documentation-update/\">Wayland 1.25 Documentation Update</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/wayland-1-25-documentation-update/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Tue, 28 Apr 2026 06:53:17 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Welcome to SkiaSharp 4.0 Preview 1",
+          "description": "<p>SkiaSharp 4.0 Preview 1 is here. Learn all about the new features and how Uno Platform has stepped up as a co-maintainer.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/welcome-to-skia-sharp-40-preview1/\">Welcome to SkiaSharp 4.0 Preview 1</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/welcome-to-skia-sharp-40-preview1/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Tue, 28 Apr 2026 17:06:00 +0000",
+          "author": "David Ortinau"
+        },
+        {
+          "title": "High-Performance Distributed Caching with .NET and Postgres on Azure",
+          "description": "<p>Adding caching to your application architecture can significantly improve key performance metrics, cut latency, and reduce load across downstream systems. In this walkthrough, we highlight the latest caching best practices and incorporate these design patterns into a reusable .NET application that you can reference when adding new capabilities to your application stack.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/high-performance-distributed-caching-dotnet-postgres-azure/\">High-Performance Distributed Caching with .NET and Postgres on Azure</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/high-performance-distributed-caching-dotnet-postgres-azure/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Tue, 28 Apr 2026 17:05:00 +0000",
+          "author": "Jared Meade"
+        },
+        {
+          "title": "GitHub for Beginners: Getting started with Markdown",
+          "description": "<p>Discover how to format and edit your comments and posts using Markdown.</p>\n<p>The post <a href=\"https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/\">GitHub for Beginners: Getting started with Markdown</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Tue, 28 Apr 2026 18:00:00 +0000",
+          "author": "Kedasha Kerr"
+        },
+        {
+          "title": "Securing the git push pipeline: Responding to a critical remote code execution vulnerability",
+          "description": "<p>How we validated, fixed, and investigated a critical vulnerability in under two hours, and confirmed no exploitation.</p>\n<p>The post <a href=\"https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/\">Securing the git push pipeline: Responding to a critical remote code execution vulnerability</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Tue, 28 Apr 2026 15:30:00 +0000",
+          "author": "Alexis Wales"
+        },
+        {
+          "title": "An update on GitHub availability",
+          "description": "<p>Here’s what we’ve done—and what we’re still doing—to improve our availability and reliability.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/an-update-on-github-availability/\">An update on GitHub availability</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/an-update-on-github-availability/",
+          "source": "GitHub Blog",
+          "category": "Développement",
+          "published": "Tue, 28 Apr 2026 10:01:37 +0000",
+          "author": "Vlad Fedorov"
+        },
+        {
+          "title": "Top announcements of the What’s Next with AWS, 2026",
+          "description": "At the \"What's Next with AWS\" 2026 event, AWS launched Amazon Quick—an AI assistant for work with a desktop app and expanded integrations—and expanded Amazon Connect into four agentic AI solutions for supply chain, hiring, customer experience, and healthcare. AWS also expended its partnership with OpenAI, bringing models like GPT-5.5, Codex, and Managed Agents to Amazon Bedrock in limited preview.",
+          "link": "https://aws.amazon.com/blogs/aws/top-announcements-of-the-whats-next-with-aws-2026/",
+          "source": "AWS Blog",
+          "category": "Cloud",
+          "published": "Tue, 28 Apr 2026 18:11:39 +0000",
+          "author": "AWS News Blog Team"
+        },
+        {
+          "title": "GitHub for Beginners: Getting started with Markdown",
+          "description": "<p>Discover how to format and edit your comments and posts using Markdown.</p>\n<p>The post <a href=\"https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/\">GitHub for Beginners: Getting started with Markdown</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Tue, 28 Apr 2026 18:00:00 +0000",
+          "author": "Kedasha Kerr"
+        },
+        {
+          "title": "Securing the git push pipeline: Responding to a critical remote code execution vulnerability",
+          "description": "<p>How we validated, fixed, and investigated a critical vulnerability in under two hours, and confirmed no exploitation.</p>\n<p>The post <a href=\"https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/\">Securing the git push pipeline: Responding to a critical remote code execution vulnerability</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Tue, 28 Apr 2026 15:30:00 +0000",
+          "author": "Alexis Wales"
+        },
+        {
+          "title": "An update on GitHub availability",
+          "description": "<p>Here’s what we’ve done—and what we’re still doing—to improve our availability and reliability.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/an-update-on-github-availability/\">An update on GitHub availability</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
+          "link": "https://github.blog/news-insights/company-news/an-update-on-github-availability/",
+          "source": "Git Blog",
+          "category": "DevOps",
+          "published": "Tue, 28 Apr 2026 10:01:37 +0000",
+          "author": "Vlad Fedorov"
         },
         {
           "title": "The OWASP Foundation appoints Missie Lindsey as Director of Corporate Relations",
@@ -2031,96 +2211,6 @@
           "category": "Infrastructure",
           "published": "Mon, 27 Apr 2026 10:35:00 -0800",
           "author": "Inconnu"
-        },
-        {
-          "title": "RadioGoGo – Surf Global Radio Waves",
-          "description": "<p>Experience the world of sound with RadioGoGo. Surf through global radio waves for the latest music, news, and cultural insights. Start listening now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/radiogogo-surf-global-radio-waves/\">RadioGoGo – Surf Global Radio Waves</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/radiogogo-surf-global-radio-waves/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 07:29:35 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "KDE Plasma 6.7 — Top Features You’ll Love",
-          "description": "<p>Discover the top features of KDE Plasma 6.7 that enhance your desktop experience. Explore customization, performance improvements, and more!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/kde-plasma-6-7-top-features-youll-love/\">KDE Plasma 6.7 — Top Features You’ll Love</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/kde-plasma-6-7-top-features-youll-love/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 07:24:43 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Firefox 149.0.2: VPN Integration and Bug Fixes",
-          "description": "<p>Discover the latest Firefox 149.0.2 update featuring seamless VPN integration and essential bug fixes to enhance your browsing experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/firefox-149-0-2-vpn-integration-and-bug-fixes/\">Firefox 149.0.2: VPN Integration and Bug Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/firefox-149-0-2-vpn-integration-and-bug-fixes/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 07:23:24 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Solus Says It Has No Plans to Implement Age Verification",
-          "description": "<p>Discover why Solus has no plans to implement age verification. Explore the implications for users and the broader industry in our detailed analysis.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/solus-says-it-has-no-plans-to-implement-age-verification/\">Solus Says It Has No Plans to Implement Age Verification</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/solus-says-it-has-no-plans-to-implement-age-verification/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 07:19:29 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Chaos Malware Expands to Linux Servers: What You Need to Know",
-          "description": "<p>Chaos malware is now expanding to Linux servers. Stay informed with crucial information and strategies to protect your infrastructure from this emerging risk.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/chaos-malware-expands-to-linux-servers-what-you-need-to-know/\">Chaos Malware Expands to Linux Servers: What You Need to Know</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/chaos-malware-expands-to-linux-servers-what-you-need-to-know/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 07:17:38 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Asqav: Open-source SDK for AI Agent Governance",
-          "description": "<p>Explore Asqav, an open-source SDK that streamlines AI agent governance. Enhance your AI solutions with comprehensive tools for responsible development.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/asqav-open-source-sdk-for-ai-agent-governance/\">Asqav: Open-source SDK for AI Agent Governance</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/asqav-open-source-sdk-for-ai-agent-governance/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 07:15:40 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "PipeWire 1.6.3 Multimedia Framework Improves RAOP, MIDI, and Stability",
-          "description": "<p>Discover the enhancements in PipeWire 1.6.3, featuring improved RAOP, MIDI support, and enhanced stability for a seamless multimedia experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/pipewire-1-6-3-multimedia-framework-improves-raop-midi-and-stability/\">PipeWire 1.6.3 Multimedia Framework Improves RAOP, MIDI, and Stability</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/pipewire-1-6-3-multimedia-framework-improves-raop-midi-and-stability/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 07:13:20 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Miracle-WM 0.9 Makes This Mir-Based Wayland Compositor Truly Hackable",
-          "description": "<p>Explore the features of Miracle-WM 0.9, the Mir-based Wayland compositor that empowers developers with unparalleled hackability and customization options.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/miracle-wm-0-9-makes-this-mir-based-wayland-compositor-truly-hackable/\">Miracle-WM 0.9 Makes This Mir-Based Wayland Compositor Truly Hackable</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/miracle-wm-0-9-makes-this-mir-based-wayland-compositor-truly-hackable/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 07:02:11 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Fedora 44: Best New Features",
-          "description": "<p>Uncover the exciting new features of Fedora 44! From improved performance to enhanced security, see how this release transforms your Linux environment.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/fedora-44-best-new-features/\">Fedora 44: Best New Features</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/fedora-44-best-new-features/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 06:59:03 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Rofi and Wofi: Keyboard Launchers That Keep Your Hands on the Keys",
-          "description": "<p>Elevate your workflow with Rofi and Wofi, efficient keyboard launchers that streamline access to applications while keeping your hands on the keys. Learn more!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/rofi-and-wofi-keyboard-launchers-that-keep-your-hands-on-the-keys/\">Rofi and Wofi: Keyboard Launchers That Keep Your Hands on the Keys</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/rofi-and-wofi-keyboard-launchers-that-keep-your-hands-on-the-keys/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Mon, 27 Apr 2026 06:55:23 +0000",
-          "author": "Content Operations"
         },
         {
           "title": "Combining API versioning with OpenAPI in .NET 10 applications",
@@ -2438,15 +2528,6 @@
           "author": "Cassidy Williams"
         },
         {
-          "title": "Developer policy update: Intermediary liability, copyright, and transparency",
-          "description": "<p>We’re sharing recent policy updates that developers should know about, updating our Transparency Center with the full year of 2025 data, and looking to what’s ahead.</p>\n<p>The post <a href=\"https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/\">Developer policy update: Intermediary liability, copyright, and transparency</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Wed, 15 Apr 2026 15:00:00 +0000",
-          "author": "Margaret Tucker"
-        },
-        {
           "title": "Gemini 3.1 Flash TTS: the next generation of expressive AI speech",
           "description": "Our newest audio model introduces granular audio tags that give you precise control to direct AI speech for expressive audio generation.",
           "link": "https://deepmind.google/blog/gemini-3-1-flash-tts-the-next-generation-of-expressive-ai-speech/",
@@ -2472,15 +2553,6 @@
           "category": "DevOps",
           "published": "Wed, 15 Apr 2026 17:00:00 +0000",
           "author": "Cassidy Williams"
-        },
-        {
-          "title": "Developer policy update: Intermediary liability, copyright, and transparency",
-          "description": "<p>We’re sharing recent policy updates that developers should know about, updating our Transparency Center with the full year of 2025 data, and looking to what’s ahead.</p>\n<p>The post <a href=\"https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/\">Developer policy update: Intermediary liability, copyright, and transparency</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Wed, 15 Apr 2026 15:00:00 +0000",
-          "author": "Margaret Tucker"
         },
         {
           "title": "Why We Chose the Harder Path: Docker Hardened Images, One Year Later",
@@ -2510,24 +2582,6 @@
           "author": ".NET Team"
         },
         {
-          "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
-          "description": "<p>Learn to find and exploit real-world agentic AI vulnerabilities through five progressive challenges in this free, open source game that over 10,000 developers have already used to sharpen their security skills.</p>\n<p>The post <a href=\"https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/\">Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Tue, 14 Apr 2026 18:17:59 +0000",
-          "author": "Joseph Katsioloudes"
-        },
-        {
-          "title": "How exposed is your code? Find out in minutes—for free",
-          "description": "<p>The new Code Security Risk Assessment gives you a one-click view of vulnerabilities across your organization, at no cost.</p>\n<p>The post <a href=\"https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/\">How exposed is your code? Find out in minutes—for free</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/",
-          "source": "GitHub Blog",
-          "category": "Développement",
-          "published": "Tue, 14 Apr 2026 15:00:00 +0000",
-          "author": "Dorothy Pearce"
-        },
-        {
           "title": "AWS Interconnect is now generally available, with a new option to simplify last-mile connectivity",
           "description": "Today, we’re announcing the general availability of AWS Interconnect – multicloud, a managed private connectivity service that connects your Amazon Virtual Private Cloud (Amazon VPC) directly to VPCs on other cloud providers. We’re also introducing AWS Interconnect – last mile, a new capability that simplifies how you establish high-speed, private connections to AWS from your […]",
           "link": "https://aws.amazon.com/blogs/aws/aws-interconnect-is-now-generally-available-with-a-new-option-to-simplify-last-mile-connectivity/",
@@ -2544,24 +2598,6 @@
           "category": "Cloud",
           "published": "Tue, 14 Apr 2026 15:00:00 +0000",
           "author": "Aung Oo"
-        },
-        {
-          "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
-          "description": "<p>Learn to find and exploit real-world agentic AI vulnerabilities through five progressive challenges in this free, open source game that over 10,000 developers have already used to sharpen their security skills.</p>\n<p>The post <a href=\"https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/\">Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Tue, 14 Apr 2026 18:17:59 +0000",
-          "author": "Joseph Katsioloudes"
-        },
-        {
-          "title": "How exposed is your code? Find out in minutes—for free",
-          "description": "<p>The new Code Security Risk Assessment gives you a one-click view of vulnerabilities across your organization, at no cost.</p>\n<p>The post <a href=\"https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/\">How exposed is your code? Find out in minutes—for free</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
-          "link": "https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/",
-          "source": "Git Blog",
-          "category": "DevOps",
-          "published": "Tue, 14 Apr 2026 15:00:00 +0000",
-          "author": "Dorothy Pearce"
         },
         {
           "title": "How to Analyze Hugging Face for Arm64 Readiness",
@@ -2636,15 +2672,6 @@
           "author": "Jeffrey Fritz"
         },
         {
-          "title": "ASP.NET Core 2.3 end of support announcement",
-          "description": "<p>ASP.NET Core 2.3 will reach end of support on April 13, 2027. Learn what this means for your applications and how to upgrade to a modern supported version of .NET.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/aspnet-core-2-3-end-of-support/\">ASP.NET Core 2.3 end of support announcement</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/aspnet-core-2-3-end-of-support/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Tue, 07 Apr 2026 17:00:00 +0000",
-          "author": "Daniel Roth"
-        },
-        {
           "title": "Launching S3 Files, making S3 buckets accessible as file systems",
           "description": "Amazon S3 Files makes S3 buckets accessible as high-performance file systems on AWS compute resources, eliminating the tradeoff between object storage benefits and interactive file capabilities while enabling seamless data sharing with ~1ms latencies.",
           "link": "https://aws.amazon.com/blogs/aws/launching-s3-files-making-s3-buckets-accessible-as-file-systems/",
@@ -2697,15 +2724,6 @@
           "category": "Infrastructure",
           "published": "Thu, 02 Apr 2026 13:00:00 +0000",
           "author": "Deanna Sparks"
-        },
-        {
-          "title": "Explore union types in C# 15",
-          "description": "<p>C# 15 introduces union types — declare a closed set of case types with implicit conversions and exhaustive pattern matching. Try unions in preview today and see the broader exhaustiveness roadmap.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/csharp-15-union-types/\">Explore union types in C# 15</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/csharp-15-union-types/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Thu, 02 Apr 2026 17:05:00 +0000",
-          "author": "Bill Wagner"
         },
         {
           "title": "Gemma 4: Byte for byte, the most capable open models",
@@ -2949,15 +2967,6 @@
           "category": "IA",
           "published": "Mon, 09 Mar 2026 13:52:36 +0000",
           "author": "Inconnu"
-        },
-        {
-          "title": "AWS Weekly Roundup: Amazon Connect Health, Bedrock AgentCore Policy, GameDay Europe, and more (March 9, 2026)",
-          "description": "Fiti AWS Student Community Kenya! Last week was an incredible whirlwind: a round of meetups, hands-on workshops, and career discussions across Kenya that culminated with the AWS Student Community Day at Meru University of Science and Technology, with keynotes from my colleagues Veliswa and Tiffany, and sessions on everything from GitOps to cloud-native engineering, and […]",
-          "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-connect-health-bedrock-agentcore-policy-gameday-europe-and-more-march-9-2026/",
-          "source": "AWS Blog",
-          "category": "Cloud",
-          "published": "Mon, 09 Mar 2026 16:15:35 +0000",
-          "author": "Sébastien Stormacq"
         },
         {
           "title": "Gemini 3.1 Flash-Lite: Built for intelligence at scale",
@@ -3686,15 +3695,6 @@
           "source": "Kubernetes Blog",
           "category": "Infrastructure",
           "published": "Thu, 18 Sep 2025 10:30:00 -0800",
-          "author": "Inconnu"
-        },
-        {
-          "title": "Kubernetes v1.34: Pods Report DRA Resource Health",
-          "description": "<p>The rise of AI/ML and other high-performance workloads has made specialized hardware like GPUs, TPUs, and FPGAs a critical component of many Kubernetes clusters. However, as discussed in a <a href=\"https://kubernetes.io/blog/2025/07/03/navigating-failures-in-pods-with-devices/\">previous blog post about navigating failures in Pods with devices</a>, when this hardware fails, it can be difficult to diagnose, leading to significant downtime. With the release of Kubernetes v1.34, we are excited to announce a new alpha feature that brings much-needed visibility into the health of these devices.</p>\n<p>This work extends the functionality of <a href=\"https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/4680-add-resource-health-to-pod-status\">KEP-4680</a>, which first introduced a mechanism for reporting the health of devices managed by Device Plugins. Now, this capability is being extended to <em>Dynamic Resource Allocation (DRA)</em>. Controlled by the <code>ResourceHealthStatus</code> feature gate, this enhancement allows DRA drivers to report device health directly into a Pod's <code>.status</code> field, providing crucial insights for operators and developers.</p>\n<h2 id=\"why-expose-device-health-in-pod-status\">Why expose device health in Pod status?</h2>\n<p>For stateful applications or long-running jobs, a device failure can be disruptive and costly. By exposing device health in the <code>.status</code> field for a Pod, Kubernetes provides a standardized way for users and automation tools to quickly diagnose issues. If a Pod is failing, you can now check its status to see if an unhealthy device is the root cause, saving valuable time that might otherwise be spent debugging application code.</p>\n<h2 id=\"how-it-works\">How it works</h2>\n<p>This feature introduces a new, optional communication channel between the Kubelet and DRA drivers, built on three core components.</p>\n<h3 id=\"a-new-grpc-health-service\">A new gRPC health service</h3>\n<p>A new gRPC service, <code>DRAResourceHealth</code>, is defined in the <code>dra-health/v1alpha1</code> API group. DRA drivers can implement this service to stream device health updates to the Kubelet. The service includes a <code>NodeWatchResources</code> server-streaming RPC that sends the health status (<code>Healthy</code>, <code>Unhealthy</code>, or <code>Unknown</code>) for the devices it manages.</p>\n<h3 id=\"kubelet-integration\">Kubelet integration</h3>\n<p>The Kubelet’s <code>DRAPluginManager</code> discovers which drivers implement the health service. For each compatible driver, it starts a long-lived <code>NodeWatchResources</code> stream to receive health updates. The DRA Manager then consumes these updates and stores them in a persistent <code>healthInfoCache</code> that can survive Kubelet restarts.</p>\n<h3 id=\"populating-the-pod-status\">Populating the Pod status</h3>\n<p>When a device's health changes, the DRA manager identifies all Pods affected by the change and triggers a Pod status update. A new field, <code>allocatedResourcesStatus</code>, is now part of the <code>v1.ContainerStatus</code> API object. The Kubelet populates this field with the current health of each device allocated to the container.</p>\n<h2 id=\"a-practical-example\">A practical example</h2>\n<p>If a Pod is in a <code>CrashLoopBackOff</code> state, you can use <code>kubectl describe pod &lt;pod-name&gt;</code> to inspect its status. If an allocated device has failed, the output will now include the <code>allocatedResourcesStatus</code> field, clearly indicating the problem:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-yaml\"><span style=\"display: flex;\"><span><span style=\"color: #008000; font-weight: bold;\">status</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">containerStatuses</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">name</span>:<span style=\"color: #bbb;\"> </span>my-gpu-intensive-container<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #080; font-style: italic;\"># ... other container statuses</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">allocatedResourcesStatus</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">name</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"claim:my-gpu-claim\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">resources</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">resourceID</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"example.com/gpu-a1b2-c3d4\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">health</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"Unhealthy\"</span><span style=\"color: #bbb;\">\n</span></span></span></code></pre></div><p>This explicit status makes it clear that the issue is with the underlying hardware, not the application.</p>\n<p>Now you can improve the failure detection logic to react on the unhealthy devices associated with the Pod by de-scheduling a Pod.</p>\n<h2 id=\"how-to-use-this-feature\">How to use this feature</h2>\n<p>As this is an alpha feature in Kubernetes v1.34, you must take the following steps to use it:</p>\n<ol>\n<li>Enable the <code>ResourceHealthStatus</code> feature gate on your kube-apiserver and kubelets.</li>\n<li>Ensure you are using a DRA driver that implements the <code>v1alpha1 DRAResourceHealth</code> gRPC service.</li>\n</ol>\n<h2 id=\"dra-drivers\">DRA drivers</h2>\n<p>If you are developing a DRA driver, make sure to think about device failure detection strategy and ensure that your driver is integrated with this feature. This way, your driver will improve the user experience and simplify debuggability of hardware issues.</p>\n<h2 id=\"what-s-next\">What's next?</h2>\n<p>This is the first step in a broader effort to improve how Kubernetes handles device failures. As we gather feedback on this alpha feature, the community is planning several key enhancements before graduating to Beta:</p>\n<ul>\n<li><em>Detailed health messages:</em> To improve the troubleshooting experience, we plan to add a human-readable message field to the gRPC API. This will allow DRA drivers to provide specific context for a health status, such as &quot;GPU temperature exceeds threshold&quot; or &quot;NVLink connection lost&quot;.</li>\n<li><em>Configurable health timeouts:</em> The timeout for marking a device's health as &quot;Unknown&quot; is currently hardcoded. We plan to make this configurable, likely on a per-driver basis, to better accommodate the different health-reporting characteristics of various hardware.</li>\n<li><em>Improved post-mortem troubleshooting:</em> We will address a known limitation where health updates may not be applied to pods that have already terminated. This fix will ensure that the health status of a device at the time of failure is preserved, which is crucial for troubleshooting batch jobs and other &quot;run-to-completion&quot; workloads.</li>\n</ul>\n<p>This feature was developed as part of <a href=\"https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/4680-add-resource-health-to-pod-status\">KEP-4680</a>, and community feedback is crucial as we work toward graduating it to Beta. We have more improvements of device failure handling in k8s and encourage you to try it out and share your experiences with the SIG Node community!</p>",
-          "link": "https://kubernetes.io/blog/2025/09/17/kubernetes-v1-34-pods-report-dra-resource-health/",
-          "source": "Kubernetes Blog",
-          "category": "Infrastructure",
-          "published": "Wed, 17 Sep 2025 10:30:00 -0800",
           "author": "Inconnu"
         },
         {
