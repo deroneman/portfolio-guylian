@@ -1,9 +1,108 @@
 {
-  "lastUpdate": "2026-04-29T09:19:31.116271",
+  "lastUpdate": "2026-04-30T09:22:20.470631",
   "articles": {
     "infrastructure": {
       "icon": "🏗️",
       "articles": [
+        {
+          "title": "Kubernetes v1.36: Tiered Memory Protection with Memory QoS",
+          "description": "<p>On behalf of SIG Node, we are pleased to announce updates to the Memory QoS\nfeature (alpha) in Kubernetes v1.36. Memory QoS uses the cgroup v2 memory\ncontroller to give the kernel better guidance on how to treat container memory.\nIt was first introduced in v1.22 and updated in v1.27. In Kubernetes v1.36, we're introducing: opt-in memory reservation, tiered\nprotection by QoS class, observability metrics, and kernel-version warning for <code>memory.high</code>.</p>\n<h2 id=\"what-s-new-in-v1-36\">What's new in v1.36</h2>\n<h3 id=\"opt-in-memory-reservation-with-memoryreservationpolicy\">Opt-in memory reservation with <code>memoryReservationPolicy</code></h3>\n<p>v1.36 separates throttling from reservation. Enabling the feature gate turns on\n<code>memory.high</code> throttling (the kubelet sets <code>memory.high</code> based on\n<code>memoryThrottlingFactor</code>, default 0.9), but memory reservation is now controlled\nby a separate kubelet configuration field:</p>\n<ul>\n<li><strong><code>None</code></strong> (default): no <code>memory.min</code> or <code>memory.low</code> is written. Throttling\nvia <code>memory.high</code> still works.</li>\n<li><strong><code>TieredReservation</code></strong>: the kubelet writes tiered memory protection based on the Pod's\n<a href=\"https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/\">QoS class</a>:</li>\n</ul>\n<p><strong>Guaranteed</strong> Pods get hard protection via <code>memory.min</code>. For example, a\nGuaranteed Pod requesting 512 MiB of memory results in:</p>\n<pre tabindex=\"0\"><code class=\"language-none\">$ cat /sys/fs/cgroup/kubepods.slice/kubepods-pod6a4f2e3b_1c9d_4a5e_8f7b_2d3e4f5a6b7c.slice/memory.min\n536870912\n</code></pre><p>The kernel will not reclaim this memory under any circumstances. If it cannot\nhonor the guarantee, it invokes the OOM killer on other processes to free pages.</p>\n<p><strong>Burstable</strong> Pods get soft protection via <code>memory.low</code>. For the same 512 MiB\nrequest on a Burstable Pod:</p>\n<pre tabindex=\"0\"><code class=\"language-none\">$ cat /sys/fs/cgroup/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod8b3c7d2e_4f5a_6b7c_9d1e_3f4a5b6c7d8e.slice/memory.low\n536870912\n</code></pre><p>The kernel avoids reclaiming this memory under normal pressure, but may reclaim\nit if the alternative is a system-wide OOM.</p>\n<p><strong>BestEffort</strong> Pods get neither <code>memory.min</code> nor <code>memory.low</code>. Their memory\nremains fully reclaimable.</p>\n<h4 id=\"comparison-with-v1-27-behavior\">Comparison with v1.27 behavior</h4>\n<p>In earlier versions, enabling the MemoryQoS feature gate immediately set <code>memory.min</code> for every container with a memory request. <code>memory.min</code> is a hard reservation that the kernel will not reclaim, regardless of memory pressure.</p>\n<p>Consider a node with 8 GiB of RAM where Burstable Pod requests total 7 GiB. In earlier versions, that 7 GiB would be locked as <code>memory.min</code>, leaving little headroom for the kernel, system daemons, or BestEffort workloads and increasing the risk of OOM kills.</p>\n<p>With v1.36 tiered reservation, those Burstable requests map to <code>memory.low</code> instead of <code>memory.min</code>. Under normal pressure, the kernel still protects that memory, but under extreme pressure it can reclaim part of it to avoid system-wide OOM. Only Guaranteed Pods use <code>memory.min</code>, which keeps hard reservation lower.</p>\n<p>With <code>memoryReservationPolicy</code> in v1.36, you can enable throttling first, observe workload behavior, and opt into reservation when your node has enough headroom.</p>\n<h3 id=\"observability-metrics\">Observability metrics</h3>\n<p>Two alpha-stability metrics are exposed on the kubelet <code>/metrics</code> endpoint:</p>\n<table>\n<thead>\n<tr>\n<th>Metric</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>kubelet_memory_qos_node_memory_min_bytes</code></td>\n<td>Total <code>memory.min</code> across Guaranteed Pods</td>\n</tr>\n<tr>\n<td><code>kubelet_memory_qos_node_memory_low_bytes</code></td>\n<td>Total <code>memory.low</code> across Burstable Pods</td>\n</tr>\n</tbody>\n</table>\n<p>These are useful for capacity planning. If <code>kubelet_memory_qos_node_memory_min_bytes</code>\nis creeping toward your node's physical memory, you know hard reservation is\ngetting tight.</p>\n<pre tabindex=\"0\"><code class=\"language-none\">$ curl -sk https://localhost:10250/metrics | grep memory_qos\n# HELP kubelet_memory_qos_node_memory_min_bytes [ALPHA] Total memory.min in bytes for Guaranteed pods\nkubelet_memory_qos_node_memory_min_bytes 5.36870912e+08\n# HELP kubelet_memory_qos_node_memory_low_bytes [ALPHA] Total memory.low in bytes for Burstable pods\nkubelet_memory_qos_node_memory_low_bytes 2.147483648e+09\n</code></pre><h3 id=\"kernel-version-check\">Kernel version check</h3>\n<p>On kernels older than 5.9, <code>memory.high</code> throttling can trigger the\n<a href=\"https://lore.kernel.org/all/a4e23b59e9ef499b575ae73a8120ee089b7d3373.1594640214.git.chris@chrisdown.name/\">kernel livelock</a> issue. The bug was fixed\nin kernel 5.9. In v1.36, when the feature gate is enabled, the kubelet checks the\nkernel version at startup and logs a warning if it is below 5.9. The feature\ncontinues to work — this is informational, not a hard block.</p>\n<h3 id=\"how-kubernetes-maps-memory-qos-to-cgroup-v2\">How Kubernetes maps Memory QoS to cgroup v2</h3>\n<p>Memory QoS uses four cgroup v2 memory controller interfaces:</p>\n<ul>\n<li><strong><code>memory.max</code></strong>: hard memory limit — unchanged from previous versions</li>\n<li><strong><code>memory.min</code></strong>: hard memory protection — with <code>TieredReservation</code>, set only for Guaranteed Pods</li>\n<li><strong><code>memory.low</code></strong>: soft memory protection — set for Burstable Pods with <code>TieredReservation</code></li>\n<li><strong><code>memory.high</code></strong>: memory throttling threshold — unchanged from previous versions</li>\n</ul>\n<p>The following table shows how Kubernetes container resources map to cgroup v2\ninterfaces when <code>memoryReservationPolicy: TieredReservation</code> is configured.\nWith the default <code>memoryReservationPolicy: None</code>, no <code>memory.min</code> or\n<code>memory.low</code> values are set.</p>\n<table>\n<tr>\n<th>QoS Class</th>\n<th><tt>memory.min</tt></th>\n<th><tt>memory.low</tt></th>\n<th><tt>memory.high</tt></th>\n<th><tt>memory.max</tt></th>\n</tr>\n<tr>\n<td><b>Guaranteed</b></td>\n<td>Set to <code>requests.memory</code><br />(hard protection)</td>\n<td>Not set</td>\n<td>Not set<br />(requests == limits, so throttling is not useful)</td>\n<td>Set to <code>limits.memory</code></td>\n</tr>\n<tr>\n<td><b>Burstable</b></td>\n<td>Not set</td>\n<td>Set to <code>requests.memory</code><br />(soft protection)</td>\n<td>Calculated based on<br />formula with throttling factor</td>\n<td>Set to <code>limits.memory</code><br />(if specified)</td>\n</tr>\n<tr>\n<td><b>BestEffort</b></td>\n<td>Not set</td>\n<td>Not set</td>\n<td>Calculated based on<br />node allocatable memory</td>\n<td>Not set</td>\n</tr>\n</table>\n<h3 id=\"cgroup-hierarchy\">Cgroup hierarchy</h3>\n<p>cgroup v2 requires that a parent cgroup's memory protection is at least as\nlarge as the sum of its children's. The kubelet maintains this by setting\n<code>memory.min</code> on the kubepods root cgroup to the sum of all Guaranteed and\nBurstable Pod memory requests, and <code>memory.low</code> on the Burstable QoS cgroup\nto the sum of all Burstable Pod memory requests. This way the kernel can\nenforce the per-container and per-pod protection values correctly.</p>\n<p>The kubelet manages pod-level and QoS-class cgroups directly using the runc\nlibcontainer library, while container-level cgroups are managed by the\ncontainer runtime (containerd or CRI-O).</p>\n<h2 id=\"how-do-i-use-it\">How do I use it?</h2>\n<h3 id=\"prerequisites\">Prerequisites</h3>\n<ol>\n<li>Kubernetes v1.36 or later</li>\n<li>Linux with cgroup v2. Kernel 5.9 or higher is recommended — earlier kernels\nwork but may experience the livelock issue. You can verify cgroup v2 is\nactive by running <code>mount | grep cgroup2</code>.</li>\n<li>A container runtime that supports cgroup v2 (containerd 1.6+, CRI-O 1.22+)</li>\n</ol>\n<h3 id=\"configuration\">Configuration</h3>\n<p>To enable Memory QoS with tiered protection:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-yaml\"><span style=\"display: flex;\"><span><span style=\"color: #008000; font-weight: bold;\">apiVersion</span>:<span style=\"color: #bbb;\"> </span>kubelet.config.k8s.io/v1beta1<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">kind</span>:<span style=\"color: #bbb;\"> </span>KubeletConfiguration<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">featureGates</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">MemoryQoS</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #a2f; font-weight: bold;\">true</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">memoryReservationPolicy: TieredReservation # Options</span>:<span style=\"color: #bbb;\"> </span>None (default), TieredReservation<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">memoryThrottlingFactor: 0.9 # Optional</span>:<span style=\"color: #bbb;\"> </span>default is 0.9<span style=\"color: #bbb;\">\n</span></span></span></code></pre></div><p>If you want <code>memory.high</code> throttling without memory protection, omit\n<code>memoryReservationPolicy</code> or set it to <code>None</code>:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-yaml\"><span style=\"display: flex;\"><span><span style=\"color: #008000; font-weight: bold;\">apiVersion</span>:<span style=\"color: #bbb;\"> </span>kubelet.config.k8s.io/v1beta1<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">kind</span>:<span style=\"color: #bbb;\"> </span>KubeletConfiguration<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">featureGates</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">MemoryQoS</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #a2f; font-weight: bold;\">true</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">memoryReservationPolicy</span>:<span style=\"color: #bbb;\"> </span>None <span style=\"color: #bbb;\"> </span><span style=\"color: #080; font-style: italic;\"># This is the default</span><span style=\"color: #bbb;\">\n</span></span></span></code></pre></div><h2 id=\"how-can-i-learn-more\">How can I learn more?</h2>\n<ul>\n<li><a href=\"https://kep.k8s.io/2570\">KEP-2570: Memory QoS</a></li>\n<li><a href=\"https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/\">Pod Quality of Service Classes</a></li>\n<li><a href=\"https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/\">Managing Resources for Containers</a></li>\n<li><a href=\"https://kubernetes.io/docs/concepts/architecture/cgroups/\">Kubernetes cgroups v2 support</a></li>\n<li><a href=\"https://docs.kernel.org/admin-guide/cgroup-v2.html\">Linux kernel cgroups v2 documentation</a></li>\n</ul>\n<h2 id=\"getting-involved\">Getting involved</h2>\n<p>This feature is driven by <a href=\"https://github.com/kubernetes/community/tree/master/sig-node\">SIG Node</a>.\nIf you are interested in contributing or have feedback, you can find us on\n<a href=\"https://kubernetes.slack.com/messages/sig-node\">Slack</a> (#sig-node), the\n<a href=\"https://groups.google.com/forum/#!forum/kubernetes-sig-node\">mailing list</a>,\nor at the regular\n<a href=\"https://github.com/kubernetes/community/tree/master/sig-node#meetings\">SIG Node meetings</a>.\nPlease file bugs at <a href=\"https://github.com/kubernetes/kubernetes/issues\">kubernetes/kubernetes</a>\nand enhancement proposals at\n<a href=\"https://github.com/kubernetes/enhancements/issues/2570\">kubernetes/enhancements</a>.</p>",
+          "link": "https://kubernetes.io/blog/2026/04/29/kubernetes-v1-36-memory-qos-tiered-protection/",
+          "source": "Kubernetes Blog",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 10:35:00 -0800",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Super Productivity – Todo App with Timeboxing & Time Tracking Capabilities",
+          "description": "<p>Super Productivity is your ultimate todo app, featuring timeboxing and time tracking to enhance focus and efficiency. Boost your productivity today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/super-productivity-todo-app-with-timeboxing-time-tracking-capabilities/\">Super Productivity &#8211; Todo App with Timeboxing &amp; Time Tracking Capabilities</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/super-productivity-todo-app-with-timeboxing-time-tracking-capabilities/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 08:03:15 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "DavMail 6.6 Exchange Gateway Released with Office 365 Fixes",
+          "description": "<p>Announcing DavMail 6.6 Exchange Gateway with vital Office 365 fixes. Stay connected and optimize your email workflow with this latest release.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/davmail-6-6-exchange-gateway-released-with-office-365-fixes/\">DavMail 6.6 Exchange Gateway Released with Office 365 Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/davmail-6-6-exchange-gateway-released-with-office-365-fixes/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 08:01:45 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "9to5Linux Weekly Roundup: April 12th, 2026",
+          "description": "<p>Catch up on the most important Linux news in the 9to5Linux Weekly Roundup for April 12th, 2026. Don't miss out on key updates and trends!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-april-12th-2026/\">9to5Linux Weekly Roundup: April 12th, 2026</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-april-12th-2026/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 07:57:57 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Three Months After Georgia Tech, Stallman Heads to UT Austin",
+          "description": "<p>Learn about Richard Stallman's move to UT Austin three months after Georgia Tech, and how his presence is shaping the academic landscape in technology.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/three-months-after-georgia-tech-stallman-heads-to-ut-austin/\">Three Months After Georgia Tech, Stallman Heads to UT Austin</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/three-months-after-georgia-tech-stallman-heads-to-ut-austin/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 07:53:31 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Linuxiac Weekly Wrap-Up: Week 15, 2026 (Apr 6 – 12)",
+          "description": "<p>Discover the latest in Linux news with our Weekly Wrap-Up for Week 15, 2026. Stay informed on updates, trends, and insights from April 6 to 12.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-15-2026-apr-6-12/\">Linuxiac Weekly Wrap-Up: Week 15, 2026 (Apr 6 – 12)</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-15-2026-apr-6-12/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 07:49:49 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Linux Kernel 7.0 Officially Released, This Is What’s New",
+          "description": "<p>Linux Kernel 7.0 is here! Uncover the exciting new features and improvements in this official release that enhance functionality and user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linux-kernel-7-0-officially-released-this-is-whats-new/\">Linux Kernel 7.0 Officially Released, This Is What’s New</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/linux-kernel-7-0-officially-released-this-is-whats-new/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 07:46:49 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "FreeBSD Opens Public Testing for Its Laptop Support Push",
+          "description": "<p>FreeBSD announces public testing for enhanced laptop support. Discover the latest features and improvements aimed at optimizing your laptop experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/freebsd-opens-public-testing-for-its-laptop-support-push/\">FreeBSD Opens Public Testing for Its Laptop Support Push</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/freebsd-opens-public-testing-for-its-laptop-support-push/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 07:45:13 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Trisquel GNU/Linux 12.0 LTS Released with GNU Linux-Libre 6.8 Kernel, MATE 1.26",
+          "description": "<p>Discover the latest Trisquel GNU/Linux 12.0 LTS, featuring the GNU Linux-Libre 6.8 Kernel and MATE 1.26. Experience freedom and performance today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/trisquel-gnu-linux-12-0-lts-released-with-gnu-linux-libre-6-8-kernel-mate-1-26/\">Trisquel GNU/Linux 12.0 LTS Released with GNU Linux-Libre 6.8 Kernel, MATE 1.26</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/trisquel-gnu-linux-12-0-lts-released-with-gnu-linux-libre-6-8-kernel-mate-1-26/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 07:43:11 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "AerynOS Gets a New Logo in Quiet Branding Update",
+          "description": "<p>AerynOS unveils a fresh logo in a subtle branding update, reflecting its commitment to innovation and modern design. Discover the new look today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/aerynos-gets-a-new-logo-in-quiet-branding-update/\">AerynOS Gets a New Logo in Quiet Branding Update</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/aerynos-gets-a-new-logo-in-quiet-branding-update/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 07:38:11 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "First Look at Shelly, a Modern Graphical Package Manager for Arch Linux",
+          "description": "<p>Discover Shelly, the modern graphical package manager for Arch Linux. Streamline your software management with an intuitive interface and powerful features.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/first-look-at-shelly-a-modern-graphical-package-manager-for-arch-linux/\">First Look at Shelly, a Modern Graphical Package Manager for Arch Linux</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/first-look-at-shelly-a-modern-graphical-package-manager-for-arch-linux/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 07:34:38 +0000",
+          "author": "Content Operations"
+        },
         {
           "title": "Kubernetes v1.36: Staleness Mitigation and Observability for Controllers",
           "description": "<p>Staleness in Kubernetes controllers is a problem that affects many controllers, and is something may affect controller behavior\nin subtle ways. It is usually not until it is too late, when a controller in production has already taken incorrect action, that\nstaleness is found to be an issue due to some underlying assumption made by the controller author. Some issues caused by staleness\ninclude controllers taking incorrect actions, controllers not taking action when they should, and controllers taking too long to\ntake action. I am excited to announce that Kubernetes v1.36 includes new features that help mitigate staleness in controllers\nand provide better observability into controller behavior.</p>\n<h2 id=\"what-is-staleness\">What is staleness?</h2>\n<p>Staleness in controllers comes from an outdated view of the world inside of the controller cache. In order to provide a fast user\nexperience, controllers typically maintain a local cache of the state of the cluster. This cache is populated by watching the\nKubernetes API server for changes to objects that the controller cares about. When the controller needs to take action, it will\nfirst check its cache to see if it has the latest information. If it does not, it will then update its cache by watching the API\nserver for changes to objects that the controller cares about. This process is known as <em>reconciliation</em>.</p>\n<p>However, there are some cases where the controller's cache may be outdated. For example, if the controller is restarted, it will\nneed to rebuild its cache by watching the API server for changes to objects that the controller cares about. During this time, the\ncontroller's cache will be outdated, and it will not be able to take action. Additionally, if the API server is down, the controller's\ncache will not be updated, and it will not be able to take action. These are just a few examples of cases where the controller's\ncache may be outdated.</p>\n<h2 id=\"improvements-in-1-36\">Improvements in 1.36</h2>\n<p>Kubernetes v1.36 includes improvements in both client-go as well as implementations of highly contended controllers in\nkube-controller-manager, using those client-go improvements.</p>\n<h3 id=\"client-go-improvements\">client-go improvements</h3>\n<p>In client-go, the project added <em>atomic FIFO processing</em> (feature gate\nname <code>AtomicFIFO</code>), which is on top of the existing FIFO queue implementation. The new approach allows for\nthe queue to atomically handle operations that are recieved in batches, such as the initial set of objects from a\n<em>list</em> operation that an informer uses to populate its cache. This ensures that the queue is always in a consistent state,\neven when events come out of order. Prior to this, events were added to the queue\nin the order that they were received, which could lead to an inconsistent state in the cache that does not accurately reflect\nthe state of the cluster.</p>\n<p>With this change, you can now ensure that the queue is always in a consistent state, even when events come out of order. To take\nadvantage of this, clients using client-go can now introspect into the cache to determine the latest resource version that the\ncontroller cache has seen. This is done with the newly added function <code>LastStoreSyncResourceVersion()</code> implemented on the <code>Store</code>\ninterface <a href=\"https://pkg.go.dev/k8s.io/client-go@v0.36.0/tools/cache#Store\">here</a>. This function is the basis for the staleness mitigation\nfeatures in kube-controller-manager.</p>\n<h3 id=\"kube-controller-manager-improvements\">kube-controller-manager improvements</h3>\n<p>In kube-controller-manager, the v1.36 release has added the ability for 4 different controllers to use this new capability. The controllers are:</p>\n<ol>\n<li>DaemonSet controller</li>\n<li>StatefulSet controller</li>\n<li>ReplicaSet controller</li>\n<li>Job controller</li>\n</ol>\n<p>These controllers all act on pods, which in most cases are under the highest amount of contention in a cluster. The changes are\non by default for these controllers, and can be disabled by setting the feature gates <code>StaleControllerConsistency&lt;API type&gt;</code>\nto <code>false</code> for the specific controller you wish to disable it for. For example, to disable the feature for the DaemonSet controller,\nyou would set the feature gate <code>StaleControllerConsistencyDaemonSet</code> to <code>false</code>.</p>\n<p>When the relevant feature gate is enabled, the controller will first check the latest\n<a href=\"https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions\">resource version</a> of the cache before taking action. If the\nlatest resource version of the cache is lower than what the controller has written to the API server for the object it is trying to\nreconcile, the controller will not take action. This is because the controller's cache is outdated, and it does not have the latest\ninformation about the state of the cluster.</p>\n<h3 id=\"use-for-informer-authors\">Use for informer authors</h3>\n<p>Informer authors using client-go can also immediately take advantage of these improvements. See an example of how to use this feature\nin the <a href=\"https://github.com/kubernetes/kubernetes/pull/137212\">ReplicaSet informer</a>. This PR shows how to use the new feature to check\nif the informer's cache is stale before taking action. The client-go library provides a <code>ConsistencyStore</code> data structure that queries the store\nand compares the latest resource version of the cache with the written resource version of the object.</p>\n<p>The ReplicaSet controller tracks both the ReplicaSet's resource version and the resource version of the pods that the ReplicaSet\nmanages. For a specific ReplicaSet, it tracks the latest written resource version of the pods that the ReplicaSet owns as well as\nany writes to the ReplicaSet itself. If the latest resource version of the cache is lower than what the controller has\nwritten to the API server for the object it is trying to reconcile, the controller will not take action. This is because the\ncontroller's cache is outdated, and it does not have the latest information about the state of the cluster.</p>\n<p>An informer author can use the <code>ConsistencyStore</code> to track the latest resource version of the objects that the informer cares about.\nIt provides 3 main functions:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-go\"><span style=\"display: flex;\"><span><span style=\"color: #a2f; font-weight: bold;\">type</span> ConsistencyStore <span style=\"color: #a2f; font-weight: bold;\">interface</span> {\n</span></span><span style=\"display: flex;\"><span> <span style=\"color: #080; font-style: italic;\">// WroteAt records that the given object was written at the given resource version.\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"></span> <span style=\"color: #00a000;\">WroteAt</span>(owningObj runtime.Object, uid types.UID, groupResource schema.GroupResource, resourceVersion <span style=\"color: #0b0; font-weight: bold;\">string</span>)\n</span></span><span style=\"display: flex;\"><span>\n</span></span><span style=\"display: flex;\"><span> <span style=\"color: #080; font-style: italic;\">// EnsureReady returns true if the cache is up to date for the given object.\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"></span> <span style=\"color: #080; font-style: italic;\">// It is used prior to reconciliation to decide whether to reconcile or not.\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"></span> <span style=\"color: #00a000;\">EnsureReady</span>(namespacedName types.NamespacedName) <span style=\"color: #0b0; font-weight: bold;\">bool</span>\n</span></span><span style=\"display: flex;\"><span>\n</span></span><span style=\"display: flex;\"><span> <span style=\"color: #080; font-style: italic;\">// Clear removes the given object from the consistency store.\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"></span> <span style=\"color: #080; font-style: italic;\">// It is used when an object is deleted.\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #080; font-style: italic;\"></span> <span style=\"color: #00a000;\">Clear</span>(namespacedName types.NamespacedName, uid types.UID)\n</span></span><span style=\"display: flex;\"><span>}\n</span></span></code></pre></div><ol>\n<li><code>WroteAt</code>: This function is called by the controller when it writes to the API server for an object. It is used to record the\nlatest resource version of the object that the controller has written to the API server. The <code>owningObj</code> is the object that the\ncontroller is reconciling, and the <code>uid</code> is the UID of that object. The resource version and GroupResource are the resource version\nand GroupResource of the object that the controller has written to the API server. The object is not explicitly tracked, since the\ncontroller only cares about waiting to catch up to the latest resource version of the written object.</li>\n<li><code>EnsureReady</code>: This function is called by the controller to ensure that the cache is up to date for the object. It is used prior\nto reconciliation to decide whether to reconcile or not. It returns true if the cache is up to date for the object, and false\notherwise. It will use the information provided by <code>WroteAt</code> to determine if the cache is up to date.</li>\n<li><code>Clear</code>: This function is called by the controller when an object is deleted. It is used to remove the object from the consistency\nstore. This is mostly used for cleanup when an object is deleted to prevent the consistency store from growing indefinitely.</li>\n</ol>\n<p>The UID is used to distinguish between different objects that have the same name, such as when an object is deleted and then\nrecreated. It is not needed for EnsureReady because the consistency store is only concerned with catching up to the latest resource\nversion of the object, not the specific object. It is primarily used to ensure that the controller doesn't delete the entry for\nan object when it is recreated with a new UID.</p>\n<p>With these 3 functions, an informer author can implement staleness mitigation in their controller.</p>\n<h2 id=\"observability\">Observability</h2>\n<p>In addition to the staleness mitigation features, the Kubernetes project has also added related instrumentation to kube-controller-manager\nin 1.36. These metrics are also enabled by default, and are controlled using the same set of feature gates.</p>\n<h3 id=\"metrics\">Metrics</h3>\n<p>The following <a href=\"https://kubernetes.io/docs/reference/instrumentation/metrics/#list-of-alpha-kubernetes-metrics\">alpha metrics</a> have been added to kube-controller-manager in 1.36:</p>\n<p><code>stale_sync_skips_total</code>: The number of times the controller has skipped a sync due to stale cache. This metric is exposed\nfor each controller that uses the staleness mitigation feature with the subsystem of the controller.</p>\n<p>This metric is exposed by the kube-controller-manager metrics endpoint, and can be used to monitor the health of the controller.</p>\n<p>Along with this metric, client-go also emits metrics that expose the latest resource version of every shared informer\nwith the subsystem of the informer. This allows you to see the latest resource version of each informer, and use that to\ndetermine if the controller's cache is stale, especially great for comparing against the resource version of the API server.</p>\n<p>This metric is named <code>store_resource_version</code> and has the Group, Version, and Resource as labels.</p>\n<h2 id=\"what-s-next\">What's next?</h2>\n<p>Kubernetes SIG API Machinery is excited to continue working on this feature and hope to bring it to more controllers in the future.\nWe are also interested in hearing your feedback on this feature. Please let us know what you think in the comments\nbelow or by opening an <a href=\"https://github.com/kubernetes/kubernetes/issues\">issue</a> on the Kubernetes GitHub repository.</p>\n<p>We are also working with <a href=\"https://github.com/kubernetes-sigs/controller-runtime/pull/3473\">controller-runtime</a> to enable this set of\nsemantics for all controllers built with controller-runtime. This will allow any controller built with controller-runtime to gain\nthe benefits of read your own writes, without having to implement the logic themselves.</p>",
@@ -12,96 +111,6 @@
           "category": "Infrastructure",
           "published": "Tue, 28 Apr 2026 10:35:00 -0800",
           "author": "Inconnu"
-        },
-        {
-          "title": "KDE Frameworks 6.25 Adds Support for Converting Momme Units in KRunner",
-          "description": "<p>Discover how KDE Frameworks 6.25 enhances KRunner with new support for converting Momme units, streamlining your workflow and improving efficiency.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/kde-frameworks-6-25-adds-support-for-converting-momme-units-in-krunner/\">KDE Frameworks 6.25 Adds Support for Converting Momme Units in KRunner</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/kde-frameworks-6-25-adds-support-for-converting-momme-units-in-krunner/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 07:36:55 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Deepin 25.1 Arrives With Linux Kernel 6.18 and New AI Features",
-          "description": "<p>Discover Deepin 25.1, featuring the latest Linux Kernel 6.18 and innovative AI enhancements. Explore the future of user-friendly Linux today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/deepin-25-1-arrives-with-linux-kernel-6-18-and-new-ai-features/\">Deepin 25.1 Arrives With Linux Kernel 6.18 and New AI Features</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/deepin-25-1-arrives-with-linux-kernel-6-18-and-new-ai-features/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 07:35:10 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "How to Install n8n on Ubuntu 26.04",
-          "description": "<p>Learn how to install n8n on Ubuntu 26.04 with our step-by-step guide. Simplify your automation tasks and enhance productivity today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-install-n8n-on-ubuntu-26-04/\">How to Install n8n on Ubuntu 26.04</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/how-to-install-n8n-on-ubuntu-26-04/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 07:31:11 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "How to install Odoo 19 on Ubuntu 26.04",
-          "description": "<p>Learn how to effortlessly install Odoo 19 on Ubuntu 26.04 with our comprehensive guide. Boost your productivity and streamline operations now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-install-odoo-19-on-ubuntu-26-04/\">How to install Odoo 19 on Ubuntu 26.04</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/how-to-install-odoo-19-on-ubuntu-26-04/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 07:28:00 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Calibre 9.7 E-Book Manager Improves the Annotations Browser and Content Server",
-          "description": "<p>Explore the latest features of Calibre 9.7 E-Book Manager, including an upgraded annotations browser and a powerful content server for seamless e-book management.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/calibre-9-7-e-book-manager-improves-the-annotations-browser-and-content-server/\">Calibre 9.7 E-Book Manager Improves the Annotations Browser and Content Server</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/calibre-9-7-e-book-manager-improves-the-annotations-browser-and-content-server/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 07:26:19 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Apache Spins Anthropic’s $1.5M Into ‘Responsible AI’ Initiative",
-          "description": "<p>Learn about Apache's strategic use of Anthropic's $1.5M to launch a 'Responsible AI' initiative, fostering accountability and ethics in AI technology.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/apache-spins-anthropics-1-5m-into-responsible-ai-initiative/\">Apache Spins Anthropic’s $1.5M Into ‘Responsible AI’ Initiative</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/apache-spins-anthropics-1-5m-into-responsible-ai-initiative/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 07:16:08 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "France Launches Government Linux Desktop Plan as Windows Exit Begins",
-          "description": "<p>Discover how France's new Linux desktop initiative marks a significant shift from Windows, promoting innovation and security in public sector technology.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/france-launches-government-linux-desktop-plan-as-windows-exit-begins/\">France Launches Government Linux Desktop Plan as Windows Exit Begins</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/france-launches-government-linux-desktop-plan-as-windows-exit-begins/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 07:12:01 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "SQLite 3.53 Fixes WAL Corruption Bug, Adds New SQL Features",
-          "description": "<p>Stay updated with SQLite 3.53, featuring crucial fixes for WAL corruption and new SQL functionalities designed to improve performance and reliability.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/sqlite-3-53-fixes-wal-corruption-bug-adds-new-sql-features/\">SQLite 3.53 Fixes WAL Corruption Bug, Adds New SQL Features</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/sqlite-3-53-fixes-wal-corruption-bug-adds-new-sql-features/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 07:03:40 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Can Garuda Linux Mokka Take Manjaro’s Arch-Based Crown?",
-          "description": "<p>Can Garuda Linux Mokka surpass Manjaro's popularity in the Arch-based realm? Dive into a detailed comparison of features, performance, and user satisfaction.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/can-garuda-linux-mokka-take-manjaros-arch-based-crown/\">Can Garuda Linux Mokka Take Manjaro’s Arch-Based Crown?</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/can-garuda-linux-mokka-take-manjaros-arch-based-crown/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 06:59:12 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Wayland 1.25 Documentation Update",
-          "description": "<p>Discover the latest updates in Wayland 1.25 documentation. Enhance your understanding and implementation with comprehensive guides and resources.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/wayland-1-25-documentation-update/\">Wayland 1.25 Documentation Update</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/wayland-1-25-documentation-update/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 06:53:17 +0000",
-          "author": "Content Operations"
         },
         {
           "title": "Kubernetes v1.36: Mutable Pod Resources for Suspended Jobs (beta)",
@@ -624,21 +633,30 @@
           "category": "Infrastructure",
           "published": "Fri, 19 Sep 2025 10:30:00 -0800",
           "author": "Inconnu"
-        },
-        {
-          "title": "Kubernetes v1.34: DRA Consumable Capacity",
-          "description": "<p>Dynamic Resource Allocation (DRA) is a Kubernetes API for managing scarce resources across Pods and containers.\nIt enables flexible resource requests, going beyond simply allocating <em>N</em> number of devices to support more granular usage scenarios.\nWith DRA, users can request specific types of devices based on their attributes, define custom configurations tailored to their workloads, and even share the same resource among multiple containers or Pods.</p>\n<p>In this blog, we focus on the device sharing feature and dive into a new capability introduced in Kubernetes 1.34: <em>DRA consumable capacity</em>,\nwhich extends DRA to support finer-grained device sharing.</p>\n<h2 id=\"background-device-sharing-via-resourceclaims\">Background: device sharing via ResourceClaims</h2>\n<p>From the beginning, DRA introduced the ability for multiple Pods to share a device by referencing the same ResourceClaim.\nThis design decouples resource allocation from specific hardware, allowing for more dynamic and reusable provisioning of devices.</p>\n<p>In Kubernetes 1.33, the new support for <em>partitionable devices</em> allowed resource drivers to advertise slices of a device that are available, rather than exposing the entire device as an all-or-nothing resource.\nThis enabled Kubernetes to model shareable hardware more accurately.</p>\n<p>But there was still a missing piece: it didn't yet support scenarios\nwhere the device driver manages fine-grained, dynamic portions of a device resource — like network bandwidth — based on user demand,\nor to share those resources independently of ResourceClaims, which are restricted by their spec and namespace.</p>\n<p>That’s where <em>consumable capacity</em> for DRA comes in.</p>\n<h2 id=\"benefits-of-dra-consumable-capacity-support\">Benefits of DRA consumable capacity support</h2>\n<p>Here's a taste of what you get in a cluster with the <code>DRAConsumableCapacity</code>\n<a href=\"https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/\">feature gate</a> enabled.</p>\n<h3 id=\"device-sharing-across-multiple-resourceclaims-or-devicerequests\">Device sharing across multiple ResourceClaims or DeviceRequests</h3>\n<p>Resource drivers can now support sharing the same device — or even a slice of a device — across multiple ResourceClaims or across multiple DeviceRequests.</p>\n<p>This means that Pods from different namespaces can simultaneously share the same device,\nif permitted and supported by the specific DRA driver.</p>\n<h3 id=\"device-resource-allocation\">Device resource allocation</h3>\n<p>Kubernetes extends the allocation algorithm in the scheduler to support allocating a portion of a device's resources, as defined in the <code>capacity</code> field.\nThe scheduler ensures that the total allocated capacity across all consumers never exceeds the device’s total capacity, even when shared across multiple ResourceClaims or DeviceRequests.\nThis is very similar to the way the scheduler allows Pods and containers to share allocatable resources on Nodes;\nin this case, it allows them to share allocatable (consumable) resources on Devices.</p>\n<p>This feature expands support for scenarios where the device driver is able to manage resources <strong>within</strong> a device and on a per-process basis — for example,\nallocating a specific amount of memory (e.g., 8 GiB) from a virtual GPU,\nor setting bandwidth limits on virtual network interfaces allocated to specific Pods. This aims to provide safe and efficient resource sharing.</p>\n<h3 id=\"distinctattribute-constraint\">DistinctAttribute constraint</h3>\n<p>This feature also introduces a new constraint: <code>DistinctAttribute</code>, which is the complement of the existing <code>MatchAttribute</code> constraint.</p>\n<p>The primary goal of <code>DistinctAttribute</code> is to prevent the same underlying device from being allocated multiple times within a single ResourceClaim, which could happen since we are allocating shares (or subsets) of devices.\nThis constraint ensures that each allocation refers to a distinct resource, even if they belong to the same device class.</p>\n<p>It is useful for use cases such as allocating network devices connecting to different subnets to expand coverage or provide redundancy across failure domains.</p>\n<h2 id=\"how-to-use-consumable-capacity\">How to use consumable capacity?</h2>\n<p><code>DRAConsumableCapacity</code> is introduced as an alpha feature in Kubernetes 1.34. The <a href=\"https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/\">feature gate</a> <code>DRAConsumableCapacity</code> must be enabled in kubelet, kube-apiserver, kube-scheduler and kube-controller-manager.</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-bash\"><span style=\"display: flex;\"><span>--feature-gates<span style=\"color: #666;\">=</span>...,DRAConsumableCapacity<span style=\"color: #666;\">=</span><span style=\"color: #a2f;\">true</span>\n</span></span></code></pre></div><h3 id=\"as-a-dra-driver-developer\">As a DRA driver developer</h3>\n<p>As a DRA driver developer writing in Golang, you can make a device within a ResourceSlice allocatable to multiple ResourceClaims (or <code>devices.requests</code>) by setting <code>AllowMultipleAllocations</code> to <code>true</code>.</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-go\"><span style=\"display: flex;\"><span>Device {\n</span></span><span style=\"display: flex;\"><span> <span style=\"color: #666;\">...</span>\n</span></span><span style=\"display: flex;\"><span> AllowMultipleAllocations: ptr.<span style=\"color: #00a000;\">To</span>(<span style=\"color: #a2f; font-weight: bold;\">true</span>),\n</span></span><span style=\"display: flex;\"><span> <span style=\"color: #666;\">...</span>\n</span></span><span style=\"display: flex;\"><span>}\n</span></span></code></pre></div><p>Additionally, you can define a policy to restrict how each device's <code>Capacity</code> should be consumed by each <code>DeviceRequest</code> by defining <code>RequestPolicy</code> field in the <code>DeviceCapacity</code>.\nThe example below shows how to define a policy that requires a GPU with 40 GiB of memory to allocate at least 5 GiB per request, with each allocation in multiples of 5 GiB.</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-go\"><span style=\"display: flex;\"><span>DeviceCapacity{\n</span></span><span style=\"display: flex;\"><span> Value: resource.<span style=\"color: #00a000;\">MustParse</span>(<span style=\"color: #b44;\">\"40Gi\"</span>),\n</span></span><span style=\"display: flex;\"><span> RequestPolicy: <span style=\"color: #666;\">&amp;</span>CapacityRequestPolicy{\n</span></span><span style=\"display: flex;\"><span> Default: ptr.<span style=\"color: #00a000;\">To</span>(resource.<span style=\"color: #00a000;\">MustParse</span>(<span style=\"color: #b44;\">\"5Gi\"</span>)),\n</span></span><span style=\"display: flex;\"><span> ValidRange: <span style=\"color: #666;\">&amp;</span>CapacityRequestPolicyRange {\n</span></span><span style=\"display: flex;\"><span> Min: ptr.<span style=\"color: #00a000;\">To</span>(resource.<span style=\"color: #00a000;\">MustParse</span>(<span style=\"color: #b44;\">\"5Gi\"</span>)),\n</span></span><span style=\"display: flex;\"><span> Step: ptr.<span style=\"color: #00a000;\">To</span>(resource.<span style=\"color: #00a000;\">MustParse</span>(<span style=\"color: #b44;\">\"5Gi\"</span>)),\n</span></span><span style=\"display: flex;\"><span> }\n</span></span><span style=\"display: flex;\"><span> }\n</span></span><span style=\"display: flex;\"><span>}\n</span></span></code></pre></div><p>This will be published to the ResourceSlice, as partially shown below:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-yaml\"><span style=\"display: flex;\"><span><span style=\"color: #008000; font-weight: bold;\">apiVersion</span>:<span style=\"color: #bbb;\"> </span>resource.k8s.io/v1<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">kind</span>:<span style=\"color: #bbb;\"> </span>ResourceSlice<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #00f; font-weight: bold;\">...</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">spec</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">devices</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">name</span>:<span style=\"color: #bbb;\"> </span>gpu0<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">allowMultipleAllocations</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #a2f; font-weight: bold;\">true</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">capacity</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">memory</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">value</span>:<span style=\"color: #bbb;\"> </span>40Gi<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">requestPolicy</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">default</span>:<span style=\"color: #bbb;\"> </span>5Gi<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">validRange</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">min</span>:<span style=\"color: #bbb;\"> </span>5Gi<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">step</span>:<span style=\"color: #bbb;\"> </span>5Gi<span style=\"color: #bbb;\">\n</span></span></span></code></pre></div><p>An allocated device with a specified portion of consumed capacity will have a <code>ShareID</code> field set in the allocation status.</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-go\"><span style=\"display: flex;\"><span>claim.Status.Allocation.Devices.Results[i].ShareID\n</span></span></code></pre></div><p>This <code>ShareID</code> allows the driver to distinguish between different allocations that refer to the <strong>same device or same statically-partitioned slice</strong> but come from <strong>different <code>ResourceClaim</code> requests</strong>.<br />\nIt acts as a unique identifier for each shared slice, enabling the driver to manage and enforce resource limits independently across multiple consumers.</p>\n<h3 id=\"as-a-consumer\">As a consumer</h3>\n<p>As a consumer (or user), the device resource can be requested with a ResourceClaim like this:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-yaml\"><span style=\"display: flex;\"><span><span style=\"color: #008000; font-weight: bold;\">apiVersion</span>:<span style=\"color: #bbb;\"> </span>resource.k8s.io/v1<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">kind</span>:<span style=\"color: #bbb;\"> </span>ResourceClaim<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #00f; font-weight: bold;\">...</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">spec</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">devices</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">requests</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #080; font-style: italic;\"># for devices</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">name</span>:<span style=\"color: #bbb;\"> </span>req0<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">exactly</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">deviceClassName</span>:<span style=\"color: #bbb;\"> </span>resource.example.com<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">capacity</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">requests</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #080; font-style: italic;\"># for resources which must be provided by those devices</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">memory</span>:<span style=\"color: #bbb;\"> </span>10Gi<span style=\"color: #bbb;\">\n</span></span></span></code></pre></div><p>This configuration ensures that the requested device can provide at least 10GiB of <code>memory</code>.</p>\n<p>Notably that <strong>any</strong> <code>resource.example.com</code> device that has at least 10GiB of memory can be allocated.\nIf a device that does not support multiple allocations is chosen, the allocation would consume the entire device.\nTo filter only devices that support multiple allocations, you can define a selector like this:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-yaml\"><span style=\"display: flex;\"><span><span style=\"color: #008000; font-weight: bold;\">selectors</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">cel</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">expression</span>:<span style=\"color: #bbb;\"> </span>|-<span style=\"color: #b44; font-style: italic;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #b44; font-style: italic;\"> device.allowMultipleAllocations == true</span><span style=\"color: #bbb;\">\n</span></span></span></code></pre></div><h2 id=\"integration-with-dra-device-status\">Integration with DRA device status</h2>\n<p>In device sharing, general device information is provided through the resource slice.\nHowever, some details are set dynamically after allocation.\nThese can be conveyed using the <a href=\"https://kubernetes.io/docs/concepts/scheduling-eviction/dynamic-resource-allocation/#resourceclaim-device-status\"><code>.status.devices</code></a> field of a ResourceClaim.\nThat field is only published in clusters where the <code>DRAResourceClaimDeviceStatus</code>\nfeature gate is enabled.</p>\n<p>If you do have <em>device status</em> support available, a driver can expose additional device-specific information beyond the <code>ShareID</code>.\nOne particularly useful use case is for virtual networks, where a driver can include the assigned IP address(es) in the status.\nThis is valuable for both network service operations and troubleshooting.</p>\n<p>You can find more information by watching our recording at: <a href=\"https://sched.co/1x71v\">KubeCon Japan 2025 - Reimagining Cloud Native Networks: The Critical Role of DRA</a>.</p>\n<h2 id=\"what-can-you-do-next\">What can you do next?</h2>\n<ul>\n<li>\n<p><strong>Check out the <a href=\"https://github.com/kubernetes-sigs/cni-dra-driver\">CNI DRA Driver project</a></strong> for an example of DRA integration in Kubernetes networking. Try integrating with network resources like <code>macvlan</code>, <code>ipvlan</code>, or smart NICs.</p>\n</li>\n<li>\n<p>Start enabling the <code>DRAConsumableCapacity</code> feature gate and experimenting with virtualized or partitionable devices. Specify your workloads with <em>consumable capacity</em> (for example: fractional bandwidth or memory).</p>\n</li>\n<li>\n<p>Let us know your feedback:</p>\n<ul>\n<li>✅ What worked well?</li>\n<li>⚠️ What didn’t?</li>\n</ul>\n<p>If you encountered issues to fix or opportunities to enhance,\nplease <a href=\"https://github.com/kubernetes/enhancements/issues\">file a new issue</a>\nand reference <a href=\"https://github.com/kubernetes/enhancements/issues/5075\">KEP-5075</a> there,\nor reach out via <a href=\"https://kubernetes.slack.com/archives/C0409NGC1TK\">Slack (#wg-device-management)</a>.</p>\n</li>\n</ul>\n<h3 id=\"conclusion\">Conclusion</h3>\n<p>Consumable capacity support enhances the device sharing capability of DRA by allowing effective device sharing across namespaces, across claims, and tailored to each Pod’s actual needs.\nIt also empowers drivers to enforce capacity limits, improves scheduling accuracy, and unlocks new use cases like bandwidth-aware networking and multi-tenant device sharing.</p>\n<p>Try it out, experiment with consumable resources, and help shape the future of dynamic resource allocation in Kubernetes!</p>\n<h3 id=\"further-reading\">Further Reading</h3>\n<ul>\n<li><a href=\"https://kubernetes.io/docs/concepts/scheduling-eviction/dynamic-resource-allocation/\">DRA in the Kubernetes documentation</a></li>\n<li><a href=\"https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling/4815-dra-partitionable-devices\">KEP for DRA Partitionable Devices</a></li>\n<li><a href=\"https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/4817-resource-claim-device-status\">KEP for DRA Device Status</a></li>\n<li><a href=\"https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling/5075-dra-consumable-capacity\">KEP for DRA Consumable Capacity</a></li>\n<li><a href=\"https://www.kubernetes.dev/resources/release/#kubernetes-v134\">Kubernetes 1.34 Release Notes</a></li>\n</ul>",
-          "link": "https://kubernetes.io/blog/2025/09/18/kubernetes-v1-34-dra-consumable-capacity/",
-          "source": "Kubernetes Blog",
-          "category": "Infrastructure",
-          "published": "Thu, 18 Sep 2025 10:30:00 -0800",
-          "author": "Inconnu"
         }
       ]
     },
     "developpement": {
       "icon": "💻",
       "articles": [
+        {
+          "title": "Governing MCP tool calls in .NET with the Agent Governance Toolkit",
+          "description": "<p>Learn how to govern MCP tool calls in .NET with the Agent Governance Toolkit—policy-based access control, security scanning, and response sanitization to reduce risk in AI agent systems.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/governing-mcp-tool-calls-in-dotnet-with-the-agent-governance-toolkit/\">Governing MCP tool calls in .NET with the Agent Governance Toolkit</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/governing-mcp-tool-calls-in-dotnet-with-the-agent-governance-toolkit/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Wed, 29 Apr 2026 17:05:00 +0000",
+          "author": "Jack Batzner"
+        },
+        {
+          "title": "VSTest is Removing its Newtonsoft.Json Dependency",
+          "description": "<p>VSTest is removing its Newtonsoft.Json dependency in .NET 11 and Visual Studio 18.8. Here's who is affected and how to fix it.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/vs-test-is-removing-its-newtonsoft-json-dependency/\">VSTest is Removing its Newtonsoft.Json Dependency</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/vs-test-is-removing-its-newtonsoft-json-dependency/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Wed, 29 Apr 2026 17:05:00 +0000",
+          "author": "McKenna Barlow"
+        },
         {
           "title": "Welcome to SkiaSharp 4.0 Preview 1",
           "description": "<p>SkiaSharp 4.0 Preview 1 is here. Learn all about the new features and how Uno Platform has stepped up as a co-maintainer.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/welcome-to-skia-sharp-40-preview1/\">Welcome to SkiaSharp 4.0 Preview 1</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
@@ -656,6 +674,15 @@
           "category": "Développement",
           "published": "Tue, 28 Apr 2026 17:05:00 +0000",
           "author": "Jared Meade"
+        },
+        {
+          "title": "Combining API versioning with OpenAPI in .NET 10 applications",
+          "description": "<p>Learn how to implement API versioning in your .NET 10 applications using OpenAPI for better API management and documentation.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/api-versioning-in-dotnet-10-applications/\">Combining API versioning with OpenAPI in .NET 10 applications</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/api-versioning-in-dotnet-10-applications/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Tue, 28 Apr 2026 17:00:00 +0000",
+          "author": "Sander ten Brinke"
         },
         {
           "title": "GitHub for Beginners: Getting started with Markdown",
@@ -683,15 +710,6 @@
           "category": "Développement",
           "published": "Tue, 28 Apr 2026 10:01:37 +0000",
           "author": "Vlad Fedorov"
-        },
-        {
-          "title": "Combining API versioning with OpenAPI in .NET 10 applications",
-          "description": "<p>Learn how to implement API versioning in your .NET 10 applications using OpenAPI for better API management and documentation.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/api-versioning-in-dotnet-10-applications/\">Combining API versioning with OpenAPI in .NET 10 applications</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/api-versioning-in-dotnet-10-applications/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Mon, 27 Apr 2026 20:00:00 +0000",
-          "author": "Sander ten Brinke"
         },
         {
           "title": "GitHub Copilot is moving to usage-based billing",
@@ -800,24 +818,6 @@
           "category": "Développement",
           "published": "Tue, 14 Apr 2026 19:49:00 +0000",
           "author": "Rahul Bhandari (MSFT), Tara Overfield"
-        },
-        {
-          "title": ".NET 11 Preview 3 is now available!",
-          "description": "<p>Find out about the new features in .NET 11 Preview 3 across the .NET runtime, SDK, libraries, ASP.NET Core, .NET MAUI, C#, Entity Framework Core, container images, and more!</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/dotnet-11-preview-3/\">.NET 11 Preview 3 is now available!</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/dotnet-11-preview-3/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Tue, 14 Apr 2026 19:30:00 +0000",
-          "author": ".NET Team"
-        },
-        {
-          "title": "Your Migration’s Source of Truth: The Modernization Assessment",
-          "description": "<p>Introducing GitHub Copilot Modernization and diving into the assessment report as part of cloud modernization process</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/your-migrations-source-of-truth-the-modernization-assessment/\">Your Migration&#8217;s Source of Truth: The Modernization Assessment</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/your-migrations-source-of-truth-the-modernization-assessment/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Tue, 07 Apr 2026 18:00:00 +0000",
-          "author": "Jeffrey Fritz"
         }
       ]
     },
@@ -1745,7 +1745,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532545",
+          "published": "2026-04-30T09:22:19.536071",
           "author": "roidelapluie"
         },
         {
@@ -1754,7 +1754,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532540",
+          "published": "2026-04-30T09:22:19.536067",
           "author": "prombot"
         },
         {
@@ -1763,7 +1763,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532536",
+          "published": "2026-04-30T09:22:19.536063",
           "author": "roidelapluie"
         },
         {
@@ -1772,7 +1772,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532532",
+          "published": "2026-04-30T09:22:19.536059",
           "author": "roidelapluie"
         },
         {
@@ -1781,7 +1781,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532528",
+          "published": "2026-04-30T09:22:19.536054",
           "author": "prombot"
         },
         {
@@ -1790,7 +1790,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532523",
+          "published": "2026-04-30T09:22:19.536050",
           "author": "prombot"
         },
         {
@@ -1799,7 +1799,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532519",
+          "published": "2026-04-30T09:22:19.536046",
           "author": "roidelapluie"
         },
         {
@@ -1808,7 +1808,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532514",
+          "published": "2026-04-30T09:22:19.536041",
           "author": "roidelapluie"
         },
         {
@@ -1817,7 +1817,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532509",
+          "published": "2026-04-30T09:22:19.536036",
           "author": "prombot"
         },
         {
@@ -1826,7 +1826,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532495",
+          "published": "2026-04-30T09:22:19.536022",
           "author": "prombot"
         },
         {
@@ -1930,7 +1930,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532545",
+          "published": "2026-04-30T09:22:19.536071",
           "author": "roidelapluie"
         },
         {
@@ -1939,7 +1939,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532540",
+          "published": "2026-04-30T09:22:19.536067",
           "author": "prombot"
         },
         {
@@ -1948,7 +1948,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532536",
+          "published": "2026-04-30T09:22:19.536063",
           "author": "roidelapluie"
         },
         {
@@ -1957,7 +1957,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532532",
+          "published": "2026-04-30T09:22:19.536059",
           "author": "roidelapluie"
         },
         {
@@ -1966,7 +1966,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532528",
+          "published": "2026-04-30T09:22:19.536054",
           "author": "prombot"
         },
         {
@@ -1975,7 +1975,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532523",
+          "published": "2026-04-30T09:22:19.536050",
           "author": "prombot"
         },
         {
@@ -1984,7 +1984,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532519",
+          "published": "2026-04-30T09:22:19.536046",
           "author": "roidelapluie"
         },
         {
@@ -1993,7 +1993,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532514",
+          "published": "2026-04-30T09:22:19.536041",
           "author": "roidelapluie"
         },
         {
@@ -2002,7 +2002,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532509",
+          "published": "2026-04-30T09:22:19.536036",
           "author": "prombot"
         },
         {
@@ -2011,8 +2011,125 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-04-29T09:19:30.532495",
+          "published": "2026-04-30T09:22:19.536022",
           "author": "prombot"
+        },
+        {
+          "title": "Kubernetes v1.36: Tiered Memory Protection with Memory QoS",
+          "description": "<p>On behalf of SIG Node, we are pleased to announce updates to the Memory QoS\nfeature (alpha) in Kubernetes v1.36. Memory QoS uses the cgroup v2 memory\ncontroller to give the kernel better guidance on how to treat container memory.\nIt was first introduced in v1.22 and updated in v1.27. In Kubernetes v1.36, we're introducing: opt-in memory reservation, tiered\nprotection by QoS class, observability metrics, and kernel-version warning for <code>memory.high</code>.</p>\n<h2 id=\"what-s-new-in-v1-36\">What's new in v1.36</h2>\n<h3 id=\"opt-in-memory-reservation-with-memoryreservationpolicy\">Opt-in memory reservation with <code>memoryReservationPolicy</code></h3>\n<p>v1.36 separates throttling from reservation. Enabling the feature gate turns on\n<code>memory.high</code> throttling (the kubelet sets <code>memory.high</code> based on\n<code>memoryThrottlingFactor</code>, default 0.9), but memory reservation is now controlled\nby a separate kubelet configuration field:</p>\n<ul>\n<li><strong><code>None</code></strong> (default): no <code>memory.min</code> or <code>memory.low</code> is written. Throttling\nvia <code>memory.high</code> still works.</li>\n<li><strong><code>TieredReservation</code></strong>: the kubelet writes tiered memory protection based on the Pod's\n<a href=\"https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/\">QoS class</a>:</li>\n</ul>\n<p><strong>Guaranteed</strong> Pods get hard protection via <code>memory.min</code>. For example, a\nGuaranteed Pod requesting 512 MiB of memory results in:</p>\n<pre tabindex=\"0\"><code class=\"language-none\">$ cat /sys/fs/cgroup/kubepods.slice/kubepods-pod6a4f2e3b_1c9d_4a5e_8f7b_2d3e4f5a6b7c.slice/memory.min\n536870912\n</code></pre><p>The kernel will not reclaim this memory under any circumstances. If it cannot\nhonor the guarantee, it invokes the OOM killer on other processes to free pages.</p>\n<p><strong>Burstable</strong> Pods get soft protection via <code>memory.low</code>. For the same 512 MiB\nrequest on a Burstable Pod:</p>\n<pre tabindex=\"0\"><code class=\"language-none\">$ cat /sys/fs/cgroup/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod8b3c7d2e_4f5a_6b7c_9d1e_3f4a5b6c7d8e.slice/memory.low\n536870912\n</code></pre><p>The kernel avoids reclaiming this memory under normal pressure, but may reclaim\nit if the alternative is a system-wide OOM.</p>\n<p><strong>BestEffort</strong> Pods get neither <code>memory.min</code> nor <code>memory.low</code>. Their memory\nremains fully reclaimable.</p>\n<h4 id=\"comparison-with-v1-27-behavior\">Comparison with v1.27 behavior</h4>\n<p>In earlier versions, enabling the MemoryQoS feature gate immediately set <code>memory.min</code> for every container with a memory request. <code>memory.min</code> is a hard reservation that the kernel will not reclaim, regardless of memory pressure.</p>\n<p>Consider a node with 8 GiB of RAM where Burstable Pod requests total 7 GiB. In earlier versions, that 7 GiB would be locked as <code>memory.min</code>, leaving little headroom for the kernel, system daemons, or BestEffort workloads and increasing the risk of OOM kills.</p>\n<p>With v1.36 tiered reservation, those Burstable requests map to <code>memory.low</code> instead of <code>memory.min</code>. Under normal pressure, the kernel still protects that memory, but under extreme pressure it can reclaim part of it to avoid system-wide OOM. Only Guaranteed Pods use <code>memory.min</code>, which keeps hard reservation lower.</p>\n<p>With <code>memoryReservationPolicy</code> in v1.36, you can enable throttling first, observe workload behavior, and opt into reservation when your node has enough headroom.</p>\n<h3 id=\"observability-metrics\">Observability metrics</h3>\n<p>Two alpha-stability metrics are exposed on the kubelet <code>/metrics</code> endpoint:</p>\n<table>\n<thead>\n<tr>\n<th>Metric</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>kubelet_memory_qos_node_memory_min_bytes</code></td>\n<td>Total <code>memory.min</code> across Guaranteed Pods</td>\n</tr>\n<tr>\n<td><code>kubelet_memory_qos_node_memory_low_bytes</code></td>\n<td>Total <code>memory.low</code> across Burstable Pods</td>\n</tr>\n</tbody>\n</table>\n<p>These are useful for capacity planning. If <code>kubelet_memory_qos_node_memory_min_bytes</code>\nis creeping toward your node's physical memory, you know hard reservation is\ngetting tight.</p>\n<pre tabindex=\"0\"><code class=\"language-none\">$ curl -sk https://localhost:10250/metrics | grep memory_qos\n# HELP kubelet_memory_qos_node_memory_min_bytes [ALPHA] Total memory.min in bytes for Guaranteed pods\nkubelet_memory_qos_node_memory_min_bytes 5.36870912e+08\n# HELP kubelet_memory_qos_node_memory_low_bytes [ALPHA] Total memory.low in bytes for Burstable pods\nkubelet_memory_qos_node_memory_low_bytes 2.147483648e+09\n</code></pre><h3 id=\"kernel-version-check\">Kernel version check</h3>\n<p>On kernels older than 5.9, <code>memory.high</code> throttling can trigger the\n<a href=\"https://lore.kernel.org/all/a4e23b59e9ef499b575ae73a8120ee089b7d3373.1594640214.git.chris@chrisdown.name/\">kernel livelock</a> issue. The bug was fixed\nin kernel 5.9. In v1.36, when the feature gate is enabled, the kubelet checks the\nkernel version at startup and logs a warning if it is below 5.9. The feature\ncontinues to work — this is informational, not a hard block.</p>\n<h3 id=\"how-kubernetes-maps-memory-qos-to-cgroup-v2\">How Kubernetes maps Memory QoS to cgroup v2</h3>\n<p>Memory QoS uses four cgroup v2 memory controller interfaces:</p>\n<ul>\n<li><strong><code>memory.max</code></strong>: hard memory limit — unchanged from previous versions</li>\n<li><strong><code>memory.min</code></strong>: hard memory protection — with <code>TieredReservation</code>, set only for Guaranteed Pods</li>\n<li><strong><code>memory.low</code></strong>: soft memory protection — set for Burstable Pods with <code>TieredReservation</code></li>\n<li><strong><code>memory.high</code></strong>: memory throttling threshold — unchanged from previous versions</li>\n</ul>\n<p>The following table shows how Kubernetes container resources map to cgroup v2\ninterfaces when <code>memoryReservationPolicy: TieredReservation</code> is configured.\nWith the default <code>memoryReservationPolicy: None</code>, no <code>memory.min</code> or\n<code>memory.low</code> values are set.</p>\n<table>\n<tr>\n<th>QoS Class</th>\n<th><tt>memory.min</tt></th>\n<th><tt>memory.low</tt></th>\n<th><tt>memory.high</tt></th>\n<th><tt>memory.max</tt></th>\n</tr>\n<tr>\n<td><b>Guaranteed</b></td>\n<td>Set to <code>requests.memory</code><br />(hard protection)</td>\n<td>Not set</td>\n<td>Not set<br />(requests == limits, so throttling is not useful)</td>\n<td>Set to <code>limits.memory</code></td>\n</tr>\n<tr>\n<td><b>Burstable</b></td>\n<td>Not set</td>\n<td>Set to <code>requests.memory</code><br />(soft protection)</td>\n<td>Calculated based on<br />formula with throttling factor</td>\n<td>Set to <code>limits.memory</code><br />(if specified)</td>\n</tr>\n<tr>\n<td><b>BestEffort</b></td>\n<td>Not set</td>\n<td>Not set</td>\n<td>Calculated based on<br />node allocatable memory</td>\n<td>Not set</td>\n</tr>\n</table>\n<h3 id=\"cgroup-hierarchy\">Cgroup hierarchy</h3>\n<p>cgroup v2 requires that a parent cgroup's memory protection is at least as\nlarge as the sum of its children's. The kubelet maintains this by setting\n<code>memory.min</code> on the kubepods root cgroup to the sum of all Guaranteed and\nBurstable Pod memory requests, and <code>memory.low</code> on the Burstable QoS cgroup\nto the sum of all Burstable Pod memory requests. This way the kernel can\nenforce the per-container and per-pod protection values correctly.</p>\n<p>The kubelet manages pod-level and QoS-class cgroups directly using the runc\nlibcontainer library, while container-level cgroups are managed by the\ncontainer runtime (containerd or CRI-O).</p>\n<h2 id=\"how-do-i-use-it\">How do I use it?</h2>\n<h3 id=\"prerequisites\">Prerequisites</h3>\n<ol>\n<li>Kubernetes v1.36 or later</li>\n<li>Linux with cgroup v2. Kernel 5.9 or higher is recommended — earlier kernels\nwork but may experience the livelock issue. You can verify cgroup v2 is\nactive by running <code>mount | grep cgroup2</code>.</li>\n<li>A container runtime that supports cgroup v2 (containerd 1.6+, CRI-O 1.22+)</li>\n</ol>\n<h3 id=\"configuration\">Configuration</h3>\n<p>To enable Memory QoS with tiered protection:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-yaml\"><span style=\"display: flex;\"><span><span style=\"color: #008000; font-weight: bold;\">apiVersion</span>:<span style=\"color: #bbb;\"> </span>kubelet.config.k8s.io/v1beta1<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">kind</span>:<span style=\"color: #bbb;\"> </span>KubeletConfiguration<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">featureGates</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">MemoryQoS</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #a2f; font-weight: bold;\">true</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">memoryReservationPolicy: TieredReservation # Options</span>:<span style=\"color: #bbb;\"> </span>None (default), TieredReservation<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">memoryThrottlingFactor: 0.9 # Optional</span>:<span style=\"color: #bbb;\"> </span>default is 0.9<span style=\"color: #bbb;\">\n</span></span></span></code></pre></div><p>If you want <code>memory.high</code> throttling without memory protection, omit\n<code>memoryReservationPolicy</code> or set it to <code>None</code>:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-yaml\"><span style=\"display: flex;\"><span><span style=\"color: #008000; font-weight: bold;\">apiVersion</span>:<span style=\"color: #bbb;\"> </span>kubelet.config.k8s.io/v1beta1<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">kind</span>:<span style=\"color: #bbb;\"> </span>KubeletConfiguration<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">featureGates</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">MemoryQoS</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #a2f; font-weight: bold;\">true</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">memoryReservationPolicy</span>:<span style=\"color: #bbb;\"> </span>None <span style=\"color: #bbb;\"> </span><span style=\"color: #080; font-style: italic;\"># This is the default</span><span style=\"color: #bbb;\">\n</span></span></span></code></pre></div><h2 id=\"how-can-i-learn-more\">How can I learn more?</h2>\n<ul>\n<li><a href=\"https://kep.k8s.io/2570\">KEP-2570: Memory QoS</a></li>\n<li><a href=\"https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/\">Pod Quality of Service Classes</a></li>\n<li><a href=\"https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/\">Managing Resources for Containers</a></li>\n<li><a href=\"https://kubernetes.io/docs/concepts/architecture/cgroups/\">Kubernetes cgroups v2 support</a></li>\n<li><a href=\"https://docs.kernel.org/admin-guide/cgroup-v2.html\">Linux kernel cgroups v2 documentation</a></li>\n</ul>\n<h2 id=\"getting-involved\">Getting involved</h2>\n<p>This feature is driven by <a href=\"https://github.com/kubernetes/community/tree/master/sig-node\">SIG Node</a>.\nIf you are interested in contributing or have feedback, you can find us on\n<a href=\"https://kubernetes.slack.com/messages/sig-node\">Slack</a> (#sig-node), the\n<a href=\"https://groups.google.com/forum/#!forum/kubernetes-sig-node\">mailing list</a>,\nor at the regular\n<a href=\"https://github.com/kubernetes/community/tree/master/sig-node#meetings\">SIG Node meetings</a>.\nPlease file bugs at <a href=\"https://github.com/kubernetes/kubernetes/issues\">kubernetes/kubernetes</a>\nand enhancement proposals at\n<a href=\"https://github.com/kubernetes/enhancements/issues/2570\">kubernetes/enhancements</a>.</p>",
+          "link": "https://kubernetes.io/blog/2026/04/29/kubernetes-v1-36-memory-qos-tiered-protection/",
+          "source": "Kubernetes Blog",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 10:35:00 -0800",
+          "author": "Inconnu"
+        },
+        {
+          "title": "Super Productivity – Todo App with Timeboxing & Time Tracking Capabilities",
+          "description": "<p>Super Productivity is your ultimate todo app, featuring timeboxing and time tracking to enhance focus and efficiency. Boost your productivity today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/super-productivity-todo-app-with-timeboxing-time-tracking-capabilities/\">Super Productivity &#8211; Todo App with Timeboxing &amp; Time Tracking Capabilities</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/super-productivity-todo-app-with-timeboxing-time-tracking-capabilities/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 08:03:15 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "DavMail 6.6 Exchange Gateway Released with Office 365 Fixes",
+          "description": "<p>Announcing DavMail 6.6 Exchange Gateway with vital Office 365 fixes. Stay connected and optimize your email workflow with this latest release.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/davmail-6-6-exchange-gateway-released-with-office-365-fixes/\">DavMail 6.6 Exchange Gateway Released with Office 365 Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/davmail-6-6-exchange-gateway-released-with-office-365-fixes/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 08:01:45 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "9to5Linux Weekly Roundup: April 12th, 2026",
+          "description": "<p>Catch up on the most important Linux news in the 9to5Linux Weekly Roundup for April 12th, 2026. Don't miss out on key updates and trends!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-april-12th-2026/\">9to5Linux Weekly Roundup: April 12th, 2026</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-april-12th-2026/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 07:57:57 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Three Months After Georgia Tech, Stallman Heads to UT Austin",
+          "description": "<p>Learn about Richard Stallman's move to UT Austin three months after Georgia Tech, and how his presence is shaping the academic landscape in technology.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/three-months-after-georgia-tech-stallman-heads-to-ut-austin/\">Three Months After Georgia Tech, Stallman Heads to UT Austin</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/three-months-after-georgia-tech-stallman-heads-to-ut-austin/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 07:53:31 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Linuxiac Weekly Wrap-Up: Week 15, 2026 (Apr 6 – 12)",
+          "description": "<p>Discover the latest in Linux news with our Weekly Wrap-Up for Week 15, 2026. Stay informed on updates, trends, and insights from April 6 to 12.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-15-2026-apr-6-12/\">Linuxiac Weekly Wrap-Up: Week 15, 2026 (Apr 6 – 12)</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-15-2026-apr-6-12/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 07:49:49 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Linux Kernel 7.0 Officially Released, This Is What’s New",
+          "description": "<p>Linux Kernel 7.0 is here! Uncover the exciting new features and improvements in this official release that enhance functionality and user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linux-kernel-7-0-officially-released-this-is-whats-new/\">Linux Kernel 7.0 Officially Released, This Is What’s New</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/linux-kernel-7-0-officially-released-this-is-whats-new/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 07:46:49 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "FreeBSD Opens Public Testing for Its Laptop Support Push",
+          "description": "<p>FreeBSD announces public testing for enhanced laptop support. Discover the latest features and improvements aimed at optimizing your laptop experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/freebsd-opens-public-testing-for-its-laptop-support-push/\">FreeBSD Opens Public Testing for Its Laptop Support Push</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/freebsd-opens-public-testing-for-its-laptop-support-push/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 07:45:13 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Trisquel GNU/Linux 12.0 LTS Released with GNU Linux-Libre 6.8 Kernel, MATE 1.26",
+          "description": "<p>Discover the latest Trisquel GNU/Linux 12.0 LTS, featuring the GNU Linux-Libre 6.8 Kernel and MATE 1.26. Experience freedom and performance today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/trisquel-gnu-linux-12-0-lts-released-with-gnu-linux-libre-6-8-kernel-mate-1-26/\">Trisquel GNU/Linux 12.0 LTS Released with GNU Linux-Libre 6.8 Kernel, MATE 1.26</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/trisquel-gnu-linux-12-0-lts-released-with-gnu-linux-libre-6-8-kernel-mate-1-26/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 07:43:11 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "AerynOS Gets a New Logo in Quiet Branding Update",
+          "description": "<p>AerynOS unveils a fresh logo in a subtle branding update, reflecting its commitment to innovation and modern design. Discover the new look today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/aerynos-gets-a-new-logo-in-quiet-branding-update/\">AerynOS Gets a New Logo in Quiet Branding Update</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/aerynos-gets-a-new-logo-in-quiet-branding-update/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 07:38:11 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "First Look at Shelly, a Modern Graphical Package Manager for Arch Linux",
+          "description": "<p>Discover Shelly, the modern graphical package manager for Arch Linux. Streamline your software management with an intuitive interface and powerful features.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/first-look-at-shelly-a-modern-graphical-package-manager-for-arch-linux/\">First Look at Shelly, a Modern Graphical Package Manager for Arch Linux</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/first-look-at-shelly-a-modern-graphical-package-manager-for-arch-linux/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Wed, 29 Apr 2026 07:34:38 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Governing MCP tool calls in .NET with the Agent Governance Toolkit",
+          "description": "<p>Learn how to govern MCP tool calls in .NET with the Agent Governance Toolkit—policy-based access control, security scanning, and response sanitization to reduce risk in AI agent systems.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/governing-mcp-tool-calls-in-dotnet-with-the-agent-governance-toolkit/\">Governing MCP tool calls in .NET with the Agent Governance Toolkit</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/governing-mcp-tool-calls-in-dotnet-with-the-agent-governance-toolkit/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Wed, 29 Apr 2026 17:05:00 +0000",
+          "author": "Jack Batzner"
+        },
+        {
+          "title": "VSTest is Removing its Newtonsoft.Json Dependency",
+          "description": "<p>VSTest is removing its Newtonsoft.Json dependency in .NET 11 and Visual Studio 18.8. Here's who is affected and how to fix it.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/vs-test-is-removing-its-newtonsoft-json-dependency/\">VSTest is Removing its Newtonsoft.Json Dependency</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/vs-test-is-removing-its-newtonsoft-json-dependency/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Wed, 29 Apr 2026 17:05:00 +0000",
+          "author": "McKenna Barlow"
         },
         {
           "title": "Kubernetes v1.36: Staleness Mitigation and Observability for Controllers",
@@ -2022,96 +2139,6 @@
           "category": "Infrastructure",
           "published": "Tue, 28 Apr 2026 10:35:00 -0800",
           "author": "Inconnu"
-        },
-        {
-          "title": "KDE Frameworks 6.25 Adds Support for Converting Momme Units in KRunner",
-          "description": "<p>Discover how KDE Frameworks 6.25 enhances KRunner with new support for converting Momme units, streamlining your workflow and improving efficiency.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/kde-frameworks-6-25-adds-support-for-converting-momme-units-in-krunner/\">KDE Frameworks 6.25 Adds Support for Converting Momme Units in KRunner</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/kde-frameworks-6-25-adds-support-for-converting-momme-units-in-krunner/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 07:36:55 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Deepin 25.1 Arrives With Linux Kernel 6.18 and New AI Features",
-          "description": "<p>Discover Deepin 25.1, featuring the latest Linux Kernel 6.18 and innovative AI enhancements. Explore the future of user-friendly Linux today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/deepin-25-1-arrives-with-linux-kernel-6-18-and-new-ai-features/\">Deepin 25.1 Arrives With Linux Kernel 6.18 and New AI Features</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/deepin-25-1-arrives-with-linux-kernel-6-18-and-new-ai-features/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 07:35:10 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "How to Install n8n on Ubuntu 26.04",
-          "description": "<p>Learn how to install n8n on Ubuntu 26.04 with our step-by-step guide. Simplify your automation tasks and enhance productivity today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-install-n8n-on-ubuntu-26-04/\">How to Install n8n on Ubuntu 26.04</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/how-to-install-n8n-on-ubuntu-26-04/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 07:31:11 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "How to install Odoo 19 on Ubuntu 26.04",
-          "description": "<p>Learn how to effortlessly install Odoo 19 on Ubuntu 26.04 with our comprehensive guide. Boost your productivity and streamline operations now!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-install-odoo-19-on-ubuntu-26-04/\">How to install Odoo 19 on Ubuntu 26.04</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/how-to-install-odoo-19-on-ubuntu-26-04/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 07:28:00 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Calibre 9.7 E-Book Manager Improves the Annotations Browser and Content Server",
-          "description": "<p>Explore the latest features of Calibre 9.7 E-Book Manager, including an upgraded annotations browser and a powerful content server for seamless e-book management.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/calibre-9-7-e-book-manager-improves-the-annotations-browser-and-content-server/\">Calibre 9.7 E-Book Manager Improves the Annotations Browser and Content Server</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/calibre-9-7-e-book-manager-improves-the-annotations-browser-and-content-server/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 07:26:19 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Apache Spins Anthropic’s $1.5M Into ‘Responsible AI’ Initiative",
-          "description": "<p>Learn about Apache's strategic use of Anthropic's $1.5M to launch a 'Responsible AI' initiative, fostering accountability and ethics in AI technology.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/apache-spins-anthropics-1-5m-into-responsible-ai-initiative/\">Apache Spins Anthropic’s $1.5M Into ‘Responsible AI’ Initiative</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/apache-spins-anthropics-1-5m-into-responsible-ai-initiative/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 07:16:08 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "France Launches Government Linux Desktop Plan as Windows Exit Begins",
-          "description": "<p>Discover how France's new Linux desktop initiative marks a significant shift from Windows, promoting innovation and security in public sector technology.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/france-launches-government-linux-desktop-plan-as-windows-exit-begins/\">France Launches Government Linux Desktop Plan as Windows Exit Begins</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/france-launches-government-linux-desktop-plan-as-windows-exit-begins/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 07:12:01 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "SQLite 3.53 Fixes WAL Corruption Bug, Adds New SQL Features",
-          "description": "<p>Stay updated with SQLite 3.53, featuring crucial fixes for WAL corruption and new SQL functionalities designed to improve performance and reliability.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/sqlite-3-53-fixes-wal-corruption-bug-adds-new-sql-features/\">SQLite 3.53 Fixes WAL Corruption Bug, Adds New SQL Features</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/sqlite-3-53-fixes-wal-corruption-bug-adds-new-sql-features/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 07:03:40 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Can Garuda Linux Mokka Take Manjaro’s Arch-Based Crown?",
-          "description": "<p>Can Garuda Linux Mokka surpass Manjaro's popularity in the Arch-based realm? Dive into a detailed comparison of features, performance, and user satisfaction.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/can-garuda-linux-mokka-take-manjaros-arch-based-crown/\">Can Garuda Linux Mokka Take Manjaro’s Arch-Based Crown?</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/can-garuda-linux-mokka-take-manjaros-arch-based-crown/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 06:59:12 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Wayland 1.25 Documentation Update",
-          "description": "<p>Discover the latest updates in Wayland 1.25 documentation. Enhance your understanding and implementation with comprehensive guides and resources.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/wayland-1-25-documentation-update/\">Wayland 1.25 Documentation Update</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/wayland-1-25-documentation-update/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Tue, 28 Apr 2026 06:53:17 +0000",
-          "author": "Content Operations"
         },
         {
           "title": "Welcome to SkiaSharp 4.0 Preview 1",
@@ -2130,6 +2157,15 @@
           "category": "Développement",
           "published": "Tue, 28 Apr 2026 17:05:00 +0000",
           "author": "Jared Meade"
+        },
+        {
+          "title": "Combining API versioning with OpenAPI in .NET 10 applications",
+          "description": "<p>Learn how to implement API versioning in your .NET 10 applications using OpenAPI for better API management and documentation.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/api-versioning-in-dotnet-10-applications/\">Combining API versioning with OpenAPI in .NET 10 applications</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
+          "link": "https://devblogs.microsoft.com/dotnet/api-versioning-in-dotnet-10-applications/",
+          "source": ".NET Blog",
+          "category": "Développement",
+          "published": "Tue, 28 Apr 2026 17:00:00 +0000",
+          "author": "Sander ten Brinke"
         },
         {
           "title": "GitHub for Beginners: Getting started with Markdown",
@@ -2211,15 +2247,6 @@
           "category": "Infrastructure",
           "published": "Mon, 27 Apr 2026 10:35:00 -0800",
           "author": "Inconnu"
-        },
-        {
-          "title": "Combining API versioning with OpenAPI in .NET 10 applications",
-          "description": "<p>Learn how to implement API versioning in your .NET 10 applications using OpenAPI for better API management and documentation.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/api-versioning-in-dotnet-10-applications/\">Combining API versioning with OpenAPI in .NET 10 applications</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/api-versioning-in-dotnet-10-applications/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Mon, 27 Apr 2026 20:00:00 +0000",
-          "author": "Sander ten Brinke"
         },
         {
           "title": "GitHub Copilot is moving to usage-based billing",
@@ -2573,15 +2600,6 @@
           "author": "Rahul Bhandari (MSFT), Tara Overfield"
         },
         {
-          "title": ".NET 11 Preview 3 is now available!",
-          "description": "<p>Find out about the new features in .NET 11 Preview 3 across the .NET runtime, SDK, libraries, ASP.NET Core, .NET MAUI, C#, Entity Framework Core, container images, and more!</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/dotnet-11-preview-3/\">.NET 11 Preview 3 is now available!</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/dotnet-11-preview-3/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Tue, 14 Apr 2026 19:30:00 +0000",
-          "author": ".NET Team"
-        },
-        {
           "title": "AWS Interconnect is now generally available, with a new option to simplify last-mile connectivity",
           "description": "Today, we’re announcing the general availability of AWS Interconnect – multicloud, a managed private connectivity service that connects your Amazon Virtual Private Cloud (Amazon VPC) directly to VPCs on other cloud providers. We’re also introducing AWS Interconnect – last mile, a new capability that simplifies how you establish high-speed, private connections to AWS from your […]",
           "link": "https://aws.amazon.com/blogs/aws/aws-interconnect-is-now-generally-available-with-a-new-option-to-simplify-last-mile-connectivity/",
@@ -2661,15 +2679,6 @@
           "category": "Cloud",
           "published": "Wed, 08 Apr 2026 16:00:00 +0000",
           "author": "Fernando Vasconcellos"
-        },
-        {
-          "title": "Your Migration’s Source of Truth: The Modernization Assessment",
-          "description": "<p>Introducing GitHub Copilot Modernization and diving into the assessment report as part of cloud modernization process</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/dotnet/your-migrations-source-of-truth-the-modernization-assessment/\">Your Migration&#8217;s Source of Truth: The Modernization Assessment</a> appeared first on <a href=\"https://devblogs.microsoft.com/dotnet\">.NET Blog</a>.</p>",
-          "link": "https://devblogs.microsoft.com/dotnet/your-migrations-source-of-truth-the-modernization-assessment/",
-          "source": ".NET Blog",
-          "category": "Développement",
-          "published": "Tue, 07 Apr 2026 18:00:00 +0000",
-          "author": "Jeffrey Fritz"
         },
         {
           "title": "Launching S3 Files, making S3 buckets accessible as file systems",
@@ -3686,15 +3695,6 @@
           "source": "Kubernetes Blog",
           "category": "Infrastructure",
           "published": "Fri, 19 Sep 2025 10:30:00 -0800",
-          "author": "Inconnu"
-        },
-        {
-          "title": "Kubernetes v1.34: DRA Consumable Capacity",
-          "description": "<p>Dynamic Resource Allocation (DRA) is a Kubernetes API for managing scarce resources across Pods and containers.\nIt enables flexible resource requests, going beyond simply allocating <em>N</em> number of devices to support more granular usage scenarios.\nWith DRA, users can request specific types of devices based on their attributes, define custom configurations tailored to their workloads, and even share the same resource among multiple containers or Pods.</p>\n<p>In this blog, we focus on the device sharing feature and dive into a new capability introduced in Kubernetes 1.34: <em>DRA consumable capacity</em>,\nwhich extends DRA to support finer-grained device sharing.</p>\n<h2 id=\"background-device-sharing-via-resourceclaims\">Background: device sharing via ResourceClaims</h2>\n<p>From the beginning, DRA introduced the ability for multiple Pods to share a device by referencing the same ResourceClaim.\nThis design decouples resource allocation from specific hardware, allowing for more dynamic and reusable provisioning of devices.</p>\n<p>In Kubernetes 1.33, the new support for <em>partitionable devices</em> allowed resource drivers to advertise slices of a device that are available, rather than exposing the entire device as an all-or-nothing resource.\nThis enabled Kubernetes to model shareable hardware more accurately.</p>\n<p>But there was still a missing piece: it didn't yet support scenarios\nwhere the device driver manages fine-grained, dynamic portions of a device resource — like network bandwidth — based on user demand,\nor to share those resources independently of ResourceClaims, which are restricted by their spec and namespace.</p>\n<p>That’s where <em>consumable capacity</em> for DRA comes in.</p>\n<h2 id=\"benefits-of-dra-consumable-capacity-support\">Benefits of DRA consumable capacity support</h2>\n<p>Here's a taste of what you get in a cluster with the <code>DRAConsumableCapacity</code>\n<a href=\"https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/\">feature gate</a> enabled.</p>\n<h3 id=\"device-sharing-across-multiple-resourceclaims-or-devicerequests\">Device sharing across multiple ResourceClaims or DeviceRequests</h3>\n<p>Resource drivers can now support sharing the same device — or even a slice of a device — across multiple ResourceClaims or across multiple DeviceRequests.</p>\n<p>This means that Pods from different namespaces can simultaneously share the same device,\nif permitted and supported by the specific DRA driver.</p>\n<h3 id=\"device-resource-allocation\">Device resource allocation</h3>\n<p>Kubernetes extends the allocation algorithm in the scheduler to support allocating a portion of a device's resources, as defined in the <code>capacity</code> field.\nThe scheduler ensures that the total allocated capacity across all consumers never exceeds the device’s total capacity, even when shared across multiple ResourceClaims or DeviceRequests.\nThis is very similar to the way the scheduler allows Pods and containers to share allocatable resources on Nodes;\nin this case, it allows them to share allocatable (consumable) resources on Devices.</p>\n<p>This feature expands support for scenarios where the device driver is able to manage resources <strong>within</strong> a device and on a per-process basis — for example,\nallocating a specific amount of memory (e.g., 8 GiB) from a virtual GPU,\nor setting bandwidth limits on virtual network interfaces allocated to specific Pods. This aims to provide safe and efficient resource sharing.</p>\n<h3 id=\"distinctattribute-constraint\">DistinctAttribute constraint</h3>\n<p>This feature also introduces a new constraint: <code>DistinctAttribute</code>, which is the complement of the existing <code>MatchAttribute</code> constraint.</p>\n<p>The primary goal of <code>DistinctAttribute</code> is to prevent the same underlying device from being allocated multiple times within a single ResourceClaim, which could happen since we are allocating shares (or subsets) of devices.\nThis constraint ensures that each allocation refers to a distinct resource, even if they belong to the same device class.</p>\n<p>It is useful for use cases such as allocating network devices connecting to different subnets to expand coverage or provide redundancy across failure domains.</p>\n<h2 id=\"how-to-use-consumable-capacity\">How to use consumable capacity?</h2>\n<p><code>DRAConsumableCapacity</code> is introduced as an alpha feature in Kubernetes 1.34. The <a href=\"https://kubernetes.io/docs/reference/command-line-tools-reference/feature-gates/\">feature gate</a> <code>DRAConsumableCapacity</code> must be enabled in kubelet, kube-apiserver, kube-scheduler and kube-controller-manager.</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-bash\"><span style=\"display: flex;\"><span>--feature-gates<span style=\"color: #666;\">=</span>...,DRAConsumableCapacity<span style=\"color: #666;\">=</span><span style=\"color: #a2f;\">true</span>\n</span></span></code></pre></div><h3 id=\"as-a-dra-driver-developer\">As a DRA driver developer</h3>\n<p>As a DRA driver developer writing in Golang, you can make a device within a ResourceSlice allocatable to multiple ResourceClaims (or <code>devices.requests</code>) by setting <code>AllowMultipleAllocations</code> to <code>true</code>.</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-go\"><span style=\"display: flex;\"><span>Device {\n</span></span><span style=\"display: flex;\"><span> <span style=\"color: #666;\">...</span>\n</span></span><span style=\"display: flex;\"><span> AllowMultipleAllocations: ptr.<span style=\"color: #00a000;\">To</span>(<span style=\"color: #a2f; font-weight: bold;\">true</span>),\n</span></span><span style=\"display: flex;\"><span> <span style=\"color: #666;\">...</span>\n</span></span><span style=\"display: flex;\"><span>}\n</span></span></code></pre></div><p>Additionally, you can define a policy to restrict how each device's <code>Capacity</code> should be consumed by each <code>DeviceRequest</code> by defining <code>RequestPolicy</code> field in the <code>DeviceCapacity</code>.\nThe example below shows how to define a policy that requires a GPU with 40 GiB of memory to allocate at least 5 GiB per request, with each allocation in multiples of 5 GiB.</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-go\"><span style=\"display: flex;\"><span>DeviceCapacity{\n</span></span><span style=\"display: flex;\"><span> Value: resource.<span style=\"color: #00a000;\">MustParse</span>(<span style=\"color: #b44;\">\"40Gi\"</span>),\n</span></span><span style=\"display: flex;\"><span> RequestPolicy: <span style=\"color: #666;\">&amp;</span>CapacityRequestPolicy{\n</span></span><span style=\"display: flex;\"><span> Default: ptr.<span style=\"color: #00a000;\">To</span>(resource.<span style=\"color: #00a000;\">MustParse</span>(<span style=\"color: #b44;\">\"5Gi\"</span>)),\n</span></span><span style=\"display: flex;\"><span> ValidRange: <span style=\"color: #666;\">&amp;</span>CapacityRequestPolicyRange {\n</span></span><span style=\"display: flex;\"><span> Min: ptr.<span style=\"color: #00a000;\">To</span>(resource.<span style=\"color: #00a000;\">MustParse</span>(<span style=\"color: #b44;\">\"5Gi\"</span>)),\n</span></span><span style=\"display: flex;\"><span> Step: ptr.<span style=\"color: #00a000;\">To</span>(resource.<span style=\"color: #00a000;\">MustParse</span>(<span style=\"color: #b44;\">\"5Gi\"</span>)),\n</span></span><span style=\"display: flex;\"><span> }\n</span></span><span style=\"display: flex;\"><span> }\n</span></span><span style=\"display: flex;\"><span>}\n</span></span></code></pre></div><p>This will be published to the ResourceSlice, as partially shown below:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-yaml\"><span style=\"display: flex;\"><span><span style=\"color: #008000; font-weight: bold;\">apiVersion</span>:<span style=\"color: #bbb;\"> </span>resource.k8s.io/v1<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">kind</span>:<span style=\"color: #bbb;\"> </span>ResourceSlice<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #00f; font-weight: bold;\">...</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">spec</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">devices</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">name</span>:<span style=\"color: #bbb;\"> </span>gpu0<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">allowMultipleAllocations</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #a2f; font-weight: bold;\">true</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">capacity</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">memory</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">value</span>:<span style=\"color: #bbb;\"> </span>40Gi<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">requestPolicy</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">default</span>:<span style=\"color: #bbb;\"> </span>5Gi<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">validRange</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">min</span>:<span style=\"color: #bbb;\"> </span>5Gi<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">step</span>:<span style=\"color: #bbb;\"> </span>5Gi<span style=\"color: #bbb;\">\n</span></span></span></code></pre></div><p>An allocated device with a specified portion of consumed capacity will have a <code>ShareID</code> field set in the allocation status.</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-go\"><span style=\"display: flex;\"><span>claim.Status.Allocation.Devices.Results[i].ShareID\n</span></span></code></pre></div><p>This <code>ShareID</code> allows the driver to distinguish between different allocations that refer to the <strong>same device or same statically-partitioned slice</strong> but come from <strong>different <code>ResourceClaim</code> requests</strong>.<br />\nIt acts as a unique identifier for each shared slice, enabling the driver to manage and enforce resource limits independently across multiple consumers.</p>\n<h3 id=\"as-a-consumer\">As a consumer</h3>\n<p>As a consumer (or user), the device resource can be requested with a ResourceClaim like this:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-yaml\"><span style=\"display: flex;\"><span><span style=\"color: #008000; font-weight: bold;\">apiVersion</span>:<span style=\"color: #bbb;\"> </span>resource.k8s.io/v1<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">kind</span>:<span style=\"color: #bbb;\"> </span>ResourceClaim<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #00f; font-weight: bold;\">...</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">spec</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">devices</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">requests</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #080; font-style: italic;\"># for devices</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">name</span>:<span style=\"color: #bbb;\"> </span>req0<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">exactly</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">deviceClassName</span>:<span style=\"color: #bbb;\"> </span>resource.example.com<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">capacity</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">requests</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #080; font-style: italic;\"># for resources which must be provided by those devices</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">memory</span>:<span style=\"color: #bbb;\"> </span>10Gi<span style=\"color: #bbb;\">\n</span></span></span></code></pre></div><p>This configuration ensures that the requested device can provide at least 10GiB of <code>memory</code>.</p>\n<p>Notably that <strong>any</strong> <code>resource.example.com</code> device that has at least 10GiB of memory can be allocated.\nIf a device that does not support multiple allocations is chosen, the allocation would consume the entire device.\nTo filter only devices that support multiple allocations, you can define a selector like this:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-yaml\"><span style=\"display: flex;\"><span><span style=\"color: #008000; font-weight: bold;\">selectors</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">cel</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">expression</span>:<span style=\"color: #bbb;\"> </span>|-<span style=\"color: #b44; font-style: italic;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #b44; font-style: italic;\"> device.allowMultipleAllocations == true</span><span style=\"color: #bbb;\">\n</span></span></span></code></pre></div><h2 id=\"integration-with-dra-device-status\">Integration with DRA device status</h2>\n<p>In device sharing, general device information is provided through the resource slice.\nHowever, some details are set dynamically after allocation.\nThese can be conveyed using the <a href=\"https://kubernetes.io/docs/concepts/scheduling-eviction/dynamic-resource-allocation/#resourceclaim-device-status\"><code>.status.devices</code></a> field of a ResourceClaim.\nThat field is only published in clusters where the <code>DRAResourceClaimDeviceStatus</code>\nfeature gate is enabled.</p>\n<p>If you do have <em>device status</em> support available, a driver can expose additional device-specific information beyond the <code>ShareID</code>.\nOne particularly useful use case is for virtual networks, where a driver can include the assigned IP address(es) in the status.\nThis is valuable for both network service operations and troubleshooting.</p>\n<p>You can find more information by watching our recording at: <a href=\"https://sched.co/1x71v\">KubeCon Japan 2025 - Reimagining Cloud Native Networks: The Critical Role of DRA</a>.</p>\n<h2 id=\"what-can-you-do-next\">What can you do next?</h2>\n<ul>\n<li>\n<p><strong>Check out the <a href=\"https://github.com/kubernetes-sigs/cni-dra-driver\">CNI DRA Driver project</a></strong> for an example of DRA integration in Kubernetes networking. Try integrating with network resources like <code>macvlan</code>, <code>ipvlan</code>, or smart NICs.</p>\n</li>\n<li>\n<p>Start enabling the <code>DRAConsumableCapacity</code> feature gate and experimenting with virtualized or partitionable devices. Specify your workloads with <em>consumable capacity</em> (for example: fractional bandwidth or memory).</p>\n</li>\n<li>\n<p>Let us know your feedback:</p>\n<ul>\n<li>✅ What worked well?</li>\n<li>⚠️ What didn’t?</li>\n</ul>\n<p>If you encountered issues to fix or opportunities to enhance,\nplease <a href=\"https://github.com/kubernetes/enhancements/issues\">file a new issue</a>\nand reference <a href=\"https://github.com/kubernetes/enhancements/issues/5075\">KEP-5075</a> there,\nor reach out via <a href=\"https://kubernetes.slack.com/archives/C0409NGC1TK\">Slack (#wg-device-management)</a>.</p>\n</li>\n</ul>\n<h3 id=\"conclusion\">Conclusion</h3>\n<p>Consumable capacity support enhances the device sharing capability of DRA by allowing effective device sharing across namespaces, across claims, and tailored to each Pod’s actual needs.\nIt also empowers drivers to enforce capacity limits, improves scheduling accuracy, and unlocks new use cases like bandwidth-aware networking and multi-tenant device sharing.</p>\n<p>Try it out, experiment with consumable resources, and help shape the future of dynamic resource allocation in Kubernetes!</p>\n<h3 id=\"further-reading\">Further Reading</h3>\n<ul>\n<li><a href=\"https://kubernetes.io/docs/concepts/scheduling-eviction/dynamic-resource-allocation/\">DRA in the Kubernetes documentation</a></li>\n<li><a href=\"https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling/4815-dra-partitionable-devices\">KEP for DRA Partitionable Devices</a></li>\n<li><a href=\"https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/4817-resource-claim-device-status\">KEP for DRA Device Status</a></li>\n<li><a href=\"https://github.com/kubernetes/enhancements/tree/master/keps/sig-scheduling/5075-dra-consumable-capacity\">KEP for DRA Consumable Capacity</a></li>\n<li><a href=\"https://www.kubernetes.dev/resources/release/#kubernetes-v134\">Kubernetes 1.34 Release Notes</a></li>\n</ul>",
-          "link": "https://kubernetes.io/blog/2025/09/18/kubernetes-v1-34-dra-consumable-capacity/",
-          "source": "Kubernetes Blog",
-          "category": "Infrastructure",
-          "published": "Thu, 18 Sep 2025 10:30:00 -0800",
           "author": "Inconnu"
         },
         {
