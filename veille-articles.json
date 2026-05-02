@@ -1,9 +1,108 @@
 {
-  "lastUpdate": "2026-05-01T09:05:41.317648",
+  "lastUpdate": "2026-05-02T08:25:35.757007",
   "articles": {
     "infrastructure": {
       "icon": "🏗️",
       "articles": [
+        {
+          "title": "A Virtual Agent team at Docker: How the Coding Agent Sandboxes team uses a fleet of agents to ship faster",
+          "description": "I work on Coding Agent Sandboxes, aka “sbx” at Docker. The project provides secure, microVM-based isolation for running AI coding agents like Claude Code, Gemini, Codex, Docker Agent and Kiro. Agents get full autonomy inside a sandbox (their own Docker daemon, network, filesystem) without touching your host system. Over the past couple of weeks, we...",
+          "link": "https://www.docker.com/blog/a-virtual-agent-team-at-docker-how-the-coding-agent-sandboxes-team-uses-a-fleet-of-agents-to-ship-faster/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 13:00:00 +0000",
+          "author": "Jennifer Kohl"
+        },
+        {
+          "title": "Latest Raspberry Pi OS Release Disables Passwordless sudo by Default",
+          "description": "<p>The newest Raspberry Pi OS update has disabled passwordless sudo by default. Learn how this impacts your projects and improves system security today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/latest-raspberry-pi-os-release-disables-passwordless-sudo-by-default/\">Latest Raspberry Pi OS Release Disables Passwordless sudo by Default</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/latest-raspberry-pi-os-release-disables-passwordless-sudo-by-default/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:19:03 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Krita – A Powerful Open-Source Digital Painting Tool",
+          "description": "<p>Unleash your creativity with Krita, the leading open-source digital painting software. Explore its robust tools and features tailored for artists of all levels.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/krita-a-powerful-open-source-digital-painting-tool/\">Krita – A Powerful Open-Source Digital Painting Tool</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/krita-a-powerful-open-source-digital-painting-tool/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:16:53 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Scribus 1.6.6 Open-Source Desktop Publishing App Released with Bug Fixes",
+          "description": "<p>Explore Scribus 1.6.6, the open-source desktop publishing software, now with crucial bug fixes to improve your design experience and workflow efficiency.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/scribus-1-6-6-open-source-desktop-publishing-app-released-with-bug-fixes/\">Scribus 1.6.6 Open-Source Desktop Publishing App Released with Bug Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/scribus-1-6-6-open-source-desktop-publishing-app-released-with-bug-fixes/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:14:33 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "openSUSE Tumbleweed Switches Fresh Installs to Systemd-boot",
+          "description": "<p>Discover how openSUSE Tumbleweed transitions fresh installs to systemd-boot, enhancing boot management and system performance for users.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/opensuse-tumbleweed-switches-fresh-installs-to-systemd-boot/\">openSUSE Tumbleweed Switches Fresh Installs to Systemd-boot</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/opensuse-tumbleweed-switches-fresh-installs-to-systemd-boot/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:12:37 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "From Panthor to RK3588: Advancing graphics, video and SoC support in Linux kernel 7.0",
+          "description": "<p>Explore how Linux kernel 7.0 enhances graphics, video, and SoC support, featuring innovations from Panthor to RK3588. Stay updated on cutting-edge technology.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/from-panthor-to-rk3588-advancing-graphics-video-and-soc-support-in-linux-kernel-7-0/\">From Panthor to RK3588: Advancing graphics, video and SoC support in Linux kernel 7.0</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/from-panthor-to-rk3588-advancing-graphics-video-and-soc-support-in-linux-kernel-7-0/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:10:15 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Kontainer Brings a Native KDE GUI to Distrobox Container Management",
+          "description": "<p>Discover Kontainer, the innovative tool that integrates a native KDE GUI for seamless Distrobox container management. Simplify your workflow today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/kontainer-brings-a-native-kde-gui-to-distrobox-container-management/\">Kontainer Brings a Native KDE GUI to Distrobox Container Management</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/kontainer-brings-a-native-kde-gui-to-distrobox-container-management/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:08:05 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "EndeavourOS – A Modern Arch-Based Linux Experience",
+          "description": "<p>Experience the power of EndeavourOS, a user-friendly Arch-based Linux distribution. Enjoy seamless installation, customization, and a supportive community.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/endeavouros-a-modern-arch-based-linux-experience/\">EndeavourOS – A Modern Arch-Based Linux Experience</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/endeavouros-a-modern-arch-based-linux-experience/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:05:26 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "France Is Replacing 2.5 Million Windows Desktops With Linux – And I Mapped Out Its New Stack",
+          "description": "<p>France is set to replace 2.5 million Windows desktops with Linux, marking a significant shift in its digital infrastructure. Discover the implications and benefits.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/france-is-replacing-2-5-million-windows-desktops-with-linux-and-i-mapped-out-its-new-stack/\">France Is Replacing 2.5 Million Windows Desktops With Linux &#8211; And I Mapped Out Its New Stack</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/france-is-replacing-2-5-million-windows-desktops-with-linux-and-i-mapped-out-its-new-stack/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:03:50 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "ZeroID: Open-source Identity Platform for Autonomous AI Agents",
+          "description": "<p>Explore ZeroID, the innovative open-source identity platform empowering autonomous AI agents. Secure, efficient, and user-friendly identity solutions await.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/zeroid-open-source-identity-platform-for-autonomous-ai-agents/\">ZeroID: Open-source Identity Platform for Autonomous AI Agents</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/zeroid-open-source-identity-platform-for-autonomous-ai-agents/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:00:45 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "How to Install Linux Kernel 7.0 on Ubuntu 25.10",
+          "description": "<p>Discover the step-by-step guide to install Linux Kernel 7.0 on Ubuntu 25.10. Enhance your system's performance and features with our easy instructions.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-install-linux-kernel-7-0-on-ubuntu-25-10/\">How to Install Linux Kernel 7.0 on Ubuntu 25.10</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/how-to-install-linux-kernel-7-0-on-ubuntu-25-10/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 06:57:59 +0000",
+          "author": "Content Operations"
+        },
         {
           "title": "Kubernetes v1.36: In-Place Vertical Scaling for Pod-Level Resources Graduates to Beta",
           "description": "<p>Following the graduation of Pod-Level Resources to Beta in v1.34 and the General Availability (GA) of In-Place Pod Vertical Scaling in v1.35, the Kubernetes community is thrilled to announce that <strong>In-Place Pod-Level Resources Vertical Scaling has graduated to Beta in v1.36!</strong></p>\n<p>This feature is now enabled by default via the <code>InPlacePodLevelResourcesVerticalScaling</code> feature gate. It allows users to update the aggregate Pod resource budget (<code>.spec.resources</code>) for a running Pod, <strong>often without requiring a container restart.</strong></p>\n<h2 id=\"why-pod-level-in-place-resize\">Why Pod-level in-place resize?</h2>\n<p>The Pod-level resource model simplified management for complex Pods (such as those with sidecars) by allowing containers to share a collective pool of resources. In v1.36, you can now adjust this aggregate boundary on-the-fly.</p>\n<p>This is particularly useful for Pods where containers do not have individual limits defined. These containers automatically scale their effective boundaries to fit the newly resized Pod-level dimensions, allowing you to expand the shared pool during peak demand without manual per-container recalculations.</p>\n<h2 id=\"resource-inheritance-and-the-resizepolicy\">Resource inheritance and the <code>resizePolicy</code></h2>\n<p>When a Pod-level resize is initiated, the Kubelet treats the change as a resize event for every container that inherits its limits from the Pod-level budget. To determine whether a restart is required, the Kubelet consults the <code>resizePolicy</code> defined within individual containers:</p>\n<ul>\n<li><strong>Non-disruptive Updates:</strong> If a container's <code>restartPolicy</code> is set to <code>NotRequired</code>, the Kubelet attempts to update the cgroup limits dynamically via the Container Runtime Interface (CRI).</li>\n<li><strong>Disruptive Updates:</strong> If set to <code>RestartContainer</code>, the container will be restarted to apply the new aggregate boundary safely.</li>\n</ul>\n<blockquote>\n<p><strong>Note:</strong> Currently, <code>resizePolicy</code> is not supported at the Pod level. The Kubelet always defers to individual container settings to decide if an update can be applied in-place or requires a restart.</p>\n</blockquote>\n<h2 id=\"example-ccaling-a-shared-resource-pool\">Example: ccaling a shared resource pool</h2>\n<p>In this scenario, a Pod is defined with a 2 CPU pod-level limit. Because the individual containers do not have their own limits defined, they share this total pool.</p>\n<h3 id=\"1-initial-pod-specification\">1. Initial Pod specification</h3>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-yaml\"><span style=\"display: flex;\"><span><span style=\"color: #008000; font-weight: bold;\">apiVersion</span>:<span style=\"color: #bbb;\"> </span>v1<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">kind</span>:<span style=\"color: #bbb;\"> </span>Pod<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">metadata</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">name</span>:<span style=\"color: #bbb;\"> </span>shared-pool-app<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"></span><span style=\"color: #008000; font-weight: bold;\">spec</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">resources</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #080; font-style: italic;\"># Pod-level limits</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">limits</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">cpu</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"2\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">memory</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"4Gi\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">containers</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">name</span>:<span style=\"color: #bbb;\"> </span>main-app<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">image</span>:<span style=\"color: #bbb;\"> </span>my-app:v1<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">resizePolicy</span>:<span style=\"color: #bbb;\"> </span>[{<span style=\"color: #008000; font-weight: bold;\">resourceName</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"cpu\"</span><span style=\"color: #008000; font-weight: bold;\">, restartPolicy</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"NotRequired\"</span>}]<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">name</span>:<span style=\"color: #bbb;\"> </span>sidecar<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">image</span>:<span style=\"color: #bbb;\"> </span>logger:v1<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">resizePolicy</span>:<span style=\"color: #bbb;\"> </span>[{<span style=\"color: #008000; font-weight: bold;\">resourceName</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"cpu\"</span><span style=\"color: #008000; font-weight: bold;\">, restartPolicy</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"NotRequired\"</span>}]<span style=\"color: #bbb;\">\n</span></span></span></code></pre></div><h3 id=\"2-the-resize-operation\">2. The resize operation</h3>\n<p>To double the CPU capacity to 4 CPUs, apply a patch using the <code>resize</code> subresource:</p>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-bash\"><span style=\"display: flex;\"><span>kubectl patch pod shared-pool-app --subresource resize --patch <span style=\"color: #b62; font-weight: bold;\">\\\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #b62; font-weight: bold;\"></span> <span style=\"color: #b44;\">'{\"spec\":{\"resources\":{\"limits\":{\"cpu\":\"4\"}}}}'</span>\n</span></span></code></pre></div><h2 id=\"node-level-reality-feasibility-and-safety\">Node-Level reality: feasibility and safety</h2>\n<p>Applying a resize patch is only the first step. The Kubelet performs several checks and follows a specific sequence to ensure node stability:</p>\n<h3 id=\"1-the-feasibility-check\">1. The feasibility check</h3>\n<p>Before admitting a resize, the Kubelet verifies if the new aggregate request fits within the Node's allocatable capacity. If the Node is overcommitted, the resize is not ignored; instead, the <code>PodResizePending</code> condition will reflect a <code>Deferred</code> or <code>Infeasible</code> status, providing immediate feedback on why the &quot;envelope&quot; hasn't grown.</p>\n<h3 id=\"2-update-sequencing\">2. Update sequencing</h3>\n<p>To prevent resource &quot;overshoot,&quot; the Kubelet coordinates the cgroup updates in a specific order:</p>\n<ul>\n<li><strong>When Increasing:</strong> The Pod-level cgroup is expanded first, creating the &quot;room&quot; before the individual container cgroups are enlarged.</li>\n<li><strong>When Decreasing:</strong> The container cgroups are throttled first, and only then is the aggregate Pod-level cgroup shrunken.</li>\n</ul>\n<h2 id=\"observability-tracking-resize-status\">Observability: tracking resize status</h2>\n<p>With the move to Beta, Kubernetes uses <strong>Pod Conditions</strong> to track the lifecycle of a resize:</p>\n<ul>\n<li><strong><code>PodResizePending</code></strong>: The spec is updated, but the Node hasn't admitted the change (e.g., due to capacity).</li>\n<li><strong><code>PodResizeInProgress</code></strong>: The Node has admitted the resize (<code>status.allocatedResources</code>) but the changes aren't yet fully applied to the cgroups (<code>status.resources</code>).</li>\n</ul>\n<div class=\"highlight\"><pre tabindex=\"0\"><code class=\"language-yaml\"><span style=\"display: flex;\"><span><span style=\"color: #008000; font-weight: bold;\">status</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">allocatedResources</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">cpu</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"4\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">resources</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">limits</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">cpu</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"4\"</span><span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">conditions</span>:<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span>- <span style=\"color: #008000; font-weight: bold;\">type</span>:<span style=\"color: #bbb;\"> </span>PodResizeInProgress<span style=\"color: #bbb;\">\n</span></span></span><span style=\"display: flex;\"><span><span style=\"color: #bbb;\"> </span><span style=\"color: #008000; font-weight: bold;\">status</span>:<span style=\"color: #bbb;\"> </span><span style=\"color: #b44;\">\"True\"</span><span style=\"color: #bbb;\">\n</span></span></span></code></pre></div><h2 id=\"constraints-and-requirements\">Constraints and requirements</h2>\n<ul>\n<li><strong>cgroup v2 Only:</strong> Required for accurate aggregate enforcement.</li>\n<li><strong>CRI Support:</strong> Requires a container runtime that supports the <code>UpdateContainerResources</code> CRI call (e.g., containerd v2.0+ or CRI-O).</li>\n<li><strong>Feature Gates:</strong> Requires <code>PodLevelResources</code>, <code>InPlacePodVerticalScaling</code>, <code>InPlacePodLevelResourcesVerticalScaling</code>, and <code>NodeDeclaredFeatures</code>.</li>\n<li><strong>Linux Only:</strong> Currently exclusive to Linux-based nodes.</li>\n</ul>\n<h2 id=\"what-s-next\">What's next?</h2>\n<p>As we move toward General Availability (GA), the community is focusing on <strong>Vertical Pod Autoscaler (VPA) Integration</strong>, enabling VPA to issue Pod-level resource recommendations and trigger in-place actuation automatically.</p>\n<h2 id=\"getting-started-and-providing-feedback\">Getting started and providing feedback</h2>\n<p>We encourage you to test this feature and provide feedback via the standard Kubernetes communication channels:</p>\n<ul>\n<li>Slack: <a href=\"https://kubernetes.slack.com/messages/sig-node\">#sig-node</a></li>\n<li><a href=\"https://groups.google.com/forum/#!forum/kubernetes-sig-node\">Mailing list</a></li>\n<li><a href=\"https://github.com/kubernetes/community/labels/sig%2Fnode\">Open Community Issues/PRs</a></li>\n</ul>",
@@ -30,96 +129,6 @@
           "category": "Infrastructure",
           "published": "Wed, 29 Apr 2026 10:35:00 -0800",
           "author": "Inconnu"
-        },
-        {
-          "title": "Super Productivity – Todo App with Timeboxing & Time Tracking Capabilities",
-          "description": "<p>Super Productivity is your ultimate todo app, featuring timeboxing and time tracking to enhance focus and efficiency. Boost your productivity today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/super-productivity-todo-app-with-timeboxing-time-tracking-capabilities/\">Super Productivity &#8211; Todo App with Timeboxing &amp; Time Tracking Capabilities</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/super-productivity-todo-app-with-timeboxing-time-tracking-capabilities/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 08:03:15 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "DavMail 6.6 Exchange Gateway Released with Office 365 Fixes",
-          "description": "<p>Announcing DavMail 6.6 Exchange Gateway with vital Office 365 fixes. Stay connected and optimize your email workflow with this latest release.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/davmail-6-6-exchange-gateway-released-with-office-365-fixes/\">DavMail 6.6 Exchange Gateway Released with Office 365 Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/davmail-6-6-exchange-gateway-released-with-office-365-fixes/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 08:01:45 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "9to5Linux Weekly Roundup: April 12th, 2026",
-          "description": "<p>Catch up on the most important Linux news in the 9to5Linux Weekly Roundup for April 12th, 2026. Don't miss out on key updates and trends!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-april-12th-2026/\">9to5Linux Weekly Roundup: April 12th, 2026</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-april-12th-2026/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 07:57:57 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Three Months After Georgia Tech, Stallman Heads to UT Austin",
-          "description": "<p>Learn about Richard Stallman's move to UT Austin three months after Georgia Tech, and how his presence is shaping the academic landscape in technology.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/three-months-after-georgia-tech-stallman-heads-to-ut-austin/\">Three Months After Georgia Tech, Stallman Heads to UT Austin</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/three-months-after-georgia-tech-stallman-heads-to-ut-austin/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 07:53:31 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Linuxiac Weekly Wrap-Up: Week 15, 2026 (Apr 6 – 12)",
-          "description": "<p>Discover the latest in Linux news with our Weekly Wrap-Up for Week 15, 2026. Stay informed on updates, trends, and insights from April 6 to 12.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-15-2026-apr-6-12/\">Linuxiac Weekly Wrap-Up: Week 15, 2026 (Apr 6 – 12)</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-15-2026-apr-6-12/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 07:49:49 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Linux Kernel 7.0 Officially Released, This Is What’s New",
-          "description": "<p>Linux Kernel 7.0 is here! Uncover the exciting new features and improvements in this official release that enhance functionality and user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linux-kernel-7-0-officially-released-this-is-whats-new/\">Linux Kernel 7.0 Officially Released, This Is What’s New</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/linux-kernel-7-0-officially-released-this-is-whats-new/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 07:46:49 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "FreeBSD Opens Public Testing for Its Laptop Support Push",
-          "description": "<p>FreeBSD announces public testing for enhanced laptop support. Discover the latest features and improvements aimed at optimizing your laptop experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/freebsd-opens-public-testing-for-its-laptop-support-push/\">FreeBSD Opens Public Testing for Its Laptop Support Push</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/freebsd-opens-public-testing-for-its-laptop-support-push/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 07:45:13 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Trisquel GNU/Linux 12.0 LTS Released with GNU Linux-Libre 6.8 Kernel, MATE 1.26",
-          "description": "<p>Discover the latest Trisquel GNU/Linux 12.0 LTS, featuring the GNU Linux-Libre 6.8 Kernel and MATE 1.26. Experience freedom and performance today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/trisquel-gnu-linux-12-0-lts-released-with-gnu-linux-libre-6-8-kernel-mate-1-26/\">Trisquel GNU/Linux 12.0 LTS Released with GNU Linux-Libre 6.8 Kernel, MATE 1.26</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/trisquel-gnu-linux-12-0-lts-released-with-gnu-linux-libre-6-8-kernel-mate-1-26/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 07:43:11 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "AerynOS Gets a New Logo in Quiet Branding Update",
-          "description": "<p>AerynOS unveils a fresh logo in a subtle branding update, reflecting its commitment to innovation and modern design. Discover the new look today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/aerynos-gets-a-new-logo-in-quiet-branding-update/\">AerynOS Gets a New Logo in Quiet Branding Update</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/aerynos-gets-a-new-logo-in-quiet-branding-update/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 07:38:11 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "First Look at Shelly, a Modern Graphical Package Manager for Arch Linux",
-          "description": "<p>Discover Shelly, the modern graphical package manager for Arch Linux. Streamline your software management with an intuitive interface and powerful features.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/first-look-at-shelly-a-modern-graphical-package-manager-for-arch-linux/\">First Look at Shelly, a Modern Graphical Package Manager for Arch Linux</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/first-look-at-shelly-a-modern-graphical-package-manager-for-arch-linux/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 07:34:38 +0000",
-          "author": "Content Operations"
         },
         {
           "title": "Kubernetes v1.36: Staleness Mitigation and Observability for Controllers",
@@ -255,15 +264,6 @@
           "category": "Infrastructure",
           "published": "Thu, 02 Apr 2026 13:00:00 +0000",
           "author": "Deanna Sparks"
-        },
-        {
-          "title": "Run and Iterate on LLMs Faster with Docker Model Runner on DGX Station",
-          "description": "Back in October, we showed how Docker Model Runner on the NVIDIA DGX Spark makes it remarkably easy to run large AI models locally with the same familiar Docker experience developers already trust. That post struck a chord: hundreds of developers discovered that a compact desktop system paired with Docker Model Runner could replace complex...",
-          "link": "https://www.docker.com/blog/blog-docker-model-runner-new-nvidia-dgx-station/",
-          "source": "Docker Blog",
-          "category": "Infrastructure",
-          "published": "Tue, 31 Mar 2026 17:57:17 +0000",
-          "author": "Yiwen Xu"
         },
         {
           "title": "Kubernetes v1.36 Sneak Peek",
@@ -1474,6 +1474,15 @@
           "author": "AWS News Blog Team"
         },
         {
+          "title": "Microsoft named a Leader in the IDC MarketScape: Worldwide API Management 2026 Vendor Assessment",
+          "description": "<p>Azure API Management provides a single, Azure-native platform to govern everything from traditional APIs to AI models, tools, and agents.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-idc-marketscape-worldwide-api-management-2026-vendor-assessment/\">Microsoft named a Leader in the IDC MarketScape: Worldwide API Management 2026 Vendor Assessment</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-idc-marketscape-worldwide-api-management-2026-vendor-assessment/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Tue, 28 Apr 2026 16:00:00 +0000",
+          "author": "Naga Surendran"
+        },
+        {
           "title": "AWS Weekly Roundup: Anthropic & Meta partnership, AWS Lambda S3 Files, Amazon Bedrock AgentCore CLI, and more (April 27, 2026)",
           "description": "Late March took me to Seattle for the Specialist Tech Conference, one of the most energizing gatherings of AWS specialists from around the world. It was an incredible opportunity to connect with peers, exchange experiences, and go deep on the latest advancements in Generative AI and Amazon Bedrock — and a powerful reminder of something […]",
           "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-anthropic-meta-partnership-aws-lambda-s3-files-amazon-bedrock-agentcore-cli-and-more-april-27-2026/",
@@ -1481,6 +1490,24 @@
           "category": "Cloud",
           "published": "Mon, 27 Apr 2026 15:01:28 +0000",
           "author": "Daniel Abib"
+        },
+        {
+          "title": "Microsoft Sovereign Private Cloud scales to thousands of nodes with Azure Local",
+          "description": "<p>Azure Local scales Microsoft Sovereign Private Cloud, supporting AI and data workloads with full control, compliance, and disconnected operations.</p>\n<p>The post <a href=\"https://blogs.microsoft.com/blog/2026/04/27/microsoft-sovereign-private-cloud-scales-to-thousands-of-nodes-with-azure-local/\">Microsoft Sovereign Private Cloud scales to thousands of nodes with Azure Local</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://blogs.microsoft.com/blog/2026/04/27/microsoft-sovereign-private-cloud-scales-to-thousands-of-nodes-with-azure-local/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Mon, 27 Apr 2026 18:00:00 +0000",
+          "author": "Douglas Phillips"
+        },
+        {
+          "title": "OpenAI’s GPT-5.5 in Microsoft Foundry: Frontier intelligence on an enterprise ready platform",
+          "description": "<p>OpenAI’s GPT-5.5 will be generally available in Microsoft Foundry, bringing OpenAI’s latest frontier model to Azure and the enterprise teams building agents for real production work.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/openais-gpt-5-5-in-microsoft-foundry-frontier-intelligence-on-an-enterprise-ready-platform/\">OpenAI’s GPT-5.5 in Microsoft Foundry: Frontier intelligence on an enterprise ready platform</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/openais-gpt-5-5-in-microsoft-foundry-frontier-intelligence-on-an-enterprise-ready-platform/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Thu, 23 Apr 2026 22:00:00 +0000",
+          "author": "Naomi Moneypenny"
         },
         {
           "title": "Microsoft Discovery: Advancing agentic R&D at scale",
@@ -1618,15 +1645,6 @@
           "author": "Micah Walter"
         },
         {
-          "title": "Azure IaaS: Keep critical applications running with built-in resiliency at scale",
-          "description": "<p>Azure IaaS provides foundational capabilities across compute, storage, and networking to help organizations stay resilient.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/azure-iaas-keep-critical-applications-running-with-built-in-resiliency-at-scale/\">Azure IaaS: Keep critical applications running with built-in resiliency at scale</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://azure.microsoft.com/en-us/blog/azure-iaas-keep-critical-applications-running-with-built-in-resiliency-at-scale/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Wed, 01 Apr 2026 16:00:00 +0000",
-          "author": "Igal Figlin"
-        },
-        {
           "title": "Announcing the AWS Sustainability console: Programmatic access, configurable CSV reports, and Scope 1–3 reporting in one place",
           "description": "AWS announces the Sustainability console, a new standalone service that consolidates carbon emissions reporting and resources, giving sustainability teams independent access to Scope 1, 2, and 3 emissions data without requiring billing permissions.",
           "link": "https://aws.amazon.com/blogs/aws/announcing-the-aws-sustainability-console-programmatic-access-configurable-csv-reports-and-scope-1-3-reporting-in-one-place/",
@@ -1636,15 +1654,6 @@
           "author": "Sébastien Stormacq"
         },
         {
-          "title": "Building sovereign AI at the edge: Microsoft and Armada collaborate to deliver Azure Local on Galleon modular datacenters",
-          "description": "<p>Explore how Microsoft and Armada bring sovereign AI to the edge with Azure Local, enabling secure, resilient workloads in disconnected and regulated environments.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/building-sovereign-ai-at-the-edge-microsoft-and-armada-collaborate-to-deliver-azure-local-on-galleon-modular-datacenters/\">Building sovereign AI at the edge: Microsoft and Armada collaborate to deliver Azure Local on Galleon modular datacenters</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://azure.microsoft.com/en-us/blog/building-sovereign-ai-at-the-edge-microsoft-and-armada-collaborate-to-deliver-azure-local-on-galleon-modular-datacenters/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Tue, 31 Mar 2026 16:00:00 +0000",
-          "author": "Douglas Phillips"
-        },
-        {
           "title": "AWS Weekly Roundup: AWS AI/ML Scholars program, Agent Plugin for AWS Serverless, and more (March 30, 2026)",
           "description": "Last week, what excited me most was the launch of the 2026 AWS AI &amp; ML Scholars program by Swami Sivasubramanian, VP of AWS Agentic AI, to provide free AI education to up to 100,000 learners worldwide. The program has two phases: a Challenge phase where you’ll learn foundational generative AI skills, followed by a […]",
           "link": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-ai-ml-scholars-program-agent-plugin-for-aws-serverless-and-more-march-30-2026/",
@@ -1652,15 +1661,6 @@
           "category": "Cloud",
           "published": "Mon, 30 Mar 2026 16:11:28 +0000",
           "author": "Prasad Rao"
-        },
-        {
-          "title": "Navigating digital sovereignty at the frontier of transformation",
-          "description": "<p>Digital sovereignty has become a practical leadership discipline grounded in risk management, continuity planning, and long-term accountability.</p>\n<p>The post <a href=\"https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/03/25/navigating-digital-sovereignty-at-the-frontier-of-transformation/\">Navigating digital sovereignty at the frontier of transformation</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/03/25/navigating-digital-sovereignty-at-the-frontier-of-transformation/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Mon, 30 Mar 2026 21:27:39 +0000",
-          "author": "Philippe Rogge"
         },
         {
           "title": "Customize your AWS Management Console experience with visual settings including account color, region and service visibility",
@@ -1745,7 +1745,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581340",
+          "published": "2026-05-02T08:25:35.191956",
           "author": "roidelapluie"
         },
         {
@@ -1754,7 +1754,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581336",
+          "published": "2026-05-02T08:25:35.191952",
           "author": "prombot"
         },
         {
@@ -1763,7 +1763,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581332",
+          "published": "2026-05-02T08:25:35.191948",
           "author": "roidelapluie"
         },
         {
@@ -1772,7 +1772,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581328",
+          "published": "2026-05-02T08:25:35.191944",
           "author": "roidelapluie"
         },
         {
@@ -1781,7 +1781,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581323",
+          "published": "2026-05-02T08:25:35.191940",
           "author": "prombot"
         },
         {
@@ -1790,7 +1790,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581319",
+          "published": "2026-05-02T08:25:35.191935",
           "author": "prombot"
         },
         {
@@ -1799,7 +1799,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581315",
+          "published": "2026-05-02T08:25:35.191931",
           "author": "roidelapluie"
         },
         {
@@ -1808,7 +1808,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581310",
+          "published": "2026-05-02T08:25:35.191926",
           "author": "roidelapluie"
         },
         {
@@ -1817,7 +1817,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581305",
+          "published": "2026-05-02T08:25:35.191921",
           "author": "prombot"
         },
         {
@@ -1826,7 +1826,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581292",
+          "published": "2026-05-02T08:25:35.191909",
           "author": "prombot"
         },
         {
@@ -1930,7 +1930,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581340",
+          "published": "2026-05-02T08:25:35.191956",
           "author": "roidelapluie"
         },
         {
@@ -1939,7 +1939,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581336",
+          "published": "2026-05-02T08:25:35.191952",
           "author": "prombot"
         },
         {
@@ -1948,7 +1948,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581332",
+          "published": "2026-05-02T08:25:35.191948",
           "author": "roidelapluie"
         },
         {
@@ -1957,7 +1957,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581328",
+          "published": "2026-05-02T08:25:35.191944",
           "author": "roidelapluie"
         },
         {
@@ -1966,7 +1966,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581323",
+          "published": "2026-05-02T08:25:35.191940",
           "author": "prombot"
         },
         {
@@ -1975,7 +1975,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581319",
+          "published": "2026-05-02T08:25:35.191935",
           "author": "prombot"
         },
         {
@@ -1984,7 +1984,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581315",
+          "published": "2026-05-02T08:25:35.191931",
           "author": "roidelapluie"
         },
         {
@@ -1993,7 +1993,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581310",
+          "published": "2026-05-02T08:25:35.191926",
           "author": "roidelapluie"
         },
         {
@@ -2002,7 +2002,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581305",
+          "published": "2026-05-02T08:25:35.191921",
           "author": "prombot"
         },
         {
@@ -2011,8 +2011,107 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-01T09:05:40.581292",
+          "published": "2026-05-02T08:25:35.191909",
           "author": "prombot"
+        },
+        {
+          "title": "A Virtual Agent team at Docker: How the Coding Agent Sandboxes team uses a fleet of agents to ship faster",
+          "description": "I work on Coding Agent Sandboxes, aka “sbx” at Docker. The project provides secure, microVM-based isolation for running AI coding agents like Claude Code, Gemini, Codex, Docker Agent and Kiro. Agents get full autonomy inside a sandbox (their own Docker daemon, network, filesystem) without touching your host system. Over the past couple of weeks, we...",
+          "link": "https://www.docker.com/blog/a-virtual-agent-team-at-docker-how-the-coding-agent-sandboxes-team-uses-a-fleet-of-agents-to-ship-faster/",
+          "source": "Docker Blog",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 13:00:00 +0000",
+          "author": "Jennifer Kohl"
+        },
+        {
+          "title": "Latest Raspberry Pi OS Release Disables Passwordless sudo by Default",
+          "description": "<p>The newest Raspberry Pi OS update has disabled passwordless sudo by default. Learn how this impacts your projects and improves system security today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/latest-raspberry-pi-os-release-disables-passwordless-sudo-by-default/\">Latest Raspberry Pi OS Release Disables Passwordless sudo by Default</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/latest-raspberry-pi-os-release-disables-passwordless-sudo-by-default/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:19:03 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Krita – A Powerful Open-Source Digital Painting Tool",
+          "description": "<p>Unleash your creativity with Krita, the leading open-source digital painting software. Explore its robust tools and features tailored for artists of all levels.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/krita-a-powerful-open-source-digital-painting-tool/\">Krita – A Powerful Open-Source Digital Painting Tool</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/krita-a-powerful-open-source-digital-painting-tool/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:16:53 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Scribus 1.6.6 Open-Source Desktop Publishing App Released with Bug Fixes",
+          "description": "<p>Explore Scribus 1.6.6, the open-source desktop publishing software, now with crucial bug fixes to improve your design experience and workflow efficiency.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/scribus-1-6-6-open-source-desktop-publishing-app-released-with-bug-fixes/\">Scribus 1.6.6 Open-Source Desktop Publishing App Released with Bug Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/scribus-1-6-6-open-source-desktop-publishing-app-released-with-bug-fixes/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:14:33 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "openSUSE Tumbleweed Switches Fresh Installs to Systemd-boot",
+          "description": "<p>Discover how openSUSE Tumbleweed transitions fresh installs to systemd-boot, enhancing boot management and system performance for users.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/opensuse-tumbleweed-switches-fresh-installs-to-systemd-boot/\">openSUSE Tumbleweed Switches Fresh Installs to Systemd-boot</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/opensuse-tumbleweed-switches-fresh-installs-to-systemd-boot/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:12:37 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "From Panthor to RK3588: Advancing graphics, video and SoC support in Linux kernel 7.0",
+          "description": "<p>Explore how Linux kernel 7.0 enhances graphics, video, and SoC support, featuring innovations from Panthor to RK3588. Stay updated on cutting-edge technology.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/from-panthor-to-rk3588-advancing-graphics-video-and-soc-support-in-linux-kernel-7-0/\">From Panthor to RK3588: Advancing graphics, video and SoC support in Linux kernel 7.0</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/from-panthor-to-rk3588-advancing-graphics-video-and-soc-support-in-linux-kernel-7-0/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:10:15 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "Kontainer Brings a Native KDE GUI to Distrobox Container Management",
+          "description": "<p>Discover Kontainer, the innovative tool that integrates a native KDE GUI for seamless Distrobox container management. Simplify your workflow today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/kontainer-brings-a-native-kde-gui-to-distrobox-container-management/\">Kontainer Brings a Native KDE GUI to Distrobox Container Management</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/kontainer-brings-a-native-kde-gui-to-distrobox-container-management/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:08:05 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "EndeavourOS – A Modern Arch-Based Linux Experience",
+          "description": "<p>Experience the power of EndeavourOS, a user-friendly Arch-based Linux distribution. Enjoy seamless installation, customization, and a supportive community.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/endeavouros-a-modern-arch-based-linux-experience/\">EndeavourOS – A Modern Arch-Based Linux Experience</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/endeavouros-a-modern-arch-based-linux-experience/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:05:26 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "France Is Replacing 2.5 Million Windows Desktops With Linux – And I Mapped Out Its New Stack",
+          "description": "<p>France is set to replace 2.5 million Windows desktops with Linux, marking a significant shift in its digital infrastructure. Discover the implications and benefits.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/france-is-replacing-2-5-million-windows-desktops-with-linux-and-i-mapped-out-its-new-stack/\">France Is Replacing 2.5 Million Windows Desktops With Linux &#8211; And I Mapped Out Its New Stack</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/france-is-replacing-2-5-million-windows-desktops-with-linux-and-i-mapped-out-its-new-stack/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:03:50 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "ZeroID: Open-source Identity Platform for Autonomous AI Agents",
+          "description": "<p>Explore ZeroID, the innovative open-source identity platform empowering autonomous AI agents. Secure, efficient, and user-friendly identity solutions await.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/zeroid-open-source-identity-platform-for-autonomous-ai-agents/\">ZeroID: Open-source Identity Platform for Autonomous AI Agents</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/zeroid-open-source-identity-platform-for-autonomous-ai-agents/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 07:00:45 +0000",
+          "author": "Content Operations"
+        },
+        {
+          "title": "How to Install Linux Kernel 7.0 on Ubuntu 25.10",
+          "description": "<p>Discover the step-by-step guide to install Linux Kernel 7.0 on Ubuntu 25.10. Enhance your system's performance and features with our easy instructions.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/how-to-install-linux-kernel-7-0-on-ubuntu-25-10/\">How to Install Linux Kernel 7.0 on Ubuntu 25.10</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
+          "link": "https://www.linuxtoday.com/blog/how-to-install-linux-kernel-7-0-on-ubuntu-25-10/",
+          "source": "Linux News",
+          "category": "Infrastructure",
+          "published": "Fri, 01 May 2026 06:57:59 +0000",
+          "author": "Content Operations"
         },
         {
           "title": "Kubernetes v1.36: In-Place Vertical Scaling for Pod-Level Resources Graduates to Beta",
@@ -2076,96 +2175,6 @@
           "category": "Infrastructure",
           "published": "Wed, 29 Apr 2026 10:35:00 -0800",
           "author": "Inconnu"
-        },
-        {
-          "title": "Super Productivity – Todo App with Timeboxing & Time Tracking Capabilities",
-          "description": "<p>Super Productivity is your ultimate todo app, featuring timeboxing and time tracking to enhance focus and efficiency. Boost your productivity today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/super-productivity-todo-app-with-timeboxing-time-tracking-capabilities/\">Super Productivity &#8211; Todo App with Timeboxing &amp; Time Tracking Capabilities</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/super-productivity-todo-app-with-timeboxing-time-tracking-capabilities/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 08:03:15 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "DavMail 6.6 Exchange Gateway Released with Office 365 Fixes",
-          "description": "<p>Announcing DavMail 6.6 Exchange Gateway with vital Office 365 fixes. Stay connected and optimize your email workflow with this latest release.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/davmail-6-6-exchange-gateway-released-with-office-365-fixes/\">DavMail 6.6 Exchange Gateway Released with Office 365 Fixes</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/davmail-6-6-exchange-gateway-released-with-office-365-fixes/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 08:01:45 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "9to5Linux Weekly Roundup: April 12th, 2026",
-          "description": "<p>Catch up on the most important Linux news in the 9to5Linux Weekly Roundup for April 12th, 2026. Don't miss out on key updates and trends!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-april-12th-2026/\">9to5Linux Weekly Roundup: April 12th, 2026</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-april-12th-2026/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 07:57:57 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Three Months After Georgia Tech, Stallman Heads to UT Austin",
-          "description": "<p>Learn about Richard Stallman's move to UT Austin three months after Georgia Tech, and how his presence is shaping the academic landscape in technology.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/three-months-after-georgia-tech-stallman-heads-to-ut-austin/\">Three Months After Georgia Tech, Stallman Heads to UT Austin</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/three-months-after-georgia-tech-stallman-heads-to-ut-austin/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 07:53:31 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Linuxiac Weekly Wrap-Up: Week 15, 2026 (Apr 6 – 12)",
-          "description": "<p>Discover the latest in Linux news with our Weekly Wrap-Up for Week 15, 2026. Stay informed on updates, trends, and insights from April 6 to 12.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-15-2026-apr-6-12/\">Linuxiac Weekly Wrap-Up: Week 15, 2026 (Apr 6 – 12)</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-15-2026-apr-6-12/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 07:49:49 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Linux Kernel 7.0 Officially Released, This Is What’s New",
-          "description": "<p>Linux Kernel 7.0 is here! Uncover the exciting new features and improvements in this official release that enhance functionality and user experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/linux-kernel-7-0-officially-released-this-is-whats-new/\">Linux Kernel 7.0 Officially Released, This Is What’s New</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/linux-kernel-7-0-officially-released-this-is-whats-new/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 07:46:49 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "FreeBSD Opens Public Testing for Its Laptop Support Push",
-          "description": "<p>FreeBSD announces public testing for enhanced laptop support. Discover the latest features and improvements aimed at optimizing your laptop experience.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/freebsd-opens-public-testing-for-its-laptop-support-push/\">FreeBSD Opens Public Testing for Its Laptop Support Push</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/freebsd-opens-public-testing-for-its-laptop-support-push/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 07:45:13 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "Trisquel GNU/Linux 12.0 LTS Released with GNU Linux-Libre 6.8 Kernel, MATE 1.26",
-          "description": "<p>Discover the latest Trisquel GNU/Linux 12.0 LTS, featuring the GNU Linux-Libre 6.8 Kernel and MATE 1.26. Experience freedom and performance today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/trisquel-gnu-linux-12-0-lts-released-with-gnu-linux-libre-6-8-kernel-mate-1-26/\">Trisquel GNU/Linux 12.0 LTS Released with GNU Linux-Libre 6.8 Kernel, MATE 1.26</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/trisquel-gnu-linux-12-0-lts-released-with-gnu-linux-libre-6-8-kernel-mate-1-26/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 07:43:11 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "AerynOS Gets a New Logo in Quiet Branding Update",
-          "description": "<p>AerynOS unveils a fresh logo in a subtle branding update, reflecting its commitment to innovation and modern design. Discover the new look today!</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/aerynos-gets-a-new-logo-in-quiet-branding-update/\">AerynOS Gets a New Logo in Quiet Branding Update</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/aerynos-gets-a-new-logo-in-quiet-branding-update/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 07:38:11 +0000",
-          "author": "Content Operations"
-        },
-        {
-          "title": "First Look at Shelly, a Modern Graphical Package Manager for Arch Linux",
-          "description": "<p>Discover Shelly, the modern graphical package manager for Arch Linux. Streamline your software management with an intuitive interface and powerful features.</p>\n<p>The post <a href=\"https://www.linuxtoday.com/blog/first-look-at-shelly-a-modern-graphical-package-manager-for-arch-linux/\">First Look at Shelly, a Modern Graphical Package Manager for Arch Linux</a> appeared first on <a href=\"https://www.linuxtoday.com\">Linux Today</a>.</p>",
-          "link": "https://www.linuxtoday.com/blog/first-look-at-shelly-a-modern-graphical-package-manager-for-arch-linux/",
-          "source": "Linux News",
-          "category": "Infrastructure",
-          "published": "Wed, 29 Apr 2026 07:34:38 +0000",
-          "author": "Content Operations"
         },
         {
           "title": "Governing MCP tool calls in .NET with the Agent Governance Toolkit",
@@ -2258,6 +2267,15 @@
           "author": "AWS News Blog Team"
         },
         {
+          "title": "Microsoft named a Leader in the IDC MarketScape: Worldwide API Management 2026 Vendor Assessment",
+          "description": "<p>Azure API Management provides a single, Azure-native platform to govern everything from traditional APIs to AI models, tools, and agents.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-idc-marketscape-worldwide-api-management-2026-vendor-assessment/\">Microsoft named a Leader in the IDC MarketScape: Worldwide API Management 2026 Vendor Assessment</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-idc-marketscape-worldwide-api-management-2026-vendor-assessment/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Tue, 28 Apr 2026 16:00:00 +0000",
+          "author": "Naga Surendran"
+        },
+        {
           "title": "GitHub for Beginners: Getting started with Markdown",
           "description": "<p>Discover how to format and edit your comments and posts using Markdown.</p>\n<p>The post <a href=\"https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/\">GitHub for Beginners: Getting started with Markdown</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
           "link": "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/",
@@ -2330,6 +2348,15 @@
           "author": "Daniel Abib"
         },
         {
+          "title": "Microsoft Sovereign Private Cloud scales to thousands of nodes with Azure Local",
+          "description": "<p>Azure Local scales Microsoft Sovereign Private Cloud, supporting AI and data workloads with full control, compliance, and disconnected operations.</p>\n<p>The post <a href=\"https://blogs.microsoft.com/blog/2026/04/27/microsoft-sovereign-private-cloud-scales-to-thousands-of-nodes-with-azure-local/\">Microsoft Sovereign Private Cloud scales to thousands of nodes with Azure Local</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://blogs.microsoft.com/blog/2026/04/27/microsoft-sovereign-private-cloud-scales-to-thousands-of-nodes-with-azure-local/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Mon, 27 Apr 2026 18:00:00 +0000",
+          "author": "Douglas Phillips"
+        },
+        {
           "title": "GitHub Copilot is moving to usage-based billing",
           "description": "<p>Starting June 1, your Copilot usage will consume GitHub AI Credits.</p>\n<p>The post <a href=\"https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/\">GitHub Copilot is moving to usage-based billing</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>",
           "link": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
@@ -2373,6 +2400,15 @@
           "category": "Développement",
           "published": "Thu, 23 Apr 2026 17:25:00 +0000",
           "author": "Richard Lander"
+        },
+        {
+          "title": "OpenAI’s GPT-5.5 in Microsoft Foundry: Frontier intelligence on an enterprise ready platform",
+          "description": "<p>OpenAI’s GPT-5.5 will be generally available in Microsoft Foundry, bringing OpenAI’s latest frontier model to Azure and the enterprise teams building agents for real production work.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/openais-gpt-5-5-in-microsoft-foundry-frontier-intelligence-on-an-enterprise-ready-platform/\">OpenAI’s GPT-5.5 in Microsoft Foundry: Frontier intelligence on an enterprise ready platform</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/openais-gpt-5-5-in-microsoft-foundry-frontier-intelligence-on-an-enterprise-ready-platform/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Thu, 23 Apr 2026 22:00:00 +0000",
+          "author": "Naomi Moneypenny"
         },
         {
           "title": "SELinux Volume Label Changes goes GA (and likely implications in v1.37)",
@@ -2771,24 +2807,6 @@
           "author": "Micah Walter"
         },
         {
-          "title": "Azure IaaS: Keep critical applications running with built-in resiliency at scale",
-          "description": "<p>Azure IaaS provides foundational capabilities across compute, storage, and networking to help organizations stay resilient.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/azure-iaas-keep-critical-applications-running-with-built-in-resiliency-at-scale/\">Azure IaaS: Keep critical applications running with built-in resiliency at scale</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://azure.microsoft.com/en-us/blog/azure-iaas-keep-critical-applications-running-with-built-in-resiliency-at-scale/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Wed, 01 Apr 2026 16:00:00 +0000",
-          "author": "Igal Figlin"
-        },
-        {
-          "title": "Run and Iterate on LLMs Faster with Docker Model Runner on DGX Station",
-          "description": "Back in October, we showed how Docker Model Runner on the NVIDIA DGX Spark makes it remarkably easy to run large AI models locally with the same familiar Docker experience developers already trust. That post struck a chord: hundreds of developers discovered that a compact desktop system paired with Docker Model Runner could replace complex...",
-          "link": "https://www.docker.com/blog/blog-docker-model-runner-new-nvidia-dgx-station/",
-          "source": "Docker Blog",
-          "category": "Infrastructure",
-          "published": "Tue, 31 Mar 2026 17:57:17 +0000",
-          "author": "Yiwen Xu"
-        },
-        {
           "title": "Announcing the AWS Sustainability console: Programmatic access, configurable CSV reports, and Scope 1–3 reporting in one place",
           "description": "AWS announces the Sustainability console, a new standalone service that consolidates carbon emissions reporting and resources, giving sustainability teams independent access to Scope 1, 2, and 3 emissions data without requiring billing permissions.",
           "link": "https://aws.amazon.com/blogs/aws/announcing-the-aws-sustainability-console-programmatic-access-configurable-csv-reports-and-scope-1-3-reporting-in-one-place/",
@@ -2796,15 +2814,6 @@
           "category": "Cloud",
           "published": "Tue, 31 Mar 2026 19:04:00 +0000",
           "author": "Sébastien Stormacq"
-        },
-        {
-          "title": "Building sovereign AI at the edge: Microsoft and Armada collaborate to deliver Azure Local on Galleon modular datacenters",
-          "description": "<p>Explore how Microsoft and Armada bring sovereign AI to the edge with Azure Local, enabling secure, resilient workloads in disconnected and regulated environments.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/building-sovereign-ai-at-the-edge-microsoft-and-armada-collaborate-to-deliver-azure-local-on-galleon-modular-datacenters/\">Building sovereign AI at the edge: Microsoft and Armada collaborate to deliver Azure Local on Galleon modular datacenters</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://azure.microsoft.com/en-us/blog/building-sovereign-ai-at-the-edge-microsoft-and-armada-collaborate-to-deliver-azure-local-on-galleon-modular-datacenters/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Tue, 31 Mar 2026 16:00:00 +0000",
-          "author": "Douglas Phillips"
         },
         {
           "title": "Kubernetes v1.36 Sneak Peek",
@@ -2823,15 +2832,6 @@
           "category": "Cloud",
           "published": "Mon, 30 Mar 2026 16:11:28 +0000",
           "author": "Prasad Rao"
-        },
-        {
-          "title": "Navigating digital sovereignty at the frontier of transformation",
-          "description": "<p>Digital sovereignty has become a practical leadership discipline grounded in risk management, continuity planning, and long-term accountability.</p>\n<p>The post <a href=\"https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/03/25/navigating-digital-sovereignty-at-the-frontier-of-transformation/\">Navigating digital sovereignty at the frontier of transformation</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/03/25/navigating-digital-sovereignty-at-the-frontier-of-transformation/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Mon, 30 Mar 2026 21:27:39 +0000",
-          "author": "Philippe Rogge"
         },
         {
           "title": "Gemini 3.1 Flash Live: Making audio AI more natural and reliable",
