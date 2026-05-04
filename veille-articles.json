@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-05-03T08:53:01.240713",
+  "lastUpdate": "2026-05-04T09:28:54.557745",
   "articles": {
     "infrastructure": {
       "icon": "🏗️",
@@ -1465,6 +1465,15 @@
       "icon": "☁️",
       "articles": [
         {
+          "title": "Enforcing trust and transparency: Open-sourcing the Azure Integrated HSM",
+          "description": "<p>As cloud workloads become more agentic and AI systems handle increasingly sensitive data, trust must be engineered directly into infrastructure. Azure Integrated HSM brings hardware‑enforced key protection into Azure, extending cryptographic trust from silicon to services through verifiable and transparent design.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/enforcing-trust-and-transparency-open-sourcing-the-azure-integrated-hsm/\">Enforcing trust and transparency: Open-sourcing the Azure Integrated HSM</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/enforcing-trust-and-transparency-open-sourcing-the-azure-integrated-hsm/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Thu, 30 Apr 2026 18:00:00 +0000",
+          "author": "Mark Russinovich and Saurabh Dighe"
+        },
+        {
           "title": "Top announcements of the What’s Next with AWS, 2026",
           "description": "At the \"What's Next with AWS\" 2026 event, AWS launched Amazon Quick—an AI assistant for work with a desktop app and expanded integrations—and expanded Amazon Connect into four agentic AI solutions for supply chain, hiring, customer experience, and healthcare. AWS also expended its partnership with OpenAI, bringing models like GPT-5.5, Codex, and Managed Agents to Amazon Bedrock in limited preview.",
           "link": "https://aws.amazon.com/blogs/aws/top-announcements-of-the-whats-next-with-aws-2026/",
@@ -1598,15 +1607,6 @@
           "category": "Cloud",
           "published": "Thu, 09 Apr 2026 15:05:00 +0000",
           "author": "Aman Singh"
-        },
-        {
-          "title": "Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value",
-          "description": "<p>Get practical strategies and best practices to help you plan, design, and manage AI investments for sustainable value and efficiency.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/\">Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Wed, 08 Apr 2026 16:00:00 +0000",
-          "author": "Fernando Vasconcellos"
         },
         {
           "title": "Launching S3 Files, making S3 buckets accessible as file systems",
@@ -1745,7 +1745,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356653",
+          "published": "2026-05-04T09:28:53.859702",
           "author": "roidelapluie"
         },
         {
@@ -1754,7 +1754,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356649",
+          "published": "2026-05-04T09:28:53.859697",
           "author": "prombot"
         },
         {
@@ -1763,7 +1763,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356645",
+          "published": "2026-05-04T09:28:53.859693",
           "author": "roidelapluie"
         },
         {
@@ -1772,7 +1772,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356640",
+          "published": "2026-05-04T09:28:53.859689",
           "author": "roidelapluie"
         },
         {
@@ -1781,7 +1781,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356636",
+          "published": "2026-05-04T09:28:53.859684",
           "author": "prombot"
         },
         {
@@ -1790,7 +1790,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356631",
+          "published": "2026-05-04T09:28:53.859680",
           "author": "prombot"
         },
         {
@@ -1799,7 +1799,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356627",
+          "published": "2026-05-04T09:28:53.859675",
           "author": "roidelapluie"
         },
         {
@@ -1808,7 +1808,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356623",
+          "published": "2026-05-04T09:28:53.859671",
           "author": "roidelapluie"
         },
         {
@@ -1817,7 +1817,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356618",
+          "published": "2026-05-04T09:28:53.859665",
           "author": "prombot"
         },
         {
@@ -1826,7 +1826,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356604",
+          "published": "2026-05-04T09:28:53.859651",
           "author": "prombot"
         },
         {
@@ -1930,7 +1930,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356653",
+          "published": "2026-05-04T09:28:53.859702",
           "author": "roidelapluie"
         },
         {
@@ -1939,7 +1939,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.1",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356649",
+          "published": "2026-05-04T09:28:53.859697",
           "author": "prombot"
         },
         {
@@ -1948,7 +1948,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356645",
+          "published": "2026-05-04T09:28:53.859693",
           "author": "roidelapluie"
         },
         {
@@ -1957,7 +1957,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356640",
+          "published": "2026-05-04T09:28:53.859689",
           "author": "roidelapluie"
         },
         {
@@ -1966,7 +1966,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356636",
+          "published": "2026-05-04T09:28:53.859684",
           "author": "prombot"
         },
         {
@@ -1975,7 +1975,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.2",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356631",
+          "published": "2026-05-04T09:28:53.859680",
           "author": "prombot"
         },
         {
@@ -1984,7 +1984,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.305.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356627",
+          "published": "2026-05-04T09:28:53.859675",
           "author": "roidelapluie"
         },
         {
@@ -1993,7 +1993,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v0.311.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356623",
+          "published": "2026-05-04T09:28:53.859671",
           "author": "roidelapluie"
         },
         {
@@ -2002,7 +2002,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.5.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356618",
+          "published": "2026-05-04T09:28:53.859665",
           "author": "prombot"
         },
         {
@@ -2011,7 +2011,7 @@
           "link": "https://github.com/prometheus/prometheus/releases/tag/v3.11.3",
           "source": "Prometheus Blog",
           "category": "DevOps",
-          "published": "2026-05-03T08:53:00.356604",
+          "published": "2026-05-04T09:28:53.859651",
           "author": "prombot"
         },
         {
@@ -2166,6 +2166,15 @@
           "category": "IA",
           "published": "Thu, 30 Apr 2026 12:14:15 +0000",
           "author": "Inconnu"
+        },
+        {
+          "title": "Enforcing trust and transparency: Open-sourcing the Azure Integrated HSM",
+          "description": "<p>As cloud workloads become more agentic and AI systems handle increasingly sensitive data, trust must be engineered directly into infrastructure. Azure Integrated HSM brings hardware‑enforced key protection into Azure, extending cryptographic trust from silicon to services through verifiable and transparent design.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/enforcing-trust-and-transparency-open-sourcing-the-azure-integrated-hsm/\">Enforcing trust and transparency: Open-sourcing the Azure Integrated HSM</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
+          "link": "https://azure.microsoft.com/en-us/blog/enforcing-trust-and-transparency-open-sourcing-the-azure-integrated-hsm/",
+          "source": "Microsoft Azure Blog",
+          "category": "Cloud",
+          "published": "Thu, 30 Apr 2026 18:00:00 +0000",
+          "author": "Mark Russinovich and Saurabh Dighe"
         },
         {
           "title": "GitHub Copilot CLI for Beginners: Interactive v. non-interactive mode",
@@ -2733,15 +2742,6 @@
           "category": "Infrastructure",
           "published": "Wed, 08 Apr 2026 18:23:51 +0000",
           "author": "Dan Berezin Stelzer"
-        },
-        {
-          "title": "Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value",
-          "description": "<p>Get practical strategies and best practices to help you plan, design, and manage AI investments for sustainable value and efficiency.</p>\n<p>The post <a href=\"https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/\">Cloud Cost Optimization: How to maximize ROI from AI, manage costs, and unlock real business value</a> appeared first on <a href=\"https://azure.microsoft.com/en-us/blog\">Microsoft Azure Blog</a>.</p>",
-          "link": "https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/",
-          "source": "Microsoft Azure Blog",
-          "category": "Cloud",
-          "published": "Wed, 08 Apr 2026 16:00:00 +0000",
-          "author": "Fernando Vasconcellos"
         },
         {
           "title": "Launching S3 Files, making S3 buckets accessible as file systems",
